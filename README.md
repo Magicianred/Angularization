@@ -10,7 +10,8 @@
 
 ## **Sections**
 ### **"*NVM* not NPM" ❓**
-* Why "NVM"?
+* What is "NVM"?
+* Why NVM?
 * How to Install NVM
 * How to Use NVM
 ### **Visual Studio Code 🟦**
