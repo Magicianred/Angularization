@@ -1,2 +1,2 @@
 # Angularization
-Thorough documentation for getting started with Angular 11 — PeopleScript-style.
+Thorough documentation for getting started with Angular 11.
