@@ -4,7 +4,7 @@
   <img src="triangular-ruler.png" width="120px" />
 </p>
 <br>
-<h3 align="center">Thorough documentation for getting started with <b>Angular 11</b>.</h3>
+<h3 align="center">Thorough documentation for getting started with <b>Angular 11+</b>.</h3>
 <br>
 <hr>
 <br>
