@@ -38,13 +38,25 @@
 * [Unidirectional Data Flow: `ParentComponent` <b>→</b> `ChildComponent`](#unidirectional-data-flow-parentcomponent--childcomponent)
 <br>
 <br>
+<br>
+<br>
 
-## **"*NVM* not NPM" ❓** [Return to "Sections"](#sections)
+## **"*NVM* not NPM" ❓** 
+#### [Return to "Sections"](#sections)
+<hr>
+
 ### What is "NVM"?
 ### Why NVM?
 ### How to Install NVM
 ### How to Use NVM
-## **Visual Studio Code 🟦** [Return to "Sections"](#sections)
+
+<br>
+<br>
+
+## **Visual Studio Code 🟦** 
+#### [Return to "Sections"](#sections)
+<hr>
+
 ### Integrated Terminal
 ### System Administrator Permissions
 ### Extensions
@@ -52,7 +64,14 @@
 ### Delete Terminals
 ### Edit Default Terminal
 ### Bonus: Zen Mode
-## **Angular 11 🔥** [Return to "Sections"](#sections)
+
+<br>
+<br>
+
+## **Angular 11 🔥** 
+#### [Return to "Sections"](#sections)
+<hr>
+
 ### How to install Angular CLI
 ### How to generate a new app
 ### How to serve a new app
