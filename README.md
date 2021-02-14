@@ -8,7 +8,8 @@
 <hr>
 <br>
 
-## **Sections**
+<h2 align="center"><b>Sections</b></h2>
+
 ### [**"*NVM* not NPM" ❓**](#nvm-not-npm--1)
 * [What is "NVM"?](#what-is-nvm)
 * [Why NVM?](#why-nvm)
@@ -41,6 +42,8 @@
 <br>
 <br>
 
+<hr>
+
 ## **"*NVM* not NPM" ❓** 
 #### [Return to "Sections"](#sections)
 <hr>
@@ -52,6 +55,8 @@
 
 <br>
 <br>
+
+<hr>
 
 ## **Visual Studio Code 🟦** 
 #### [Return to "Sections"](#sections)
@@ -67,6 +72,8 @@
 
 <br>
 <br>
+
+<hr>
 
 ## **Angular 11 🔥** 
 #### [Return to "Sections"](#sections)
