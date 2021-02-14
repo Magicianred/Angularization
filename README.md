@@ -36,4 +36,11 @@
 * Angular**DRY**: Don't. Repeat. Yourself.
 * `*ng`X: Structural Directives
 * Unidirectional Data Flow: Parent → Child
-
+<br>
+<br>
+<h2 align="center"><b>Section Tutorials Coming Soon</b></h2>
+<br>
+<br>
+<hr>
+<br>
+<br>
