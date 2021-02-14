@@ -38,7 +38,7 @@
 * Unidirectional Data Flow: Parent → Child
 <br>
 <br>
-<h2 align="center"><b>Section Tutorials Coming Soon</b></h2>
+<h3 align="center"><b>Section Tutorials Coming Soon</b></h3>
 <br>
 <br>
 <hr>
