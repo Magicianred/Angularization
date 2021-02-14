@@ -10,7 +10,7 @@
 <br>
 
 ## **Sections**
-### **"NVM not NPM" ❓**
+### **"*NVM* not NPM" ❓**
 * Why "NVM"?
 * How to Install NVM
 * How to Use NVM
