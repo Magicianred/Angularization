@@ -11,29 +11,29 @@
 
 ## **Sections**
 ### **"NVM not NPM" ❓**
-* #### Why "NVM"?
-* #### How to Install NVM
-* #### How to Use NVM
+* Why "NVM"?
+* How to Install NVM
+* How to Use NVM
 ### **Visual Studio Code 🟦**
-* #### Integrated Terminal
-* #### System Administrator Permissions
-* #### Extensions
-* #### Add Terminals
-* #### Delete Terminals
-* #### Edit Default Terminal
-* #### Bonus: Zen Mode
+* Integrated Terminal
+* System Administrator Permissions
+* Extensions
+* Add Terminals
+* Delete Terminals
+* Edit Default Terminal
+* Bonus: Zen Mode
 ### **Angular 11 🔥**
-* #### How to install Angular CLI
-* #### How to generate a new app
-* #### How to serve a new app
-* #### `app.component`: HTML, SCSS, & TypeScript
-* #### `app.module`
-* #### `package.json`
-* #### NPM Scripting: Create New Script
-* #### NPM Scripting: Update `start`
-* #### NPM Scripting: CI/CD Power 💪
-* #### `npm generate component <component-name>`
-* #### Angular**DRY**: Don't. Repeat. Yourself.
-* #### `*ng`X: Structural Directives
-* #### Unidirectional Data Flow: Parent → Child
+* How to install Angular CLI
+* How to generate a new app
+* How to serve a new app
+* `app.component`: HTML, SCSS, & TypeScript
+* `app.module`
+* `package.json`
+* NPM Scripting: Create New Script
+* NPM Scripting: Update `start`
+* NPM Scripting: CI/CD Power 💪
+* `npm generate component <component-name>`
+* Angular**DRY**: Don't. Repeat. Yourself.
+* `*ng`X: Structural Directives
+* Unidirectional Data Flow: Parent → Child
 
