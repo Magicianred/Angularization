@@ -16,7 +16,7 @@
 * [How to Use NVM](#how-to-use-nvm)
 ### [**Visual Studio Code 🟦**](#visual-studio-code--1)
 * [Integrated Terminal](#integrated-terminal)
-* [System Administrator Permissions](#system-administrator-perssions)
+* [System Administrator Permissions](#system-administrator-permissions)
 * [Extensions](#extensions)
 * [Add Terminals](#add-terminals)
 * [Delete Terminals](#delete-terminals)
