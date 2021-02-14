@@ -35,7 +35,7 @@
 * `npm generate component <component-name>`
 * Angular**DRY**: Don't. Repeat. Yourself.
 * `*ng`X: Structural Directives
-* Unidirectional Data Flow: Parent → Child
+* Unidirectional Data Flow: `ParentComponent` <b>→</b> `ChildComponent`
 <br>
 <br>
 <h3 align="center"><b>Section Tutorials Coming Soon</b></h3>
