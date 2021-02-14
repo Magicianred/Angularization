@@ -39,12 +39,12 @@
 <br>
 <br>
 
-## **"*NVM* not NPM" ❓**
+## **"*NVM* not NPM" ❓** [Return to "Sections"](#sections)
 ### What is "NVM"?
 ### Why NVM?
 ### How to Install NVM
 ### How to Use NVM
-## **Visual Studio Code 🟦**
+## **Visual Studio Code 🟦** [Return to "Sections"](#sections)
 ### Integrated Terminal
 ### System Administrator Permissions
 ### Extensions
@@ -52,7 +52,7 @@
 ### Delete Terminals
 ### Edit Default Terminal
 ### Bonus: Zen Mode
-## **Angular 11 🔥**
+## **Angular 11 🔥** [Return to "Sections"](#sections)
 ### How to install Angular CLI
 ### How to generate a new app
 ### How to serve a new app
