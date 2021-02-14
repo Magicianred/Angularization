@@ -38,7 +38,7 @@
 * Unidirectional Data Flow: `ParentComponent` <b>→</b> `ChildComponent`
 <br>
 <br>
-<h3 align="center"><b>Section Tutorials Coming Soon</b></h3>
+<h3 align="center"><b>Tutorials for Each Section Above Coming Soon</b></h3>
 <br>
 <br>
 <hr>
