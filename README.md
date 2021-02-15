@@ -81,7 +81,7 @@ Let's put this in perspective: at the time of writing this sub-section of Angula
 Therefore, invest some time into researching and using a reliable type of NVM, since at some point — if not now or in the past — you'll most likely need it as Node.js development progresses. 
 <br>
 <br>
-**I'll be using NVM-Windows, but you can check the ["NVM Alternatives"](#nvm-alternatives) sub-section for other popular NVM project.** 
+**I'll be using NVM-Windows, but you can check the ["NVM Alternatives"](#nvm-alternatives) sub-section for other popular NVM projects.** 
 <br>
 <br>
 
