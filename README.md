@@ -15,7 +15,7 @@ The content in the sub-sections are my own personal insights, so **I highly reco
 
 However, I hope that you find this thoroughly documented, **project-in-progress** helpful as content is added to it.
 
-For now, **please give this repo a ⭐ if Angularization is something that could be useful based off of what you see thus far**. 
+For now, **please give this repo a ⭐ if you think Angularization can be useful for novice Angular developers — based off of what you see thus far**. 
 
 Thanks.
 <p align="right">— @pjnalls</p>
