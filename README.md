@@ -49,8 +49,6 @@
 <hr>
 
 ### What is "NVM"?
-<br>
-
 NVM stands for ***N*ode *V*ersion *M*anager**. Essentially, it is a system utility program which allows a system administrator to install, use, and manage multiple versions of Node.js.
 <br>
 <br>
