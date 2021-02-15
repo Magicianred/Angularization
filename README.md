@@ -13,8 +13,10 @@
 ### [**"*NVM* not NPM" ❓**](#nvm-not-npm--1)
 * [What is "NVM"?](#what-is-nvm)
 * [Why NVM?](#why-nvm)
+* [Disclaimer: Uninstalling Node.js](#disclaimer-uninstalling-nodejs)
 * [How to Install NVM](#how-to-install-nvm)
 * [How to Use NVM](#how-to-use-nvm)
+* [NVM Alternatives](#nvm-alternatives)
 ### [**Visual Studio Code 🟦**](#visual-studio-code--1)
 * [Integrated Terminal](#integrated-terminal)
 * [System Administrator Permissions](#system-administrator-permissions)
@@ -49,14 +51,27 @@
 <hr>
 
 ### What is "NVM"?
-NVM stands for ***N*ode *V*ersion *M*anager**. Essentially, it is a system utility program which allows a system administrator to install, use, and manage multiple versions of Node.js.
+NVM stands for ***N*ode *V*ersion *M*anager**. Essentially, it is a system utility for installing, using, and managing multiple versions of Node.js.
 <br>
 <br>
 
 ### Why NVM?
+If you work on multiple projects at any point, simultaneously or sequentially, it would behoove you not to have more than one version of Node.js on your machine — especially if you maintain any number of legacy and modern applications at an enterprise.
+<br>
+<br>
+At the time of writing this sub-section of Angularization (February 15, 2021), Node.js was initially released 11+ years ago (May 27, 2009) [[1]](https://github.com/nodejs/node-v0.x-archive/tags?after=v0.0.4) — soon to be *12 years ago*. Since that time, there's been ***500+ versions released for Node.js*** [[2]](https://nodejs.org/dist/).
+<br>
+<br>
+Therefore, invest some time into researching and using a reliable type of NVM, since at some point — if not now or in the past — you'll need it future, progressive Node.js web-development projects. 
+<br>
+<br>
+**I'll be using NVM-Windows, but you can check the ["NVM Alternatives"](#nvm-alternatives) sub-section for other popular NVM project.** 
+<br>
+<br>
+
 ### How to Install NVM
 ### How to Use NVM
-
+### NVM Alternatives
 <br>
 <br>
 
