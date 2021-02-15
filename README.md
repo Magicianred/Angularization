@@ -23,7 +23,7 @@
 * [Delete Terminals](#delete-terminals)
 * [Edit Default Terminal](#edit-default-terminal)
 * [Bonus: Zen Mode](#bonus-zen-mode)
-### [**Angular 11 🔥**](#angular-11--1)
+### [**Angular 11+ 🔥**](#angular-11--1)
 * [How to install Angular CLI](#how-to-install-angular-cli)
 * [How to generate a new app](#how-to-generate-a-new-app)
 * [How to serve a new app](#how-to-serve-a-new-app)
@@ -75,7 +75,7 @@
 
 <hr>
 
-## **Angular 11 🔥** 
+## **Angular 11+ 🔥** 
 #### [Return to "Sections"](#sections)
 <hr>
 
