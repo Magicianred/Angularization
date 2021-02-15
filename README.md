@@ -7,7 +7,20 @@
 <br>
 <hr>
 <br>
+I decided to start Angularization in order to document the Angular 11+ web development experience of a fellow software engineer and I — after having a knowledge-transfer and mutual learning session for getting completely setup with a Node.js Version Manager (NVM), Visual Studio Code, and Angular 11. 
+<br>
+<br>
 
+The content in the sub-sections are my own personal insights, so **I highly recommend that anyone serious about Angular 2+ development always turn to [Angular.io](https://angular.io) for their primary source of guidance when setting up, getting started, and learning Angular**.
+
+However, I hope that you find this thoroughly documented, **project-in-progress** helpful as content is added to it.
+
+For now, **please give this repo a ⭐ if Angularization is something that could be useful based off of what you see thus far**. 
+
+Thanks.
+<p align="right">— @pjnalls</p>
+<br>
+<br>
 <h2 align="center"><b>Sections</b></h2>
 
 ### [**"*NVM* not NPM" ❓**](#nvm-not-npm--1)
