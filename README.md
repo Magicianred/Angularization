@@ -3,7 +3,10 @@
 <p align="center">
   <img src="triangular-ruler.png" width="120px" />
 </p>
-<h3 align="center">Thorough documentation for getting fully setup and started for successful <b>Angular 11+</b> development.</h3>
+<h3 align="center">
+(Work-in-Progress)
+<br>
+Thorough documentation for getting fully setup and started for successful <b>Angular 11+</b> development.</h3>
 <br>
 <hr>
 <br>
