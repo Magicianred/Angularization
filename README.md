@@ -1,15 +1,9 @@
 <h1 align="center"><b>Angularization</b></h1>
 <br>
-<h1 align="center" 
-  style="background-color: #ec1c24; 
-    width: 19%;
-    margin-left: 40.5%;
-    marign-right: 40.5%;">
+<p align="center"> 
+  <img width="120px" src="triangular-ruler.png" />
+</p>
 <br>
-<span style="font-size: 200%;">📐</span>
-<br>
-<br>
-</h1>
 <h3 align="center">Thorough documentation for getting fully setup and started for successful <b>Angular 11+</b> development.</h3>
 <br>
 <hr>
