@@ -127,7 +127,6 @@ Also be sure to read the second paragraph about global module conflicts and back
 Done? Okay... *now* — time to put `nvm` to use.
 
 <br>
-<br>
 
 ### How to Use NVM
 **NVM's commands vary** due to different implementations so check your preferred NVM's documentation for details. 
