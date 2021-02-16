@@ -1,7 +1,7 @@
 <h1 align="center"><b>Angularization</b></h1>
 <br>
-<p align="center">
-  <img src="triangular-ruler.png" width="120px" />
+<p align="center"> 
+  <img width="120px" src="triangular-ruler.png" />
 </p>
 <h3 align="center">
 (Work-in-Progress)
@@ -10,7 +10,22 @@ Thorough documentation for getting fully setup and started for successful <b>Ang
 <br>
 <hr>
 <br>
+I decided to start Angularization in order to document the Angular 11+ web-development experience of a fellow software engineer and I — after having a knowledge-transfer and mutual-learning session for getting completely setup with a Node.js version manager (NVM), Visual Studio Code, and Angular 11. 
+<br>
+<br>
 
+The content in the sub-sections are my own personal insights, so... 
+
+**I highly recommend that anyone serious about Angular 2+ development always turn to [Angular.io](https://angular.io) as their primary source of guidance when setting up, getting started, and learning Angular**.
+
+However, I hope that you find this thoroughly documented, **project-in-progress** helpful as content is added to it.
+
+For now, **please give this repo a ⭐ if you think Angularization can be useful for novice Angular developers — based off of what you see thus far**. 
+
+Thanks.
+<p align="right">— @pjnalls</p>
+<br>
+<br>
 <h2 align="center"><b>Sections</b></h2>
 
 ### [**"*NVM* not NPM" ❓**](#nvm-not-npm--1)
@@ -92,7 +107,7 @@ Let's put this in perspective: at the time of writing this sub-section of Angula
 Therefore, invest some time into researching and using a reliable type of NVM, since at some point — if not now or in the past — you'll most likely need it as Node.js development progresses. 
 <br>
 <br>
-**I'll be using NVM-Windows, but you can check the ["NVM Alternatives"](#nvm-alternatives) sub-section for other popular NVM project.** 
+**I'll be using NVM-Windows, but you can check the ["NVM Alternatives"](#nvm-alternatives) sub-section for other popular NVM projects.** 
 <br>
 <br>
 
@@ -115,7 +130,16 @@ Done? Okay... *now* — time to put `nvm` to use.
 <br>
 
 ### How to Use NVM
+**NVM's commands vary** due to different implementations so check your preferred NVM's documentation for details. 
+
+For ***NVM-Windows***, refer to the https://github.com/coreybutler/nvm-windows#usage page and section full description of all the commands.
+
 ### NVM Alternatives
+* `nvm`: https://github.com/nvm-sh/nvm (**45,000+ ⭐!**)
+* `n`: https://github.com/tj/n (14,000+ ⭐)
+* `choco` https://github.com/chocolatey/choco (7,000+ ⭐)
+
+**Disclaimer**: I've only personally and *professionally* used NVM-Windows, so please research these alternatives if you've never used an any NVM I've mentioned thus far. 
 <br>
 <br>
 
