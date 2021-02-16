@@ -10,11 +10,13 @@ Thorough documentation for getting fully setup and started for successful <b>Ang
 <br>
 <hr>
 <br>
-I decided to start Angularization in order to document the Angular 11+ web-development experience of a fellow software engineer and I — after having a knowledge-transfer and mutual-learning session for getting completely setup with a Node.js Version Manager (NVM), Visual Studio Code, and Angular 11. 
+I decided to start Angularization in order to document the Angular 11+ web-development experience of a fellow software engineer and I — after having a knowledge-transfer and mutual-learning session for getting completely setup with a Node.js version manager (NVM), Visual Studio Code, and Angular 11. 
 <br>
 <br>
 
-The content in the sub-sections are my own personal insights, so **I highly recommend that anyone serious about Angular 2+ development always turn to [Angular.io](https://angular.io) as their primary source of guidance when setting up, getting started, and learning Angular**.
+The content in the sub-sections are my own personal insights, so... 
+
+**I highly recommend that anyone serious about Angular 2+ development always turn to [Angular.io](https://angular.io) as their primary source of guidance when setting up, getting started, and learning Angular**.
 
 However, I hope that you find this thoroughly documented, **project-in-progress** helpful as content is added to it.
 
@@ -68,6 +70,30 @@ Thanks.
 
 ### What is "NVM"?
 NVM stands for ***N*ode *V*ersion *M*anager**. Essentially, it is a system utility for installing, using, and managing multiple versions of Node.js.
+
+Below is a [NVM-Windows](https://github.com/coreybutler/nvm-windows) example when using a Windows Command Prompt (cmd):
+
+```cmd
+
+C:\> nvm list
+  
+    15.8.0
+  * 14.15.5 (Currently using 64-bit executable)
+
+C:\> node -v
+v14.15.5
+
+C:\> nvm use 15.8.0
+Now using node v15.8.0 (64-bit)
+
+C:\> node -v
+v15.8.0
+
+C:\>
+
+```
+
+As you can see above, We're able to switch versions of `node` with a simple `use` command.
 <br>
 <br>
 
@@ -86,8 +112,31 @@ Therefore, invest some time into researching and using a reliable type of NVM, s
 <br>
 
 ### How to Install NVM
+As mentioned in the previous sub-section, I and another developer used NVM-Windows for our Node version manager during our initial Angular 11+ session, and I have been using it since Summer 2016 (if I remember correctly).
+
+Needless to say, I haven't had any trouble's with it on a Windows machine. 
+
+Follow the set of instructions in the "**Installation & Upgrades**" sections in the `README`found [here on GitHub](https://github.com/coreybutler/nvm-windows/releases).
+
+**WARNING:** Make sure you read the ***PREREQUISITE*** part for uninstalling existing Node.js & NPM installations. 
+
+Also be sure to read the second paragraph about global module conflicts and backing up any global `npmrc` configurations.
+
+...
+
+Done? Okay... *now* — time to put `nvm` to use.
+
 ### How to Use NVM
+**NVM's commands vary** due to different implementations so check your preferred NVM's documentation for details. 
+
+For ***NVM-Windows***, refer to the https://github.com/coreybutler/nvm-windows#usage page and section full description of all the commands.
+
 ### NVM Alternatives
+* `nvm`: https://github.com/nvm-sh/nvm (**45,000+ ⭐!**)
+* `n`: https://github.com/tj/n (14,000+ ⭐)
+* `choco` https://github.com/chocolatey/choco (7,000+ ⭐)
+
+**Disclaimer**: I've only personally and *professionally* used NVM-Windows, so please research these alternatives if you've never used an any NVM I've mentioned thus far. 
 <br>
 <br>
 
