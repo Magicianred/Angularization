@@ -1,7 +1,7 @@
 <h1 align="center"><b>Angularization</b></h1>
 <br>
-<p align="center">
-  <img src="triangular-ruler.png" width="120px" />
+<p align="center"> 
+  <img width="120px" src="triangular-ruler.png" />
 </p>
 <h3 align="center">
 (Work-in-Progress)
