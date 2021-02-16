@@ -132,6 +132,8 @@ Done? Okay... *now* — time to put `nvm` to use.
 **NVM's commands vary** due to different implementations so check your preferred NVM's documentation for details. 
 
 For ***NVM-Windows***, refer to the https://github.com/coreybutler/nvm-windows#usage page and section full description of all the commands.
+<br>
+<br>
 
 ### NVM Alternatives
 * `nvm`: https://github.com/nvm-sh/nvm (**45,000+ ⭐!**)
