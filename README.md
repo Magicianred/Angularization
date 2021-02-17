@@ -114,9 +114,9 @@ Therefore, invest some time into researching and using a reliable type of NVM, s
 ### How to Install NVM
 As mentioned in the previous sub-section, I and another developer used NVM-Windows for our Node version manager during our initial Angular 11+ session, and I have been using it since Summer 2016 (if I remember correctly).
 
-Needless to say, I haven't had any trouble's with it on a Windows machine. 
+Needless to say, I haven't had any troubles with it on a Windows machine. 
 
-Follow the set of instructions in the "**Installation & Upgrades**" sections in the `README`found [here on GitHub](https://github.com/coreybutler/nvm-windows/releases).
+Follow the set of instructions in the "**Installation & Upgrades**" sections in the `README` found [here on GitHub](https://github.com/coreybutler/nvm-windows/releases).
 
 **WARNING:** Make sure you read the ***PREREQUISITE*** part for uninstalling existing Node.js & NPM installations. 
 
