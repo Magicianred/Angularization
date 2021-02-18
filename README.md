@@ -6,7 +6,8 @@
 <h3 align="center">
 (Work-in-Progress)
 <br>
-Thorough documentation for getting fully setup and started for successful <b>Angular 11+</b> development.</h3>
+<br>
+<b>Angular 11+</b> development for intermediate developers who need to start Angular development from 0.</h3>
 <br>
 <hr>
 <br>
