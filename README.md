@@ -165,8 +165,10 @@ For those new to VS Code, it looks like this:
 PROBLEMS   OUTPUT   DEBUG CONSOLE   TERMINAL
                                    ¯¯¯¯¯¯¯¯¯¯
 
-C:\>
+$ echo hello world
+hello world
 
+$
 
 
 
@@ -174,32 +176,38 @@ C:\>
 ```
 <br>
 
-But if you don't see that, then simply go to `Terminal` and select `New Terminal` from the top menu:
+Ignore the "`$ echo hello world`", etc. if your not using Git Bash (bash) for your terminal shell.
+
+If you don't see any of that in your workspace, then simply go to `Terminal` and select `New Terminal` from the top menu:
 
 ```
 🟦  File   Edit   Selection   View   Go   Run   Terminal   Help
                                                 ¯¯¯¯¯¯¯¯¯
 ```
+<br>
+
 ### Add Terminals
 We will be working with multiple terminals at some point during Angular development so search for the large `+` button in the most-right location of your integrated terminal in order to add another of the same kind.
 
 From here, you can use the dropdown next to `+` to switch between terminals.
 ```
  ____________________
-| 2: cmd           v |   +   [|]   <waste-basket-icon>  ^   ×
+| 2: bash          v |   +   [|]   <waste-basket-icon>  ^   ×
  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
          ^
         / \
          |
          |
 ```
+<br>
+
 ### End Terminal Sessions
 You can end a terminal session by clicking the 🗑 (waste-basket-looking) icon.
 
 Click the 🗑 icon.
 ```
  ____________________
-| 2: cmd           v |   +   [|]  <waste-basket-icon>   ^   ×
+| 2: bash          v |   +   [|]  <waste-basket-icon>   ^   ×
  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
                                           ^
                                          / \
@@ -211,7 +219,7 @@ Click the 🗑 icon.
 And the list of terminals will select the terminal before the removed one.
 ```
  ____________________
-| 1: cmd           v |   +   [|]  <waste-basket-icon>   ^   ×
+| 1: bash          v |   +   [|]  <waste-basket-icon>   ^   ×
  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
   ^
  / \
@@ -219,11 +227,44 @@ And the list of terminals will select the terminal before the removed one.
   |
 ```
 
-### Edit Default Terminal
-### Caveat: System Administrator Permissions
-### Extensions
-### Bonus: Zen Mode
+<br>
 
+### Select Default Shell
+
+Select a default shell terminal in the terminal dropdown menu:
+```
+ ____________________
+| 1: bash          v |
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+                   ^
+                  / \
+                   |
+                   |
+```
+
+Select `Select Default Shell` from the dropdown options and choose your preferred shell. Again, I'm using Git Bash for my shell but you can you others. 
+
+However, I recommend you stick to some form of Bash shell for solely to make it easier to follow along.
+
+<br>
+
+### Caveats: IDE-Restart & Permissions
+1. You may need to close and reopen VS Code to get any system changes to show in VS code. We had some issues with the integrated terminal not recognizing global system commands (`node`, `npm`, etc.), so try to restart VS Code first if you don't see any immediate changes throughout this documentation.
+1. You may run into administrative issues where you may not be permitted to run a certain command in your particular terminal session as we did during our setup session. It may be that, but if worst comes to worst, you can just use a different shell (`poweshell` → `cmd`) like we did.
+
+<br>
+
+### Extensions (Optional)
+Installing extensions or not is entirely up to you. I'm of the "sugarless" (read my [Unsweet.js README](https://github.com/pjnalls/unsweet.js)), minimalist mindset (mostly) when it comes multiple, third-party plugins, dependencies, etc. and I recommend you do the same, but this is completely optional.
+
+<br>
+
+### Bonus: **Zen Mode**
+Press `Ctrl` + `K` keys simultaneously, and then immediately tap `Z` to enter... **Zen Mode**.
+
+Double tap `Escape` to exit.
+
+You're welcome.
 <br>
 <br>
 
