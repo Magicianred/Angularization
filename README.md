@@ -7,7 +7,7 @@
 (Work-in-Progress)
 <br>
 <br>
-<b>Angular 11+</b> development for intermediate developers who need to start Angular development from 0.</h3>
+<b>Angular 11+</b> development for intermediate developers who need to start from 0.</h3>
 <br>
 <hr>
 <br>
