@@ -129,7 +129,7 @@ Done? Okay... *now* — time to put `nvm` to use.
 <br>
 
 ### **How to Use NVM**
-**NVM's commands vary** due to different implementations so check your preferred NVM's documentation for details. 
+**NVMs' commands vary** due to different implementations so check your preferred NVM's documentation for details. 
 
 For ***NVM-Windows***, refer to the https://github.com/coreybutler/nvm-windows#usage page and section full description of all the commands.
 <br>
@@ -153,7 +153,7 @@ For ***NVM-Windows***, refer to the https://github.com/coreybutler/nvm-windows#u
 
 <br>
 
-[Visual Studio (VS) Code](https://code.visualstudio.com/) is already widely used by many, but I just want to touch briefly on a few of many features the [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment) has that help us while we went through setting up for the Angular 11+ session.
+[Visual Studio (VS) Code](https://code.visualstudio.com/) is already widely used by many, but I just want to touch briefly on a few of many features that helped us while we went through setting up for the Angular 11+ session.
 
 <br>
 
@@ -183,7 +183,7 @@ $
 ```
 <br>
 
-Ignore the "`$ echo hello world`", etc. if your not using Git Bash (bash) as I'm using for your terminal shell.
+Ignore the "`$ echo hello world`", etc. if your not using Bash as I'm using for your terminal shell.
 
 If you don't see any of that in your workspace, then simply go to `Terminal` and select `New Terminal` from the top menu:
 
@@ -233,7 +233,7 @@ Click the 🗑 icon.
 ```
 <br>
 
-And the list of terminals will select the terminal before the removed one.
+And the list of terminals will select the terminal before the one that just ended.
 ```
  ____________________
 | 1: bash          v |   +   [|]   🗑   ^   ×
@@ -248,7 +248,7 @@ And the list of terminals will select the terminal before the removed one.
 
 ### **Select Default Shell**
 
-Select a default shell terminal in the terminal dropdown menu:
+Select a default shell terminal by clicking the terminal dropdown menu.
 ```
  ____________________
 | 1: bash          v |
@@ -260,7 +260,7 @@ Select a default shell terminal in the terminal dropdown menu:
 ```
 <br>
 
-Select `Select Default Shell` from the dropdown options and choose your preferred shell. Again, I'm using Bash (Git Bash, more specifically) for my shell, which I recommend to have an easier time following this documentation, but you are free to use others if you must. 
+Once the menu opens, choose the `Select Default Shell` from the dropdown options and choose your preferred shell. Again, I'm using Bash for my shell, which I recommend in order for you to have an easier time following this documentation, but you are free to use others if you must. 
 
 
 <br>
@@ -272,7 +272,7 @@ Select `Select Default Shell` from the dropdown options and choose your preferre
 <br>
 
 ### **Extensions (Optional)**
-Installing extensions or not is entirely up to you. I'm of the "sugarless" (read my [Unsweet.js README](https://github.com/pjnalls/unsweet.js)), minimalist mindset (mostly) when it comes multiple, third-party plugins, dependencies, etc. and I recommend you do the same, but this is completely optional.
+Installing extensions or not is entirely up to you. I'm of the "sugarless" (read my [Unsweet.js README](https://github.com/pjnalls/unsweet.js)), minimalist mindset (mostly) when it comes to relying on multiple, third-party plugins, dependencies, etc. and I recommend you add as little to your development environment early on since you can always add later — but this is completely optional.
 
 <br>
 
@@ -281,7 +281,7 @@ Press `Ctrl` and `K` keys simultaneously, and then immediately tap `Z` to enter.
 
 Double tap `Escape` to exit.
 
-You're welcome.
+You're welcome 😉.
 <br>
 <br>
 <br>
