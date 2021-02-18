@@ -10,7 +10,7 @@ Thorough documentation for getting fully setup and started for successful <b>Ang
 <br>
 <hr>
 <br>
-I decided to start Angularization in order to document the Angular 11+ web-development experience of a fellow software engineer and I — after having a knowledge-transfer and mutual-learning session for getting completely setup with a Node.js version manager (NVM), Visual Studio Code, and Angular 11. 
+I decided to start Angularization in order to document the Angular 11+ web-development experience of a fellow developer and I — after having a knowledge-transferring yet mutual-learning session for getting completely setup with a Node.js version manager (NVM), Visual Studio Code, and Angular 11. 
 <br>
 <br>
 
@@ -18,9 +18,9 @@ The content in the sub-sections are my own personal insights, so...
 
 **I highly recommend that anyone serious about Angular 2+ development always turn to [angular.io](https://angular.io) as their primary source of guidance when setting up, getting started, and learning Angular**.
 
-However, I hope that you find this thoroughly documented, **project-in-progress** helpful as content is added to it.
+However, I hope that you find this thoroughly documented, living README helpful as content is continually added.
 
-For now, **please give this repo a ⭐ if you think Angularization can be useful for novice Angular developers — based off of what you see thus far**. 
+For now, **please give this repo a ⭐ if you think Angularization can be useful for novice Angular developers — based off of what is available below thus far**. 
 
 Thanks.
 <p align="right">— @pjnalls</p>
@@ -29,19 +29,18 @@ Thanks.
 <h2 align="center"><b>Sections</b></h2>
 
 ### [**"*NVM* not NPM" ❓**](#nvm-not-npm--1)
-* [What is "NVM"?](#what-is-nvm)
-* [Why NVM?](#why-nvm)
-* [Disclaimer: Uninstalling Node.js](#disclaimer-uninstalling-nodejs)
+* [What is an "NVM"?](#what-is-an-nvm)
+* [Why an NVM?](#why-an-nvm)
 * [How to Install NVM](#how-to-install-nvm)
 * [How to Use NVM](#how-to-use-nvm)
 * [NVM Alternatives](#nvm-alternatives)
 ### [**Visual Studio Code 🟦**](#visual-studio-code--1)
 * [Integrated Terminal](#integrated-terminal)
-* [System Administrator Permissions](#system-administrator-permissions)
-* [Extensions](#extensions)
 * [Add Terminals](#add-terminals)
-* [Delete Terminals](#delete-terminals)
-* [Edit Default Terminal](#edit-default-terminal)
+* [End a Terminal Session](#end-a-terminal-session)
+* [Select Default Shell](#select-default-shell)
+* [Caveats: IDE-Restarts & Permissions](#caveats-ide-restarts--permissions)
+* [Extensions (Optional)](#extensions-optional)
 * [Bonus: Zen Mode](#bonus-zen-mode)
 ### [**Angular 11+ 🔥**](#angular-11--1)
 * [How to install Angular CLI](#how-to-install-angular-cli)
@@ -67,37 +66,38 @@ Thanks.
 ## **"*NVM* not NPM" ❓** 
 #### [Return to "Sections"](#sections)
 <hr>
+<br>
 
-### What is "NVM"?
+### **What is an "NVM"?**
 NVM stands for ***N*ode *V*ersion *M*anager**. Essentially, it is a system utility for installing, using, and managing multiple versions of Node.js.
 
-Below is a [NVM-Windows](https://github.com/coreybutler/nvm-windows) example when using a Windows Command Prompt (cmd):
+Below is a [NVM-Windows](https://github.com/coreybutler/nvm-windows) example when using a Bash (Git Bash, more specifically) shell:
 
 ```
 
-C:\> nvm list
+$ nvm list
   
     15.8.0
   * 14.15.5 (Currently using 64-bit executable)
 
-C:\> node -v
+$ node -v
 v14.15.5
 
-C:\> nvm use 15.8.0
+$ nvm use 15.8.0
 Now using node v15.8.0 (64-bit)
 
-C:\> node -v
+$ node -v
 v15.8.0
 
-C:\>
+$
 
 ```
 
-As you can see above, We're able to switch versions of `node` with a simple `use` command.
+As you can see above, we're able to switch versions of `node` with a simple `nvm use` command.
 <br>
 <br>
 
-### Why NVM?
+### **Why an NVM?**
 If you work on multiple Node.js projects at any point, simultaneously or sequentially, it would behoove you not to have more than one version of Node.js on your machine — especially if you maintain any number of legacy and modern applications at an enterprise.
 <br>
 <br>
@@ -111,7 +111,7 @@ Therefore, invest some time into researching and using a reliable type of NVM, s
 <br>
 <br>
 
-### How to Install NVM
+### **How to Install NVM**
 As mentioned in the previous sub-section, I and another developer used NVM-Windows for our Node version manager during our initial Angular 11+ session, and I have been using it since Summer 2016 (if I remember correctly).
 
 Needless to say, I haven't had any troubles with it on a Windows machine. 
@@ -128,36 +128,43 @@ Done? Okay... *now* — time to put `nvm` to use.
 
 <br>
 
-### How to Use NVM
+### **How to Use NVM**
 **NVM's commands vary** due to different implementations so check your preferred NVM's documentation for details. 
 
 For ***NVM-Windows***, refer to the https://github.com/coreybutler/nvm-windows#usage page and section full description of all the commands.
 <br>
 <br>
 
-### NVM Alternatives
-* `nvm`: https://github.com/nvm-sh/nvm (**45,000+ ⭐!**)
+### **NVM Alternatives**
+**Disclaimer**: I've only personally and *professionally* used NVM-Windows, so please research these alternatives if you've never used any of the NVMs I mentioned in this documentation. 
+* `nvm`: https://github.com/nvm-sh/nvm (**45,000+ ⭐**)
 * `n`: https://github.com/tj/n (14,000+ ⭐)
 * `choco` https://github.com/chocolatey/choco (7,000+ ⭐)
 
-**Disclaimer**: I've only personally and *professionally* used NVM-Windows, so please research these alternatives if you've never used an any NVM I've mentioned thus far. 
 <br>
 <br>
-
+<br>
+<br>
 <hr>
 
 ## **Visual Studio Code 🟦** 
 #### [Return to "Sections"](#sections)
 <hr>
 
-[Visual Studio (VS) Code](https://code.visualstudio.com/) is already widely used by many, but I just want to briefly touch on a few of many features the [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment) has that help us while we went through setting up for the Angular 11+ session.
+<br>
 
-### Integrated Terminal
-During two Angular dev. sessions, we relied heavily on VS Code's integrated terminal as using the [Angular CLI](https://cli.angular.io/) was crucial for our efficiency. 
+[Visual Studio (VS) Code](https://code.visualstudio.com/) is already widely used by many, but I just want to touch briefly on a few of many features the [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment) has that help us while we went through setting up for the Angular 11+ session.
 
-*Really*. We were able to use the integrated terminal and Angular CLI to get a broken Angular 8 app migrated to version 11 and fully functional **in less than 2 hours**! (Other than some minor caveats, [update.angular.io](https://update.angular.io/) stepped us through the whole process.)
+<br>
+
+### **Integrated Terminal**
+During two Angular dev. sessions, we relied heavily on VS Code's integrated terminal — as using the [Angular CLI](https://cli.angular.io/) was crucial for our efficiency. 
+
+*Really*. We were able to use the integrated terminal and Angular CLI to get a broken Angular 8 app migrated to version 11 and fully functional **in less than 2 hours**! (Other than some minor caveats, [update.angular.io](https://update.angular.io/) walked us through the whole migration process.)
 
 So please ensure that you have it in the bottom of your workspace.
+
+<br>
 
 For those new to VS Code, it looks like this:
 
@@ -176,7 +183,7 @@ $
 ```
 <br>
 
-Ignore the "`$ echo hello world`", etc. if your not using Git Bash (bash) for your terminal shell.
+Ignore the "`$ echo hello world`", etc. if your not using Git Bash (bash) as I'm using for your terminal shell.
 
 If you don't see any of that in your workspace, then simply go to `Terminal` and select `New Terminal` from the top menu:
 
@@ -186,40 +193,50 @@ If you don't see any of that in your workspace, then simply go to `Terminal` and
 ```
 <br>
 
-### Add Terminals
-We will be working with multiple terminals at some point during Angular development so search for the large `+` button in the most-right location of your integrated terminal in order to add another of the same kind.
-
-From here, you can use the dropdown next to `+` to switch between terminals.
+### **Add Terminals**
+We will be working with multiple terminal sessions at some point during Angular development so search for the large `+` button if you need to add another terminal session.
 ```
  ____________________
-| 2: bash          v |   +   [|]   <waste-basket-icon>  ^   ×
+| 1: bash          v |   +   [|]   🗑   ^   ×
  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
-         ^
-        / \
-         |
-         |
+                         ^
+                        / \
+                         |
+                         |
 ```
 <br>
 
-### End Terminal Sessions
+From here, you can use the terminal dropdown switch between terminals.
+```
+ ____________________
+| 2: bash          v |   +   [|]   🗑   ^   ×
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+                   ^
+                  / \
+                   |
+                   |
+```
+<br>
+
+### **End a Terminal Session**
 You can end a terminal session by clicking the 🗑 (waste-basket-looking) icon.
 
 Click the 🗑 icon.
 ```
  ____________________
-| 2: bash          v |   +   [|]  <waste-basket-icon>   ^   ×
+| 2: bash          v |   +   [|]   🗑   ^   ×
  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
-                                          ^
-                                         / \
-                                          |
-                                          |
+                                   ^
+                                  / \
+                                   |
+                                   |
 ```
 <br>
 
 And the list of terminals will select the terminal before the removed one.
 ```
  ____________________
-| 1: bash          v |   +   [|]  <waste-basket-icon>   ^   ×
+| 1: bash          v |   +   [|]   🗑   ^   ×
  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
   ^
  / \
@@ -229,7 +246,7 @@ And the list of terminals will select the terminal before the removed one.
 
 <br>
 
-### Select Default Shell
+### **Select Default Shell**
 
 Select a default shell terminal in the terminal dropdown menu:
 ```
@@ -241,30 +258,31 @@ Select a default shell terminal in the terminal dropdown menu:
                    |
                    |
 ```
+<br>
 
-Select `Select Default Shell` from the dropdown options and choose your preferred shell. Again, I'm using Git Bash for my shell but you can you others. 
+Select `Select Default Shell` from the dropdown options and choose your preferred shell. Again, I'm using Bash (Git Bash, more specifically) for my shell, which I recommend to have an easier time following this documentation, but you are free to use others if you must. 
 
-However, I recommend you stick to some form of Bash shell for solely to make it easier to follow along.
 
 <br>
 
-### Caveats: IDE-Restart & Permissions
-1. You may need to close and reopen VS Code to get any system changes to show in VS code. We had some issues with the integrated terminal not recognizing global system commands (`node`, `npm`, etc.), so try to restart VS Code first if you don't see any immediate changes throughout this documentation.
-1. You may run into administrative issues where you may not be permitted to run a certain command in your particular terminal session as we did during our setup session. It may be that, but if worst comes to worst, you can just use a different shell (`poweshell` → `cmd`) like we did.
+### **Caveats: IDE-Restarts & Permissions**
+1. You may need to close and reopen VS Code to get any system changes to show in VS code. We had some issues with the integrated terminal not recognizing global system commands (`node`, `npm`, etc.), so try to restart VS Code first if you don't see any immediate changes when making any system changes throughout this documentation.
+1. You may run into administrative issues where you may not be permitted to run a certain command in your particular terminal session as we did during our setup session. It may be that, but if worst comes to worst, you can just use a different shell (e.g., `poweshell` → `cmd`) like we did.
 
 <br>
 
-### Extensions (Optional)
+### **Extensions (Optional)**
 Installing extensions or not is entirely up to you. I'm of the "sugarless" (read my [Unsweet.js README](https://github.com/pjnalls/unsweet.js)), minimalist mindset (mostly) when it comes multiple, third-party plugins, dependencies, etc. and I recommend you do the same, but this is completely optional.
 
 <br>
 
-### Bonus: **Zen Mode**
-Press `Ctrl` + `K` keys simultaneously, and then immediately tap `Z` to enter... **Zen Mode**.
+### **Bonus: Zen Mode**
+Press `Ctrl` and `K` keys simultaneously, and then immediately tap `Z` to enter... **Zen Mode**.
 
 Double tap `Escape` to exit.
 
 You're welcome.
+<br>
 <br>
 <br>
 
@@ -274,19 +292,19 @@ You're welcome.
 #### [Return to "Sections"](#sections)
 <hr>
 
-### How to install Angular CLI
-### How to generate a new app
-### How to serve a new app
-### `app.component`: HTML, SCSS, & TypeScript
-### `app.module`
-### `package.json`
-### NPM Scripting: Create New Script
-### NPM Scripting: Update `start`
-### NPM Scripting: CI/CD Power 💪
-### `npm generate component <component-name>`
-### Angular**DRY**: Don't. Repeat. Yourself.
-### `*ng`X: Structural Directives
-### Unidirectional Data Flow: `ParentComponent` <b>→</b> `ChildComponent`
+### **How to install Angular CLI**
+### **How to generate a new app**
+### **How to serve a new app**
+### **`app.component`: HTML, SCSS, & TypeScript**
+### **`app.module`**
+### **`package.json`**
+### **NPM Scripting: Create New Script**
+### **NPM Scripting: Update `start`**
+### **NPM Scripting: CI/CD Power 💪**
+### **`npm generate component <component-name>`**
+### **Angular**DRY**: Don't. Repeat. Yourself.**
+### **`*ng`X: Structural Directives**
+### **Unidirectional Data Flow: `ParentComponent` <b>→</b> `ChildComponent`**
 <br>
 <hr>
 <br>
