@@ -11,7 +11,7 @@
 <br>
 <hr>
 <br>
-I decided to start Angularization in order to document the Angular 11+ web-development experience of a fellow developer and I — after having a knowledge-transferring yet mutual-learning session for getting completely setup with a Node.js version manager (NVM), Visual Studio Code, and Angular 11. 
+I decided to start Angularization in order to document the Angular 11+ web-development experience of a fellow developer and I — after having a quasi-knowledge-transferring, quasi-mutual-learning session for getting completely setup with a Node.js version manager (NVM), Visual Studio Code, and Angular 11. 
 <br>
 <br>
 
