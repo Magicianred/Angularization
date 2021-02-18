@@ -16,7 +16,7 @@ I decided to start Angularization in order to document the Angular 11+ web-devel
 
 The content in the sub-sections are my own personal insights, so... 
 
-**I highly recommend that anyone serious about Angular 2+ development always turn to [Angular.io](https://angular.io) as their primary source of guidance when setting up, getting started, and learning Angular**.
+**I highly recommend that anyone serious about Angular 2+ development always turn to [angular.io](https://angular.io) as their primary source of guidance when setting up, getting started, and learning Angular**.
 
 However, I hope that you find this thoroughly documented, **project-in-progress** helpful as content is added to it.
 
@@ -150,12 +150,78 @@ For ***NVM-Windows***, refer to the https://github.com/coreybutler/nvm-windows#u
 #### [Return to "Sections"](#sections)
 <hr>
 
+[Visual Studio (VS) Code](https://code.visualstudio.com/) is already widely used by many, but I just want to briefly touch on a few of many features the [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment) has that help us while we went through setting up for the Angular 11+ session.
+
 ### Integrated Terminal
-### System Administrator Permissions
-### Extensions
+During two Angular dev. sessions, we relied heavily on VS Code's integrated terminal as using the [Angular CLI](https://cli.angular.io/) was crucial for our efficiency. 
+
+*Really*. We were able to use the integrated terminal and Angular CLI to get a broken Angular 8 app migrated to version 11 and fully functional **in less than 2 hours**! (Other than some minor caveats, [update.angular.io](https://update.angular.io/) stepped us through the whole process.)
+
+So please ensure that you have it in the bottom of your workspace.
+
+For those new to VS Code, it looks like this:
+
+```
+PROBLEMS   OUTPUT   DEBUG CONSOLE   TERMINAL
+                                   ¯¯¯¯¯¯¯¯¯¯
+
+C:\>
+
+
+
+
+
+```
+<br>
+
+But if you don't see that, then simply go to `Terminal` and select `New Terminal` from the top menu:
+
+```
+🟦  File   Edit   Selection   View   Go   Run   Terminal   Help
+                                                ¯¯¯¯¯¯¯¯¯
+```
 ### Add Terminals
-### Delete Terminals
+We will be working with multiple terminals at some point during Angular development so search for the large `+` button in the most-right location of your integrated terminal in order to add another of the same kind.
+
+From here, you can use the dropdown next to `+` to switch between terminals.
+```
+ ____________________
+| 2: cmd           v |   +   [|]   <waste-basket-icon>  ^   ×
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+         ^
+        / \
+         |
+         |
+```
+### End Terminal Sessions
+You can end a terminal session by clicking the 🗑 (waste-basket-looking) icon.
+
+Click the 🗑 icon.
+```
+ ____________________
+| 2: cmd           v |   +   [|]  <waste-basket-icon>   ^   ×
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+                                          ^
+                                         / \
+                                          |
+                                          |
+```
+<br>
+
+And the list of terminals will select the terminal before the removed one.
+```
+ ____________________
+| 1: cmd           v |   +   [|]  <waste-basket-icon>   ^   ×
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  ^
+ / \
+  |
+  |
+```
+
 ### Edit Default Terminal
+### Caveat: System Administrator Permissions
+### Extensions
 ### Bonus: Zen Mode
 
 <br>
