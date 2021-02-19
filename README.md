@@ -310,13 +310,36 @@ $ npm install -g @angular/cli
 ...
 
 + @angular/cli@11.2.1
-added 238 packages from 182 contributors in 80.397s
+added 238 packages from 182 contributors in 19.985s
 
 $
 
 ```
 
 ### **How to generate a new app**
+
+```
+
+$ ng new ng-create-blog
+? Do you want to enforce stricter type checking and stricter bundle budgets in the workspace?
+  This setting helps improve maintainability and catch bugs ahead of time.
+  For more information, see https://angular.io/strict Yes
+? Would you like to add Angular routing? Yes
+? Which stylesheet format would you like to use? SCSS   [ https://sass-lang.com/documentation/syntax#scss                ]
+
+CREATE ng-create-blog/angular.json (3769 bytes)
+CREATE ng-create-blog/...
+...
+Installing packages (npm)...
+
+...
+                                      ] 
+✓ Packages installed successfully.
+  ...
+
+$
+```
+
 ### **How to serve a new app**
 ### **`app.component`: HTML, SCSS, & TypeScript**
 ### **`app.module`**
