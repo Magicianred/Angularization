@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/ng-create-blog'),
+      dir: require('path').join(__dirname, './coverage/get-great-at-js-blog'),
       subdir: '.',
       reporters: [
         { type: 'html' },

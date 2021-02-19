@@ -1,13 +1,13 @@
 <h1 align="center"><b>Angularization</b></h1>
 <br>
 <p align="center"> 
-  <img width="120px" src="triangular-ruler.png" />
+  <img width="120px" src="a-degrees.png" />
 </p>
 <h3 align="center">
 (Work-in-Progress)
 <br>
 <br>
-<b>Angular 11+</b> development for intermediate developers who need to start from 0.</h3>
+<b>Angular 11+</b> development tutorials for intermediate developers who need to start from 0.</h3>
 <br>
 <hr>
 <br>
@@ -201,7 +201,7 @@ We will be working with multiple terminal sessions at some point during Angular 
 | 1: bash          v |   +   [|]   🗑   ^   ×
  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
                          ^
-                        / \
+                        /_\
                          |
                          |
 ```
@@ -213,7 +213,7 @@ From here, you can use the terminal dropdown switch between terminals.
 | 2: bash          v |   +   [|]   🗑   ^   ×
  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
                    ^
-                  / \
+                  /_\
                    |
                    |
 ```
@@ -228,7 +228,7 @@ Click the 🗑 icon.
 | 2: bash          v |   +   [|]   🗑   ^   ×
  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
                                    ^
-                                  / \
+                                  /_\
                                    |
                                    |
 ```
@@ -240,7 +240,7 @@ And the list of terminals will select the terminal before the one that just ende
 | 1: bash          v |   +   [|]   🗑   ^   ×
  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
   ^
- / \
+ /_\
   |
   |
 ```
@@ -255,7 +255,7 @@ Select a default shell terminal by clicking the terminal dropdown menu.
 | 1: bash          v |
  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
                    ^
-                  / \
+                  /_\
                    |
                    |
 ```
@@ -320,22 +320,22 @@ $
 
 ```
 
-$ ng new ng-create-blog
+$ ng new get-great-at-js-blog
 ? Do you want to enforce stricter type checking and stricter bundle budgets in the workspace?
   This setting helps improve maintainability and catch bugs ahead of time.
   For more information, see https://angular.io/strict Yes
 ? Would you like to add Angular routing? Yes
 ? Which stylesheet format would you like to use? SCSS   [ https://sass-lang.com/documentation/syntax#scss                ]
 
-CREATE ng-create-blog/angular.json (3769 bytes)
-CREATE ng-create-blog/...
+CREATE get-great-at-js-blog/angular.json (3817 bytes)
+CREATE get-great-at-js-blog/...
 ...
 Installing packages (npm)...
 
 ...
                                       ] 
 ✓ Packages installed successfully.
-  ...
+...
 
 $
 ```
