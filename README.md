@@ -293,7 +293,29 @@ You're welcome 😉.
 #### [Return to "Sections"](#sections)
 <hr>
 
+<br>
+
 ### **How to install Angular CLI**
+You can use [cli.angular.io](https://cli.angular.io/) or follow along below.
+
+...
+
+First, globally install Angular CLI with the `npm` command.
+```
+PROBLEMS   OUTPUT   DEBUG CONSOLE   TERMINAL
+                                   ¯¯¯¯¯¯¯¯¯¯
+
+$ npm install -g @angular/cli
+
+...
+
++ @angular/cli@11.2.1
+added 238 packages from 182 contributors in 80.397s
+
+$
+
+```
+
 ### **How to generate a new app**
 ### **How to serve a new app**
 ### **`app.component`: HTML, SCSS, & TypeScript**
