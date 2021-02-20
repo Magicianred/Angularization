@@ -43,10 +43,8 @@ Thanks.
 * [Caveats: IDE-Restarts & Permissions](#caveats-ide-restarts--permissions)
 * [Extensions (Optional)](#extensions-optional)
 * [Bonus: Zen Mode](#bonus-zen-mode)
-### [**Angular 11+ 🔥**](#angular-11--1)
-* [How to install Angular CLI](#how-to-install-angular-cli)
-* [How to generate a new app](#how-to-generate-a-new-app)
-* [How to serve a new app](#how-to-serve-a-new-app)
+### [**Angular 11+ 🔥, Component-Driven Development: Markdown Blog Tutorial**](#angular-11--1-component-driven-development-markdown-blog-tutorial)
+* [Getting Started: Angular CLI](#getting-started-angular-cli)
 * [`app.component`: HTML, SCSS, & TypeScript](#appcomponent-html-scss--typescript)
 * [`app.module`](#appmodule)
 * [`package.json`](#packagejson)
@@ -289,13 +287,13 @@ You're welcome 😉.
 
 <hr>
 
-## **Angular 11+ 🔥** 
+## **Angular 11+ 🔥, Component-Driven Development: Markdown Blog Tutorial** 
 #### [Return to "Sections"](#sections)
 <hr>
 
 <br>
 
-### **How to install Angular CLI**
+### **Getting Started: Angular CLI**
 You can use [cli.angular.io](https://cli.angular.io/) or follow along below.
 
 ...
@@ -315,20 +313,20 @@ added 238 packages from 182 contributors in 19.985s
 $
 
 ```
+<br>
 
-### **How to generate a new app**
+Now that the CLI module has been installed, let's jump straight into Angular app development by creating a new app with the `ng new <app-name>` command and `cd` into the new app.
 
 ```
-
-$ ng new get-great-at-js-blog
+$ ng new get-great-at-ng-blog
 ? Do you want to enforce stricter type checking and stricter bundle budgets in the workspace?
   This setting helps improve maintainability and catch bugs ahead of time.
   For more information, see https://angular.io/strict Yes
 ? Would you like to add Angular routing? Yes
 ? Which stylesheet format would you like to use? SCSS   [ https://sass-lang.com/documentation/syntax#scss                ]
 
-CREATE get-great-at-js-blog/angular.json (3817 bytes)
-CREATE get-great-at-js-blog/...
+CREATE get-great-at-ng-blog/angular.json (3817 bytes)
+CREATE get-great-at-ng-blog/...
 ...
 Installing packages (npm)...
 
@@ -337,10 +335,20 @@ Installing packages (npm)...
 ✓ Packages installed successfully.
 ...
 
+$ cd get-get-at-ng-blog
+
 $
 ```
 
-### **How to serve a new app**
+
+<br>
+
+If you notice placeholder templates in your `src/app/app.component.html` file then run the following command...
+
+```
+$ rm -rf src/app/app.component.html && touch src/app/app.component.html
+```
+
 ### **`app.component`: HTML, SCSS, & TypeScript**
 ### **`app.module`**
 ### **`package.json`**
@@ -348,7 +356,7 @@ $
 ### **NPM Scripting: Update `start`**
 ### **NPM Scripting: CI/CD Power 💪**
 ### **`npm generate component <component-name>`**
-### **Angular**DRY**: Don't. Repeat. Yourself.**
+### **Angular*DRY*: Don't. Repeat. Yourself.**
 ### **`*ng`X: Structural Directives**
 ### **Unidirectional Data Flow: `ParentComponent` <b>→</b> `ChildComponent`**
 <br>
