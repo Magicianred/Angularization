@@ -43,7 +43,7 @@ Thanks.
 * [Caveats: IDE-Restarts & Permissions](#caveats-ide-restarts--permissions)
 * [Extensions (Optional)](#extensions-optional)
 * [Bonus: Zen Mode](#bonus-zen-mode)
-### [**Angular 11+ 🔥, Component-Driven Development: Markdown Blog Tutorial**](#angular-11--1-component-driven-development-markdown-blog-tutorial)
+### [**Angular 11+ 🔥, Component-Driven Development: Markdown Blog Tutorial**](#angular-11--component-driven-development-markdown-blog-tutorial-1)
 * [Getting Started: Angular CLI](#getting-started-angular-cli)
 * [`app.component`: HTML, SCSS, & TypeScript](#appcomponent-html-scss--typescript)
 * [`app.module`](#appmodule)
