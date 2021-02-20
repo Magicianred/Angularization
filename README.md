@@ -45,6 +45,7 @@ Thanks.
 * [Bonus: Zen Mode](#bonus-zen-mode)
 ### [**Angular 11+ 🔥, Component-Driven Development: Markdown Blog Tutorial**](#angular-11--component-driven-development-markdown-blog-tutorial-1)
 * [Getting Started: Angular CLI](#getting-started-angular-cli)
+* [Storybook.js, Why, & Getting Started](#storybookjs-why--getting-started)
 * [`app.component`: HTML, SCSS, & TypeScript](#appcomponent-html-scss--typescript)
 * [`app.module`](#appmodule)
 * [`package.json`](#packagejson)
@@ -291,6 +292,10 @@ You're welcome 😉.
 #### [Return to "Sections"](#sections)
 <hr>
 
+For this tutorial, we're going to create a single-paged blog application which adds, views, edits and deletes blog posts written in markdown. 
+
+TBD: I want to take a component-driven and visually test-driven approach to development with Storybook.js, and I'm still deciding if I want to use Express, Swagger, MongoDB for our middleware, API documentation, and backend technologies as I want to only use Angular "out-of-box" as much as possible. 
+
 <br>
 
 ### **Getting Started: Angular CLI**
@@ -347,6 +352,12 @@ If you notice placeholder templates in your `src/app/app.component.html` file th
 
 ```
 $ rm -rf src/app/app.component.html && touch src/app/app.component.html
+```
+
+### **Storybook.js, Why, & Getting Started**
+
+```
+$ npx sb init
 ```
 
 ### **`app.component`: HTML, SCSS, & TypeScript**
