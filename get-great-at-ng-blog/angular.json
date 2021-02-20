@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "get-great-at-js-blog": {
+    "get-great-at-ng-blog": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/get-great-at-js-blog",
+            "outputPath": "dist/get-great-at-ng-blog",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -68,18 +68,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "get-great-at-js-blog:build"
+            "browserTarget": "get-great-at-ng-blog:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "get-great-at-js-blog:build:production"
+              "browserTarget": "get-great-at-ng-blog:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "get-great-at-js-blog:build"
+            "browserTarget": "get-great-at-ng-blog:build"
           }
         },
         "test": {
@@ -116,16 +116,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "get-great-at-js-blog:serve"
+            "devServerTarget": "get-great-at-ng-blog:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "get-great-at-js-blog:serve:production"
+              "devServerTarget": "get-great-at-ng-blog:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "get-great-at-js-blog"
+  "defaultProject": "get-great-at-ng-blog"
 }
