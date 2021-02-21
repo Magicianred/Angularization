@@ -272,7 +272,7 @@ Once the menu opens, choose the `Select Default Shell` from the dropdown options
 <br>
 
 ### **Caveats: IDE-Restarts & Permissions**
-1. You may need to close and reopen VS Code to get any system changes to show in VS code. We had some issues with the integrated terminal not recognizing global system commands (`node`, `npm`, etc.), so try to restart VS Code first if you don't see any immediate changes when making any system changes throughout this documentation.
+1. You may need to close and reopen VS Code to get any system changes to show in VS Code. We had some issues with the integrated terminal not recognizing global system commands (`node`, `npm`, etc.), so try to restart VS Code first if you don't see any immediate changes when making any system changes throughout this documentation.
 1. You may run into administrative issues where you may not be permitted to run a certain command in your particular terminal session as we did during our setup session. It may be that, but if worst comes to worst, you can just use a different shell (e.g., `poweshell` → `cmd`) like we did.
 
 <br>
