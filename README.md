@@ -46,7 +46,7 @@ Thanks.
 ### [**Angular 11+, Component-Driven Development 🔥: Markdown Blog Tutorial**](#angular-11-component-driven-development--markdown-blog-tutorial-1)
 * [Getting Started: Angular CLI](#getting-started-angular-cli)
 * [Storybook.js, Why, & Getting Started](#storybookjs-why--getting-started)
-* [Okay, Let's Do This!: Component-Driven, Angular Development](#okay-lets-do-this-component-driven-angular-development)
+* [Okay, Let's Do This!: Component-Driven, Angular 11 Development 🔥](#okay-lets-do-this-component-driven-angular-11-development-)
 * [`app.component`: HTML, SCSS, & TypeScript](#appcomponent-html-scss--typescript)
 * [`app.module`](#appmodule)
 * [`package.json`](#packagejson)
