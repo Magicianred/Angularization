@@ -360,6 +360,56 @@ $ rm -rf src/app/app.component.html && touch src/app/app.component.html
 $ npx sb init
 ```
 
+```
+$ npm run storybook
+```
+
+```
+$ ng generate component navbar
+
+$ ng generate component navbar/nav-item
+
+```
+https://storybook.js.org/docs/angular/writing-stories/introduction
+
+https://github.com/storybookjs/storybook/issues/6364#issuecomment-485651328
+
+https://stackoverflow.com/questions/47447199/module-not-found-error-cant-resolve-sass-loader
+
+https://storybook.js.org/docs/react/configure/webpack
+
+https://webpack.js.org/plugins/html-webpack-plugin/
+
+```
+$ npm install sass-loader -D
+
+$ npm install node-sass -D
+
+$ npm install style-loader -D
+
+$ npm install css-loader -D
+
+$ npm audit
+
+$ npm audit fix
+```
+
+At the top of `.storybook/preview.js` add the following import with correct loaders inline:
+
+```javascript
+// .storybook/preview.js
+
+import '!style-loader!css-loader!sass-loader!./scss-loader.scss';
+
+```
+
+
+Once you get comfortable with Storybook, let's use Angular CLI to generate a [simple component](https://www.learnstorybook.com/intro-to-storybook/angular/en/simple-component/) and then a [composite component](https://www.learnstorybook.com/intro-to-storybook/angular/en/composite-component/).
+
+`NavComponent`
+
+`NavbarComponent`
+
 ### **`app.component`: HTML, SCSS, & TypeScript**
 ### **`app.module`**
 ### **`package.json`**
