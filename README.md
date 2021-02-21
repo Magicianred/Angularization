@@ -386,7 +386,7 @@ Feel free to detour from this tutorial and go to the official ones at [learnstor
 
 ### **Okay, Let's Do This!: Component-Driven, Angular 11+ Development 🔥**
 
-Once you get comfortable with Storybook, let's use the Angular CLI to generate two [simple component](https://www.learnstorybook.com/intro-to-storybook/angular/en/simple-component/) and then a [composite component](https://www.learnstorybook.com/intro-to-storybook/angular/en/composite-component/).
+Once you get comfortable with Storybook, let's use the Angular CLI to generate two [simple components](https://www.learnstorybook.com/intro-to-storybook/angular/en/simple-component/) and then a [composite component](https://www.learnstorybook.com/intro-to-storybook/angular/en/composite-component/).
 
 <br>
 
