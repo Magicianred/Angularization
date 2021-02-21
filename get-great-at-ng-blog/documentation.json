@@ -235,14 +235,14 @@
         },
         {
             "name": "NavbarComponent",
-            "id": "component-NavbarComponent-71cfc4835dcff4c9f8ed116e1e85876f",
+            "id": "component-NavbarComponent-563bd026a997e2e7cc9ed3f61e8c9e75",
             "file": "src/app/navbar/navbar.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
             "providers": [],
-            "selector": "app-navbar",
+            "selector": "navbar",
             "styleUrls": [
                 "./navbar.component.scss"
             ],
@@ -251,7 +251,24 @@
                 "./navbar.component.html"
             ],
             "viewProviders": [],
-            "inputsClass": [],
+            "inputsClass": [
+                {
+                    "name": "backgroundColor",
+                    "line": 11,
+                    "type": "string"
+                },
+                {
+                    "name": "light",
+                    "defaultValue": "false",
+                    "line": 10
+                },
+                {
+                    "name": "navItems",
+                    "defaultValue": "[]",
+                    "line": 12,
+                    "type": "string[]"
+                }
+            ],
             "outputsClass": [],
             "propertiesClass": [],
             "methodsClass": [
@@ -261,7 +278,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 12
+                    "line": 22
                 }
             ],
             "hostBindings": [],
@@ -269,11 +286,11 @@
             "description": "",
             "rawdescription": "",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-navbar',\n  templateUrl: './navbar.component.html',\n  styleUrls: ['./navbar.component.scss']\n})\nexport class NavbarComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\nimport { NavItemComponent } from './nav-item/nav-item.component';\n\n@Component({\n  selector: 'navbar',\n  templateUrl: './navbar.component.html',\n  styleUrls: ['./navbar.component.scss']\n})\nexport class NavbarComponent implements OnInit {\n  @Input() light = false;\n  @Input() backgroundColor?: string;\n  @Input() navItems: string[] = [];\n\n  public get classes(): string[] {\n    const mode = this.light ? 'navbar--light' : 'navbar--dark';\n\n    return ['navbar', mode];\n  }\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "",
+                    "data": ".navbar {\r\n  display: inline-block;\r\n  height: 60px;\r\n}\r\n\r\n.navbar--light, .nav-item--light {\r\n  color: #000;\r\n  background-color: #fff;\r\n}\r\n\r\n.navbar--dark, .nav-item--dark {\r\n  color: #fff;\r\n  background-color: #000;\r\n}",
                     "styleUrl": "./navbar.component.scss"
                 }
             ],
@@ -282,16 +299,27 @@
                 "name": "constructor",
                 "description": "",
                 "args": [],
-                "line": 8
+                "line": 18
             },
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<p>navbar works!</p>\n"
+            "accessors": {
+                "classes": {
+                    "name": "classes",
+                    "getSignature": {
+                        "name": "classes",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 14
+                    }
+                }
+            },
+            "templateData": "<ul \n  *ngFor=\"let item of navItems\"\n  [ngClass]=\"classes\"\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\n>\n  <li>\n    <nav-item \n      [label]=\"item\"\n      [light]=\"light\" \n      [ngClass]=\"classes\" \n      [ngStyle]=\"{ 'background-color': backgroundColor }\"></nav-item>\n  </li>\n</ul>\n"
         },
         {
             "name": "NavItemComponent",
-            "id": "component-NavItemComponent-e961fceb44b9fbefb584e5d9486835bc",
+            "id": "component-NavItemComponent-0568fad763039f20ba5dbc67a6c36bf1",
             "file": "src/app/navbar/nav-item/nav-item.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -310,25 +338,25 @@
             "inputsClass": [
                 {
                     "name": "backgroundColor",
-                    "line": 13,
+                    "line": 10,
                     "type": "string"
                 },
                 {
                     "name": "label",
-                    "defaultValue": "'💡 NavItem'",
-                    "line": 16
+                    "defaultValue": "''",
+                    "line": 11
                 },
                 {
                     "name": "light",
                     "defaultValue": "false",
-                    "line": 10
+                    "line": 9
                 }
             ],
             "outputsClass": [
                 {
                     "name": "onClick",
                     "defaultValue": "new EventEmitter<Event>()",
-                    "line": 19,
+                    "line": 13,
                     "type": "EventEmitter"
                 }
             ],
@@ -339,11 +367,11 @@
             "description": "",
             "rawdescription": "",
             "type": "component",
-            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\n\n@Component({\n  selector: 'nav-item',\n  templateUrl: './nav-item.component.html',\n  styleUrls: ['./nav-item.component.scss']\n})\nexport class NavItemComponent {\n  @Input()\n  light = false;\n\n  @Input()\n  backgroundColor?: string;\n\n  @Input()\n  label = '💡 NavItem';\n\n  @Output()\n  onClick = new EventEmitter<Event>();\n\n  public get classes(): string[] {\n    const mode = this.light ? 'nav-item--light' : 'nav-item--dark';\n\n    return ['nav-item', mode];\n  }\n}\n",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\n\n@Component({\n  selector: 'nav-item',\n  templateUrl: './nav-item.component.html',\n  styleUrls: ['./nav-item.component.scss']\n})\nexport class NavItemComponent {\n  @Input() light = false;\n  @Input() backgroundColor?: string;\n  @Input() label = '';\n\n  @Output() onClick = new EventEmitter<Event>();\n\n  public get classes(): string[] {\n    const mode = this.light ? 'nav-item--light' : 'nav-item--dark';\n\n    return ['nav-item', mode];\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".nav-item {\r\n  font-family:'Segoe UI', 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, Tahoma, Geneva, Verdana, sans-serif;\r\n  font-weight: 400;\r\n  cursor: pointer;\r\n  display: inline-block;\r\n  line-height: 1;\r\n  opacity: 1;\r\n}\r\n\r\n.nav-item--light {\r\n  color: #000;\r\n  background-color: #fff;\r\n}\r\n\r\n.nav-item--dark {\r\n  color: #fff;\r\n  background-color: #000;\r\n}\r\n\r\n.nav-item:hover {\r\n  opacity: 0.667;\r\n}",
+                    "data": ".nav-item {\r\n  font-family:'Segoe UI', 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, Tahoma, Geneva, Verdana, sans-serif;\r\n  font-weight: 500;\r\n  cursor: pointer;\r\n  display: inline-block;\r\n  line-height: 30px;\r\n  padding-left: 10px;\r\n  padding-right: 10px;\r\n  opacity: 1;\r\n}\r\n\r\n.nav-item--light {\r\n  color: #000;\r\n  background-color: #fff;\r\n}\r\n\r\n.nav-item--dark {\r\n  color: #fff;\r\n  background-color: #000;\r\n}\r\n\r\n.nav-item:hover {\r\n  opacity: 0.667;\r\n}",
                     "styleUrl": "./nav-item.component.scss"
                 }
             ],
@@ -355,11 +383,11 @@
                         "name": "classes",
                         "type": "[]",
                         "returnType": "string[]",
-                        "line": 21
+                        "line": 15
                     }
                 }
             },
-            "templateData": "<a\n  (click)=\"onClick.emit($event)\"\n  [ngClass]=\"classes\"\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\n>\n  {{ label }}\n</a>\n"
+            "templateData": "<a\n  (click)=\"onClick.emit($event)\"\n  [ngClass]=\"classes\"\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\n  [ngModel]=\"label\"\n  [ngModel]=\"light\"\n>\n  {{ label }}\n</a>\n"
         },
         {
             "name": "PageComponent",
@@ -516,6 +544,14 @@
                 "name": "Dark",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/Navbar.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Dark",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/NavItem.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
@@ -541,6 +577,14 @@
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/stories/Button.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Light",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Navbar.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -583,6 +627,14 @@
                 "file": "src/stories/Page.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "navItemsData",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Navbar.stories.ts",
+                "type": "[]",
+                "defaultValue": "[ '🤷‍♂️ Why A°?', '📐 Angular', '📖 Storybook' ]"
             },
             {
                 "name": "Primary",
@@ -635,6 +687,14 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/Navbar.stories.ts",
+                "type": "Story<NavbarComponent>",
+                "defaultValue": "(args: NavbarComponent) => ({\r\n  component: NavbarComponent,\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/NavItem.stories.ts",
                 "type": "Story<NavItemComponent>",
                 "defaultValue": "(args: NavItemComponent) => ({\r\n  component: NavItemComponent,\r\n  props: args,\r\n})"
@@ -667,6 +727,40 @@
                     "subtype": "variable",
                     "file": "src/test.ts",
                     "type": "literal type"
+                }
+            ],
+            "src/stories/Navbar.stories.ts": [
+                {
+                    "name": "Dark",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Navbar.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Light",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Navbar.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "navItemsData",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Navbar.stories.ts",
+                    "type": "[]",
+                    "defaultValue": "[ '🤷‍♂️ Why A°?', '📐 Angular', '📖 Storybook' ]"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Navbar.stories.ts",
+                    "type": "Story<NavbarComponent>",
+                    "defaultValue": "(args: NavbarComponent) => ({\r\n  component: NavbarComponent,\r\n  props: args,\r\n})"
                 }
             ],
             "src/stories/NavItem.stories.ts": [
@@ -829,7 +923,7 @@
         ]
     },
     "coverage": {
-        "count": 3,
+        "count": 2,
         "status": "low",
         "files": [
             {
@@ -865,7 +959,7 @@
                 "linktype": "component",
                 "name": "NavbarComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/3",
+                "coverageCount": "0/6",
                 "status": "low"
             },
             {
@@ -990,6 +1084,46 @@
             },
             {
                 "filePath": "src/stories/NavItem.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Navbar.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Dark",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Navbar.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Light",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Navbar.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "navItemsData",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Navbar.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",

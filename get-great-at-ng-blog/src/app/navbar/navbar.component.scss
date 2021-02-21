@@ -1,0 +1,14 @@
+.navbar {
+  display: inline-block;
+  height: 60px;
+}
+
+.navbar--light, .nav-item--light {
+  color: #000;
+  background-color: #fff;
+}
+
+.navbar--dark, .nav-item--dark {
+  color: #fff;
+  background-color: #000;
+}
