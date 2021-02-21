@@ -383,10 +383,11 @@ $ npm run storybook
 
 Feel free to detour from this tutorial and go to the official ones at [learnstorybook.com](https://www.learnstorybook.com/intro-to-storybook/react/en/simple-component/).
 
+<br>
 
 ### **Okay, Let's Do This!: Component-Driven, Angular 11+ Development 🔥**
 
-Once you get comfortable with Storybook, let's use the Angular CLI to generate two [simple components](https://www.learnstorybook.com/intro-to-storybook/angular/en/simple-component/) and then a [composite component](https://www.learnstorybook.com/intro-to-storybook/angular/en/composite-component/).
+Once you get comfortable with Storybook, let's use the Angular CLI to generate two [simple components](https://www.learnstorybook.com/intro-to-storybook/angular/en/simple-component/) and then a [composite component](https://www.learnstorybook.com/intro-to-storybook/angular/en/composite-component/):
 
 <br>
 
@@ -408,6 +409,9 @@ $ ng generate component navbar/brand
 Ultimately, we want to strive for visual TDD and CDD, so let's first write our [stories](https://storybook.js.org/docs/react/get-started/whats-a-story).
 
 
+### **`NavItem.stories.ts`**
+### **`NavBrand.stories.ts`**
+### **`Navbar.stories.ts`**
 
 ### **`app.component`: HTML, SCSS, & TypeScript**
 ### **`app.module`**
