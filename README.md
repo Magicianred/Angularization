@@ -10,8 +10,12 @@
 <b>Angular 11+</b> development tutorials for intermediate developers who need to start from 0.</h3>
 <br>
 <hr>
+
 <br>
-I decided to start Angularization in order to document the Angular 11+ web-development experience of a fellow developer and I — after having a quasi-knowledge-transferring, quasi-mutually-learning session for getting completely setup with a Node.js version manager (NVM), Visual Studio Code, and Angular 11. 
+<br>
+<h2 align="center"><b>Preface</b></h2>
+<br>
+I decided to start Angularization in order to document my particular Angular 11+ web-development setup process after having a quasi-knowledge-transferring, quasi-mutually-learning session for getting another developer completely setup with a Node.js version manager (NVM), Visual Studio Code, and Angular 11. 
 <br>
 <br>
 
@@ -21,13 +25,14 @@ The content in the sub-sections are my own personal insights, so...
 
 However, I hope that you find this thoroughly documented, living README helpful as content is continually added.
 
-For now, **please give this repo a ⭐ if you think Angularization can be useful for novice Angular developers — based off of what is available below thus far**. 
+For now, **please give this repo a ⭐ if you think Angularization can be helpful for novice Angular developers — based off of what is available below thus far**. 
 
 Thanks.
 <p align="right">— @pjnalls</p>
 <br>
 <br>
 <h2 align="center"><b>Sections</b></h2>
+<br>
 
 ### [**"*NVM* not NPM" ❓**](#nvm-not-npm--1)
 * [What is an "NVM"?](#what-is-an-nvm)
@@ -296,12 +301,12 @@ You're welcome 😉.
 
 For this tutorial, we're going to create a single-paged blog application which adds, views, edits and deletes blog posts written in markdown. 
 
-TBD: I want to take a component-driven and visually test-driven approach to development with Storybook.js, and I'm still deciding if I want to use Express, Swagger, MongoDB for our middleware, API documentation, and backend technologies as I want to only use Angular "out-of-box" as much as possible. 
+TBD: I want to take a component-driven and visually test-driven approach to development with Storybook.js, and I'm still deciding if I want to use Express, Swagger, and MongoDB for our middleware, API documentation, and backend technologies although I want to use Angular "out-of-box" as much as possible without very little added dependencies. 
 
 <br>
 
 ### **Getting Started: Angular CLI**
-You can use [cli.angular.io](https://cli.angular.io/) or follow along below.
+You can go to [cli.angular.io](https://cli.angular.io/) to get familiar with Angular's CLI or follow along below.
 
 ...
 
@@ -322,7 +327,7 @@ $
 ```
 <br>
 
-Now that the CLI module has been installed, let's jump straight into Angular app development by creating a new app with the `ng new <app-name>` command and `cd` into the new app.
+Now that the command-line interface has been installed, let's jump straight into Angular app development by generating a new app with the `ng new <app-name>` command and then `cd` into the new app.
 
 ```
 $ ng new get-great-at-ng-blog
@@ -350,6 +355,12 @@ $
 
 <br>
 
+You may want to read about [Angular workspace and project file structure](https://angular.io/guide/file-structure) while you explore the different files.
+
+You can also explore [Angular basics](https://angular.io/guide/what-is-angular) if you're completely new to any progressive, component-based, front-end frameworks to at least get the gist of how they work, why you need them, and the scope of the Angular ecosystem.
+
+...
+
 If you notice placeholder templates in your `src/app/app.component.html` file then run the following command...
 
 ```
@@ -360,30 +371,38 @@ $ rm -rf src/app/app.component.html && touch src/app/app.component.html
 ### **Storybook.js, Why, & Getting Started**
 "Storybook is an open source tool for developing UI components in isolation for React, Vue, Angular, and more" [[1]](https://storybook.js.org/).
 
-Even if you're not planning on creating a full-blown design system, a tool like Storybook can be used in order for full leverage it's [visual test-driven development (visual TDD)](https://www.chromatic.com/blog/visual-test-driven-development/) and [component-driven development (CDD)](https://www.chromatic.com/blog/component-driven-development/).
+Even if you're not planning on creating a full-scale design system, a tool like Storybook can be used in order to gain full leverage of it's [visual test-driven development (visual TDD)](https://www.chromatic.com/blog/visual-test-driven-development/) and [component-driven development (CDD)](https://www.chromatic.com/blog/component-driven-development/) capabilities.
 
-It enforce [DRY principles](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) to make your code reusable so that it work anywhere with the correct data. Furthermore, it gives you living documentation of all your UI from the smallest, atomic component to full-blown pages (and I've seen some one put there whole Angular app). All that with hot-module reloading on top 🍒! 
+It enforces [DRY principles](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) to make your code reusable so that your individual components work anywhere with the correct data. Furthermore, it gives you living documentation of all your UI components — from the smallest, atomic component to full-blown pages (and even the entire app itself if you get the routing right). All that with hot-module reloading on top 🍒! 
 
-All Storybook asks of you is to write short [stories](https://storybook.js.org/docs/react/get-started/whats-a-story). It's just as simple as `$ touch <ComponentName>.stories.ts` in your terminal and adding less than 30 lines of code at best — once you have Storybook installed and a component generated.
+All Storybook requires of you is to (1) install it and (2) write short [stories](https://storybook.js.org/docs/react/get-started/whats-a-story). It's just as simple as `$ touch src/stories/<ComponentName>.stories.ts` in your terminal and adding less than 30 lines of code at best — once you have Storybook installed and a component generated.
 
 ...
 
-So if your on board, you just need to do two things in the root of your Angular 11+ app:
-
-1. Install Storybook.
+So if your on board, let's install Storybook and then run the app in our root folder:
 
 ```
 $ npx sb init
 ```
+<br>
 
-2. Run Storybook.
+Once the installation completes then startup the app and take a look.
 ```
 $ npm run storybook
 ```
 
+<br>
+
 Feel free to detour from this tutorial and go to the official ones at [learnstorybook.com](https://www.learnstorybook.com/intro-to-storybook/react/en/simple-component/).
 
+...
+
 <br>
+
+Once you're ready and are all setup, let's get to it!
+
+<br>
+
 
 ### **Okay, Let's Do This!: Component-Driven, Angular 11+ Development 🔥**
 
