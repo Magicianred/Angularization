@@ -43,9 +43,10 @@ Thanks.
 * [Caveats: IDE-Restarts & Permissions](#caveats-ide-restarts--permissions)
 * [Extensions (Optional)](#extensions-optional)
 * [Bonus: Zen Mode](#bonus-zen-mode)
-### [**Angular 11+ 🔥, Component-Driven Development: Markdown Blog Tutorial**](#angular-11--component-driven-development-markdown-blog-tutorial-1)
+### [**Angular 11+, Component-Driven Development 🔥: Markdown Blog Tutorial**](#angular-11-component-driven-development--markdown-blog-tutorial-1)
 * [Getting Started: Angular CLI](#getting-started-angular-cli)
 * [Storybook.js, Why, & Getting Started](#storybookjs-why--getting-started)
+* [Okay, Let's Do This!: Component-Driven, Angular Development](#okay-lets-do-this-component-driven-angular-development)
 * [`app.component`: HTML, SCSS, & TypeScript](#appcomponent-html-scss--typescript)
 * [`app.module`](#appmodule)
 * [`package.json`](#packagejson)
@@ -288,9 +289,10 @@ You're welcome 😉.
 
 <hr>
 
-## **Angular 11+ 🔥, Component-Driven Development: Markdown Blog Tutorial** 
+## **Angular 11+, Component-Driven Development 🔥: Markdown Blog Tutorial** 
 #### [Return to "Sections"](#sections)
 <hr>
+<br>
 
 For this tutorial, we're going to create a single-paged blog application which adds, views, edits and deletes blog posts written in markdown. 
 
@@ -353,62 +355,59 @@ If you notice placeholder templates in your `src/app/app.component.html` file th
 ```
 $ rm -rf src/app/app.component.html && touch src/app/app.component.html
 ```
+<br>
 
 ### **Storybook.js, Why, & Getting Started**
+"Storybook is an open source tool for developing UI components in isolation for React, Vue, Angular, and more" [[1]](https://storybook.js.org/).
+
+Even if you're not planning on creating a full-blown design system, a tool like Storybook can be used in order for full leverage it's [visual test-driven development (visual TDD)](https://www.chromatic.com/blog/visual-test-driven-development/) and [component-driven development (CDD)](https://www.chromatic.com/blog/component-driven-development/).
+
+It enforce [DRY principles](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) to make your code reusable so that it work anywhere with the correct data. Furthermore, it gives you living documentation of all your UI from the smallest, atomic component to full-blown pages (and I've seen some one put there whole Angular app). All that with hot-module reloading on top 🍒! 
+
+All Storybook asks of you is to write short [stories](https://storybook.js.org/docs/react/get-started/whats-a-story). It's just as simple as `$ touch <ComponentName>.stories.ts` in your terminal and adding less than 30 lines of code at best — once you have Storybook installed and a component generated.
+
+...
+
+So if your on board, you just need to do two things in the root of your Angular 11+ app:
+
+1. Install Storybook.
 
 ```
 $ npx sb init
 ```
 
+2. Run Storybook.
 ```
 $ npm run storybook
 ```
 
+Feel free to detour from this tutorial and go to the official ones at [learnstorybook.com](https://www.learnstorybook.com/intro-to-storybook/react/en/simple-component/).
+
+
+### **Okay, Let's Do This!: Component-Driven, Angular 11+ Development 🔥**
+
+Once you get comfortable with Storybook, let's use the Angular CLI to generate two [simple component](https://www.learnstorybook.com/intro-to-storybook/angular/en/simple-component/) and then a [composite component](https://www.learnstorybook.com/intro-to-storybook/angular/en/composite-component/).
+
+<br>
+
+First, `ng generate` the `navbar` composite component:
 ```
 $ ng generate component navbar
+```
+<br>
 
+Next, `ng generate` the `nav-item` and `brand` simple components nested inside the `navbar` composite component:
+
+```
 $ ng generate component navbar/nav-item
 
+$ ng generate component navbar/brand
 ```
-https://storybook.js.org/docs/angular/writing-stories/introduction
+<br>
 
-https://github.com/storybookjs/storybook/issues/6364#issuecomment-485651328
-
-https://stackoverflow.com/questions/47447199/module-not-found-error-cant-resolve-sass-loader
-
-https://storybook.js.org/docs/react/configure/webpack
-
-https://webpack.js.org/plugins/html-webpack-plugin/
-
-```
-$ npm install sass-loader -D
-
-$ npm install node-sass -D
-
-$ npm install style-loader -D
-
-$ npm install css-loader -D
-
-$ npm audit
-
-$ npm audit fix
-```
-
-At the top of `.storybook/preview.js` add the following import with correct loaders inline:
-
-```javascript
-// .storybook/preview.js
-
-import '!style-loader!css-loader!sass-loader!./scss-loader.scss';
-
-```
+Ultimately, we want to strive for visual TDD and CDD, so let's first write our [stories](https://storybook.js.org/docs/react/get-started/whats-a-story).
 
 
-Once you get comfortable with Storybook, let's use Angular CLI to generate a [simple component](https://www.learnstorybook.com/intro-to-storybook/angular/en/simple-component/) and then a [composite component](https://www.learnstorybook.com/intro-to-storybook/angular/en/composite-component/).
-
-`NavComponent`
-
-`NavbarComponent`
 
 ### **`app.component`: HTML, SCSS, & TypeScript**
 ### **`app.module`**
