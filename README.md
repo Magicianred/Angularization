@@ -1,13 +1,25 @@
-<h1 align="center"><b>Angularization</b></h1>
+<br>
 <br>
 <p align="center"> 
-  <img width="120px" src="a-degrees.png" />
+  <img width="120px" src="a-degrees.png" alt="Angularization project logo"/>
 </p>
+<br>
+<h1 align="center"><b>Angularization</b><br><br></h1>
+<br>
+
 <h3 align="center">
-(Work-in-Progress)
+
+  <br>
+  <br>
+  <b>Angular 11+</b> development tutorials for intermediate developers who need to start from 0.
+  <br>
+  <br>
+
+  (Work-in-Progress)
+
+</h3>
 <br>
 <br>
-<b>Angular 11+</b> development tutorials for intermediate developers who need to start from 0.</h3>
 <br>
 <hr>
 
@@ -48,7 +60,7 @@ Thanks.
 * [Caveats: IDE-Restarts & Permissions](#caveats-ide-restarts--permissions)
 * [Extensions (Optional)](#extensions-optional)
 * [Bonus: Zen Mode](#bonus-zen-mode)
-### [**Angular 11+, Component-Driven Development 🔥: Markdown Blog Tutorial**](#angular-11-component-driven-development--markdown-blog-tutorial-1)
+### [**Angular 11+ & Component-Driven Development 🔥**](#angular-11--component-driven-development--)
 * [Getting Started: Angular CLI](#getting-started-angular-cli)
 * [Storybook.js, Why, & Getting Started](#storybookjs-why--getting-started)
 * [Okay, Let's Do This!: Component-Driven, Angular 11 Development 🔥](#okay-lets-do-this-component-driven-angular-11-development-)
@@ -62,6 +74,7 @@ Thanks.
 * [Angular**DRY**: Don't. Repeat. Yourself.](#angulardry-dont-repeat-yourself)
 * [`*ng`X: Structural Directives](#ngx-structural-directives)
 * [Unidirectional Data Flow: `ParentComponent` <b>→</b> `ChildComponent`](#unidirectional-data-flow-parentcomponent--childcomponent)
+### [**References**](#references)
 <br>
 <br>
 <br>
@@ -107,7 +120,7 @@ As you can see above, we're able to switch versions of `node` with a simple `nvm
 If you work on multiple Node.js projects at any point, simultaneously or sequentially, it would behoove you not to have more than one version of Node.js on your machine — especially if you maintain any number of legacy and modern applications at an enterprise.
 <br>
 <br>
-Let's put this in perspective: at the time of writing this sub-section of Angularization (February 15, 2021), Node.js was initially released 11+ years ago (May 27, 2009) [[1]](https://github.com/nodejs/node-v0.x-archive/tags?after=v0.0.4) — soon to be *12 years ago*. Since that time, there's been ***500+ versions released for Node.js*** [[2]](https://nodejs.org/dist/).
+Let's put this in perspective: at the time of writing this sub-section of Angularization (February 15, 2021), Node.js was initially released 11+ years ago (May 27, 2009) [[1]](#1) — soon to be *12 years ago*. Since that time, there's been ***500+ versions released for Node.js*** [[2]](#2).
 <br>
 <br>
 Therefore, invest some time into researching and using a reliable type of NVM, since at some point — if not now or in the past — you'll most likely need it as Node.js development progresses. 
@@ -272,7 +285,9 @@ Once the menu opens, choose the `Select Default Shell` from the dropdown options
 <br>
 
 ### **Caveats: IDE-Restarts & Permissions**
+
 1. You may need to close and reopen VS Code to get any system changes to show in VS Code. We had some issues with the integrated terminal not recognizing global system commands (`node`, `npm`, etc.), so try to restart VS Code first if you don't see any immediate changes when making any system changes throughout this documentation.
+
 1. You may run into administrative issues where you may not be permitted to run a certain command in your particular terminal session as we did during our setup session. It may be that, but if worst comes to worst, you can just use a different shell (e.g., `poweshell` → `cmd`) like we did.
 
 <br>
@@ -294,14 +309,12 @@ You're welcome 😉.
 
 <hr>
 
-## **Angular 11+, Component-Driven Development 🔥: Markdown Blog Tutorial** 
+## **Angular 11+ & Component-Driven Development 🔥** 
 #### [Return to "Sections"](#sections)
 <hr>
 <br>
 
-For this tutorial, we're going to create a single-paged blog application which adds, views, edits and deletes blog posts written in markdown. 
-
-TBD: I want to take a component-driven and visually test-driven approach to development with Storybook.js, and I'm still deciding if I want to use Express, Swagger, and MongoDB for our middleware, API documentation, and backend technologies although I want to use Angular "out-of-box" as much as possible without very little added dependencies. 
+For this tutorial, we're going to cover the basics of [component-driven development (CDD)](https://www.chromatic.com/blog/component-driven-development/) with Angular 11 by creating a navbar, one component at a time. 
 
 <br>
 
@@ -361,7 +374,7 @@ You can also explore [Angular basics](https://angular.io/guide/what-is-angular) 
 
 ...
 
-If you notice placeholder templates in your `src/app/app.component.html` file then run the following command...
+If you notice placeholder templates in your `src/app/app.component.html` file then run the following command:
 
 ```
 $ rm -rf src/app/app.component.html && touch src/app/app.component.html
@@ -369,11 +382,11 @@ $ rm -rf src/app/app.component.html && touch src/app/app.component.html
 <br>
 
 ### **Storybook.js, Why, & Getting Started**
-"Storybook is an open source tool for developing UI components in isolation for React, Vue, Angular, and more" [[1]](https://storybook.js.org/).
+"[Storybook](https://storybook.js.org/) is an open source tool for developing UI components in isolation for React, Vue, Angular, and more" [[3]](#3).
 
-Even if you're not planning on creating a full-scale design system, a tool like Storybook can be used in order to gain full leverage of it's [visual test-driven development (visual TDD)](https://www.chromatic.com/blog/visual-test-driven-development/) and [component-driven development (CDD)](https://www.chromatic.com/blog/component-driven-development/) capabilities.
+Even if you're not planning on creating full-scale design systems, a tool like Storybook can be used in order to gain full leverage of it's [visual test-driven development (visual TDD)](https://www.chromatic.com/blog/visual-test-driven-development/) and [component-driven development (CDD)](https://www.chromatic.com/blog/component-driven-development/) capabilities.
 
-It enforces [DRY principles](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) to make your code reusable so that your individual components work anywhere with the correct data. Furthermore, it gives you living documentation of all your UI components — from the smallest, atomic component to full-blown pages (and even the entire app itself if you get the routing right). All that with hot-module reloading on top 🍒! 
+Storybook enforces [DRY principles](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) to make your code reusable so that your individual components work anywhere with the correct data. Furthermore, it gives you living documentation of all your UI components — from the smallest, atomic component to full-blown pages (and even the entire app itself if you get the routing right). All that with hot-module reloading on top 🍒! 
 
 All Storybook requires of you is to (1) install it and (2) write short [stories](https://storybook.js.org/docs/react/get-started/whats-a-story). It's just as simple as `$ touch src/stories/<ComponentName>.stories.ts` in your terminal and adding less than 30 lines of code at best — once you have Storybook installed and a component generated.
 
@@ -421,16 +434,133 @@ Next, `ng generate` the `nav-item` and `brand` simple components nested inside t
 ```
 $ ng generate component navbar/nav-item
 
-$ ng generate component navbar/brand
+$ ng generate component navbar/nav-brand
 ```
 <br>
 
 Ultimately, we want to strive for visual TDD and CDD, so let's first write our [stories](https://storybook.js.org/docs/react/get-started/whats-a-story).
 
+<br>
+
+### **Visual Test-Driven Development**
+
+Let's take advantage of the hot-module reloading for Storybook and visually develop our components by writing the stories (the "interesting" states) first while we get our visual test to pass, or behave visually as expected. 
+
+<br>
+
+Run `npm run storybook` from the root location of your project once more.
+
+```
+$ npm run storybook
+```
+
+<br>
+
+Once story book is running locally, create a TypeScript file for writing new stories:
+
+```
+$ touch src/stories/NavBrand.stories.ts
+```
+
+<br>
+
+### **`NavBrand.stories.ts`**
+
+You can refer to the documentation for Storybook as I did to [learn how to write stories](https://storybook.js.org/docs/react/writing-stories/introduction) as I did. Be sure you pick Angular as your framework for the correct docs. (By default, it's React.)
+
+When you're ready, you can setup and start writing stories like these:
+
+```typescript
+// NavBrand.stories.ts
+
+import { Meta, Story } from '@storybook/angular/types-6-0';
+import { NavBrandComponent } from '../app/navbar/nav-brand/nav-brand.component';
+
+export default {
+  title: 'Example/NavBrand',
+  component: NavBrandComponent,
+  argTypes: {
+    backgroundColor: { control: 'color' },
+  },
+} as Meta;
+
+const Template: Story<NavBrandComponent> = (args: NavBrandComponent) => ({
+  component: NavBrandComponent,
+  props: args,
+});
+
+export const Light = Template.bind({});
+Light.args = { light: true, label: 'A°' };
+
+export const Dark = Template.bind({});
+Dark.args = { label: 'A°' };
+
+```
+
+When you save the above code in the file, you'll notice two errors. ***That's good***: it means you're starting the TDD process 🙂.
+
+Now that are stories (tests) have been written, let's fix the errors with *minimal* code in our `nav-brand.component.ts` file (located in the `src/app/navbar/nav-brand` folder) since TypeScript doesn't recognize the `light` or `label` properties.
+
+<br>
+
+### **`nav-brand.component.ts`**
+In the first few lines of the `NavBrandComponent` class, add the following fields:
+
+```typescript
+// ...
+
+export class NavBrandComponent implements OnInit {
+  
+  // Add the following 2 input fields.
+  @Input() light = false;
+  @Input() label = '';
+
+  // ...
+}
+
+```
+Now save.
+
+...
+
+If Storybook runs with no errors, then... Congrats! You've successful done TDD and are now *really* ready for visual TDD 🎉. 
+
+Ensure that you can see "NavBrand" in the Storybook UI-component explorer and the generic "nav-brand works" paragraph text that Angular CLI generates `nav-brand.component.html` file (also located in the `src/app/navbar/nav-brand` folder).
+
+
+
+### **`nav-brand.component.html`**
+
+```html
+<!-- nav-brand.component.html -->
+<a
+  (click)="onClick.emit($event)"
+  [ngClass]="classes"
+  [ngStyle]="{ 'background-color': backgroundColor }"
+  ngDefaultControl [ngModel]="label"
+  ngDefaultControl [ngModel]="light"
+>
+  {{ label }}
+</a>
+
+```
+
+Ensure that you can see "NavBrand" in the Storybook UI-component explorer and you can see a generic looking "A°" or whatever you decided to label your brand.
+
+Once confirmed, let's give our brand some style!
+
+### **`nav-brand.component.scss`**
+
 
 ### **`NavItem.stories.ts`**
-### **`NavBrand.stories.ts`**
+### **`nav-item.component.html`**
+### **`nav-item.component.scss`**
+### **`nav-item.component.ts`**
+
 ### **`Navbar.stories.ts`**
+### **`navbar.component.html`**
+### **`navbar.component.scss`**
+### **`navbar.component.ts`**
 
 ### **`app.component`: HTML, SCSS, & TypeScript**
 ### **`app.module`**
@@ -442,7 +572,29 @@ Ultimately, we want to strive for visual TDD and CDD, so let's first write our [
 ### **Angular*DRY*: Don't. Repeat. Yourself.**
 ### **`*ng`X: Structural Directives**
 ### **Unidirectional Data Flow: `ParentComponent` <b>→</b> `ChildComponent`**
+
 <br>
+
 <hr>
+
+## **References** 
+#### [Return to "Sections"](#sections)
+<hr>
+<br>
+
+### 1. 
+
+https://github.com/nodejs/node-v0.x-archive/tags?after=v0.0.4
+
+### 2. 
+
+https://nodejs.org/dist/
+
+### 3. 
+
+https://storybook.js.org/ 
+
+
+<br>
 <br>
 <br>

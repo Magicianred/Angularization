@@ -2,13 +2,14 @@ import { Meta, moduleMetadata, Story } from '@storybook/angular';
 import { CommonModule } from '@angular/common';
 import { NavbarComponent } from '../app/navbar/navbar.component';
 import { NavItemComponent } from '../app/navbar/nav-item/nav-item.component';
+import { NavBrandComponent } from '../app/navbar/nav-brand/nav-brand.component';
 
 export default {
   title: 'Example/Navbar',
   excludeStories: /.*Data$/,
   decorators: [
     moduleMetadata({
-      declarations: [NavbarComponent, NavItemComponent],
+      declarations: [NavbarComponent, NavBrandComponent, NavItemComponent],
       imports: [CommonModule],
     }),
   ],
@@ -23,10 +24,10 @@ const Template: Story<NavbarComponent> = (args: NavbarComponent) => ({
 });
 
 export const navItemsData =  
-  [ '🤷‍♂️ Why A°?', '📐 Angular', '📖 Storybook' ];
+  [ '❓ About', '📐 Angularization', '💪 Get Great' ];
 
 export const Light = Template.bind({});
-Light.args = { light: true, navItems: navItemsData };
+Light.args = { light: true, brand: 'A°', navItems: navItemsData };
 
 export const Dark = Template.bind({})
-Dark.args = { light: false, navItems: navItemsData };
+Dark.args = { light: false, brand: 'A°', navItems: navItemsData };
