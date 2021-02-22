@@ -499,7 +499,7 @@ Dark.args = { label: 'A°' };
 
 When you save the above code in the file, you'll notice two errors. ***That's good***: it means you're starting the TDD process 🙂.
 
-Now that are stories (tests) have been written, let's fix the errors with *minimal* code in our `nav-brand` component `.ts` file since TypeScript doesn't recognize the `light` or `label` properties.
+Now that are stories (tests) have been written, let's fix the errors with *minimal* code in our `nav-brand.component.ts` file (located in the `src/app/navbar/nav-brand` folder) since TypeScript doesn't recognize the `light` or `label` properties.
 
 <br>
 
@@ -525,11 +525,30 @@ Now save.
 
 If Storybook runs with no errors, then... Congrats! You've successful done TDD and are now *really* ready for visual TDD 🎉. 
 
-Ensure that you can see "NavBrand" in the Storybook UI-component explorer and you can see a generic looking "A°" or whatever you decided to label your brand.
+Ensure that you can see "NavBrand" in the Storybook UI-component explorer and the generic "nav-brand works" paragraph text that Angular CLI generates `nav-brand.component.html` file (also located in the `src/app/navbar/nav-brand` folder).
 
-Once confirmed, let's start making things look fancy!
+
 
 ### **`nav-brand.component.html`**
+
+```html
+<!-- nav-brand.component.html -->
+<a
+  (click)="onClick.emit($event)"
+  [ngClass]="classes"
+  [ngStyle]="{ 'background-color': backgroundColor }"
+  ngDefaultControl [ngModel]="label"
+  ngDefaultControl [ngModel]="light"
+>
+  {{ label }}
+</a>
+
+```
+
+Ensure that you can see "NavBrand" in the Storybook UI-component explorer and you can see a generic looking "A°" or whatever you decided to label your brand.
+
+Once confirmed, let's give our brand some style!
+
 ### **`nav-brand.component.scss`**
 
 

@@ -1,18 +1,22 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'app-nav-brand',
+  selector: 'nav-brand',
   templateUrl: './nav-brand.component.html',
   styleUrls: ['./nav-brand.component.scss']
 })
-export class NavBrandComponent implements OnInit {
+export class NavBrandComponent {
   
   @Input() light = false;
+  @Input() backgroundColor?: string;
   @Input() label = '';
-  
-  constructor() { }
 
-  ngOnInit(): void {
+  @Output() onClick = new EventEmitter<Event>();
+
+  public get classes(): string[] {
+    const mode = this.light ? 'nav-brand--light' : 'nav-brand--dark';
+
+    return ['nav-brand', mode];
   }
 
 }
