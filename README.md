@@ -1,13 +1,25 @@
-<h1 align="center"><b>Angularization</b></h1>
+<br>
 <br>
 <p align="center"> 
-  <img width="120px" src="a-degrees.png" />
+  <img width="120px" src="a-degrees.png" alt="Angularization project logo"/>
 </p>
+<br>
+<h1 align="center"><b>Angularization</b><br><br></h1>
+<br>
+
 <h3 align="center">
-(Work-in-Progress)
+
+  <br>
+  <br>
+  <b>Angular 11+</b> development tutorials for intermediate developers who need to start from 0.
+  <br>
+  <br>
+
+  (Work-in-Progress)
+
+</h3>
 <br>
 <br>
-<b>Angular 11+</b> development tutorials for intermediate developers who need to start from 0.</h3>
 <br>
 <hr>
 
@@ -98,7 +110,7 @@ As you can see above, we're able to switch versions of `node` with a simple `nvm
 If you work on multiple Node.js projects at any point, simultaneously or sequentially, it would behoove you not to have more than one version of Node.js on your machine — especially if you maintain any number of legacy and modern applications at an enterprise.
 <br>
 <br>
-Let's put this in perspective: at the time of writing this sub-section of Angularization (February 15, 2021), Node.js was initially released 11+ years ago (May 27, 2009) [[1]](https://github.com/nodejs/node-v0.x-archive/tags?after=v0.0.4) — soon to be *12 years ago*. Since that time, there's been ***500+ versions released for Node.js*** [[2]](https://nodejs.org/dist/).
+Let's put this in perspective: at the time of writing this sub-section of Angularization (February 15, 2021), Node.js was initially released 11+ years ago (May 27, 2009) [[1]](#1) — soon to be *12 years ago*. Since that time, there's been ***500+ versions released for Node.js*** [[2]](#2).
 <br>
 <br>
 Therefore, invest some time into researching and using a reliable type of NVM, since at some point — if not now or in the past — you'll most likely need it as Node.js development progresses. 
@@ -263,7 +275,9 @@ Once the menu opens, choose the `Select Default Shell` from the dropdown options
 <br>
 
 ### **Caveats: IDE-Restarts & Permissions**
+
 1. You may need to close and reopen VS Code to get any system changes to show in VS Code. We had some issues with the integrated terminal not recognizing global system commands (`node`, `npm`, etc.), so try to restart VS Code first if you don't see any immediate changes when making any system changes throughout this documentation.
+
 1. You may run into administrative issues where you may not be permitted to run a certain command in your particular terminal session as we did during our setup session. It may be that, but if worst comes to worst, you can just use a different shell (e.g., `poweshell` → `cmd`) like we did.
 
 <br>
@@ -285,14 +299,12 @@ You're welcome 😉.
 
 <hr>
 
-## **Angular 11+, Component-Driven Development 🔥: Markdown Blog Tutorial** 
+## **Angular 11+ & Component-Driven Development 🔥** 
 #### [Return to "Sections"](#sections)
 <hr>
 <br>
 
-For this tutorial, we're going to create a single-paged blog application which adds, views, edits and deletes blog posts written in markdown. 
-
-TBD: I want to take a component-driven and visually test-driven approach to development with Storybook.js, and I'm still deciding if I want to use Express, Swagger, and MongoDB for our middleware, API documentation, and backend technologies although I want to use Angular "out-of-box" as much as possible without very little added dependencies. 
+For this tutorial, we're going to cover the basics of [component-driven development (CDD)](https://www.chromatic.com/blog/component-driven-development/) with Angular 11 by creating a navbar, one component at a time. 
 
 <br>
 
@@ -352,7 +364,7 @@ You can also explore [Angular basics](https://angular.io/guide/what-is-angular) 
 
 ...
 
-If you notice placeholder templates in your `src/app/app.component.html` file then run the following command...
+If you notice placeholder templates in your `src/app/app.component.html` file then run the following command:
 
 ```
 $ rm -rf src/app/app.component.html && touch src/app/app.component.html
@@ -360,11 +372,11 @@ $ rm -rf src/app/app.component.html && touch src/app/app.component.html
 <br>
 
 ### **Storybook.js, Why, & Getting Started**
-"Storybook is an open source tool for developing UI components in isolation for React, Vue, Angular, and more" [[1]](https://storybook.js.org/).
+"[Storybook](https://storybook.js.org/) is an open source tool for developing UI components in isolation for React, Vue, Angular, and more" [[3]](#3).
 
-Even if you're not planning on creating a full-scale design system, a tool like Storybook can be used in order to gain full leverage of it's [visual test-driven development (visual TDD)](https://www.chromatic.com/blog/visual-test-driven-development/) and [component-driven development (CDD)](https://www.chromatic.com/blog/component-driven-development/) capabilities.
+Even if you're not planning on creating full-scale design systems, a tool like Storybook can be used in order to gain full leverage of it's [visual test-driven development (visual TDD)](https://www.chromatic.com/blog/visual-test-driven-development/) and [component-driven development (CDD)](https://www.chromatic.com/blog/component-driven-development/) capabilities.
 
-It enforces [DRY principles](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) to make your code reusable so that your individual components work anywhere with the correct data. Furthermore, it gives you living documentation of all your UI components — from the smallest, atomic component to full-blown pages (and even the entire app itself if you get the routing right). All that with hot-module reloading on top 🍒! 
+Storybook enforces [DRY principles](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) to make your code reusable so that your individual components work anywhere with the correct data. Furthermore, it gives you living documentation of all your UI components — from the smallest, atomic component to full-blown pages (and even the entire app itself if you get the routing right). All that with hot-module reloading on top 🍒! 
 
 All Storybook requires of you is to (1) install it and (2) write short [stories](https://storybook.js.org/docs/react/get-started/whats-a-story). It's just as simple as `$ touch src/stories/<ComponentName>.stories.ts` in your terminal and adding less than 30 lines of code at best — once you have Storybook installed and a component generated.
 
@@ -412,7 +424,7 @@ Next, `ng generate` the `nav-item` and `brand` simple components nested inside t
 ```
 $ ng generate component navbar/nav-item
 
-$ ng generate component navbar/brand
+$ ng generate component navbar/nav-brand
 ```
 <br>
 
@@ -554,6 +566,9 @@ Once confirmed, let's give our brand some style!
 
 
 ### **`Navbar.stories.ts`**
+### **`navbar.component.html`**
+### **`navbar.component.scss`**
+### **`navbar.component.ts`**
 
 <br>
 
@@ -573,6 +588,27 @@ Once confirmed, let's give our brand some style!
 ### **`navbar.component.ts`**
 
 <br>
+
 <hr>
+
+## **References** 
+#### [Return to "Sections"](#sections)
+<hr>
+<br>
+
+### 1. 
+
+https://github.com/nodejs/node-v0.x-archive/tags?after=v0.0.4
+
+### 2. 
+
+https://nodejs.org/dist/
+
+### 3. 
+
+https://storybook.js.org/ 
+
+
+<br>
 <br>
 <br>
