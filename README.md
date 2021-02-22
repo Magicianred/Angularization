@@ -509,7 +509,7 @@ export class NavBrandComponent implements OnInit {
 }
 
 ```
-Now save.
+Save.
 
 ...
 
@@ -566,8 +566,17 @@ Once confirmed, let's give our brand some style!
 
 
 ### **`Navbar.stories.ts`**
+
+<br>
+
 ### **`navbar.component.html`**
+
+<br>
+
 ### **`navbar.component.scss`**
+
+<br>
+
 ### **`navbar.component.ts`**
 
 <br>
