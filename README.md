@@ -48,20 +48,11 @@ Thanks.
 * [Caveats: IDE-Restarts & Permissions](#caveats-ide-restarts--permissions)
 * [Extensions (Optional)](#extensions-optional)
 * [Bonus: Zen Mode](#bonus-zen-mode)
-### [**Angular 11+, Component-Driven Development 🔥: Markdown Blog Tutorial**](#angular-11-component-driven-development--markdown-blog-tutorial-1)
+### [**Angular 11+ & Component-Driven Development 🔥**](#angular-11--component-driven-development--1)
 * [Getting Started: Angular CLI](#getting-started-angular-cli)
 * [Storybook.js, Why, & Getting Started](#storybookjs-why--getting-started)
 * [Okay, Let's Do This!: Component-Driven, Angular 11 Development 🔥](#okay-lets-do-this-component-driven-angular-11-development-)
-* [`app.component`: HTML, SCSS, & TypeScript](#appcomponent-html-scss--typescript)
-* [`app.module`](#appmodule)
-* [`package.json`](#packagejson)
-* [NPM Scripting: Create New Script](#npm-scripting-create-new-script)
-* [NPM Scripting: Update `start`](#npm-scripting-update-start)
-* [NPM Scripting: CI/CD Power 💪](#npm-scripting-cicd-power-)
-* [`npm generate component <component-name>`](#npm-generate-component-component-name)
-* [Angular**DRY**: Don't. Repeat. Yourself.](#angulardry-dont-repeat-yourself)
-* [`*ng`X: Structural Directives](#ngx-structural-directives)
-* [Unidirectional Data Flow: `ParentComponent` <b>→</b> `ChildComponent`](#unidirectional-data-flow-parentcomponent--childcomponent)
+### [**References**](#references)
 <br>
 <br>
 <br>
@@ -427,21 +418,160 @@ $ ng generate component navbar/brand
 
 Ultimately, we want to strive for visual TDD and CDD, so let's first write our [stories](https://storybook.js.org/docs/react/get-started/whats-a-story).
 
+<br>
+
+### **Visual Test-Driven Development**
+
+Let's take advantage of the hot-module reloading for Storybook and visually develop our components by writing the stories (the "interesting" states) first while we get our visual test to pass, or behave visually as expected. 
+
+<br>
+
+Run `npm run storybook` from the root location of your project once more.
+
+```
+$ npm run storybook
+```
+
+<br>
+
+Once story book is running locally, create a TypeScript file for writing new stories:
+
+```
+$ touch src/stories/NavBrand.stories.ts
+```
+
+<br>
+
+### **`NavBrand.stories.ts`**
+
+You can refer to the documentation for Storybook as I did to [learn how to write stories](https://storybook.js.org/docs/react/writing-stories/introduction) as I did. Be sure you pick Angular as your framework for the correct docs. (By default, it's React.)
+
+When you're ready, you can setup and start writing stories like these:
+
+```typescript
+// NavBrand.stories.ts
+
+import { Meta, Story } from '@storybook/angular/types-6-0';
+import { NavBrandComponent } from '../app/navbar/nav-brand/nav-brand.component';
+
+export default {
+  title: 'Example/NavBrand',
+  component: NavBrandComponent,
+  argTypes: {
+    backgroundColor: { control: 'color' },
+  },
+} as Meta;
+
+const Template: Story<NavBrandComponent> = (args: NavBrandComponent) => ({
+  component: NavBrandComponent,
+  props: args,
+});
+
+export const Light = Template.bind({});
+Light.args = { light: true, label: 'A°' };
+
+export const Dark = Template.bind({});
+Dark.args = { label: 'A°' };
+
+```
+
+When you save the above code in the file, you'll notice two errors. ***That's good***: it means you're starting the TDD process 🙂.
+
+Now that we've written our stories (tests), let's fix the errors with *minimal* code in our `nav-brand.component.ts` file (located in the `src/app/navbar/nav-brand` folder) since TypeScript doesn't recognize the `light` or `label` properties.
+
+<br>
+
+### **`nav-brand.component.ts`**
+In the first few lines of the `NavBrandComponent` class, add the following fields:
+
+```typescript
+// ...
+
+export class NavBrandComponent implements OnInit {
+  
+  // Add the following 2 input fields.
+  @Input() light = false;
+  @Input() label = '';
+
+  // ...
+}
+
+```
+Now save.
+
+...
+
+If Storybook runs with no errors, then... Congrats! You've successful done TDD and are now *really* ready for visual TDD 🎉. 
+
+Ensure that you can see "NavBrand" in the Storybook UI-component explorer and the generic "nav-brand works" paragraph text that Angular CLI generates `nav-brand.component.html` file (also located in the `src/app/navbar/nav-brand` folder).
+
+<br>
+
+### **`nav-brand.component.html`**
+
+```html
+<!-- nav-brand.component.html -->
+<a
+  (click)="onClick.emit($event)"
+  [ngClass]="classes"
+  [ngStyle]="{ 'background-color': backgroundColor }"
+  ngDefaultControl [ngModel]="label"
+  ngDefaultControl [ngModel]="light"
+>
+  {{ label }}
+</a>
+
+```
+
+Ensure that you can see "NavBrand" in the Storybook UI-component explorer and you can see a generic looking "A°" or whatever you decided to label your brand.
+
+Once confirmed, let's give our brand some style!
+
+<br>
+
+### **`nav-brand.component.scss`**
+
+<br>
 
 ### **`NavItem.stories.ts`**
-### **`NavBrand.stories.ts`**
+
+<br>
+
+
+### **`nav-item.component.html`**
+
+<br>
+
+
+### **`nav-item.component.scss`**
+
+<br>
+
+
+### **`nav-item.component.ts`**
+
+<br>
+
+
 ### **`Navbar.stories.ts`**
 
-### **`app.component`: HTML, SCSS, & TypeScript**
-### **`app.module`**
-### **`package.json`**
-### **NPM Scripting: Create New Script**
-### **NPM Scripting: Update `start`**
-### **NPM Scripting: CI/CD Power 💪**
-### **`npm generate component <component-name>`**
-### **Angular*DRY*: Don't. Repeat. Yourself.**
-### **`*ng`X: Structural Directives**
-### **Unidirectional Data Flow: `ParentComponent` <b>→</b> `ChildComponent`**
+<br>
+
+
+### **`navbar.component.html`**
+
+
+<br>
+
+
+### **`navbar.component.scss`**
+
+
+<br>
+
+
+### **`navbar.component.ts`**
+
 <br>
 <hr>
 <br>
