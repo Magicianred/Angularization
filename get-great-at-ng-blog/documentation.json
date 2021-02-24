@@ -320,18 +320,18 @@
                     }
                 }
             },
-            "templateData": "<div \r\n  class=\"navbar-container\"\r\n  [ngClass]=\"classes\"\r\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"  \r\n>\r\n  <nav-brand \r\n    [brand]=\"brand\"\r\n    [light]=\"light\"\r\n    [ngClass]=\"classes\" \r\n    [ngStyle]=\"{ 'background-color': backgroundColor }\">\r\n  </nav-brand>\r\n  <ul \r\n    *ngFor=\"let item of navItems\"\r\n    [ngClass]=\"classes\"\r\n    [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n  >\r\n    <li>\r\n      <nav-item \r\n        [label]=\"item\"\r\n        [light]=\"light\" \r\n        [ngClass]=\"classes\" \r\n        [ngStyle]=\"{ 'background-color': backgroundColor }\">\r\n      </nav-item>\r\n    </li>\r\n  </ul>\r\n</div>\r\n"
+            "templateData": "<div\r\n  class=\"navbar-container\"\r\n  [ngClass]=\"classes\"\r\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"  \r\n>\r\n  <div style=\"float: left;\">\r\n    <nav-brand \r\n      [label]=\"brand\"\r\n      [light]=\"light\"\r\n      [ngClass]=\"classes\" \r\n      [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n      >\r\n    </nav-brand>\r\n  </div>\r\n  <div>\r\n    <ul \r\n      *ngFor=\"let item of navItems\"\r\n      [ngClass]=\"classes\"\r\n      [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n    >\r\n      <li>\r\n        <nav-item \r\n          [label]=\"item\"\r\n          [light]=\"light\" \r\n          [ngClass]=\"classes\" \r\n          [ngStyle]=\"{ 'background-color': backgroundColor }\">\r\n        </nav-item>\r\n      </li>\r\n    </ul>\r\n  </div>\r\n</div>\r\n"
         },
         {
             "name": "NavBrandComponent",
-            "id": "component-NavBrandComponent-5ab2dce8aff1f4332a8dee99482ddd2f",
+            "id": "component-NavBrandComponent-29c92572e2db1ad72c95805e502fe510",
             "file": "src/app/navbar/nav-brand/nav-brand.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
             "providers": [],
-            "selector": "app-nav-brand",
+            "selector": "nav-brand",
             "styleUrls": [
                 "./nav-brand.component.scss"
             ],
@@ -347,7 +347,7 @@
                     "type": "string"
                 },
                 {
-                    "name": "brand",
+                    "name": "label",
                     "defaultValue": "''",
                     "line": 12
                 },
@@ -372,11 +372,11 @@
             "description": "",
             "rawdescription": "",
             "type": "component",
-            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\n\n@Component({\n  selector: 'app-nav-brand',\n  templateUrl: './nav-brand.component.html',\n  styleUrls: ['./nav-brand.component.scss']\n})\nexport class NavBrandComponent {\n  \n  @Input() light = false;\n  @Input() backgroundColor?: string;\n  @Input() brand = '';\n\n  @Output() onClick = new EventEmitter<Event>();\n\n  public get classes(): string[] {\n    const mode = this.light ? 'nav-brand--light' : 'nav-brand--dark';\n\n    return ['nav-brand', mode];\n  }\n\n}\n",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'nav-brand',\r\n  templateUrl: './nav-brand.component.html',\r\n  styleUrls: ['./nav-brand.component.scss']\r\n})\r\nexport class NavBrandComponent {\r\n  \r\n  @Input() light = false;\r\n  @Input() backgroundColor?: string;\r\n  @Input() label = '';\r\n\r\n  @Output() onClick = new EventEmitter<Event>();\r\n\r\n  public get classes(): string[] {\r\n    const mode = this.light ? 'nav-brand--light' : 'nav-brand--dark';\r\n\r\n    return ['nav-brand', mode];\r\n  }\r\n\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".nav-brand {\r\n  font-size: 45px;\r\n  height: 60px;\r\n  line-height: 60px;\r\n  width: 60px;\r\n  padding-left: 5px;\r\n  padding-right: 5px;\r\n  font-family: Arial, Helvetica, sans-serif;\r\n  font-weight: 700;\r\n}\r\n.nav-brand--light { color: crimson; background-color: #fff; }\r\n.nav-brand--dark { color: #fff; background-color: #000; }",
+                    "data": ".nav-brand {\r\n  float: left;\r\n  font-size: 40px;\r\n  padding-top: 10px;\r\n  padding-left: 20px;\r\n  padding-right: 5px;\r\n  font-family: Arial, Helvetica, sans-serif;\r\n  font-weight: 700;\r\n  margin: 0;\r\n  padding-bottom: 0;\r\n}\r\n.nav-brand--light { color: crimson; background-color: #fff; }\r\n.nav-brand--dark { color: #fff; background-color: #000; }",
                     "styleUrl": "./nav-brand.component.scss"
                 }
             ],
@@ -392,7 +392,7 @@
                     }
                 }
             },
-            "templateData": "<a\n  (click)=\"onClick.emit($event)\"\n  [ngClass]=\"classes\"\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\n  ngDefaultControl [ngModel]=\"brand\"\n  ngDefaultControl [ngModel]=\"light\"\n>\n  {{ brand }}\n</a>"
+            "templateData": "<a\r\n  (click)=\"onClick.emit($event)\"\r\n  [ngClass]=\"classes\"\r\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n  ngDefaultControl [ngModel]=\"label\"\r\n  ngDefaultControl [ngModel]=\"light\"\r\n>\r\n  {{ label }}\r\n</a>\r\n"
         },
         {
             "name": "NavItemComponent",
@@ -448,7 +448,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".nav-item {\r\n  font-family:'Segoe UI', 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, Tahoma, Geneva, Verdana, sans-serif;\r\n  font-weight: 500;\r\n  cursor: pointer;\r\n  display: inline-block;\r\n  line-height: 60px;\r\n  padding-left: 10px;\r\n  padding-right: 10px;\r\n  opacity: 1;\r\n  margin-left: 60px;\r\n}\r\n\r\n.nav-item--light {\r\n  color: #000;\r\n  background-color: #fff;\r\n}\r\n\r\n.nav-item--dark {\r\n  color: #fff;\r\n  background-color: #000;\r\n}\r\n\r\n.nav-item:hover {\r\n  opacity: 0.667;\r\n}",
+                    "data": ".nav-item {\r\n  font-family: \r\n    'Segoe UI', \r\n    'Nunito Sans', \r\n    'Helvetica Neue', \r\n    Helvetica, Arial, \r\n    Tahoma, \r\n    Geneva, \r\n    Verdana, \r\n    sans-serif;\r\n  font-weight: 500;\r\n  cursor: pointer;\r\n  display: inline-block;\r\n  line-height: 60px;\r\n  padding-left: 10px;\r\n  padding-right: 10px;\r\n  opacity: 1;\r\n  margin-left: 60px;\r\n}\r\n\r\n.nav-item--light {\r\n  color: #000;\r\n  background-color: #fff;\r\n}\r\n\r\n.nav-item--dark {\r\n  color: #fff;\r\n  background-color: #000;\r\n}\r\n\r\n.nav-item:hover {\r\n  opacity: 0.667;\r\n}",
                     "styleUrl": "./nav-item.component.scss"
                 }
             ],
@@ -730,7 +730,7 @@
                 "subtype": "variable",
                 "file": "src/stories/Navbar.stories.ts",
                 "type": "[]",
-                "defaultValue": "[ '🤷‍♂️ Why A°?', '📐 Angular', '📖 Storybook' ]"
+                "defaultValue": "[ '❓ About', '📐 Angularization', '💪 Get Great' ]"
             },
             {
                 "name": "Primary",
@@ -856,7 +856,7 @@
                     "subtype": "variable",
                     "file": "src/stories/Navbar.stories.ts",
                     "type": "[]",
-                    "defaultValue": "[ '🤷‍♂️ Why A°?', '📐 Angular', '📖 Storybook' ]"
+                    "defaultValue": "[ '❓ About', '📐 Angularization', '💪 Get Great' ]"
                 },
                 {
                     "name": "Template",
