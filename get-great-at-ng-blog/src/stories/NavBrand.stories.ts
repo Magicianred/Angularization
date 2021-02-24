@@ -1,6 +1,5 @@
 import { Meta, Story } from '@storybook/angular/types-6-0';
-import { NavBrandComponent } from 'src/app/navbar/nav-brand/nav-brand.component';
-import type { INavModel } from 'src/app/navbar/nav.model';
+import { NavBrandComponent } from '../app/navbar/nav-brand/nav-brand.component';
 
 export default {
   title: 'Example/NavBrand',
@@ -15,12 +14,8 @@ const Template: Story<NavBrandComponent> = (args: NavBrandComponent) => ({
   props: args,
 });
 
-let navModel: INavModel = { light: true, label: 'A°' };
-
 export const Light = Template.bind({});
-Light.args = { navModel };
-
-navModel = { light: false, label: 'A°' };
+Light.args = { light: true, label: 'A°' };
 
 export const Dark = Template.bind({});
-Dark.args = { navModel };
+Dark.args = { label: 'A°' };

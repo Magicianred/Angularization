@@ -2,7 +2,8 @@
   (click)="onClick.emit($event)"
   [ngClass]="classes"
   [ngStyle]="{ 'background-color': backgroundColor }"
-  ngDefaultControl [ngModel]="navModel"
+  ngDefaultControl [ngModel]="label"
+  ngDefaultControl [ngModel]="light"
 >
-  {{ navModel.label }}
+  {{ label }}
 </a>

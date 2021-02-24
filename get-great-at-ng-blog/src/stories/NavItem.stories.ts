@@ -1,7 +1,5 @@
 import { Meta, Story } from '@storybook/angular/types-6-0';
 import { NavItemComponent } from '../app/navbar/nav-item/nav-item.component';
-import type { INavModel } from 'src/app/navbar/nav.model';
-import { navItemsData } from './Navbar.stories';
 
 export default {
   title: 'Example/NavItem',
@@ -16,12 +14,8 @@ const Template: Story<NavItemComponent> = (args: NavItemComponent) => ({
   props: args,
 });
 
-let navModel: INavModel = { light: true, label: '💡 NavItem' };
-
 export const Light = Template.bind({});
-Light.args = { navModel };
-
-navModel = { light: false, label: '🌙 NavItem' }
+Light.args = { light: true, label: '💡 NavItem' };
 
 export const Dark = Template.bind({});
-Dark.args = { navModel };
+Dark.args = { label: '🌙 NavItem' };

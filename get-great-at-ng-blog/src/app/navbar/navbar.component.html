@@ -5,7 +5,8 @@
 >
   <div style="float: left;">
     <nav-brand 
-      [navModel]="navModel"
+      [label]="brand"
+      [light]="light"
       [ngClass]="classes" 
       [ngStyle]="{ 'background-color': backgroundColor }"
       >
@@ -19,7 +20,8 @@
     >
       <li>
         <nav-item 
-          [navModel]="{ light: navModel.light, label: item  }"
+          [label]="item"
+          [light]="light" 
           [ngClass]="classes" 
           [ngStyle]="{ 'background-color': backgroundColor }">
         </nav-item>
