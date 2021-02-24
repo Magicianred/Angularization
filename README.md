@@ -509,7 +509,7 @@ export class NavBrandComponent implements OnInit {
 }
 
 ```
-Now save.
+Save.
 
 ...
 
@@ -522,7 +522,6 @@ Ensure that you can see "NavBrand" in the Storybook UI-component explorer and th
 ### **`nav-brand.component.html`**
 
 ```html
-<!-- nav-brand.component.html -->
 <a
   (click)="onClick.emit($event)"
   [ngClass]="classes"
@@ -532,7 +531,6 @@ Ensure that you can see "NavBrand" in the Storybook UI-component explorer and th
 >
   {{ label }}
 </a>
-
 ```
 
 Ensure that you can see "NavBrand" in the Storybook UI-component explorer and you can see a generic looking "A°" or whatever you decided to label your brand.
@@ -566,8 +564,17 @@ Once confirmed, let's give our brand some style!
 
 
 ### **`Navbar.stories.ts`**
+
+<br>
+
 ### **`navbar.component.html`**
+
+<br>
+
 ### **`navbar.component.scss`**
+
+<br>
+
 ### **`navbar.component.ts`**
 
 <br>
