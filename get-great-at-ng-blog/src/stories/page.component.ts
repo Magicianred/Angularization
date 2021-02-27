@@ -13,7 +13,12 @@ import { BgImageComponent } from 'src/app/bg-image/bg-image.component';
     [ngStyle]="{ 'background-color': backgroundColor }"
   >
   </navbar>
-  <bg-image></bg-image>
+  <bg-image
+    [light]="light"
+    [ngClass]="classes" 
+    [ngStyle]="{ 'background-color': backgroundColor }"
+  >
+  </bg-image>
   <!-- <article>
     <section>
     </section>

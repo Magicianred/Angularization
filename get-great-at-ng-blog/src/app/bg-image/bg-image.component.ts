@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'bg-image',
   templateUrl: './bg-image.component.html',
   styleUrls: ['./bg-image.component.scss']
 })
-export class BgImageComponent implements OnInit {
+export class BgImageComponent {
+  @Input() light = false;
+  @Input() backgroundColor?: string;
+  @Input() navItems: string[] = [];
 
-  constructor() { }
+  public get classes(): string[] {
+    const mode = this.light ? 'bg-image--light' : 'bg-image--dark';
 
-  ngOnInit(): void {
+    return [mode];
   }
-
 }
