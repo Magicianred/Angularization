@@ -9,8 +9,8 @@ import { NavBrandComponent } from './navbar/nav-brand/nav-brand.component';
 import { PxFooterComponent } from './px-footer/px-footer.component';
 import { FontSizeComponent } from './px-footer/font-size/font-size.component';
 import { QualityComponent } from './px-footer/quality/quality.component';
-import { ThemeComponent } from './px-footer/theme/theme.component';
 import { BgImageComponent } from './bg-image/bg-image.component';
+import { ThemeButtonComponent } from './px-footer/theme-button/theme-button.component';
 
 @NgModule({
   declarations: [
@@ -21,8 +21,8 @@ import { BgImageComponent } from './bg-image/bg-image.component';
     PxFooterComponent,
     FontSizeComponent,
     QualityComponent,
-    ThemeComponent,
-    BgImageComponent
+    BgImageComponent,
+    ThemeButtonComponent
   ],
   imports: [
     BrowserModule,

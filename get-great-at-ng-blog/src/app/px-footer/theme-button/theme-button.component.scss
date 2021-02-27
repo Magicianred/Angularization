@@ -1,0 +1,20 @@
+.theme-button {
+  border: 0;
+  padding: 5px 10px 5px 10px;
+  border-radius: 6px;
+  font-size: 10px;
+  background-color: #fff;
+  width: 45px;
+}
+
+.theme-button--light { background-color: #000; }
+.theme-button--dark { background-color: #fff; }
+
+/* Large Mobile */
+@media (min-width: 414px) { .theme-button { font-size: 12px;   width: 49px;} }
+
+/* Tablet */
+@media (min-width: 834px) { .theme-button { font-size: 15px; width: 54px;} }
+
+/* Full */
+@media (min-width: 1112px) { .theme-button { font-size: 18px; width: 60px;} }

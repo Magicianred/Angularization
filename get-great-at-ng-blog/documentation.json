@@ -92,7 +92,7 @@
         },
         {
             "name": "BgImageComponent",
-            "id": "component-BgImageComponent-3c78fe82977258c1b6cdc2d745865783",
+            "id": "component-BgImageComponent-e7ee52c73243e3a54429e74e00c586c5",
             "file": "src/app/bg-image/bg-image.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -108,43 +108,53 @@
                 "./bg-image.component.html"
             ],
             "viewProviders": [],
-            "inputsClass": [],
-            "outputsClass": [],
-            "propertiesClass": [],
-            "methodsClass": [
+            "inputsClass": [
                 {
-                    "name": "ngOnInit",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 12
+                    "name": "backgroundColor",
+                    "line": 10,
+                    "type": "string"
+                },
+                {
+                    "name": "light",
+                    "defaultValue": "false",
+                    "line": 9
+                },
+                {
+                    "name": "navItems",
+                    "defaultValue": "[]",
+                    "line": 11,
+                    "type": "string[]"
                 }
             ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
             "hostBindings": [],
             "hostListeners": [],
             "description": "",
             "rawdescription": "",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'bg-image',\n  templateUrl: './bg-image.component.html',\n  styleUrls: ['./bg-image.component.scss']\n})\nexport class BgImageComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'bg-image',\n  templateUrl: './bg-image.component.html',\n  styleUrls: ['./bg-image.component.scss']\n})\nexport class BgImageComponent {\n  @Input() light = false;\n  @Input() backgroundColor?: string;\n  @Input() navItems: string[] = [];\n\n  public get classes(): string[] {\n    const mode = this.light ? 'bg-image--light' : 'bg-image--dark';\n\n    return [mode];\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".bg-image {\r\n  padding: 0;\r\n  margin: 0;\r\n  background-image: url(\"../../assets/bg-image.jpg\");\r\n  background-repeat: no-repeat;\r\n  background-attachment: fixed;\r\n  background-size: 100% !important;\r\n  background-position: top center;\r\n  height: 100vh;\r\n  filter: opacity(12.5%);\r\n}\r\n\r\n/* Large Mobile */\r\n@media (min-width: 414px) { .bg-image { background-size: 100% !important; } }\r\n\r\n/* Tablet */\r\n@media (min-width: 834px) { .bg-image { background-size: 100% !important; } }\r\n\r\n/* Full */\r\n@media (min-width: 1112px) { .bg-image { background-size: 100% !important; } }",
+                    "data": ".bg-image {\r\n  padding: 0;\r\n  margin: 0;\r\n  background-image: url(\"../../assets/bg-image.jpg\");\r\n  background-repeat: no-repeat;\r\n  background-attachment: fixed;\r\n  background-size: 750% !important;\r\n  background-position: top center;\r\n  height: 100vh;\r\n  filter: opacity(12.5%);\r\n}\r\n\r\n.bg-image--light { background-color: #fff; }\r\n.bg-image--dark { background-color: #000; }\r\n\r\n/* Large Mobile */\r\n@media (min-width: 414px) { .bg-image { background-size: 500% !important; } }\r\n\r\n/* Tablet */\r\n@media (min-width: 834px) { .bg-image { background-size: 300% !important; } }\r\n\r\n/* Full */\r\n@media (min-width: 1112px) { .bg-image { background-size: 125% !important; } }",
                     "styleUrl": "./bg-image.component.scss"
                 }
             ],
             "stylesData": "",
-            "constructorObj": {
-                "name": "constructor",
-                "description": "",
-                "args": [],
-                "line": 8
+            "accessors": {
+                "classes": {
+                    "name": "classes",
+                    "getSignature": {
+                        "name": "classes",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 13
+                    }
+                }
             },
-            "implements": [
-                "OnInit"
-            ],
-            "templateData": "<div class=\"bg-image\">\n</div>\n"
+            "templateData": "<div \n  [ngClass]=\"classes\"\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\n  ngDefaultControl [ngModel]=\"light\"\n>\n  <div class=\"bg-image\"></div>\n</div>\n"
         },
         {
             "name": "ButtonComponent",
@@ -407,7 +417,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".navbar-container {\r\n  width: 100%;\r\n}\r\n\r\n.navbar {\r\n  display: inline-block;\r\n  height: 45px;\r\n  list-style-type: none;\r\n  margin: 0;\r\n}\r\n\r\n.navbar--light, .nav-item--light {\r\n  color: #000;\r\n  background-color: #fff;\r\n  border-bottom: 2px solid #000;\r\n}\r\n\r\n.navbar--dark, .nav-item--dark {\r\n  color: #fff;\r\n  background-color: #000;\r\n  border-bottom: 2px solid #fff;\r\n}\r\n\r\nul, ul li { padding-left: 8px; margin: 0 }\r\n\r\n/* Large Mobile */\r\n@media (min-width: 414px) { \r\n  .navbar { height: 45px; }\r\n  ul, ul li { padding-left: 22px; margin: 0 } \r\n}\r\n\r\n/* Tablet */\r\n@media (min-width: 834px) { \r\n  .navbar { height: 50px; }\r\n  ul, ul li { padding-left: 40px; margin: 0 } \r\n}\r\n\r\n/* Full */\r\n@media (min-width: 1112px) { \r\n  .navbar { height: 60px; }\r\n  ul, ul li { padding-left: 52px; margin: 0 } \r\n}",
+                    "data": ".navbar-container {\r\n  width: 100%;\r\n}\r\n\r\n.navbar {\r\n  display: inline-block;\r\n  height: 45px;\r\n  list-style-type: none;\r\n  margin: 0;\r\n}\r\n\r\n.navbar--light, .nav-item--light {\r\n  color: #000;\r\n  background-color: #fff;\r\n  border-bottom: 2px solid #000;\r\n}\r\n\r\n.navbar--dark, .nav-item--dark {\r\n  color: #fff;\r\n  background-color: #000;\r\n  border-bottom: 2px solid #fff;\r\n}\r\n\r\nul, ul li { padding-left: 5px; margin: 0 }\r\n\r\n/* Large Mobile */\r\n@media (min-width: 414px) { \r\n  .navbar { height: 45px; }\r\n  ul, ul li { padding-left: 22px; margin: 0 } \r\n}\r\n\r\n/* Tablet */\r\n@media (min-width: 834px) { \r\n  .navbar { height: 50px; }\r\n  ul, ul li { padding-left: 40px; margin: 0 } \r\n}\r\n\r\n/* Full */\r\n@media (min-width: 1112px) { \r\n  .navbar { height: 60px; }\r\n  ul, ul li { padding-left: 52px; margin: 0 } \r\n}",
                     "styleUrl": "./navbar.component.scss"
                 }
             ],
@@ -580,7 +590,7 @@
         },
         {
             "name": "PageComponent",
-            "id": "component-PageComponent-df5fa37f83660b5a272c9948144efc35",
+            "id": "component-PageComponent-15430051913e4a4dbeb32d23b395df19",
             "file": "src/stories/page.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -592,29 +602,29 @@
                 "./page.css"
             ],
             "styles": [],
-            "template": "<article>    <navbar\n      [brand]=\"brand\"\n      [light]=\"light\"\n      [navItems]=\"navItems\"\n      [ngClass]=\"classes\"\n      [ngStyle]=\"{ 'background-color': backgroundColor }\"\n    >\n    </navbar>\n    <bg-image></bg-image>\n    <section>\n    </section>\n  </article>",
+            "template": "<navbar\n  [brand]=\"brand\"\n  [light]=\"light\"\n  [navItems]=\"navItems\"\n  [ngClass]=\"classes\"\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\n>\n</navbar>\n<bg-image\n  [light]=\"light\"\n  [ngClass]=\"classes\"\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\n>\n</bg-image>\n<!-- <article>\n  <section>\n  </section>\n</article> -->",
             "templateUrl": [],
             "viewProviders": [],
             "inputsClass": [
                 {
                     "name": "backgroundColor",
-                    "line": 25,
+                    "line": 31,
                     "type": "string"
                 },
                 {
                     "name": "brand",
                     "defaultValue": "''",
-                    "line": 24
+                    "line": 30
                 },
                 {
                     "name": "light",
                     "defaultValue": "false",
-                    "line": 23
+                    "line": 29
                 },
                 {
                     "name": "navItems",
                     "defaultValue": "[]",
-                    "line": 26,
+                    "line": 32,
                     "type": "string[]"
                 }
             ],
@@ -626,7 +636,7 @@
             "description": "",
             "rawdescription": "",
             "type": "component",
-            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\r\nimport { NavbarComponent } from 'src/app/navbar/navbar.component';\r\nimport { BgImageComponent } from 'src/app/bg-image/bg-image.component';\r\n\r\n@Component({\r\n  selector: 'a-degree-page',\r\n  template: `<article>\r\n    <navbar \r\n      [brand]=\"brand\"\r\n      [light]=\"light\"\r\n      [navItems]=\"navItems\"\r\n      [ngClass]=\"classes\" \r\n      [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n    >\r\n    </navbar>\r\n    <bg-image></bg-image>\r\n    <section>\r\n    </section>\r\n  </article>`,\r\n  styleUrls: ['./page.css'],\r\n})\r\nexport default class PageComponent {\r\n  @Input() light = false;\r\n  @Input() brand = '';\r\n  @Input() backgroundColor?: string;\r\n  @Input() navItems: string[] = [];\r\n\r\n  public get classes(): string[] {\r\n    const mode = this.light ? 'page--light' : 'page--dark';\r\n\r\n    return ['page', mode];\r\n  }\r\n}\r\n\r\n// export const Page = ({ user, onLogin, onLogout, onCreateAccount }) => (\r\n//   <article>\r\n//     <Header user={user} onLogin={onLogin} onLogout={onLogout} onCreateAccount={onCreateAccount} />\r\n\r\n// );\r\n// Page.propTypes = {\r\n//   user: PropTypes.shape({}),\r\n//   onLogin: PropTypes.func.isRequired,\r\n//   onLogout: PropTypes.func.isRequired,\r\n//   onCreateAccount: PropTypes.func.isRequired,\r\n// };\r\n\r\n// Page.defaultProps = {\r\n//   user: null,\r\n// };\r\n",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\r\nimport { NavbarComponent } from 'src/app/navbar/navbar.component';\r\nimport { BgImageComponent } from 'src/app/bg-image/bg-image.component';\r\n\r\n@Component({\r\n  selector: 'a-degree-page',\r\n  template: `\r\n  <navbar \r\n    [brand]=\"brand\"\r\n    [light]=\"light\"\r\n    [navItems]=\"navItems\"\r\n    [ngClass]=\"classes\" \r\n    [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n  >\r\n  </navbar>\r\n  <bg-image\r\n    [light]=\"light\"\r\n    [ngClass]=\"classes\" \r\n    [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n  >\r\n  </bg-image>\r\n  <!-- <article>\r\n    <section>\r\n    </section>\r\n  </article> -->`,\r\n  styleUrls: ['./page.css'],\r\n})\r\nexport default class PageComponent {\r\n  @Input() light = false;\r\n  @Input() brand = '';\r\n  @Input() backgroundColor?: string;\r\n  @Input() navItems: string[] = [];\r\n\r\n  public get classes(): string[] {\r\n    const mode = this.light ? 'page--light' : 'page--dark';\r\n\r\n    return ['page', mode];\r\n  }\r\n}\r\n\r\n// export const Page = ({ user, onLogin, onLogout, onCreateAccount }) => (\r\n//   <article>\r\n//     <Header user={user} onLogin={onLogin} onLogout={onLogout} onCreateAccount={onCreateAccount} />\r\n\r\n// );\r\n// Page.propTypes = {\r\n//   user: PropTypes.shape({}),\r\n//   onLogin: PropTypes.func.isRequired,\r\n//   onLogout: PropTypes.func.isRequired,\r\n//   onCreateAccount: PropTypes.func.isRequired,\r\n// };\r\n\r\n// Page.defaultProps = {\r\n//   user: null,\r\n// };\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -642,7 +652,7 @@
                         "name": "classes",
                         "type": "[]",
                         "returnType": "string[]",
-                        "line": 28
+                        "line": 34
                     }
                 }
             }
@@ -926,6 +936,14 @@
                 "name": "Dark",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/BgImage.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Dark",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/Navbar.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
@@ -958,23 +976,31 @@
                 "name": "environment",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/environments/environment.prod.ts",
+                "file": "src/environments/environment.ts",
                 "type": "object",
-                "defaultValue": "{\r\n  production: true\r\n}"
+                "defaultValue": "{\r\n  production: false\r\n}"
             },
             {
                 "name": "environment",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/environments/environment.ts",
+                "file": "src/environments/environment.prod.ts",
                 "type": "object",
-                "defaultValue": "{\r\n  production: false\r\n}"
+                "defaultValue": "{\r\n  production: true\r\n}"
             },
             {
                 "name": "Large",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/stories/Button.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Light",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/BgImage.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -1077,6 +1103,14 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/BgImage.stories.ts",
+                "type": "Story<BgImageComponent>",
+                "defaultValue": "(args: BgImageComponent) => ({\r\n  component: BgImageComponent,\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/Button.stories.ts",
                 "type": "Story<Button>",
                 "defaultValue": "(args: Button) => ({\r\n  component: Button,\r\n  props: args,\r\n})"
@@ -1141,6 +1175,32 @@
                     "subtype": "variable",
                     "file": "src/test.ts",
                     "type": "literal type"
+                }
+            ],
+            "src/stories/BgImage.stories.ts": [
+                {
+                    "name": "Dark",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/BgImage.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Light",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/BgImage.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/BgImage.stories.ts",
+                    "type": "Story<BgImageComponent>",
+                    "defaultValue": "(args: BgImageComponent) => ({\r\n  component: BgImageComponent,\r\n  props: args,\r\n})"
                 }
             ],
             "src/stories/Navbar.stories.ts": [
@@ -1263,16 +1323,6 @@
                     "defaultValue": "(args: Page) => ({\r\n  component: Page,\r\n  props: args,\r\n})"
                 }
             ],
-            "src/environments/environment.prod.ts": [
-                {
-                    "name": "environment",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/environments/environment.prod.ts",
-                    "type": "object",
-                    "defaultValue": "{\r\n  production: true\r\n}"
-                }
-            ],
             "src/environments/environment.ts": [
                 {
                     "name": "environment",
@@ -1281,6 +1331,16 @@
                     "file": "src/environments/environment.ts",
                     "type": "object",
                     "defaultValue": "{\r\n  production: false\r\n}"
+                }
+            ],
+            "src/environments/environment.prod.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.prod.ts",
+                    "type": "object",
+                    "defaultValue": "{\r\n  production: true\r\n}"
                 }
             ],
             "src/stories/Button.stories.ts": [
@@ -1371,7 +1431,7 @@
         ]
     },
     "coverage": {
-        "count": 2,
+        "count": 1,
         "status": "low",
         "files": [
             {
@@ -1398,7 +1458,7 @@
                 "linktype": "component",
                 "name": "BgImageComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/3",
+                "coverageCount": "0/4",
                 "status": "low"
             },
             {
@@ -1480,6 +1540,36 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "environment",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/BgImage.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Dark",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/BgImage.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Light",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/BgImage.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
