@@ -91,6 +91,62 @@
             "templateData": ""
         },
         {
+            "name": "BgImageComponent",
+            "id": "component-BgImageComponent-3c78fe82977258c1b6cdc2d745865783",
+            "file": "src/app/bg-image/bg-image.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "bg-image",
+            "styleUrls": [
+                "./bg-image.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./bg-image.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 12
+                }
+            ],
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'bg-image',\n  templateUrl: './bg-image.component.html',\n  styleUrls: ['./bg-image.component.scss']\n})\nexport class BgImageComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".bg-image {\r\n  padding: 0;\r\n  margin: 0;\r\n  background-image: url(\"../../assets/bg-image.jpg\");\r\n  background-repeat: no-repeat;\r\n  background-attachment: fixed;\r\n  background-size: 100% !important;\r\n  background-position: top center;\r\n  height: 100vh;\r\n  filter: opacity(12.5%);\r\n}\r\n\r\n/* Large Mobile */\r\n@media (min-width: 414px) { .bg-image { background-size: 100% !important; } }\r\n\r\n/* Tablet */\r\n@media (min-width: 834px) { .bg-image { background-size: 100% !important; } }\r\n\r\n/* Full */\r\n@media (min-width: 1112px) { .bg-image { background-size: 100% !important; } }",
+                    "styleUrl": "./bg-image.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "args": [],
+                "line": 8
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<div class=\"bg-image\">\n</div>\n"
+        },
+        {
             "name": "ButtonComponent",
             "id": "component-ButtonComponent-44f2f1e1b3a1e0ebc1e0edafd90d05c0",
             "file": "src/stories/button.component.ts",
@@ -170,6 +226,62 @@
                     }
                 }
             }
+        },
+        {
+            "name": "FontSizeComponent",
+            "id": "component-FontSizeComponent-f5cfdfd9a4e8929e3058b5321a9aba32",
+            "file": "src/app/px-footer/font-size/font-size.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-font-size",
+            "styleUrls": [
+                "./font-size.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./font-size.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 12
+                }
+            ],
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-font-size',\n  templateUrl: './font-size.component.html',\n  styleUrls: ['./font-size.component.scss']\n})\nexport class FontSizeComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./font-size.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "args": [],
+                "line": 8
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<p>font-size works!</p>\n"
         },
         {
             "name": "HeaderComponent",
@@ -295,7 +407,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".navbar-container {\r\n  width: 100%;\r\n}\r\n\r\n.navbar {\r\n  display: inline-block;\r\n  height: 60px;\r\n  list-style-type: none;\r\n  margin: 0;\r\n}\r\n\r\n.navbar--light, .nav-item--light {\r\n  color: #000;\r\n  background-color: #fff;\r\n  border-bottom: 2px solid #000;\r\n}\r\n\r\n.navbar--dark, .nav-item--dark {\r\n  color: #fff;\r\n  background-color: #000;\r\n  border-bottom: 2px solid #fff;\r\n}",
+                    "data": ".navbar-container {\r\n  width: 100%;\r\n}\r\n\r\n.navbar {\r\n  display: inline-block;\r\n  height: 45px;\r\n  list-style-type: none;\r\n  margin: 0;\r\n}\r\n\r\n.navbar--light, .nav-item--light {\r\n  color: #000;\r\n  background-color: #fff;\r\n  border-bottom: 2px solid #000;\r\n}\r\n\r\n.navbar--dark, .nav-item--dark {\r\n  color: #fff;\r\n  background-color: #000;\r\n  border-bottom: 2px solid #fff;\r\n}\r\n\r\nul, ul li { padding-left: 8px; margin: 0 }\r\n\r\n/* Large Mobile */\r\n@media (min-width: 414px) { \r\n  .navbar { height: 45px; }\r\n  ul, ul li { padding-left: 22px; margin: 0 } \r\n}\r\n\r\n/* Tablet */\r\n@media (min-width: 834px) { \r\n  .navbar { height: 50px; }\r\n  ul, ul li { padding-left: 40px; margin: 0 } \r\n}\r\n\r\n/* Full */\r\n@media (min-width: 1112px) { \r\n  .navbar { height: 60px; }\r\n  ul, ul li { padding-left: 52px; margin: 0 } \r\n}",
                     "styleUrl": "./navbar.component.scss"
                 }
             ],
@@ -320,11 +432,11 @@
                     }
                 }
             },
-            "templateData": "<div\r\n  class=\"navbar-container\"\r\n  [ngClass]=\"classes\"\r\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"  \r\n>\r\n  <div style=\"float: left;\">\r\n    <nav-brand \r\n      [label]=\"brand\"\r\n      [light]=\"light\"\r\n      [ngClass]=\"classes\" \r\n      [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n      >\r\n    </nav-brand>\r\n  </div>\r\n  <div>\r\n    <ul \r\n      *ngFor=\"let item of navItems\"\r\n      [ngClass]=\"classes\"\r\n      [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n    >\r\n      <li>\r\n        <nav-item \r\n          [label]=\"item\"\r\n          [light]=\"light\" \r\n          [ngClass]=\"classes\" \r\n          [ngStyle]=\"{ 'background-color': backgroundColor }\">\r\n        </nav-item>\r\n      </li>\r\n    </ul>\r\n  </div>\r\n</div>\r\n"
+            "templateData": "<div\r\n  class=\"navbar-container\"\r\n  [ngClass]=\"classes\"\r\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n  ngDefaultControl [ngModel]=\"brand\"\r\n  ngDefaultControl [ngModel]=\"light\"\r\n  ngDefaultControl [ngModel]=\"navItems\"\r\n>\r\n  <div style=\"float: left;\">\r\n    <nav-brand \r\n      [label]=\"brand\"\r\n      [light]=\"light\"\r\n      [ngClass]=\"classes\" \r\n      [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n      >\r\n    </nav-brand>\r\n  </div>\r\n  <div>\r\n    <ul \r\n      *ngFor=\"let item of navItems\"\r\n      [ngClass]=\"classes\"\r\n      [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n    >\r\n      <li>\r\n        <nav-item \r\n          [label]=\"item\"\r\n          [light]=\"light\" \r\n          [ngClass]=\"classes\" \r\n          [ngStyle]=\"{ 'background-color': backgroundColor }\">\r\n        </nav-item>\r\n      </li>\r\n    </ul>\r\n  </div>\r\n</div>\r\n"
         },
         {
             "name": "NavBrandComponent",
-            "id": "component-NavBrandComponent-29c92572e2db1ad72c95805e502fe510",
+            "id": "component-NavBrandComponent-210fe85a947ba432837a1168d0586afe",
             "file": "src/app/navbar/nav-brand/nav-brand.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -343,25 +455,25 @@
             "inputsClass": [
                 {
                     "name": "backgroundColor",
-                    "line": 11,
+                    "line": 10,
                     "type": "string"
                 },
                 {
                     "name": "label",
                     "defaultValue": "''",
-                    "line": 12
+                    "line": 11
                 },
                 {
                     "name": "light",
                     "defaultValue": "false",
-                    "line": 10
+                    "line": 9
                 }
             ],
             "outputsClass": [
                 {
                     "name": "onClick",
                     "defaultValue": "new EventEmitter<Event>()",
-                    "line": 14,
+                    "line": 13,
                     "type": "EventEmitter"
                 }
             ],
@@ -372,11 +484,11 @@
             "description": "",
             "rawdescription": "",
             "type": "component",
-            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'nav-brand',\r\n  templateUrl: './nav-brand.component.html',\r\n  styleUrls: ['./nav-brand.component.scss']\r\n})\r\nexport class NavBrandComponent {\r\n  \r\n  @Input() light = false;\r\n  @Input() backgroundColor?: string;\r\n  @Input() label = '';\r\n\r\n  @Output() onClick = new EventEmitter<Event>();\r\n\r\n  public get classes(): string[] {\r\n    const mode = this.light ? 'nav-brand--light' : 'nav-brand--dark';\r\n\r\n    return ['nav-brand', mode];\r\n  }\r\n\r\n}\r\n",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'nav-brand',\r\n  templateUrl: './nav-brand.component.html',\r\n  styleUrls: ['./nav-brand.component.scss']\r\n})\r\nexport class NavBrandComponent {\r\n  @Input() light = false;\r\n  @Input() backgroundColor?: string;\r\n  @Input() label = '';\r\n\r\n  @Output() onClick = new EventEmitter<Event>();\r\n\r\n  public get classes(): string[] {\r\n    const mode = this.light ? 'nav-brand--light' : 'nav-brand--dark';\r\n\r\n    return ['nav-brand', mode];\r\n  }\r\n\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".nav-brand {\r\n  float: left;\r\n  font-size: 40px;\r\n  padding-top: 10px;\r\n  padding-left: 20px;\r\n  padding-right: 5px;\r\n  font-family: Arial, Helvetica, sans-serif;\r\n  font-weight: 700;\r\n  margin: 0;\r\n  padding-bottom: 0;\r\n}\r\n.nav-brand--light { color: crimson; background-color: #fff; }\r\n.nav-brand--dark { color: #fff; background-color: #000; }",
+                    "data": ".nav-brand {\r\n  float: left;\r\n  font-size: 25px;\r\n  padding-top: 8px;\r\n  padding-left: 10px;\r\n  padding-right: 2.5px;\r\n  font-family: Arial, Helvetica, sans-serif;\r\n  font-weight: 700;\r\n  margin: 0;\r\n  padding-bottom: 0;\r\n}\r\n.nav-brand--light { color: crimson; background-color: #fff; }\r\n.nav-brand--dark { color: #fff; background-color: #000; }\r\n\r\n/* Tablet */\r\n@media (min-width: 834px) {\r\n  .nav-brand { \r\n    font-size: 30px;  \r\n    padding-top: 10px;\r\n    padding-left: 15px;\r\n    padding-right: 5px;\r\n  }\r\n}\r\n\r\n/* Full */\r\n@media (min-width: 1112px) {\r\n  .nav-brand { \r\n    font-size: 40px;\r\n    padding-top: 10px;\r\n    padding-left: 20px;\r\n    padding-right: 5px;\r\n  }\r\n}",
                     "styleUrl": "./nav-brand.component.scss"
                 }
             ],
@@ -388,7 +500,7 @@
                         "name": "classes",
                         "type": "[]",
                         "returnType": "string[]",
-                        "line": 16
+                        "line": 15
                     }
                 }
             },
@@ -448,7 +560,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".nav-item {\r\n  font-family: \r\n    'Segoe UI', \r\n    'Nunito Sans', \r\n    'Helvetica Neue', \r\n    Helvetica, Arial, \r\n    Tahoma, \r\n    Geneva, \r\n    Verdana, \r\n    sans-serif;\r\n  font-weight: 500;\r\n  cursor: pointer;\r\n  display: inline-block;\r\n  line-height: 60px;\r\n  padding-left: 10px;\r\n  padding-right: 10px;\r\n  margin-left: 15px;\r\n  font-size: 10px;\r\n  opacity: 1;\r\n}\r\n\r\n.nav-item--light {\r\n  color: #000;\r\n  background-color: #fff;\r\n}\r\n\r\n.nav-item--dark {\r\n  color: #fff;\r\n  background-color: #000;\r\n}\r\n\r\n.nav-item:hover {\r\n  opacity: 0.667;\r\n}\r\n\r\n/* Medium-Size */\r\n@media (min-width: 720px) { \r\n  .nav-item {\r\n    margin-left: 30px;\r\n    font-size: 12px;\r\n  }\r\n}\r\n\r\n/* Full-Size */\r\n@media (min-width: 1000px) {\r\n  .nav-item {\r\n    margin-left: 60px;\r\n    font-size: 15px;\r\n  }\r\n}",
+                    "data": ".nav-item {\r\n  font-family: \r\n    'Segoe UI', \r\n    'Nunito Sans', \r\n    'Helvetica Neue', \r\n    Helvetica, Arial, \r\n    Tahoma, \r\n    Geneva, \r\n    Verdana, \r\n    sans-serif;\r\n  font-weight: 500;\r\n  cursor: pointer;\r\n  display: inline-block;\r\n  line-height: 45px;\r\n  padding-left: 0;\r\n  padding-right: 0;\r\n  margin-left: 0;\r\n  font-size: 10px;\r\n  opacity: 1;\r\n}\r\n\r\n.nav-item--light {\r\n  color: #000;\r\n  background-color: #fff;\r\n}\r\n\r\n.nav-item--dark {\r\n  color: #fff;\r\n  background-color: #000;\r\n}\r\n\r\n.nav-item:hover {\r\n  opacity: 0.667;\r\n}\r\n\r\n/* Tablet */\r\n@media (min-width: 834px) { \r\n  .nav-item {\r\n    margin-left: 15px;\r\n    font-size: 12px;\r\n    padding-left: 5px;\r\n    padding-right: 5px; \r\n    line-height: 50px;\r\n  }\r\n}\r\n\r\n/* Full-Size */\r\n@media (min-width: 1112px) {\r\n  .nav-item {\r\n    margin-left: 60px;\r\n    font-size: 15px;\r\n    padding-left: 10px;\r\n    padding-right: 10px;  \r\n    line-height: 60px;\r\n  }\r\n}",
                     "styleUrl": "./nav-item.component.scss"
                 }
             ],
@@ -468,49 +580,45 @@
         },
         {
             "name": "PageComponent",
-            "id": "component-PageComponent-caf3f2fce2bf7356cf7ccd76b8a88482",
+            "id": "component-PageComponent-df5fa37f83660b5a272c9948144efc35",
             "file": "src/stories/page.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
             "providers": [],
-            "selector": "storybook-page",
+            "selector": "a-degree-page",
             "styleUrls": [
                 "./page.css"
             ],
             "styles": [],
-            "template": "<article>    <storybook-header\n      [user]=\"user\"\n      (onLogout)=\"onLogout.emit($event)\"\n      (onLogin)=\"onLogin.emit($event)\"\n      (onCreateAccount)=\"onCreateAccount.emit($event)\"\n    ></storybook-header>\n    <section>\n      <h2>Pages in Storybook</h2>\n      <p>\n        We recommend building UIs with a\n        <a href=\"https://componentdriven.org\" target=\"_blank\" rel=\"noopener noreferrer\">\n          <strong>component-driven</strong>\n        </a>\n        process starting with atomic components and ending with pages.\n      </p>\n      <p>\n        Render pages with mock data. This makes it easy to build and review page states without\n        needing to navigate to them in your app. Here are some handy patterns for managing page data\n        in Storybook:\n      </p>\n      <ul>\n        <li>\n          Use a higher-level connected component. Storybook helps you compose such data from the\n          \"args\" of child component stories\n        </li>\n        <li>\n          Assemble data in the page component from your services. You can mock these services out\n          using Storybook.\n        </li>\n      </ul>\n      <p>\n        Get a guided tutorial on component-driven development at\n        <a href=\"https://www.learnstorybook.com\" target=\"_blank\" rel=\"noopener noreferrer\">\n          Learn Storybook\n        </a>\n        . Read more in the\n        <a href=\"https://storybook.js.org/docs\" target=\"_blank\" rel=\"noopener noreferrer\">\n          docs\n        </a>\n        .\n      </p>\n      <div class=\"tip-wrapper\">\n        <span class=\"tip\">Tip</span> Adjust the width of the canvas with the\n        <svg width=\"10\" height=\"10\" viewBox=\"0 0 12 12\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z\"\n              id=\"a\"\n              fill=\"#999\"\n            />\n          </g>\n        </svg>\n        Viewports addon in the toolbar\n      </div>\n    </section>\n  </article>",
+            "template": "<article>    <navbar\n      [brand]=\"brand\"\n      [light]=\"light\"\n      [navItems]=\"navItems\"\n      [ngClass]=\"classes\"\n      [ngStyle]=\"{ 'background-color': backgroundColor }\"\n    >\n    </navbar>\n    <bg-image></bg-image>\n    <section>\n    </section>\n  </article>",
             "templateUrl": [],
             "viewProviders": [],
             "inputsClass": [
                 {
-                    "name": "user",
-                    "defaultValue": "null",
-                    "line": 66,
-                    "type": "unknown"
-                }
-            ],
-            "outputsClass": [
-                {
-                    "name": "onCreateAccount",
-                    "defaultValue": "new EventEmitter<Event>()",
-                    "line": 75,
-                    "type": "EventEmitter"
+                    "name": "backgroundColor",
+                    "line": 25,
+                    "type": "string"
                 },
                 {
-                    "name": "onLogin",
-                    "defaultValue": "new EventEmitter<Event>()",
-                    "line": 69,
-                    "type": "EventEmitter"
+                    "name": "brand",
+                    "defaultValue": "''",
+                    "line": 24
                 },
                 {
-                    "name": "onLogout",
-                    "defaultValue": "new EventEmitter<Event>()",
-                    "line": 72,
-                    "type": "EventEmitter"
+                    "name": "light",
+                    "defaultValue": "false",
+                    "line": 23
+                },
+                {
+                    "name": "navItems",
+                    "defaultValue": "[]",
+                    "line": 26,
+                    "type": "string[]"
                 }
             ],
+            "outputsClass": [],
             "propertiesClass": [],
             "methodsClass": [],
             "hostBindings": [],
@@ -518,7 +626,7 @@
             "description": "",
             "rawdescription": "",
             "type": "component",
-            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'storybook-page',\r\n  template: `<article>\r\n    <storybook-header\r\n      [user]=\"user\"\r\n      (onLogout)=\"onLogout.emit($event)\"\r\n      (onLogin)=\"onLogin.emit($event)\"\r\n      (onCreateAccount)=\"onCreateAccount.emit($event)\"\r\n    ></storybook-header>\r\n    <section>\r\n      <h2>Pages in Storybook</h2>\r\n      <p>\r\n        We recommend building UIs with a\r\n        <a href=\"https://componentdriven.org\" target=\"_blank\" rel=\"noopener noreferrer\">\r\n          <strong>component-driven</strong>\r\n        </a>\r\n        process starting with atomic components and ending with pages.\r\n      </p>\r\n      <p>\r\n        Render pages with mock data. This makes it easy to build and review page states without\r\n        needing to navigate to them in your app. Here are some handy patterns for managing page data\r\n        in Storybook:\r\n      </p>\r\n      <ul>\r\n        <li>\r\n          Use a higher-level connected component. Storybook helps you compose such data from the\r\n          \"args\" of child component stories\r\n        </li>\r\n        <li>\r\n          Assemble data in the page component from your services. You can mock these services out\r\n          using Storybook.\r\n        </li>\r\n      </ul>\r\n      <p>\r\n        Get a guided tutorial on component-driven development at\r\n        <a href=\"https://www.learnstorybook.com\" target=\"_blank\" rel=\"noopener noreferrer\">\r\n          Learn Storybook\r\n        </a>\r\n        . Read more in the\r\n        <a href=\"https://storybook.js.org/docs\" target=\"_blank\" rel=\"noopener noreferrer\">\r\n          docs\r\n        </a>\r\n        .\r\n      </p>\r\n      <div class=\"tip-wrapper\">\r\n        <span class=\"tip\">Tip</span> Adjust the width of the canvas with the\r\n        <svg width=\"10\" height=\"10\" viewBox=\"0 0 12 12\" xmlns=\"http://www.w3.org/2000/svg\">\r\n          <g fill=\"none\" fillRule=\"evenodd\">\r\n            <path\r\n              d=\"M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z\"\r\n              id=\"a\"\r\n              fill=\"#999\"\r\n            />\r\n          </g>\r\n        </svg>\r\n        Viewports addon in the toolbar\r\n      </div>\r\n    </section>\r\n  </article>`,\r\n  styleUrls: ['./page.css'],\r\n})\r\nexport default class PageComponent {\r\n  @Input()\r\n  user: unknown = null;\r\n\r\n  @Output()\r\n  onLogin = new EventEmitter<Event>();\r\n\r\n  @Output()\r\n  onLogout = new EventEmitter<Event>();\r\n\r\n  @Output()\r\n  onCreateAccount = new EventEmitter<Event>();\r\n}\r\n\r\n// export const Page = ({ user, onLogin, onLogout, onCreateAccount }) => (\r\n//   <article>\r\n//     <Header user={user} onLogin={onLogin} onLogout={onLogout} onCreateAccount={onCreateAccount} />\r\n\r\n// );\r\n// Page.propTypes = {\r\n//   user: PropTypes.shape({}),\r\n//   onLogin: PropTypes.func.isRequired,\r\n//   onLogout: PropTypes.func.isRequired,\r\n//   onCreateAccount: PropTypes.func.isRequired,\r\n// };\r\n\r\n// Page.defaultProps = {\r\n//   user: null,\r\n// };\r\n",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\r\nimport { NavbarComponent } from 'src/app/navbar/navbar.component';\r\nimport { BgImageComponent } from 'src/app/bg-image/bg-image.component';\r\n\r\n@Component({\r\n  selector: 'a-degree-page',\r\n  template: `<article>\r\n    <navbar \r\n      [brand]=\"brand\"\r\n      [light]=\"light\"\r\n      [navItems]=\"navItems\"\r\n      [ngClass]=\"classes\" \r\n      [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n    >\r\n    </navbar>\r\n    <bg-image></bg-image>\r\n    <section>\r\n    </section>\r\n  </article>`,\r\n  styleUrls: ['./page.css'],\r\n})\r\nexport default class PageComponent {\r\n  @Input() light = false;\r\n  @Input() brand = '';\r\n  @Input() backgroundColor?: string;\r\n  @Input() navItems: string[] = [];\r\n\r\n  public get classes(): string[] {\r\n    const mode = this.light ? 'page--light' : 'page--dark';\r\n\r\n    return ['page', mode];\r\n  }\r\n}\r\n\r\n// export const Page = ({ user, onLogin, onLogout, onCreateAccount }) => (\r\n//   <article>\r\n//     <Header user={user} onLogin={onLogin} onLogout={onLogout} onCreateAccount={onCreateAccount} />\r\n\r\n// );\r\n// Page.propTypes = {\r\n//   user: PropTypes.shape({}),\r\n//   onLogin: PropTypes.func.isRequired,\r\n//   onLogout: PropTypes.func.isRequired,\r\n//   onCreateAccount: PropTypes.func.isRequired,\r\n// };\r\n\r\n// Page.defaultProps = {\r\n//   user: null,\r\n// };\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -526,7 +634,186 @@
                     "styleUrl": "./page.css"
                 }
             ],
-            "stylesData": ""
+            "stylesData": "",
+            "accessors": {
+                "classes": {
+                    "name": "classes",
+                    "getSignature": {
+                        "name": "classes",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 28
+                    }
+                }
+            }
+        },
+        {
+            "name": "PxFooterComponent",
+            "id": "component-PxFooterComponent-c823aa6b5bf63fe04480ee0379f52377",
+            "file": "src/app/px-footer/px-footer.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-px-footer",
+            "styleUrls": [
+                "./px-footer.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./px-footer.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 12
+                }
+            ],
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-px-footer',\n  templateUrl: './px-footer.component.html',\n  styleUrls: ['./px-footer.component.scss']\n})\nexport class PxFooterComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./px-footer.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "args": [],
+                "line": 8
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<p>px-footer works!</p>\n"
+        },
+        {
+            "name": "QualityComponent",
+            "id": "component-QualityComponent-02c961ffb80127507478ab9f6a3b524f",
+            "file": "src/app/px-footer/quality/quality.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-quality",
+            "styleUrls": [
+                "./quality.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./quality.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 12
+                }
+            ],
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-quality',\n  templateUrl: './quality.component.html',\n  styleUrls: ['./quality.component.scss']\n})\nexport class QualityComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./quality.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "args": [],
+                "line": 8
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<p>quality works!</p>\n"
+        },
+        {
+            "name": "ThemeComponent",
+            "id": "component-ThemeComponent-d1374bbe441997df544aed4351a85db8",
+            "file": "src/app/px-footer/theme/theme.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-theme",
+            "styleUrls": [
+                "./theme.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./theme.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 12
+                }
+            ],
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-theme',\n  templateUrl: './theme.component.html',\n  styleUrls: ['./theme.component.scss']\n})\nexport class ThemeComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./theme.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "args": [],
+                "line": 8
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<p>theme works!</p>\n"
         }
     ],
     "modules": [
@@ -544,6 +831,12 @@
                             "name": "AppComponent"
                         },
                         {
+                            "name": "BgImageComponent"
+                        },
+                        {
+                            "name": "FontSizeComponent"
+                        },
+                        {
                             "name": "NavBrandComponent"
                         },
                         {
@@ -551,6 +844,15 @@
                         },
                         {
                             "name": "NavbarComponent"
+                        },
+                        {
+                            "name": "PxFooterComponent"
+                        },
+                        {
+                            "name": "QualityComponent"
+                        },
+                        {
+                            "name": "ThemeComponent"
                         }
                     ]
                 },
@@ -645,6 +947,14 @@
                 "defaultValue": "Template.bind({})"
             },
             {
+                "name": "Dark",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Page.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
                 "name": "environment",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -693,15 +1003,7 @@
                 "defaultValue": "Template.bind({})"
             },
             {
-                "name": "LoggedIn",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Header.stories.ts",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "LoggedIn",
+                "name": "Light",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/stories/Page.stories.ts",
@@ -709,7 +1011,7 @@
                 "defaultValue": "Template.bind({})"
             },
             {
-                "name": "LoggedOut",
+                "name": "LoggedIn",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/stories/Header.stories.ts",
@@ -720,7 +1022,7 @@
                 "name": "LoggedOut",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Page.stories.ts",
+                "file": "src/stories/Header.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -729,6 +1031,14 @@
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/stories/Navbar.stories.ts",
+                "type": "[]",
+                "defaultValue": "[ '❓ About', '📐 Angularization', '💪 Get Great' ]"
+            },
+            {
+                "name": "navItemsData",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Page.stories.ts",
                 "type": "[]",
                 "defaultValue": "[ '❓ About', '📐 Angularization', '💪 Get Great' ]"
             },
@@ -919,6 +1229,40 @@
                     "defaultValue": "(args: NavItemComponent) => ({\r\n  component: NavItemComponent,\r\n  props: args,\r\n})"
                 }
             ],
+            "src/stories/Page.stories.ts": [
+                {
+                    "name": "Dark",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Page.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Light",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Page.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "navItemsData",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Page.stories.ts",
+                    "type": "[]",
+                    "defaultValue": "[ '❓ About', '📐 Angularization', '💪 Get Great' ]"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Page.stories.ts",
+                    "type": "Story<Page>",
+                    "defaultValue": "(args: Page) => ({\r\n  component: Page,\r\n  props: args,\r\n})"
+                }
+            ],
             "src/environments/environment.prod.ts": [
                 {
                     "name": "environment",
@@ -1006,32 +1350,6 @@
                     "type": "Story<Header>",
                     "defaultValue": "(args: Header) => ({\r\n  component: Header,\r\n  props: args,\r\n})"
                 }
-            ],
-            "src/stories/Page.stories.ts": [
-                {
-                    "name": "LoggedIn",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Page.stories.ts",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "LoggedOut",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Page.stories.ts",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Page.stories.ts",
-                    "type": "Story<Page>",
-                    "defaultValue": "(args: Page) => ({\r\n  component: Page,\r\n  props: args,\r\n})"
-                }
             ]
         },
         "groupedFunctions": {},
@@ -1075,6 +1393,15 @@
                 "status": "low"
             },
             {
+                "filePath": "src/app/bg-image/bg-image.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "BgImageComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
                 "filePath": "src/app/navbar/nav-brand/nav-brand.component.ts",
                 "type": "component",
                 "linktype": "component",
@@ -1099,6 +1426,42 @@
                 "name": "NavbarComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/7",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/px-footer/font-size/font-size.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "FontSizeComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/px-footer/px-footer.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "PxFooterComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/px-footer/quality/quality.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "QualityComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/px-footer/theme/theme.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ThemeComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
                 "status": "low"
             },
             {
@@ -1306,7 +1669,7 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "LoggedIn",
+                "name": "Dark",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -1316,7 +1679,17 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "LoggedOut",
+                "name": "Light",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Page.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "navItemsData",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
