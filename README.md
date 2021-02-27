@@ -519,7 +519,7 @@ export class NavBrandComponent implements OnInit {
 }
 
 ```
-Now save.
+Save.
 
 ...
 

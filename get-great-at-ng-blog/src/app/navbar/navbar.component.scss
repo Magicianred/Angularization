@@ -4,7 +4,7 @@
 
 .navbar {
   display: inline-block;
-  height: 60px;
+  height: 45px;
   list-style-type: none;
   margin: 0;
 }
@@ -19,4 +19,24 @@
   color: #fff;
   background-color: #000;
   border-bottom: 2px solid #fff;
+}
+
+ul, ul li { padding-left: 8px; margin: 0 }
+
+/* Large Mobile */
+@media (min-width: 414px) { 
+  .navbar { height: 45px; }
+  ul, ul li { padding-left: 22px; margin: 0 } 
+}
+
+/* Tablet */
+@media (min-width: 834px) { 
+  .navbar { height: 50px; }
+  ul, ul li { padding-left: 40px; margin: 0 } 
+}
+
+/* Full */
+@media (min-width: 1112px) { 
+  .navbar { height: 60px; }
+  ul, ul li { padding-left: 52px; margin: 0 } 
 }

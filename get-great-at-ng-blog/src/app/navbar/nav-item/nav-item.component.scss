@@ -11,11 +11,12 @@
   font-weight: 500;
   cursor: pointer;
   display: inline-block;
-  line-height: 60px;
-  padding-left: 10px;
-  padding-right: 10px;
+  line-height: 45px;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+  font-size: 10px;
   opacity: 1;
-  margin-left: 60px;
 }
 
 .nav-item--light {
@@ -30,4 +31,26 @@
 
 .nav-item:hover {
   opacity: 0.667;
+}
+
+/* Tablet */
+@media (min-width: 834px) { 
+  .nav-item {
+    margin-left: 15px;
+    font-size: 12px;
+    padding-left: 5px;
+    padding-right: 5px; 
+    line-height: 50px;
+  }
+}
+
+/* Full-Size */
+@media (min-width: 1112px) {
+  .nav-item {
+    margin-left: 60px;
+    font-size: 15px;
+    padding-left: 10px;
+    padding-right: 10px;  
+    line-height: 60px;
+  }
 }
