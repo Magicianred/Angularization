@@ -594,6 +594,10 @@ https://nodejs.org/dist/
 
 https://storybook.js.org/ 
 
+### 4.
+
+https://github.com/angular-eslint/angular-eslint#migrating-an-angular-cli-project-from-codelyzer-and-tslint
+
 
 <br>
 <br>
