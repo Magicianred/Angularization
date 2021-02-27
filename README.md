@@ -509,7 +509,7 @@ export class NavBrandComponent implements OnInit {
 }
 
 ```
-Now save.
+Save.
 
 ...
 
@@ -607,6 +607,10 @@ https://nodejs.org/dist/
 ### 3. 
 
 https://storybook.js.org/ 
+
+### 4.
+
+https://github.com/angular-eslint/angular-eslint#migrating-an-angular-cli-project-from-codelyzer-and-tslint
 
 
 <br>

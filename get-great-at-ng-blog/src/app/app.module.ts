@@ -6,13 +6,23 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NavItemComponent } from './navbar/nav-item/nav-item.component';
 import { NavBrandComponent } from './navbar/nav-brand/nav-brand.component';
+import { PxFooterComponent } from './px-footer/px-footer.component';
+import { FontSizeComponent } from './px-footer/font-size/font-size.component';
+import { QualityComponent } from './px-footer/quality/quality.component';
+import { ThemeComponent } from './px-footer/theme/theme.component';
+import { BgImageComponent } from './bg-image/bg-image.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     NavItemComponent,
-    NavBrandComponent
+    NavBrandComponent,
+    PxFooterComponent,
+    FontSizeComponent,
+    QualityComponent,
+    ThemeComponent,
+    BgImageComponent
   ],
   imports: [
     BrowserModule,

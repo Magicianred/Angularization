@@ -1,7 +1,10 @@
 <div
   class="navbar-container"
   [ngClass]="classes"
-  [ngStyle]="{ 'background-color': backgroundColor }"  
+  [ngStyle]="{ 'background-color': backgroundColor }"
+  ngDefaultControl [ngModel]="brand"
+  ngDefaultControl [ngModel]="light"
+  ngDefaultControl [ngModel]="navItems"
 >
   <div style="float: left;">
     <nav-brand 

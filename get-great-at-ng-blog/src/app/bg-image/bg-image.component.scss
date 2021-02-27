@@ -1,0 +1,23 @@
+.bg-image {
+  padding: 0;
+  margin: 0;
+  background-image: url("../../assets/bg-image.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 750% !important;
+  background-position: top center;
+  height: 100vh;
+  filter: opacity(12.5%);
+}
+
+.bg-image--light { background-color: #fff; }
+.bg-image--dark { background-color: #000; }
+
+/* Large Mobile */
+@media (min-width: 414px) { .bg-image { background-size: 500% !important; } }
+
+/* Tablet */
+@media (min-width: 834px) { .bg-image { background-size: 300% !important; } }
+
+/* Full */
+@media (min-width: 1112px) { .bg-image { background-size: 125% !important; } }
