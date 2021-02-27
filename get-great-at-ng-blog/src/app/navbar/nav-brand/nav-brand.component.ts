@@ -6,7 +6,6 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./nav-brand.component.scss']
 })
 export class NavBrandComponent {
-  
   @Input() light = false;
   @Input() backgroundColor?: string;
   @Input() label = '';
