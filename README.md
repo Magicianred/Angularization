@@ -60,20 +60,10 @@ Thanks.
 * [Caveats: IDE-Restarts & Permissions](#caveats-ide-restarts--permissions)
 * [Extensions (Optional)](#extensions-optional)
 * [Bonus: Zen Mode](#bonus-zen-mode)
-### [**Angular 11+ & Component-Driven Development 🔥**](#angular-11--component-driven-development--)
+### [**Angular 11+ & Component-Driven Development 🔥**](#angular-11--component-driven-development--1)
 * [Getting Started: Angular CLI](#getting-started-angular-cli)
 * [Storybook.js, Why, & Getting Started](#storybookjs-why--getting-started)
 * [Okay, Let's Do This!: Component-Driven, Angular 11 Development 🔥](#okay-lets-do-this-component-driven-angular-11-development-)
-* [`app.component`: HTML, SCSS, & TypeScript](#appcomponent-html-scss--typescript)
-* [`app.module`](#appmodule)
-* [`package.json`](#packagejson)
-* [NPM Scripting: Create New Script](#npm-scripting-create-new-script)
-* [NPM Scripting: Update `start`](#npm-scripting-update-start)
-* [NPM Scripting: CI/CD Power 💪](#npm-scripting-cicd-power-)
-* [`npm generate component <component-name>`](#npm-generate-component-component-name)
-* [Angular**DRY**: Don't. Repeat. Yourself.](#angulardry-dont-repeat-yourself)
-* [`*ng`X: Structural Directives](#ngx-structural-directives)
-* [Unidirectional Data Flow: `ParentComponent` <b>→</b> `ChildComponent`](#unidirectional-data-flow-parentcomponent--childcomponent)
 ### [**References**](#references)
 <br>
 <br>
@@ -499,7 +489,7 @@ Dark.args = { label: 'A°' };
 
 When you save the above code in the file, you'll notice two errors. ***That's good***: it means you're starting the TDD process 🙂.
 
-Now that are stories (tests) have been written, let's fix the errors with *minimal* code in our `nav-brand.component.ts` file (located in the `src/app/navbar/nav-brand` folder) since TypeScript doesn't recognize the `light` or `label` properties.
+Now that we've written our stories (tests), let's fix the errors with *minimal* code in our `nav-brand.component.ts` file (located in the `src/app/navbar/nav-brand` folder) since TypeScript doesn't recognize the `light` or `label` properties.
 
 <br>
 
@@ -527,7 +517,7 @@ If Storybook runs with no errors, then... Congrats! You've successful done TDD a
 
 Ensure that you can see "NavBrand" in the Storybook UI-component explorer and the generic "nav-brand works" paragraph text that Angular CLI generates `nav-brand.component.html` file (also located in the `src/app/navbar/nav-brand` folder).
 
-
+<br>
 
 ### **`nav-brand.component.html`**
 
@@ -549,29 +539,53 @@ Ensure that you can see "NavBrand" in the Storybook UI-component explorer and yo
 
 Once confirmed, let's give our brand some style!
 
+<br>
+
 ### **`nav-brand.component.scss`**
 
+<br>
 
 ### **`NavItem.stories.ts`**
+
+<br>
+
+
 ### **`nav-item.component.html`**
+
+<br>
+
+
 ### **`nav-item.component.scss`**
+
+<br>
+
+
 ### **`nav-item.component.ts`**
+
+<br>
+
 
 ### **`Navbar.stories.ts`**
 ### **`navbar.component.html`**
 ### **`navbar.component.scss`**
 ### **`navbar.component.ts`**
 
-### **`app.component`: HTML, SCSS, & TypeScript**
-### **`app.module`**
-### **`package.json`**
-### **NPM Scripting: Create New Script**
-### **NPM Scripting: Update `start`**
-### **NPM Scripting: CI/CD Power 💪**
-### **`npm generate component <component-name>`**
-### **Angular*DRY*: Don't. Repeat. Yourself.**
-### **`*ng`X: Structural Directives**
-### **Unidirectional Data Flow: `ParentComponent` <b>→</b> `ChildComponent`**
+<br>
+
+
+### **`navbar.component.html`**
+
+
+<br>
+
+
+### **`navbar.component.scss`**
+
+
+<br>
+
+
+### **`navbar.component.ts`**
 
 <br>
 
