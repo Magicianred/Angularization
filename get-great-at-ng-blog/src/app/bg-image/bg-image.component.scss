@@ -10,6 +10,9 @@
   filter: opacity(12.5%);
 }
 
+.bg-image--light { background-color: #fff; }
+.bg-image--dark { background-color: #000; }
+
 /* Large Mobile */
 @media (min-width: 414px) { .bg-image { background-size: 500% !important; } }
 
