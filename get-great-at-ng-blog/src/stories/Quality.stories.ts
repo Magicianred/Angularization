@@ -3,7 +3,7 @@ import { QualityComponent } from '../app/px-footer/quality/quality.component';
 import { Fidelity } from '../app/px-footer/quality/fidelity.enum';
 
 export default {
-  title: 'PXFooter/Quality',
+  title: 'PxFooter/Quality',
   component: QualityComponent,
   argTypes: {
     backgroundColor: { control: 'color' },
@@ -16,7 +16,7 @@ const Template: Story<QualityComponent> = (args: QualityComponent) => ({
 });
 
 export const Light = Template.bind({});
-Light.args = { light: true, fidelity: Fidelity.Normal , label: '---' };
+Light.args = { light: true, fidelity: Fidelity.Normal };
 
 export const Dark = Template.bind({});
-Dark.args = { fidelity: Fidelity.Normal, label: '---' };
+Dark.args = { fidelity: Fidelity.Normal };

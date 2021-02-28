@@ -8,7 +8,6 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class ThemeButtonComponent {
   @Input() light = false;
   @Input() backgroundColor?: string;
-  @Input() label = '';
 
   @Output() onClick = new EventEmitter<Event>();
 
@@ -19,7 +18,6 @@ export class ThemeButtonComponent {
   }
 
   toggleTheme() { 
-    this.light = !this.light; 
-    this.label = this.light ? '💡' : '🌙';
+    this.light = !this.light;
   }
 }

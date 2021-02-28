@@ -1,0 +1,36 @@
+.footer-container {
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  position: fixed;
+  z-index: 9999;
+}
+
+.footer {
+  display: inline-block;
+  height: 45px;
+  margin: 0;
+}
+
+div div * { border-top: 0 !important; }
+
+.footer--light, .nav-item--light {
+  color: #000;
+  background-color: #fff;
+  border-top: 2px solid #000;
+}
+
+.footer--dark, .nav-item--dark {
+  color: #fff;
+  background-color: #000;
+  border-top: 2px solid #fff;
+}
+
+/* Large Mobile */
+@media (min-width: 414px) { .footer { height: 45px; } }
+
+/* Tablet */
+@media (min-width: 834px) { .footer { height: 50px; } }
+
+/* Full */
+@media (min-width: 1112px) { .footer { height: 60px; } }

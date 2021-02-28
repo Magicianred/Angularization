@@ -3,7 +3,7 @@ import { FontSizeComponent } from '../app/px-footer/font-size/font-size.componen
 import { FontSize } from '../app/px-footer/font-size/font-size.enum';
 
 export default {
-  title: 'PXFooter/FontSize',
+  title: 'PxFooter/FontSize',
   component: FontSizeComponent,
   argTypes: {
     backgroundColor: { control: 'color' },
@@ -16,7 +16,7 @@ const Template: Story<FontSizeComponent> = (args: FontSizeComponent) => ({
 });
 
 export const Light = Template.bind({});
-Light.args = { light: true, fontSize: FontSize.Normal , label: 'AAA' };
+Light.args = { light: true, fontSize: FontSize.Normal };
 
 export const Dark = Template.bind({});
-Dark.args = { fontSize: FontSize.Normal, label: 'AAA' };
+Dark.args = { fontSize: FontSize.Normal };
