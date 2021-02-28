@@ -239,14 +239,14 @@
         },
         {
             "name": "FontSizeComponent",
-            "id": "component-FontSizeComponent-f5cfdfd9a4e8929e3058b5321a9aba32",
+            "id": "component-FontSizeComponent-a30856200131904be257c3a5bb465c27",
             "file": "src/app/px-footer/font-size/font-size.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
             "providers": [],
-            "selector": "app-font-size",
+            "selector": "font-size",
             "styleUrls": [
                 "./font-size.component.scss"
             ],
@@ -255,17 +255,60 @@
                 "./font-size.component.html"
             ],
             "viewProviders": [],
-            "inputsClass": [],
-            "outputsClass": [],
+            "inputsClass": [
+                {
+                    "name": "backgroundColor",
+                    "line": 13,
+                    "type": "string"
+                },
+                {
+                    "name": "fontSize",
+                    "defaultValue": "0",
+                    "line": 12,
+                    "type": "FontSize"
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "''",
+                    "line": 14
+                },
+                {
+                    "name": "light",
+                    "defaultValue": "false",
+                    "line": 11
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "onClick",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "line": 16,
+                    "type": "EventEmitter"
+                }
+            ],
             "propertiesClass": [],
             "methodsClass": [
                 {
-                    "name": "ngOnInit",
-                    "args": [],
+                    "name": "selectFontSize",
+                    "args": [
+                        {
+                            "name": "fs",
+                            "type": "FontSize"
+                        }
+                    ],
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 12
+                    "line": 24,
+                    "jsdoctags": [
+                        {
+                            "name": "fs",
+                            "type": "FontSize",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
                 }
             ],
             "hostBindings": [],
@@ -273,11 +316,11 @@
             "description": "",
             "rawdescription": "",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-font-size',\n  templateUrl: './font-size.component.html',\n  styleUrls: ['./font-size.component.scss']\n})\nexport class FontSizeComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "sourceCode": "import { Component, ElementRef, EventEmitter, Input, Output } from '@angular/core';\nimport { FontSize } from './font-size.enum';\n\n@Component({\n  selector: 'font-size',\n  templateUrl: './font-size.component.html',\n  styleUrls: ['./font-size.component.scss']\n})\nexport class FontSizeComponent {\n  constructor(private _elementRef : ElementRef) {}\n  @Input() light = false;\n  @Input() fontSize: FontSize = 0;\n  @Input() backgroundColor?: string;\n  @Input() label = '';\n\n  @Output() onClick = new EventEmitter<Event>();\n\n  public get classes(): string[] {\n    const mode = this.light ? 'font-size--light' : 'font-size--dark';\n\n    return ['font-size', mode];\n  }\n\n  selectFontSize(fs: FontSize) { \n    /* const domElement = this._elementRef.nativeElement.querySelector('body');\n\n    if (this.fontSize < fs && fs === 1) domElement.style.fontSize += 12;\n    else if (this.fontSize < fs && fs === 0) domElement.style.fontSize += 6;\n    else if (this.fontSize > fs && fs === -1) domElement.style.fontSize -= 12;\n    else if (this.fontSize > fs && fs === 0) domElement.style.fontSize -= 6; */\n    \n    this.fontSize = fs;\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "",
+                    "data": ".font-size { \r\n  font-weight: 700; \r\n  width: 90px;\r\n  text-align: center;\r\n  cursor: pointer; \r\n}\r\n\r\n.medium-a, .large-a { padding-left: 7.5px; }\r\n\r\n.small-a { font-size: medium; }\r\n.medium-a { font-size: x-large; }\r\n.large-a { font-size: xx-large; }\r\n\r\n.font-size--light { color: #000; background-color: #fff;}\r\n.font-size--dark { color: #fff; background-color: #000;}\r\n\r\n.selected-a--light { color: #fff !important; -webkit-text-stroke: 1.5px #000; }\r\n.selected-a--dark { color: #000 !important; -webkit-text-stroke: 1.5px #fff; }",
                     "styleUrl": "./font-size.component.scss"
                 }
             ],
@@ -285,13 +328,35 @@
             "constructorObj": {
                 "name": "constructor",
                 "description": "",
-                "args": [],
-                "line": 8
+                "args": [
+                    {
+                        "name": "_elementRef",
+                        "type": "ElementRef"
+                    }
+                ],
+                "line": 9,
+                "jsdoctags": [
+                    {
+                        "name": "_elementRef",
+                        "type": "ElementRef",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
             },
-            "implements": [
-                "OnInit"
-            ],
-            "templateData": "<p>font-size works!</p>\n"
+            "accessors": {
+                "classes": {
+                    "name": "classes",
+                    "getSignature": {
+                        "name": "classes",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 18
+                    }
+                }
+            },
+            "templateData": "<p\n  [ngClass]=\"classes\"\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\n  ngDefaultControl [ngModel]=\"label\"\n  ngDefaultControl [ngModel]=\"light\"\n>\n  <span \n    [ngClass]=\"{ 'small-a': true, 'selected-a--light': fontSize === -1 && light, 'selected-a--dark': fontSize === -1 && !light }\"\n    (click)=\"selectFontSize(-1)\"\n  >{{ label[0] }}</span><span\n    [ngClass]=\"{ 'medium-a': true, 'selected-a--light': fontSize === 0 && light, 'selected-a--dark': fontSize === 0 && !light }\" \n    (click)=\"selectFontSize(0)\"\n  >{{ label[1] }}</span><span \n    [ngClass]=\"{ 'large-a': true, 'selected-a--light': fontSize === 1 && light, 'selected-a--dark': fontSize === 1 && !light }\"\n    (click)=\"selectFontSize(1)\"\n  >{{ label[2] }}</span>\n</p>\n"
         },
         {
             "name": "HeaderComponent",
@@ -570,7 +635,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".nav-item {\r\n  font-family: \r\n    'Segoe UI', \r\n    'Nunito Sans', \r\n    'Helvetica Neue', \r\n    Helvetica, Arial, \r\n    Tahoma, \r\n    Geneva, \r\n    Verdana, \r\n    sans-serif;\r\n  font-weight: 500;\r\n  cursor: pointer;\r\n  display: inline-block;\r\n  line-height: 45px;\r\n  padding-left: 0;\r\n  padding-right: 0;\r\n  margin-left: 0;\r\n  font-size: 10px;\r\n  opacity: 1;\r\n}\r\n\r\n.nav-item--light {\r\n  color: #000;\r\n  background-color: #fff;\r\n}\r\n\r\n.nav-item--dark {\r\n  color: #fff;\r\n  background-color: #000;\r\n}\r\n\r\n.nav-item:hover {\r\n  opacity: 0.667;\r\n}\r\n\r\n/* Tablet */\r\n@media (min-width: 834px) { \r\n  .nav-item {\r\n    margin-left: 15px;\r\n    font-size: 12px;\r\n    padding-left: 5px;\r\n    padding-right: 5px; \r\n    line-height: 50px;\r\n  }\r\n}\r\n\r\n/* Full-Size */\r\n@media (min-width: 1112px) {\r\n  .nav-item {\r\n    margin-left: 60px;\r\n    font-size: 15px;\r\n    padding-left: 10px;\r\n    padding-right: 10px;  \r\n    line-height: 60px;\r\n  }\r\n}",
+                    "data": ".nav-item {\r\n  font-weight: 500;\r\n  cursor: pointer;\r\n  display: inline-block;\r\n  line-height: 45px;\r\n  padding-left: 0;\r\n  padding-right: 0;\r\n  margin-left: 0;\r\n  font-size: 10px;\r\n  opacity: 1;\r\n}\r\n\r\n.nav-item--light {\r\n  color: #000;\r\n  background-color: #fff;\r\n}\r\n\r\n.nav-item--dark {\r\n  color: #fff;\r\n  background-color: #000;\r\n}\r\n\r\n.nav-item:hover {\r\n  opacity: 0.667;\r\n}\r\n\r\n/* Tablet */\r\n@media (min-width: 834px) { \r\n  .nav-item {\r\n    margin-left: 15px;\r\n    font-size: 12px;\r\n    padding-left: 5px;\r\n    padding-right: 5px; \r\n    line-height: 50px;\r\n  }\r\n}\r\n\r\n/* Full-Size */\r\n@media (min-width: 1112px) {\r\n  .nav-item {\r\n    margin-left: 60px;\r\n    font-size: 15px;\r\n    padding-left: 10px;\r\n    padding-right: 10px;  \r\n    line-height: 60px;\r\n  }\r\n}",
                     "styleUrl": "./nav-item.component.scss"
                 }
             ],
@@ -715,7 +780,7 @@
         },
         {
             "name": "QualityComponent",
-            "id": "component-QualityComponent-02c961ffb80127507478ab9f6a3b524f",
+            "id": "component-QualityComponent-c9959fd9609944dc76e2ae195fe57895",
             "file": "src/app/px-footer/quality/quality.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -731,17 +796,53 @@
                 "./quality.component.html"
             ],
             "viewProviders": [],
-            "inputsClass": [],
+            "inputsClass": [
+                {
+                    "name": "backgroundColor",
+                    "line": 12,
+                    "type": "string"
+                },
+                {
+                    "name": "fidelity",
+                    "defaultValue": "0",
+                    "line": 11,
+                    "type": "Fidelity"
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "''",
+                    "line": 13
+                },
+                {
+                    "name": "light",
+                    "defaultValue": "false",
+                    "line": 10
+                }
+            ],
             "outputsClass": [],
             "propertiesClass": [],
             "methodsClass": [
                 {
-                    "name": "ngOnInit",
-                    "args": [],
+                    "name": "selectFontSize",
+                    "args": [
+                        {
+                            "name": "f",
+                            "type": "Fidelity"
+                        }
+                    ],
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 12
+                    "line": 21,
+                    "jsdoctags": [
+                        {
+                            "name": "f",
+                            "type": "Fidelity",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
                 }
             ],
             "hostBindings": [],
@@ -749,55 +850,80 @@
             "description": "",
             "rawdescription": "",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-quality',\n  templateUrl: './quality.component.html',\n  styleUrls: ['./quality.component.scss']\n})\nexport class QualityComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { Fidelity } from './fidelity.enum';\n\n@Component({\n  selector: 'app-quality',\n  templateUrl: './quality.component.html',\n  styleUrls: ['./quality.component.scss']\n})\nexport class QualityComponent {\n  @Input() light = false;\n  @Input() fidelity: Fidelity = 0;\n  @Input() backgroundColor?: string;\n  @Input() label = '';\n\n  public get classes(): string[] {\n    const mode = this.light ? 'quality--light' : 'quality--dark';\n\n    return ['quality', mode];\n  }\n\n  selectFontSize(f: Fidelity) {\n    this.fidelity = f;\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "",
+                    "data": ".quality { \r\n  font-weight: 700; \r\n  width: 90px;\r\n  text-align: center;\r\n  cursor: pointer; \r\n}\r\n\r\n.medium-dash, .large-dash { padding-left: 7.5px; }\r\n\r\n.small-dash { font-size: medium; }\r\n.medium-dash { font-size: x-large; }\r\n.large-dash { font-size: xx-large; }\r\n\r\n.quality--light { color: #000; background-color: #fff;}\r\n.quality--dark { color: #fff; background-color: #000;}\r\n\r\n.selected-dash--light { color: #fff !important; -webkit-text-stroke: 1.5px #000; }\r\n.selected-dash--dark { color: #000 !important; -webkit-text-stroke: 1.5px #fff; }",
                     "styleUrl": "./quality.component.scss"
                 }
             ],
             "stylesData": "",
-            "constructorObj": {
-                "name": "constructor",
-                "description": "",
-                "args": [],
-                "line": 8
+            "accessors": {
+                "classes": {
+                    "name": "classes",
+                    "getSignature": {
+                        "name": "classes",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 15
+                    }
+                }
             },
-            "implements": [
-                "OnInit"
-            ],
-            "templateData": "<p>quality works!</p>\n"
+            "templateData": "<p\n  [ngClass]=\"classes\"\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\n  ngDefaultControl [ngModel]=\"label\"\n  ngDefaultControl [ngModel]=\"light\"\n>\n  <span \n    [ngClass]=\"{ 'small-dash': true, 'selected-dash--light': fidelity === -1 && light, 'selected-dash--dark': fidelity === -1 && !light }\"\n    (click)=\"selectFontSize(-1)\"\n  >{{ label[0] }}</span><span\n    [ngClass]=\"{ 'medium-dash': true, 'selected-dash--light': fidelity === 0 && light, 'selected-dash--dark': fidelity === 0 && !light }\" \n    (click)=\"selectFontSize(0)\"\n  >{{ label[1] }}</span><span \n    [ngClass]=\"{ 'large-dash': true, 'selected-dash--light': fidelity === 1 && light, 'selected-dash--dark': fidelity === 1 && !light }\"\n    (click)=\"selectFontSize(1)\"\n  >{{ label[2] }}</span>\n</p>\n"
         },
         {
-            "name": "ThemeComponent",
-            "id": "component-ThemeComponent-d1374bbe441997df544aed4351a85db8",
-            "file": "src/app/px-footer/theme/theme.component.ts",
+            "name": "ThemeButtonComponent",
+            "id": "component-ThemeButtonComponent-88dbc99e2944ea316bbee1ab0c424052",
+            "file": "src/app/px-footer/theme-button/theme-button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
             "providers": [],
-            "selector": "app-theme",
+            "selector": "theme-button",
             "styleUrls": [
-                "./theme.component.scss"
+                "./theme-button.component.scss"
             ],
             "styles": [],
             "templateUrl": [
-                "./theme.component.html"
+                "./theme-button.component.html"
             ],
             "viewProviders": [],
-            "inputsClass": [],
-            "outputsClass": [],
+            "inputsClass": [
+                {
+                    "name": "backgroundColor",
+                    "line": 10,
+                    "type": "string"
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "''",
+                    "line": 11
+                },
+                {
+                    "name": "light",
+                    "defaultValue": "false",
+                    "line": 9
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "onClick",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "line": 13,
+                    "type": "EventEmitter"
+                }
+            ],
             "propertiesClass": [],
             "methodsClass": [
                 {
-                    "name": "ngOnInit",
+                    "name": "toggleTheme",
                     "args": [],
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 12
+                    "line": 21
                 }
             ],
             "hostBindings": [],
@@ -805,25 +931,27 @@
             "description": "",
             "rawdescription": "",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-theme',\n  templateUrl: './theme.component.html',\n  styleUrls: ['./theme.component.scss']\n})\nexport class ThemeComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "sourceCode": "import { Component, EventEmitter, Input, Output } from '@angular/core';\n\n@Component({\n  selector: 'theme-button',\n  templateUrl: './theme-button.component.html',\n  styleUrls: ['./theme-button.component.scss']\n})\nexport class ThemeButtonComponent {\n  @Input() light = false;\n  @Input() backgroundColor?: string;\n  @Input() label = '';\n\n  @Output() onClick = new EventEmitter<Event>();\n\n  public get classes(): string[] {\n    const mode = this.light ? 'theme-button--light' : 'theme-button--dark';\n\n    return ['theme-button', mode];\n  }\n\n  toggleTheme() { \n    this.light = !this.light; \n    this.label = this.light ? '💡' : '🌙';\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "",
-                    "styleUrl": "./theme.component.scss"
+                    "data": ".theme-button {\r\n  border: 0;\r\n  padding: 5px 10px 5px 10px;\r\n  border-radius: 6px;\r\n  font-size: 10px;\r\n  background-color: #fff;\r\n  width: 45px;\r\n}\r\n\r\n.theme-button--light { background-color: #000; }\r\n.theme-button--dark { background-color: #fff; }\r\n\r\n/* Large Mobile */\r\n@media (min-width: 414px) { .theme-button { font-size: 12px;   width: 49px;} }\r\n\r\n/* Tablet */\r\n@media (min-width: 834px) { .theme-button { font-size: 15px; width: 54px;} }\r\n\r\n/* Full */\r\n@media (min-width: 1112px) { .theme-button { font-size: 18px; width: 60px;} }",
+                    "styleUrl": "./theme-button.component.scss"
                 }
             ],
             "stylesData": "",
-            "constructorObj": {
-                "name": "constructor",
-                "description": "",
-                "args": [],
-                "line": 8
+            "accessors": {
+                "classes": {
+                    "name": "classes",
+                    "getSignature": {
+                        "name": "classes",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 15
+                    }
+                }
             },
-            "implements": [
-                "OnInit"
-            ],
-            "templateData": "<p>theme works!</p>\n"
+            "templateData": "<button  \n  (click)=\"toggleTheme()\"\n  [ngClass]=\"classes\"\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\n  ngDefaultControl [ngModel]=\"label\"\n  ngDefaultControl [ngModel]=\"light\"\n>\n  {{ label }}\n</button>\n"
         }
     ],
     "modules": [
@@ -862,7 +990,7 @@
                             "name": "QualityComponent"
                         },
                         {
-                            "name": "ThemeComponent"
+                            "name": "ThemeButtonComponent"
                         }
                     ]
                 },
@@ -944,6 +1072,14 @@
                 "name": "Dark",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/FontSize.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Dark",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/Navbar.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
@@ -960,7 +1096,7 @@
                 "name": "Dark",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/NavItem.stories.ts",
+                "file": "src/stories/Page.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -968,17 +1104,25 @@
                 "name": "Dark",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Page.stories.ts",
+                "file": "src/stories/ThemeButton.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
             {
-                "name": "environment",
+                "name": "Dark",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/environments/environment.ts",
-                "type": "object",
-                "defaultValue": "{\r\n  production: false\r\n}"
+                "file": "src/stories/Quality.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Dark",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/NavItem.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
             },
             {
                 "name": "environment",
@@ -987,6 +1131,14 @@
                 "file": "src/environments/environment.prod.ts",
                 "type": "object",
                 "defaultValue": "{\r\n  production: true\r\n}"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/environments/environment.ts",
+                "type": "object",
+                "defaultValue": "{\r\n  production: false\r\n}"
             },
             {
                 "name": "Large",
@@ -1008,6 +1160,14 @@
                 "name": "Light",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/FontSize.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Light",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/Navbar.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
@@ -1024,7 +1184,7 @@
                 "name": "Light",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/NavItem.stories.ts",
+                "file": "src/stories/Page.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -1032,7 +1192,23 @@
                 "name": "Light",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Page.stories.ts",
+                "file": "src/stories/ThemeButton.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Light",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Quality.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Light",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/NavItem.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -1119,6 +1295,14 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/FontSize.stories.ts",
+                "type": "Story<FontSizeComponent>",
+                "defaultValue": "(args: FontSizeComponent) => ({\r\n  component: FontSizeComponent,\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/Header.stories.ts",
                 "type": "Story<Header>",
                 "defaultValue": "(args: Header) => ({\r\n  component: Header,\r\n  props: args,\r\n})"
@@ -1143,22 +1327,79 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/NavItem.stories.ts",
-                "type": "Story<NavItemComponent>",
-                "defaultValue": "(args: NavItemComponent) => ({\r\n  component: NavItemComponent,\r\n  props: args,\r\n})"
+                "file": "src/stories/Page.stories.ts",
+                "type": "Story<Page>",
+                "defaultValue": "(args: Page) => ({\r\n  component: Page,\r\n  props: args,\r\n})"
             },
             {
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Page.stories.ts",
-                "type": "Story<Page>",
-                "defaultValue": "(args: Page) => ({\r\n  component: Page,\r\n  props: args,\r\n})"
+                "file": "src/stories/ThemeButton.stories.ts",
+                "type": "Story<ThemeButtonComponent>",
+                "defaultValue": "(args: ThemeButtonComponent) => ({\r\n  component: ThemeButtonComponent,\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Quality.stories.ts",
+                "type": "Story<QualityComponent>",
+                "defaultValue": "(args: QualityComponent) => ({\r\n  component: QualityComponent,\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/NavItem.stories.ts",
+                "type": "Story<NavItemComponent>",
+                "defaultValue": "(args: NavItemComponent) => ({\r\n  component: NavItemComponent,\r\n  props: args,\r\n})"
             }
         ],
         "functions": [],
         "typealiases": [],
-        "enumerations": [],
+        "enumerations": [
+            {
+                "name": "Fidelity",
+                "childs": [
+                    {
+                        "name": "Low"
+                    },
+                    {
+                        "name": "Normal",
+                        "value": "0"
+                    },
+                    {
+                        "name": "High",
+                        "value": "1"
+                    }
+                ],
+                "ctype": "miscellaneous",
+                "subtype": "enum",
+                "description": "",
+                "file": "src/app/px-footer/quality/fidelity.enum.ts"
+            },
+            {
+                "name": "FontSize",
+                "childs": [
+                    {
+                        "name": "Small"
+                    },
+                    {
+                        "name": "Normal",
+                        "value": "0"
+                    },
+                    {
+                        "name": "Large",
+                        "value": "1"
+                    }
+                ],
+                "ctype": "miscellaneous",
+                "subtype": "enum",
+                "description": "",
+                "file": "src/app/px-footer/font-size/font-size.enum.ts"
+            }
+        ],
         "groupedVariables": {
             "src/test.ts": [
                 {
@@ -1201,6 +1442,32 @@
                     "file": "src/stories/BgImage.stories.ts",
                     "type": "Story<BgImageComponent>",
                     "defaultValue": "(args: BgImageComponent) => ({\r\n  component: BgImageComponent,\r\n  props: args,\r\n})"
+                }
+            ],
+            "src/stories/FontSize.stories.ts": [
+                {
+                    "name": "Dark",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/FontSize.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Light",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/FontSize.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/FontSize.stories.ts",
+                    "type": "Story<FontSizeComponent>",
+                    "defaultValue": "(args: FontSizeComponent) => ({\r\n  component: FontSizeComponent,\r\n  props: args,\r\n})"
                 }
             ],
             "src/stories/Navbar.stories.ts": [
@@ -1263,32 +1530,6 @@
                     "defaultValue": "(args: NavBrandComponent) => ({\r\n  component: NavBrandComponent,\r\n  props: args,\r\n})"
                 }
             ],
-            "src/stories/NavItem.stories.ts": [
-                {
-                    "name": "Dark",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/NavItem.stories.ts",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Light",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/NavItem.stories.ts",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/NavItem.stories.ts",
-                    "type": "Story<NavItemComponent>",
-                    "defaultValue": "(args: NavItemComponent) => ({\r\n  component: NavItemComponent,\r\n  props: args,\r\n})"
-                }
-            ],
             "src/stories/Page.stories.ts": [
                 {
                     "name": "Dark",
@@ -1323,14 +1564,82 @@
                     "defaultValue": "(args: Page) => ({\r\n  component: Page,\r\n  props: args,\r\n})"
                 }
             ],
-            "src/environments/environment.ts": [
+            "src/stories/ThemeButton.stories.ts": [
                 {
-                    "name": "environment",
+                    "name": "Dark",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/environments/environment.ts",
-                    "type": "object",
-                    "defaultValue": "{\r\n  production: false\r\n}"
+                    "file": "src/stories/ThemeButton.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Light",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/ThemeButton.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/ThemeButton.stories.ts",
+                    "type": "Story<ThemeButtonComponent>",
+                    "defaultValue": "(args: ThemeButtonComponent) => ({\r\n  component: ThemeButtonComponent,\r\n  props: args,\r\n})"
+                }
+            ],
+            "src/stories/Quality.stories.ts": [
+                {
+                    "name": "Dark",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Quality.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Light",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Quality.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Quality.stories.ts",
+                    "type": "Story<QualityComponent>",
+                    "defaultValue": "(args: QualityComponent) => ({\r\n  component: QualityComponent,\r\n  props: args,\r\n})"
+                }
+            ],
+            "src/stories/NavItem.stories.ts": [
+                {
+                    "name": "Dark",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/NavItem.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Light",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/NavItem.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/NavItem.stories.ts",
+                    "type": "Story<NavItemComponent>",
+                    "defaultValue": "(args: NavItemComponent) => ({\r\n  component: NavItemComponent,\r\n  props: args,\r\n})"
                 }
             ],
             "src/environments/environment.prod.ts": [
@@ -1341,6 +1650,16 @@
                     "file": "src/environments/environment.prod.ts",
                     "type": "object",
                     "defaultValue": "{\r\n  production: true\r\n}"
+                }
+            ],
+            "src/environments/environment.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.ts",
+                    "type": "object",
+                    "defaultValue": "{\r\n  production: false\r\n}"
                 }
             ],
             "src/stories/Button.stories.ts": [
@@ -1413,7 +1732,52 @@
             ]
         },
         "groupedFunctions": {},
-        "groupedEnumerations": {},
+        "groupedEnumerations": {
+            "src/app/px-footer/quality/fidelity.enum.ts": [
+                {
+                    "name": "Fidelity",
+                    "childs": [
+                        {
+                            "name": "Low"
+                        },
+                        {
+                            "name": "Normal",
+                            "value": "0"
+                        },
+                        {
+                            "name": "High",
+                            "value": "1"
+                        }
+                    ],
+                    "ctype": "miscellaneous",
+                    "subtype": "enum",
+                    "description": "",
+                    "file": "src/app/px-footer/quality/fidelity.enum.ts"
+                }
+            ],
+            "src/app/px-footer/font-size/font-size.enum.ts": [
+                {
+                    "name": "FontSize",
+                    "childs": [
+                        {
+                            "name": "Small"
+                        },
+                        {
+                            "name": "Normal",
+                            "value": "0"
+                        },
+                        {
+                            "name": "Large",
+                            "value": "1"
+                        }
+                    ],
+                    "ctype": "miscellaneous",
+                    "subtype": "enum",
+                    "description": "",
+                    "file": "src/app/px-footer/font-size/font-size.enum.ts"
+                }
+            ]
+        },
         "groupedTypeAliases": {}
     },
     "routes": {
@@ -1494,7 +1858,7 @@
                 "linktype": "component",
                 "name": "FontSizeComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/3",
+                "coverageCount": "0/8",
                 "status": "low"
             },
             {
@@ -1512,16 +1876,16 @@
                 "linktype": "component",
                 "name": "QualityComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/3",
+                "coverageCount": "0/6",
                 "status": "low"
             },
             {
-                "filePath": "src/app/px-footer/theme/theme.component.ts",
+                "filePath": "src/app/px-footer/theme-button/theme-button.component.ts",
                 "type": "component",
                 "linktype": "component",
-                "name": "ThemeComponent",
+                "name": "ThemeButtonComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/3",
+                "coverageCount": "0/6",
                 "status": "low"
             },
             {
@@ -1625,6 +1989,36 @@
                 "status": "low"
             },
             {
+                "filePath": "src/stories/FontSize.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Dark",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/FontSize.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Light",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/FontSize.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "src/stories/Header.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
@@ -1786,6 +2180,66 @@
             },
             {
                 "filePath": "src/stories/Page.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Quality.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Dark",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Quality.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Light",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Quality.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/ThemeButton.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Dark",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/ThemeButton.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Light",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/ThemeButton.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
