@@ -9,9 +9,8 @@ import { FontSize } from './font-size.enum';
 export class FontSizeComponent {
   constructor(private _elementRef : ElementRef) {}
   @Input() light = false;
-  @Input() fontSize: FontSize = 0;
+  @Input() fontSize: FontSize = FontSize.Normal;
   @Input() backgroundColor?: string;
-  @Input() label = '';
 
   @Output() onClick = new EventEmitter<Event>();
 

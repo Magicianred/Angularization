@@ -2,8 +2,7 @@
   (click)="toggleTheme()"
   [ngClass]="classes"
   [ngStyle]="{ 'background-color': backgroundColor }"
-  ngDefaultControl [ngModel]="label"
   ngDefaultControl [ngModel]="light"
 >
-  {{ label }}
+  {{ light ? '💡' : '🌙' }}
 </button>

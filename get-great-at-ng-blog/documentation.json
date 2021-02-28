@@ -138,7 +138,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".bg-image {\r\n  padding: 0;\r\n  margin: 0;\r\n  background-image: url(\"../../assets/bg-image.jpg\");\r\n  background-repeat: no-repeat;\r\n  background-attachment: fixed;\r\n  background-size: 750% !important;\r\n  background-position: top center;\r\n  height: 100vh;\r\n  filter: opacity(12.5%);\r\n}\r\n\r\n.bg-image--light { background-color: #fff; }\r\n.bg-image--dark { background-color: #000; }\r\n\r\n/* Large Mobile */\r\n@media (min-width: 414px) { .bg-image { background-size: 500% !important; } }\r\n\r\n/* Tablet */\r\n@media (min-width: 834px) { .bg-image { background-size: 300% !important; } }\r\n\r\n/* Full */\r\n@media (min-width: 1112px) { .bg-image { background-size: 125% !important; } }",
+                    "data": ".bg-image {\r\n  padding: 0;\r\n  margin: 0;\r\n  background-image: url(\"../../assets/bg-image.jpg\");\r\n  background-repeat: no-repeat;\r\n  background-attachment: fixed;\r\n  background-size: 750% !important;\r\n  background-position: top center;\r\n  height: 100vh;\r\n  filter: opacity(12.5%);\r\n}\r\n\r\n.bg-image--light { background-color: #fff; }\r\n.bg-image--dark { background-color: #000; }\r\n\r\n.bg-image--light, .bg-image--dark {\r\n  width: 100%;\r\n  position: fixed;\r\n  top: 0;\r\n  left: 0; \r\n}\r\n\r\n/* Large Mobile */\r\n@media (min-width: 414px) { .bg-image { background-size: 500% !important; } }\r\n\r\n/* Tablet */\r\n@media (min-width: 834px) { .bg-image { background-size: 300% !important; } }\r\n\r\n/* Full */\r\n@media (min-width: 1112px) { .bg-image { background-size: 125% !important; } }",
                     "styleUrl": "./bg-image.component.scss"
                 }
             ],
@@ -239,7 +239,7 @@
         },
         {
             "name": "FontSizeComponent",
-            "id": "component-FontSizeComponent-a30856200131904be257c3a5bb465c27",
+            "id": "component-FontSizeComponent-8a1aafc0289eb282354dc57a346df38b",
             "file": "src/app/px-footer/font-size/font-size.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -263,14 +263,9 @@
                 },
                 {
                     "name": "fontSize",
-                    "defaultValue": "0",
+                    "defaultValue": "FontSize.Normal",
                     "line": 12,
                     "type": "FontSize"
-                },
-                {
-                    "name": "label",
-                    "defaultValue": "''",
-                    "line": 14
                 },
                 {
                     "name": "light",
@@ -282,7 +277,7 @@
                 {
                     "name": "onClick",
                     "defaultValue": "new EventEmitter<Event>()",
-                    "line": 16,
+                    "line": 15,
                     "type": "EventEmitter"
                 }
             ],
@@ -299,7 +294,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 24,
+                    "line": 23,
                     "jsdoctags": [
                         {
                             "name": "fs",
@@ -316,11 +311,11 @@
             "description": "",
             "rawdescription": "",
             "type": "component",
-            "sourceCode": "import { Component, ElementRef, EventEmitter, Input, Output } from '@angular/core';\nimport { FontSize } from './font-size.enum';\n\n@Component({\n  selector: 'font-size',\n  templateUrl: './font-size.component.html',\n  styleUrls: ['./font-size.component.scss']\n})\nexport class FontSizeComponent {\n  constructor(private _elementRef : ElementRef) {}\n  @Input() light = false;\n  @Input() fontSize: FontSize = 0;\n  @Input() backgroundColor?: string;\n  @Input() label = '';\n\n  @Output() onClick = new EventEmitter<Event>();\n\n  public get classes(): string[] {\n    const mode = this.light ? 'font-size--light' : 'font-size--dark';\n\n    return ['font-size', mode];\n  }\n\n  selectFontSize(fs: FontSize) { \n    /* const domElement = this._elementRef.nativeElement.querySelector('body');\n\n    if (this.fontSize < fs && fs === 1) domElement.style.fontSize += 12;\n    else if (this.fontSize < fs && fs === 0) domElement.style.fontSize += 6;\n    else if (this.fontSize > fs && fs === -1) domElement.style.fontSize -= 12;\n    else if (this.fontSize > fs && fs === 0) domElement.style.fontSize -= 6; */\n    \n    this.fontSize = fs;\n  }\n}\n",
+            "sourceCode": "import { Component, ElementRef, EventEmitter, Input, Output } from '@angular/core';\nimport { FontSize } from './font-size.enum';\n\n@Component({\n  selector: 'font-size',\n  templateUrl: './font-size.component.html',\n  styleUrls: ['./font-size.component.scss']\n})\nexport class FontSizeComponent {\n  constructor(private _elementRef : ElementRef) {}\n  @Input() light = false;\n  @Input() fontSize: FontSize = FontSize.Normal;\n  @Input() backgroundColor?: string;\n\n  @Output() onClick = new EventEmitter<Event>();\n\n  public get classes(): string[] {\n    const mode = this.light ? 'font-size--light' : 'font-size--dark';\n\n    return ['font-size', mode];\n  }\n\n  selectFontSize(fs: FontSize) { \n    /* const domElement = this._elementRef.nativeElement.querySelector('body');\n\n    if (this.fontSize < fs && fs === 1) domElement.style.fontSize += 12;\n    else if (this.fontSize < fs && fs === 0) domElement.style.fontSize += 6;\n    else if (this.fontSize > fs && fs === -1) domElement.style.fontSize -= 12;\n    else if (this.fontSize > fs && fs === 0) domElement.style.fontSize -= 6; */\n    \n    this.fontSize = fs;\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".font-size { \r\n  font-weight: 700; \r\n  width: 90px;\r\n  text-align: center;\r\n  cursor: pointer; \r\n}\r\n\r\n.medium-a, .large-a { padding-left: 7.5px; }\r\n\r\n.small-a { font-size: medium; }\r\n.medium-a { font-size: x-large; }\r\n.large-a { font-size: xx-large; }\r\n\r\n.font-size--light { color: #000; background-color: #fff;}\r\n.font-size--dark { color: #fff; background-color: #000;}\r\n\r\n.selected-a--light { color: #fff !important; -webkit-text-stroke: 1.5px #000; }\r\n.selected-a--dark { color: #000 !important; -webkit-text-stroke: 1.5px #fff; }",
+                    "data": ".font-size { \r\n  font-weight: 700; \r\n  width: 90px;\r\n  margin: 0;\r\n  text-align: center;\r\n  cursor: pointer; \r\n}\r\n\r\n.medium-a, .large-a { padding-left: 7.5px; }\r\n\r\n.small-a { font-size: medium; }\r\n.medium-a { font-size: x-large; }\r\n.large-a { font-size: xx-large; }\r\n\r\n.font-size--light { color: #000; background-color: #fff;}\r\n.font-size--dark { color: #fff; background-color: #000;}\r\n\r\n.selected-a--light { color: #fff !important; -webkit-text-stroke: 1.5px #000; }\r\n.selected-a--dark { color: #000 !important; -webkit-text-stroke: 1.5px #fff; }",
                     "styleUrl": "./font-size.component.scss"
                 }
             ],
@@ -352,11 +347,11 @@
                         "name": "classes",
                         "type": "[]",
                         "returnType": "string[]",
-                        "line": 18
+                        "line": 17
                     }
                 }
             },
-            "templateData": "<p\n  [ngClass]=\"classes\"\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\n  ngDefaultControl [ngModel]=\"label\"\n  ngDefaultControl [ngModel]=\"light\"\n>\n  <span \n    [ngClass]=\"{ 'small-a': true, 'selected-a--light': fontSize === -1 && light, 'selected-a--dark': fontSize === -1 && !light }\"\n    (click)=\"selectFontSize(-1)\"\n  >{{ label[0] }}</span><span\n    [ngClass]=\"{ 'medium-a': true, 'selected-a--light': fontSize === 0 && light, 'selected-a--dark': fontSize === 0 && !light }\" \n    (click)=\"selectFontSize(0)\"\n  >{{ label[1] }}</span><span \n    [ngClass]=\"{ 'large-a': true, 'selected-a--light': fontSize === 1 && light, 'selected-a--dark': fontSize === 1 && !light }\"\n    (click)=\"selectFontSize(1)\"\n  >{{ label[2] }}</span>\n</p>\n"
+            "templateData": "<p\n  [ngClass]=\"classes\"\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\n  ngDefaultControl [ngModel]=\"label\"\n  ngDefaultControl [ngModel]=\"light\"\n>\n  <span \n    [ngClass]=\"{ 'small-a': true, 'selected-a--light': fontSize === -1 && light, 'selected-a--dark': fontSize === -1 && !light }\"\n    (click)=\"selectFontSize(-1)\"\n  >A</span><span\n    [ngClass]=\"{ 'medium-a': true, 'selected-a--light': fontSize === 0 && light, 'selected-a--dark': fontSize === 0 && !light }\" \n    (click)=\"selectFontSize(0)\"\n  >A</span><span \n    [ngClass]=\"{ 'large-a': true, 'selected-a--light': fontSize === 1 && light, 'selected-a--dark': fontSize === 1 && !light }\"\n    (click)=\"selectFontSize(1)\"\n  >A</span>\n</p>\n"
         },
         {
             "name": "HeaderComponent",
@@ -482,7 +477,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".navbar-container {\r\n  width: 100%;\r\n}\r\n\r\n.navbar {\r\n  display: inline-block;\r\n  height: 45px;\r\n  list-style-type: none;\r\n  margin: 0;\r\n}\r\n\r\n.navbar--light, .nav-item--light {\r\n  color: #000;\r\n  background-color: #fff;\r\n  border-bottom: 2px solid #000;\r\n}\r\n\r\n.navbar--dark, .nav-item--dark {\r\n  color: #fff;\r\n  background-color: #000;\r\n  border-bottom: 2px solid #fff;\r\n}\r\n\r\nul, ul li { padding-left: 5px; margin: 0 }\r\n\r\n/* Large Mobile */\r\n@media (min-width: 414px) { \r\n  .navbar { height: 45px; }\r\n  ul, ul li { padding-left: 22px; margin: 0 } \r\n}\r\n\r\n/* Tablet */\r\n@media (min-width: 834px) { \r\n  .navbar { height: 50px; }\r\n  ul, ul li { padding-left: 40px; margin: 0 } \r\n}\r\n\r\n/* Full */\r\n@media (min-width: 1112px) { \r\n  .navbar { height: 60px; }\r\n  ul, ul li { padding-left: 52px; margin: 0 } \r\n}",
+                    "data": ".navbar-container {\r\n  width: 100%;\r\n  left: 0;\r\n  top: 0;\r\n  position: fixed;\r\n  z-index: 9999;\r\n}\r\n\r\n.navbar {\r\n  display: inline-block;\r\n  height: 45px;\r\n  list-style-type: none;\r\n  margin: 0;\r\n}\r\n\r\n.navbar--light, .nav-item--light {\r\n  color: #000;\r\n  background-color: #fff;\r\n  border-bottom: 2px solid #000;\r\n}\r\n\r\n.navbar--dark, .nav-item--dark {\r\n  color: #fff;\r\n  background-color: #000;\r\n  border-bottom: 2px solid #fff;\r\n}\r\n\r\nul, ul li { padding-left: 5px; margin: 0 }\r\n\r\n/* Large Mobile */\r\n@media (min-width: 414px) { \r\n  .navbar { height: 45px; }\r\n  ul, ul li { padding-left: 22px; margin: 0 } \r\n}\r\n\r\n/* Tablet */\r\n@media (min-width: 834px) { \r\n  .navbar { height: 50px; }\r\n  ul, ul li { padding-left: 40px; margin: 0 } \r\n}\r\n\r\n/* Full */\r\n@media (min-width: 1112px) { \r\n  .navbar { height: 60px; }\r\n  ul, ul li { padding-left: 52px; margin: 0 } \r\n}",
                     "styleUrl": "./navbar.component.scss"
                 }
             ],
@@ -655,7 +650,7 @@
         },
         {
             "name": "PageComponent",
-            "id": "component-PageComponent-15430051913e4a4dbeb32d23b395df19",
+            "id": "component-PageComponent-2b0ec891a0d42a60cb008d0904883e78",
             "file": "src/stories/page.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -667,29 +662,41 @@
                 "./page.css"
             ],
             "styles": [],
-            "template": "<navbar\n  [brand]=\"brand\"\n  [light]=\"light\"\n  [navItems]=\"navItems\"\n  [ngClass]=\"classes\"\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\n>\n</navbar>\n<bg-image\n  [light]=\"light\"\n  [ngClass]=\"classes\"\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\n>\n</bg-image>\n<!-- <article>\n  <section>\n  </section>\n</article> -->",
+            "template": "<navbar\n  [brand]=\"brand\"\n  [light]=\"light\"\n  [navItems]=\"navItems\"\n  [ngClass]=\"classes\"\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\n>\n</navbar>\n<bg-image\n  [light]=\"light\"\n  [ngClass]=\"classes\"\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\n>\n</bg-image>\n<br>\n<br>\n<br>\n<px-footer\n  [light]=\"light\"\n  [fontSize]=\"0\"\n  [fidelity]=\"0\"\n  [navItems]=\"navItems\"\n  [ngClass]=\"classes\"\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\n>\n</px-footer>\n",
             "templateUrl": [],
             "viewProviders": [],
             "inputsClass": [
                 {
                     "name": "backgroundColor",
-                    "line": 31,
+                    "line": 48,
                     "type": "string"
                 },
                 {
                     "name": "brand",
                     "defaultValue": "''",
-                    "line": 30
+                    "line": 45
+                },
+                {
+                    "name": "fidelity",
+                    "defaultValue": "Fidelity.Normal",
+                    "line": 47,
+                    "type": "Fidelity"
+                },
+                {
+                    "name": "fontSize",
+                    "defaultValue": "FontSize.Normal",
+                    "line": 46,
+                    "type": "FontSize"
                 },
                 {
                     "name": "light",
                     "defaultValue": "false",
-                    "line": 29
+                    "line": 44
                 },
                 {
                     "name": "navItems",
                     "defaultValue": "[]",
-                    "line": 32,
+                    "line": 49,
                     "type": "string[]"
                 }
             ],
@@ -701,11 +708,11 @@
             "description": "",
             "rawdescription": "",
             "type": "component",
-            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\r\nimport { NavbarComponent } from 'src/app/navbar/navbar.component';\r\nimport { BgImageComponent } from 'src/app/bg-image/bg-image.component';\r\n\r\n@Component({\r\n  selector: 'a-degree-page',\r\n  template: `\r\n  <navbar \r\n    [brand]=\"brand\"\r\n    [light]=\"light\"\r\n    [navItems]=\"navItems\"\r\n    [ngClass]=\"classes\" \r\n    [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n  >\r\n  </navbar>\r\n  <bg-image\r\n    [light]=\"light\"\r\n    [ngClass]=\"classes\" \r\n    [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n  >\r\n  </bg-image>\r\n  <!-- <article>\r\n    <section>\r\n    </section>\r\n  </article> -->`,\r\n  styleUrls: ['./page.css'],\r\n})\r\nexport default class PageComponent {\r\n  @Input() light = false;\r\n  @Input() brand = '';\r\n  @Input() backgroundColor?: string;\r\n  @Input() navItems: string[] = [];\r\n\r\n  public get classes(): string[] {\r\n    const mode = this.light ? 'page--light' : 'page--dark';\r\n\r\n    return ['page', mode];\r\n  }\r\n}\r\n\r\n// export const Page = ({ user, onLogin, onLogout, onCreateAccount }) => (\r\n//   <article>\r\n//     <Header user={user} onLogin={onLogin} onLogout={onLogout} onCreateAccount={onCreateAccount} />\r\n\r\n// );\r\n// Page.propTypes = {\r\n//   user: PropTypes.shape({}),\r\n//   onLogin: PropTypes.func.isRequired,\r\n//   onLogout: PropTypes.func.isRequired,\r\n//   onCreateAccount: PropTypes.func.isRequired,\r\n// };\r\n\r\n// Page.defaultProps = {\r\n//   user: null,\r\n// };\r\n",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\r\nimport { NavbarComponent } from 'src/app/navbar/navbar.component';\r\nimport { PxFooterComponent } from 'src/app/px-footer/px-footer.component';\r\nimport { BgImageComponent } from 'src/app/bg-image/bg-image.component';\r\nimport { FontSizeComponent } from '../app/px-footer/font-size/font-size.component';\r\nimport { QualityComponent } from '../app/px-footer/quality/quality.component';\r\nimport { ThemeButtonComponent } from '../app/px-footer/theme-button/theme-button.component';\r\nimport { FontSize } from '../app/px-footer/font-size/font-size.enum';\r\nimport { Fidelity } from '../app/px-footer/quality/fidelity.enum';\r\n\r\n@Component({\r\n  selector: 'a-degree-page',\r\n  template: `\r\n  <navbar \r\n    [brand]=\"brand\"\r\n    [light]=\"light\"\r\n    [navItems]=\"navItems\"\r\n    [ngClass]=\"classes\" \r\n    [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n  >\r\n  </navbar>\r\n  <bg-image\r\n    [light]=\"light\"\r\n    [ngClass]=\"classes\" \r\n    [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n  >\r\n  </bg-image>\r\n  <br>\r\n  <br>\r\n  <br>\r\n  <px-footer\r\n    [light]=\"light\"\r\n    [fontSize]=\"0\"\r\n    [fidelity]=\"0\"\r\n    [navItems]=\"navItems\"\r\n    [ngClass]=\"classes\" \r\n    [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n  >\r\n  </px-footer>\r\n    `,\r\n  styleUrls: ['./page.css'],\r\n})\r\nexport default class PageComponent {\r\n  @Input() light = false;\r\n  @Input() brand = '';\r\n  @Input() fontSize: FontSize = FontSize.Normal;\r\n  @Input() fidelity: Fidelity = Fidelity.Normal;\r\n  @Input() backgroundColor?: string;\r\n  @Input() navItems: string[] = [];\r\n\r\n  public get classes(): string[] {\r\n    const mode = this.light ? 'page--light' : 'page--dark';\r\n\r\n    return ['page', mode];\r\n  }\r\n}\r\n\r\n// export const Page = ({ user, onLogin, onLogout, onCreateAccount }) => (\r\n//   <article>\r\n//     <Header user={user} onLogin={onLogin} onLogout={onLogout} onCreateAccount={onCreateAccount} />\r\n\r\n// );\r\n// Page.propTypes = {\r\n//   user: PropTypes.shape({}),\r\n//   onLogin: PropTypes.func.isRequired,\r\n//   onLogout: PropTypes.func.isRequired,\r\n//   onCreateAccount: PropTypes.func.isRequired,\r\n// };\r\n\r\n// Page.defaultProps = {\r\n//   user: null,\r\n// };\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "section {\r\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\r\n  font-size: 14px;\r\n  line-height: 24px;\r\n  padding: 48px 20px;\r\n  margin: 0 auto;\r\n  max-width: 600px;\r\n  color: #333;\r\n}\r\n\r\nh2 {\r\n  font-weight: 900;\r\n  font-size: 32px;\r\n  line-height: 1;\r\n  margin: 0 0 4px;\r\n  display: inline-block;\r\n  vertical-align: top;\r\n}\r\n\r\np {\r\n  margin: 1em 0;\r\n}\r\n\r\na {\r\n  text-decoration: none;\r\n  color: #1ea7fd;\r\n}\r\n\r\nul {\r\n  padding-left: 30px;\r\n  margin: 1em 0;\r\n}\r\n\r\nli {\r\n  margin-bottom: 8px;\r\n}\r\n\r\n.tip {\r\n  display: inline-block;\r\n  border-radius: 1em;\r\n  font-size: 11px;\r\n  line-height: 12px;\r\n  font-weight: 700;\r\n  background: #e7fdd8;\r\n  color: #66bf3c;\r\n  padding: 4px 12px;\r\n  margin-right: 10px;\r\n  vertical-align: top;\r\n}\r\n\r\n.tip-wrapper {\r\n  font-size: 13px;\r\n  line-height: 20px;\r\n  margin-top: 40px;\r\n  margin-bottom: 40px;\r\n}\r\n\r\n.tip-wrapper svg {\r\n  display: inline-block;\r\n  height: 12px;\r\n  width: 12px;\r\n  margin-right: 4px;\r\n  vertical-align: top;\r\n  margin-top: 3px;\r\n}\r\n\r\n.tip-wrapper svg path {\r\n  fill: #1ea7fd;\r\n}\r\n",
+                    "data": "section {\r\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\r\n  font-size: 14px;\r\n  line-height: 24px;\r\n  padding: 48px 20px;\r\n  margin: 0 auto;\r\n  max-width: 600px;\r\n  color: #333;\r\n}\r\n\r\nh2 {\r\n  font-weight: 900;\r\n  font-size: 32px;\r\n  line-height: 1;\r\n  margin: 0 0 4px;\r\n  display: inline-block;\r\n  vertical-align: top;\r\n  position: relative;\r\n  z-index: 9998;\r\n}\r\n\r\np {\r\n  margin: 1em 0;\r\n}\r\n\r\na {\r\n  text-decoration: none;\r\n  color: #1ea7fd;\r\n}\r\n\r\nul {\r\n  padding-left: 30px;\r\n  margin: 1em 0;\r\n}\r\n\r\nli {\r\n  margin-bottom: 8px;\r\n}\r\n\r\n.tip {\r\n  display: inline-block;\r\n  border-radius: 1em;\r\n  font-size: 11px;\r\n  line-height: 12px;\r\n  font-weight: 700;\r\n  background: #e7fdd8;\r\n  color: #66bf3c;\r\n  padding: 4px 12px;\r\n  margin-right: 10px;\r\n  vertical-align: top;\r\n}\r\n\r\n.tip-wrapper {\r\n  font-size: 13px;\r\n  line-height: 20px;\r\n  margin-top: 40px;\r\n  margin-bottom: 40px;\r\n}\r\n\r\n.tip-wrapper svg {\r\n  display: inline-block;\r\n  height: 12px;\r\n  width: 12px;\r\n  margin-right: 4px;\r\n  vertical-align: top;\r\n  margin-top: 3px;\r\n}\r\n\r\n.tip-wrapper svg path {\r\n  fill: #1ea7fd;\r\n}\r\n",
                     "styleUrl": "./page.css"
                 }
             ],
@@ -717,21 +724,21 @@
                         "name": "classes",
                         "type": "[]",
                         "returnType": "string[]",
-                        "line": 34
+                        "line": 51
                     }
                 }
             }
         },
         {
             "name": "PxFooterComponent",
-            "id": "component-PxFooterComponent-c823aa6b5bf63fe04480ee0379f52377",
+            "id": "component-PxFooterComponent-8f53414d0b43eb34ed4226a2233a83c5",
             "file": "src/app/px-footer/px-footer.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
             "providers": [],
-            "selector": "app-px-footer",
+            "selector": "px-footer",
             "styleUrls": [
                 "./px-footer.component.scss"
             ],
@@ -740,54 +747,70 @@
                 "./px-footer.component.html"
             ],
             "viewProviders": [],
-            "inputsClass": [],
-            "outputsClass": [],
-            "propertiesClass": [],
-            "methodsClass": [
+            "inputsClass": [
                 {
-                    "name": "ngOnInit",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 12
+                    "name": "backgroundColor",
+                    "line": 17,
+                    "type": "string"
+                },
+                {
+                    "name": "fidelity",
+                    "defaultValue": "Fidelity.Normal",
+                    "line": 15,
+                    "type": "Fidelity"
+                },
+                {
+                    "name": "fontSize",
+                    "defaultValue": "FontSize.Normal",
+                    "line": 16,
+                    "type": "FontSize"
+                },
+                {
+                    "name": "light",
+                    "defaultValue": "false",
+                    "line": 14
                 }
             ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
             "hostBindings": [],
             "hostListeners": [],
             "description": "",
             "rawdescription": "",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-px-footer',\n  templateUrl: './px-footer.component.html',\n  styleUrls: ['./px-footer.component.scss']\n})\nexport class PxFooterComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { FontSizeComponent } from './font-size/font-size.component';\nimport { QualityComponent } from './quality/quality.component';\nimport { ThemeButtonComponent } from './theme-button/theme-button.component';\nimport { FontSize } from './font-size/font-size.enum';\nimport { Fidelity } from './quality/fidelity.enum';\n\n@Component({\n  selector: 'px-footer',\n  templateUrl: './px-footer.component.html',\n  styleUrls: ['./px-footer.component.scss']\n})\nexport class PxFooterComponent {\n  @Input() light = false;\n  @Input() fidelity: Fidelity = Fidelity.Normal;\n  @Input() fontSize: FontSize = FontSize.Normal;\n  @Input() backgroundColor?: string;\n\n  public get classes(): string[] {\n    const mode = this.light ? 'footer--light' : 'footer--dark';\n\n    return ['footer', mode];\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "",
+                    "data": ".footer-container {\r\n  width: 100%;\r\n  left: 0;\r\n  bottom: 0;\r\n  position: fixed;\r\n  z-index: 9999;\r\n}\r\n\r\n.footer {\r\n  display: inline-block;\r\n  height: 45px;\r\n  list-style-type: none;\r\n  margin: 0;\r\n}\r\n\r\n.footer--light, .nav-item--light {\r\n  color: #000;\r\n  background-color: #fff;\r\n  border-bottom: 2px solid #000;\r\n}\r\n\r\n.footer--dark, .nav-item--dark {\r\n  color: #fff;\r\n  background-color: #000;\r\n  border-bottom: 2px solid #fff;\r\n}\r\n\r\n/* Large Mobile */\r\n@media (min-width: 414px) { .footer { height: 45px; } }\r\n\r\n/* Tablet */\r\n@media (min-width: 834px) { .footer { height: 50px; } }\r\n\r\n/* Full */\r\n@media (min-width: 1112px) { .footer { height: 60px; } }\r\n",
                     "styleUrl": "./px-footer.component.scss"
                 }
             ],
             "stylesData": "",
-            "constructorObj": {
-                "name": "constructor",
-                "description": "",
-                "args": [],
-                "line": 8
+            "accessors": {
+                "classes": {
+                    "name": "classes",
+                    "getSignature": {
+                        "name": "classes",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 19
+                    }
+                }
             },
-            "implements": [
-                "OnInit"
-            ],
-            "templateData": "<p>px-footer works!</p>\n"
+            "templateData": "<div\n  class=\"footer-container\"\n  [ngClass]=\"classes\"\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\n  ngDefaultControl [ngModel]=\"light\"\n  ngDefaultControl [ngModel]=\"fontSize\"\n  ngDefaultControl [ngModel]=\"fidelity\"\n>\n  <div style=\"float: left; width: 33%;\">\n    <font-size \n      [fontSize]=\"fontSize\"\n      [light]=\"light\"\n      [ngClass]=\"classes\" \n      [ngStyle]=\"{ 'background-color': backgroundColor }\"\n      >\n    </font-size>\n  </div>\n  <div style=\"float: left; width: 33%; text-align: center;\">\n    <quality \n      [fidelity]=\"fidelity\"\n      [light]=\"light\"\n      [ngClass]=\"classes\" \n      [ngStyle]=\"{ 'background-color': backgroundColor }\"\n      >\n    </quality>\n  </div>\n  <div style=\"float: left; width: 33%; text-align: right;\">\n    <theme-button\n      [light]=\"light\" \n      [ngClass]=\"classes\" \n      [ngStyle]=\"{ 'background-color': backgroundColor }\">\n    </theme-button>\n  </div>\n</div>\n"
         },
         {
             "name": "QualityComponent",
-            "id": "component-QualityComponent-c9959fd9609944dc76e2ae195fe57895",
+            "id": "component-QualityComponent-3b5c3b2497b6ada9b4c812646b9eb08f",
             "file": "src/app/px-footer/quality/quality.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
             "providers": [],
-            "selector": "app-quality",
+            "selector": "quality",
             "styleUrls": [
                 "./quality.component.scss"
             ],
@@ -804,14 +827,9 @@
                 },
                 {
                     "name": "fidelity",
-                    "defaultValue": "0",
+                    "defaultValue": "Fidelity.Normal",
                     "line": 11,
                     "type": "Fidelity"
-                },
-                {
-                    "name": "label",
-                    "defaultValue": "''",
-                    "line": 13
                 },
                 {
                     "name": "light",
@@ -833,7 +851,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 21,
+                    "line": 20,
                     "jsdoctags": [
                         {
                             "name": "f",
@@ -850,11 +868,11 @@
             "description": "",
             "rawdescription": "",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { Fidelity } from './fidelity.enum';\n\n@Component({\n  selector: 'app-quality',\n  templateUrl: './quality.component.html',\n  styleUrls: ['./quality.component.scss']\n})\nexport class QualityComponent {\n  @Input() light = false;\n  @Input() fidelity: Fidelity = 0;\n  @Input() backgroundColor?: string;\n  @Input() label = '';\n\n  public get classes(): string[] {\n    const mode = this.light ? 'quality--light' : 'quality--dark';\n\n    return ['quality', mode];\n  }\n\n  selectFontSize(f: Fidelity) {\n    this.fidelity = f;\n  }\n}\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { Fidelity } from './fidelity.enum';\n\n@Component({\n  selector: 'quality',\n  templateUrl: './quality.component.html',\n  styleUrls: ['./quality.component.scss']\n})\nexport class QualityComponent {\n  @Input() light = false;\n  @Input() fidelity: Fidelity = Fidelity.Normal;\n  @Input() backgroundColor?: string;\n\n  public get classes(): string[] {\n    const mode = this.light ? 'quality--light' : 'quality--dark';\n\n    return ['quality', mode];\n  }\n\n  selectFontSize(f: Fidelity) {\n    this.fidelity = f;\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".quality { \r\n  font-weight: 700; \r\n  width: 90px;\r\n  text-align: center;\r\n  cursor: pointer; \r\n}\r\n\r\n.medium-dash, .large-dash { padding-left: 7.5px; }\r\n\r\n.small-dash { font-size: medium; }\r\n.medium-dash { font-size: x-large; }\r\n.large-dash { font-size: xx-large; }\r\n\r\n.quality--light { color: #000; background-color: #fff;}\r\n.quality--dark { color: #fff; background-color: #000;}\r\n\r\n.selected-dash--light { color: #fff !important; -webkit-text-stroke: 1.5px #000; }\r\n.selected-dash--dark { color: #000 !important; -webkit-text-stroke: 1.5px #fff; }",
+                    "data": ".quality { \r\n  font-weight: 700; \r\n  width: 90px;\r\n  height: 45px;\r\n  line-height: 45px;\r\n  margin: 0;\r\n  text-align: center;\r\n  cursor: pointer;\r\n  font-size: 45px; \r\n}\r\n\r\n.normal-dash, .high-dash { padding-left: 10px; }\r\n\r\n.quality--light { color: #000; background-color: #fff;}\r\n.quality--dark { color: #fff; background-color: #000;}\r\n\r\n.selected-dash--light { color: #fff !important; -webkit-text-stroke: 1.5px #000; }\r\n.selected-dash--dark { color: #000 !important; -webkit-text-stroke: 1.5px #fff; }",
                     "styleUrl": "./quality.component.scss"
                 }
             ],
@@ -866,15 +884,15 @@
                         "name": "classes",
                         "type": "[]",
                         "returnType": "string[]",
-                        "line": 15
+                        "line": 14
                     }
                 }
             },
-            "templateData": "<p\n  [ngClass]=\"classes\"\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\n  ngDefaultControl [ngModel]=\"label\"\n  ngDefaultControl [ngModel]=\"light\"\n>\n  <span \n    [ngClass]=\"{ 'small-dash': true, 'selected-dash--light': fidelity === -1 && light, 'selected-dash--dark': fidelity === -1 && !light }\"\n    (click)=\"selectFontSize(-1)\"\n  >{{ label[0] }}</span><span\n    [ngClass]=\"{ 'medium-dash': true, 'selected-dash--light': fidelity === 0 && light, 'selected-dash--dark': fidelity === 0 && !light }\" \n    (click)=\"selectFontSize(0)\"\n  >{{ label[1] }}</span><span \n    [ngClass]=\"{ 'large-dash': true, 'selected-dash--light': fidelity === 1 && light, 'selected-dash--dark': fidelity === 1 && !light }\"\n    (click)=\"selectFontSize(1)\"\n  >{{ label[2] }}</span>\n</p>\n"
+            "templateData": "<p\n  [ngClass]=\"classes\"\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\n  ngDefaultControl [ngModel]=\"label\"\n  ngDefaultControl [ngModel]=\"light\"\n>\n  <span \n    [ngClass]=\"{ 'selected-dash--light': fidelity === -1 && light, 'selected-dash--dark': fidelity === -1 && !light }\"\n    (click)=\"selectFontSize(-1)\"\n  >•</span><span\n    [ngClass]=\"{ 'normal-dash': true, 'selected-dash--light': fidelity === 0 && light, 'selected-dash--dark': fidelity === 0 && !light }\" \n    (click)=\"selectFontSize(0)\"\n  >•</span><span \n    [ngClass]=\"{ 'high-dash': true, 'selected-dash--light': fidelity === 1 && light, 'selected-dash--dark': fidelity === 1 && !light }\"\n    (click)=\"selectFontSize(1)\"\n  >•</span>\n</p>\n"
         },
         {
             "name": "ThemeButtonComponent",
-            "id": "component-ThemeButtonComponent-88dbc99e2944ea316bbee1ab0c424052",
+            "id": "component-ThemeButtonComponent-ac1a1743f4b507cded0a1db794ae6dc1",
             "file": "src/app/px-footer/theme-button/theme-button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -897,11 +915,6 @@
                     "type": "string"
                 },
                 {
-                    "name": "label",
-                    "defaultValue": "''",
-                    "line": 11
-                },
-                {
                     "name": "light",
                     "defaultValue": "false",
                     "line": 9
@@ -911,7 +924,7 @@
                 {
                     "name": "onClick",
                     "defaultValue": "new EventEmitter<Event>()",
-                    "line": 13,
+                    "line": 12,
                     "type": "EventEmitter"
                 }
             ],
@@ -923,7 +936,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 21
+                    "line": 20
                 }
             ],
             "hostBindings": [],
@@ -931,7 +944,7 @@
             "description": "",
             "rawdescription": "",
             "type": "component",
-            "sourceCode": "import { Component, EventEmitter, Input, Output } from '@angular/core';\n\n@Component({\n  selector: 'theme-button',\n  templateUrl: './theme-button.component.html',\n  styleUrls: ['./theme-button.component.scss']\n})\nexport class ThemeButtonComponent {\n  @Input() light = false;\n  @Input() backgroundColor?: string;\n  @Input() label = '';\n\n  @Output() onClick = new EventEmitter<Event>();\n\n  public get classes(): string[] {\n    const mode = this.light ? 'theme-button--light' : 'theme-button--dark';\n\n    return ['theme-button', mode];\n  }\n\n  toggleTheme() { \n    this.light = !this.light; \n    this.label = this.light ? '💡' : '🌙';\n  }\n}\n",
+            "sourceCode": "import { Component, EventEmitter, Input, Output } from '@angular/core';\n\n@Component({\n  selector: 'theme-button',\n  templateUrl: './theme-button.component.html',\n  styleUrls: ['./theme-button.component.scss']\n})\nexport class ThemeButtonComponent {\n  @Input() light = false;\n  @Input() backgroundColor?: string;\n\n  @Output() onClick = new EventEmitter<Event>();\n\n  public get classes(): string[] {\n    const mode = this.light ? 'theme-button--light' : 'theme-button--dark';\n\n    return ['theme-button', mode];\n  }\n\n  toggleTheme() { \n    this.light = !this.light;\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -947,11 +960,11 @@
                         "name": "classes",
                         "type": "[]",
                         "returnType": "string[]",
-                        "line": 15
+                        "line": 14
                     }
                 }
             },
-            "templateData": "<button  \n  (click)=\"toggleTheme()\"\n  [ngClass]=\"classes\"\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\n  ngDefaultControl [ngModel]=\"label\"\n  ngDefaultControl [ngModel]=\"light\"\n>\n  {{ label }}\n</button>\n"
+            "templateData": "<button  \n  (click)=\"toggleTheme()\"\n  [ngClass]=\"classes\"\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\n  ngDefaultControl [ngModel]=\"light\"\n>\n  {{ light ? '💡' : '🌙' }}\n</button>\n"
         }
     ],
     "modules": [
@@ -1088,6 +1101,14 @@
                 "name": "Dark",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/NavItem.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Dark",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/NavBrand.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
@@ -1104,14 +1125,6 @@
                 "name": "Dark",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/ThemeButton.stories.ts",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Dark",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/stories/Quality.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
@@ -1120,7 +1133,15 @@
                 "name": "Dark",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/NavItem.stories.ts",
+                "file": "src/stories/ThemeButton.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Dark",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/PxFooter.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -1176,6 +1197,14 @@
                 "name": "Light",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/NavItem.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Light",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/NavBrand.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
@@ -1192,14 +1221,6 @@
                 "name": "Light",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/ThemeButton.stories.ts",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Light",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/stories/Quality.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
@@ -1208,7 +1229,15 @@
                 "name": "Light",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/NavItem.stories.ts",
+                "file": "src/stories/ThemeButton.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Light",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/PxFooter.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -1241,6 +1270,14 @@
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/stories/Page.stories.ts",
+                "type": "[]",
+                "defaultValue": "[ '❓ About', '📐 Angularization', '💪 Get Great' ]"
+            },
+            {
+                "name": "navItemsData",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/PxFooter.stories.ts",
                 "type": "[]",
                 "defaultValue": "[ '❓ About', '📐 Angularization', '💪 Get Great' ]"
             },
@@ -1303,6 +1340,14 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/Navbar.stories.ts",
+                "type": "Story<NavbarComponent>",
+                "defaultValue": "(args: NavbarComponent) => ({\r\n  component: NavbarComponent,\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/Header.stories.ts",
                 "type": "Story<Header>",
                 "defaultValue": "(args: Header) => ({\r\n  component: Header,\r\n  props: args,\r\n})"
@@ -1311,9 +1356,9 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Navbar.stories.ts",
-                "type": "Story<NavbarComponent>",
-                "defaultValue": "(args: NavbarComponent) => ({\r\n  component: NavbarComponent,\r\n  props: args,\r\n})"
+                "file": "src/stories/NavItem.stories.ts",
+                "type": "Story<NavItemComponent>",
+                "defaultValue": "(args: NavItemComponent) => ({\r\n  component: NavItemComponent,\r\n  props: args,\r\n})"
             },
             {
                 "name": "Template",
@@ -1335,14 +1380,6 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/ThemeButton.stories.ts",
-                "type": "Story<ThemeButtonComponent>",
-                "defaultValue": "(args: ThemeButtonComponent) => ({\r\n  component: ThemeButtonComponent,\r\n  props: args,\r\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/stories/Quality.stories.ts",
                 "type": "Story<QualityComponent>",
                 "defaultValue": "(args: QualityComponent) => ({\r\n  component: QualityComponent,\r\n  props: args,\r\n})"
@@ -1351,9 +1388,17 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/NavItem.stories.ts",
-                "type": "Story<NavItemComponent>",
-                "defaultValue": "(args: NavItemComponent) => ({\r\n  component: NavItemComponent,\r\n  props: args,\r\n})"
+                "file": "src/stories/ThemeButton.stories.ts",
+                "type": "Story<ThemeButtonComponent>",
+                "defaultValue": "(args: ThemeButtonComponent) => ({\r\n  component: ThemeButtonComponent,\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/PxFooter.stories.ts",
+                "type": "Story<PxFooterComponent>",
+                "defaultValue": "(args: PxFooterComponent) => ({\r\n  component: PxFooterComponent,\r\n  props: args,\r\n})"
             }
         ],
         "functions": [],
@@ -1504,6 +1549,32 @@
                     "defaultValue": "(args: NavbarComponent) => ({\r\n  component: NavbarComponent,\r\n  props: args,\r\n})"
                 }
             ],
+            "src/stories/NavItem.stories.ts": [
+                {
+                    "name": "Dark",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/NavItem.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Light",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/NavItem.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/NavItem.stories.ts",
+                    "type": "Story<NavItemComponent>",
+                    "defaultValue": "(args: NavItemComponent) => ({\r\n  component: NavItemComponent,\r\n  props: args,\r\n})"
+                }
+            ],
             "src/stories/NavBrand.stories.ts": [
                 {
                     "name": "Dark",
@@ -1564,32 +1635,6 @@
                     "defaultValue": "(args: Page) => ({\r\n  component: Page,\r\n  props: args,\r\n})"
                 }
             ],
-            "src/stories/ThemeButton.stories.ts": [
-                {
-                    "name": "Dark",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/ThemeButton.stories.ts",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Light",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/ThemeButton.stories.ts",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/ThemeButton.stories.ts",
-                    "type": "Story<ThemeButtonComponent>",
-                    "defaultValue": "(args: ThemeButtonComponent) => ({\r\n  component: ThemeButtonComponent,\r\n  props: args,\r\n})"
-                }
-            ],
             "src/stories/Quality.stories.ts": [
                 {
                     "name": "Dark",
@@ -1616,12 +1661,12 @@
                     "defaultValue": "(args: QualityComponent) => ({\r\n  component: QualityComponent,\r\n  props: args,\r\n})"
                 }
             ],
-            "src/stories/NavItem.stories.ts": [
+            "src/stories/ThemeButton.stories.ts": [
                 {
                     "name": "Dark",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/NavItem.stories.ts",
+                    "file": "src/stories/ThemeButton.stories.ts",
                     "type": "",
                     "defaultValue": "Template.bind({})"
                 },
@@ -1629,7 +1674,7 @@
                     "name": "Light",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/NavItem.stories.ts",
+                    "file": "src/stories/ThemeButton.stories.ts",
                     "type": "",
                     "defaultValue": "Template.bind({})"
                 },
@@ -1637,9 +1682,43 @@
                     "name": "Template",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/NavItem.stories.ts",
-                    "type": "Story<NavItemComponent>",
-                    "defaultValue": "(args: NavItemComponent) => ({\r\n  component: NavItemComponent,\r\n  props: args,\r\n})"
+                    "file": "src/stories/ThemeButton.stories.ts",
+                    "type": "Story<ThemeButtonComponent>",
+                    "defaultValue": "(args: ThemeButtonComponent) => ({\r\n  component: ThemeButtonComponent,\r\n  props: args,\r\n})"
+                }
+            ],
+            "src/stories/PxFooter.stories.ts": [
+                {
+                    "name": "Dark",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/PxFooter.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Light",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/PxFooter.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "navItemsData",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/PxFooter.stories.ts",
+                    "type": "[]",
+                    "defaultValue": "[ '❓ About', '📐 Angularization', '💪 Get Great' ]"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/PxFooter.stories.ts",
+                    "type": "Story<PxFooterComponent>",
+                    "defaultValue": "(args: PxFooterComponent) => ({\r\n  component: PxFooterComponent,\r\n  props: args,\r\n})"
                 }
             ],
             "src/environments/environment.prod.ts": [
@@ -1858,7 +1937,7 @@
                 "linktype": "component",
                 "name": "FontSizeComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/8",
+                "coverageCount": "0/7",
                 "status": "low"
             },
             {
@@ -1867,7 +1946,7 @@
                 "linktype": "component",
                 "name": "PxFooterComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/3",
+                "coverageCount": "0/5",
                 "status": "low"
             },
             {
@@ -1876,7 +1955,7 @@
                 "linktype": "component",
                 "name": "QualityComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/6",
+                "coverageCount": "0/5",
                 "status": "low"
             },
             {
@@ -1885,7 +1964,7 @@
                 "linktype": "component",
                 "name": "ThemeButtonComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/6",
+                "coverageCount": "0/5",
                 "status": "low"
             },
             {
@@ -2189,6 +2268,46 @@
                 "status": "low"
             },
             {
+                "filePath": "src/stories/PxFooter.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Dark",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/PxFooter.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Light",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/PxFooter.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "navItemsData",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/PxFooter.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "src/stories/Quality.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
@@ -2272,7 +2391,7 @@
                 "linktype": "component",
                 "name": "PageComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/5",
+                "coverageCount": "0/7",
                 "status": "low"
             },
             {

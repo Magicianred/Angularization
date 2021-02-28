@@ -8,17 +8,27 @@ import { NavbarComponent } from 'src/app/navbar/navbar.component';
 import { NavBrandComponent } from 'src/app/navbar/nav-brand/nav-brand.component';
 import { NavItemComponent } from 'src/app/navbar/nav-item/nav-item.component';
 import { BgImageComponent } from 'src/app/bg-image/bg-image.component';
+import { FontSizeComponent } from '../app/px-footer/font-size/font-size.component';
+import { QualityComponent } from '../app/px-footer/quality/quality.component';
+import { ThemeButtonComponent } from '../app/px-footer/theme-button/theme-button.component';
+import { FontSize } from '../app/px-footer/font-size/font-size.enum';
+import { Fidelity } from '../app/px-footer/quality/fidelity.enum';
+import { PxFooterComponent } from 'src/app/px-footer/px-footer.component';
 
 export default {
   title: 'Example/Page',
-  component: NavbarComponent,
+  component: Page,
   decorators: [
     moduleMetadata({
       declarations: [
         NavbarComponent, 
         NavBrandComponent, 
         NavItemComponent,
-        BgImageComponent
+        PxFooterComponent,
+        BgImageComponent,
+        FontSizeComponent,
+        QualityComponent,
+        ThemeButtonComponent
       ],
       imports: [CommonModule],
     }),
@@ -34,7 +44,19 @@ const navItemsData =
   [ '❓ About', '📐 Angularization', '💪 Get Great' ];
 
 export const Light = Template.bind({});
-Light.args = { light: true, brand: 'A°', navItems: navItemsData };
+Light.args = { 
+  light: true, 
+  brand: 'A°',
+  fontSize: FontSize.Normal,
+  fidelity: Fidelity.Normal, 
+  navItems: navItemsData 
+};
 
 export const Dark = Template.bind({})
-Dark.args = { light: false, brand: 'A°', navItems: navItemsData };
+Dark.args = { 
+  light: false, 
+  brand: 'A°',
+  fontSize: FontSize.Normal,
+  fidelity: Fidelity.Normal, 
+  navItems: navItemsData
+};
