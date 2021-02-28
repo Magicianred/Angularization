@@ -2,7 +2,7 @@ import { Meta, Story } from '@storybook/angular/types-6-0';
 import { NavItemComponent } from '../app/navbar/nav-item/nav-item.component';
 
 export default {
-  title: 'Example/NavItem',
+  title: 'Navbar/NavItem',
   component: NavItemComponent,
   argTypes: {
     backgroundColor: { control: 'color' },

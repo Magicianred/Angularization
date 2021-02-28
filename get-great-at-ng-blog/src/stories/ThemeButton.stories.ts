@@ -2,7 +2,7 @@ import { Meta, Story } from '@storybook/angular/types-6-0';
 import { ThemeButtonComponent } from '../app/px-footer/theme-button/theme-button.component';
 
 export default {
-  title: 'Example/ThemeButton',
+  title: 'PXFooter/ThemeButton',
   component: ThemeButtonComponent,
   argTypes: {
     backgroundColor: { control: 'color' },
