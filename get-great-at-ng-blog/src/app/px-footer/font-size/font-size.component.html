@@ -1,9 +1,17 @@
-<p>
+<p
+  [ngClass]="classes"
+  [ngStyle]="{ 'background-color': backgroundColor }"
+  ngDefaultControl [ngModel]="label"
+  ngDefaultControl [ngModel]="light"
+>
   <span 
-    class="small-a"
+    [ngClass]="{ 'small-a': true, 'selected-a--light': fontSize === -1 && light, 'selected-a--dark': fontSize === -1 && !light }"
+    (click)="selectFontSize(-1)"
   >{{ label[0] }}</span><span
-    class="medium-a" 
+    [ngClass]="{ 'medium-a': true, 'selected-a--light': fontSize === 0 && light, 'selected-a--dark': fontSize === 0 && !light }" 
+    (click)="selectFontSize(0)"
   >{{ label[1] }}</span><span 
-    class="large-a"
+    [ngClass]="{ 'large-a': true, 'selected-a--light': fontSize === 1 && light, 'selected-a--dark': fontSize === 1 && !light }"
+    (click)="selectFontSize(1)"
   >{{ label[2] }}</span>
 </p>

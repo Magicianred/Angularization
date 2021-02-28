@@ -1,8 +1,9 @@
 import { Meta, Story } from '@storybook/angular/types-6-0';
 import { FontSizeComponent } from '../app/px-footer/font-size/font-size.component';
+import { FontSize } from '../app/px-footer/font-size/font-size.enum';
 
 export default {
-  title: 'Example/FontSize',
+  title: 'PXFooter/FontSize',
   component: FontSizeComponent,
   argTypes: {
     backgroundColor: { control: 'color' },
@@ -15,7 +16,7 @@ const Template: Story<FontSizeComponent> = (args: FontSizeComponent) => ({
 });
 
 export const Light = Template.bind({});
-Light.args = { light: true, label: 'AAA' };
+Light.args = { light: true, fontSize: FontSize.Normal , label: 'AAA' };
 
 export const Dark = Template.bind({});
-Dark.args = { label: 'AAA' };
+Dark.args = { fontSize: FontSize.Normal, label: 'AAA' };

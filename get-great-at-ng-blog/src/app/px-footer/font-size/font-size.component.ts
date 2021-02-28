@@ -22,14 +22,13 @@ export class FontSizeComponent {
   }
 
   selectFontSize(fs: FontSize) { 
-    const domElement = this._elementRef.nativeElement.querySelector('body');
+    /* const domElement = this._elementRef.nativeElement.querySelector('body');
 
     if (this.fontSize < fs && fs === 1) domElement.style.fontSize += 12;
     else if (this.fontSize < fs && fs === 0) domElement.style.fontSize += 6;
     else if (this.fontSize > fs && fs === -1) domElement.style.fontSize -= 12;
-    else if (this.fontSize > fs && fs === 0) domElement.style.fontSize -= 6;
+    else if (this.fontSize > fs && fs === 0) domElement.style.fontSize -= 6; */
     
     this.fontSize = fs;
   }
-
 }
