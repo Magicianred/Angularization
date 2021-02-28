@@ -19,10 +19,10 @@ import { BgImageComponent } from 'src/app/bg-image/bg-image.component';
     [ngStyle]="{ 'background-color': backgroundColor }"
   >
   </bg-image>
-  <!-- <article>
-    <section>
-    </section>
-  </article> -->`,
+  <br>
+  <br>
+  <br>
+    `,
   styleUrls: ['./page.css'],
 })
 export default class PageComponent {

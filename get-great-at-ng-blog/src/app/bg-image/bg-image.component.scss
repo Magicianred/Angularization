@@ -13,6 +13,13 @@
 .bg-image--light { background-color: #fff; }
 .bg-image--dark { background-color: #000; }
 
+.bg-image--light, .bg-image--dark {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0; 
+}
+
 /* Large Mobile */
 @media (min-width: 414px) { .bg-image { background-size: 500% !important; } }
 

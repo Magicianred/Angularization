@@ -1,0 +1,15 @@
+.quality { 
+  font-weight: 700; 
+  width: 90px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 45px; 
+}
+
+.normal-dash, .high-dash { padding-left: 10px; }
+
+.quality--light { color: #000; background-color: #fff;}
+.quality--dark { color: #fff; background-color: #000;}
+
+.selected-dash--light { color: #fff !important; -webkit-text-stroke: 1.5px #000; }
+.selected-dash--dark { color: #000 !important; -webkit-text-stroke: 1.5px #fff; }

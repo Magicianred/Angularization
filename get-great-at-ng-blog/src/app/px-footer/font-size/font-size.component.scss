@@ -1,0 +1,18 @@
+.font-size { 
+  font-weight: 700; 
+  width: 90px;
+  text-align: center;
+  cursor: pointer; 
+}
+
+.medium-a, .large-a { padding-left: 7.5px; }
+
+.small-a { font-size: medium; }
+.medium-a { font-size: x-large; }
+.large-a { font-size: xx-large; }
+
+.font-size--light { color: #000; background-color: #fff;}
+.font-size--dark { color: #fff; background-color: #000;}
+
+.selected-a--light { color: #fff !important; -webkit-text-stroke: 1.5px #000; }
+.selected-a--dark { color: #000 !important; -webkit-text-stroke: 1.5px #fff; }

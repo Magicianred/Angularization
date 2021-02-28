@@ -2,7 +2,7 @@ import { Meta, Story } from '@storybook/angular/types-6-0';
 import { NavBrandComponent } from '../app/navbar/nav-brand/nav-brand.component';
 
 export default {
-  title: 'Example/NavBrand',
+  title: 'Navbar/NavBrand',
   component: NavBrandComponent,
   argTypes: {
     backgroundColor: { control: 'color' },

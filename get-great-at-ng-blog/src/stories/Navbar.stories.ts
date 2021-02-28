@@ -5,7 +5,7 @@ import { NavItemComponent } from '../app/navbar/nav-item/nav-item.component';
 import { NavBrandComponent } from '../app/navbar/nav-brand/nav-brand.component';
 
 export default {
-  title: 'Example/Navbar',
+  title: 'Navbar/Navbar',
   excludeStories: /.*Data$/,
   decorators: [
     moduleMetadata({

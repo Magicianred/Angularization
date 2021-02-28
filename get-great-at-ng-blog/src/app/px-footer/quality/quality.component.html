@@ -1,1 +1,17 @@
-<p>quality works!</p>
+<p
+  [ngClass]="classes"
+  [ngStyle]="{ 'background-color': backgroundColor }"
+  ngDefaultControl [ngModel]="label"
+  ngDefaultControl [ngModel]="light"
+>
+  <span 
+    [ngClass]="{ 'selected-dash--light': fidelity === -1 && light, 'selected-dash--dark': fidelity === -1 && !light }"
+    (click)="selectFontSize(-1)"
+  >{{ label[0] }}</span><span
+    [ngClass]="{ 'normal-dash': true, 'selected-dash--light': fidelity === 0 && light, 'selected-dash--dark': fidelity === 0 && !light }" 
+    (click)="selectFontSize(0)"
+  >{{ label[1] }}</span><span 
+    [ngClass]="{ 'high-dash': true, 'selected-dash--light': fidelity === 1 && light, 'selected-dash--dark': fidelity === 1 && !light }"
+    (click)="selectFontSize(1)"
+  >{{ label[2] }}</span>
+</p>
