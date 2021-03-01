@@ -19,7 +19,7 @@
   p { font-size: 15px + $font-size; }
 }
 
-.small-size { @include change-font-size(0); }
-.normal-size { @include change-font-size(6px); }
-.large-size { @include change-font-size(12px); }
+.small-size { @include change-font-size(3px); }
+.normal-size { @include change-font-size(9px); }
+.large-size { @include change-font-size(18px); }
 
