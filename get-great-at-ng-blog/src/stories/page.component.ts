@@ -7,6 +7,7 @@ import { QualityComponent } from '../app/px-footer/quality/quality.component';
 import { ThemeButtonComponent } from '../app/px-footer/theme-button/theme-button.component';
 import { FontSize } from '../app/px-footer/font-size/font-size.enum';
 import { Fidelity } from '../app/px-footer/quality/fidelity.enum';
+import { ThemeChangeComponent } from 'src/app/theme-change/theme-change.component';
 
 @Component({
   selector: 'a-degree-page',
@@ -29,6 +30,7 @@ import { Fidelity } from '../app/px-footer/quality/fidelity.enum';
   <br>
   <br>
   <px-footer 
+    (onThemeChange)="changeTheme(light)"
     [light]="light"
     [fontSize]="0"
     [fidelity]="0"
@@ -39,8 +41,7 @@ import { Fidelity } from '../app/px-footer/quality/fidelity.enum';
     `,
   styleUrls: ['./page.css'],
 })
-export default class PageComponent {
-  @Input() light = false;
+export default class PageComponent extends ThemeChangeComponent {
   @Input() brand = '';
   @Input() fontSize: FontSize = FontSize.Normal;
   @Input() fidelity: Fidelity = Fidelity.Normal;
