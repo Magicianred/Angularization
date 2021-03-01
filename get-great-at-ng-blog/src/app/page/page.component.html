@@ -18,7 +18,12 @@
     <br>
     <br>
     <br>
-    <demo-text [light]="light"></demo-text>
+    <document
+      [light]="light"
+      [ngClass]="classes" 
+      [ngStyle]="{ 'background-color': backgroundColor }"
+    >
+    </document>
     <br>
     <br>
     <br>

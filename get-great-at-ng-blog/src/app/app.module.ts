@@ -14,6 +14,13 @@ import { ThemeButtonComponent } from './px-footer/theme-button/theme-button.comp
 import { ThemeChangeComponent } from './theme-change/theme-change.component';
 import { DemoTextComponent } from './demo-text/demo-text.component';
 import { LoFiComponent } from './lo-fi/lo-fi.component';
+import { DocumentComponent } from './page/document/document.component';
+import { HomeComponent } from './articles/home/home.component';
+import { AboutComponent } from './articles/about/about.component';
+import { IndexComponent } from './articles/angularization/index/index.component';
+import { NvmComponent } from './articles/angularization/nvm/nvm.component';
+import { VsCodeComponent } from './articles/angularization/vs-code/vs-code.component';
+import { VtddAngularComponent } from './articles/angularization/vtdd-angular/vtdd-angular.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +35,14 @@ import { LoFiComponent } from './lo-fi/lo-fi.component';
     ThemeButtonComponent,
     ThemeChangeComponent,
     DemoTextComponent,
-    LoFiComponent
+    LoFiComponent,
+    DocumentComponent,
+    HomeComponent,
+    AboutComponent,
+    IndexComponent,
+    NvmComponent,
+    VsCodeComponent,
+    VtddAngularComponent
   ],
   imports: [
     BrowserModule,

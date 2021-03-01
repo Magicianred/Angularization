@@ -2,7 +2,7 @@ import { moduleMetadata } from '@storybook/angular';
 import { CommonModule } from '@angular/common';
 // also exported from '@storybook/react' if you can deal with breaking changes in 6.1
 import { Story, Meta } from '@storybook/angular/types-6-0';
-import Page from './page.component';
+import Page from 'src/app/page/page.component';
 
 import { NavbarComponent } from 'src/app/navbar/navbar.component';
 import { NavBrandComponent } from 'src/app/navbar/nav-brand/nav-brand.component';
@@ -15,6 +15,7 @@ import { FontSize } from '../app/px-footer/font-size/font-size.enum';
 import { Fidelity } from '../app/px-footer/quality/fidelity.enum';
 import { PxFooterComponent } from 'src/app/px-footer/px-footer.component';
 import { DemoTextComponent } from 'src/app/demo-text/demo-text.component';
+import { DocumentComponent } from 'src/app/page/document/document.component';
 
 export default {
   title: 'Example/Page',
@@ -30,7 +31,8 @@ export default {
         FontSizeComponent,
         QualityComponent,
         ThemeButtonComponent,
-        DemoTextComponent
+        DemoTextComponent,
+        DocumentComponent
       ],
       imports: [CommonModule],
     }),

@@ -1,4 +1,4 @@
-import { Component, ElementRef, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ThemeChangeComponent } from 'src/app/theme-change/theme-change.component';
 import { FontSize } from './font-size.enum';
 
@@ -8,11 +8,9 @@ import { FontSize } from './font-size.enum';
   styleUrls: ['./font-size.component.scss']
 })
 export class FontSizeComponent extends ThemeChangeComponent {
-  constructor(private _elementRef : ElementRef) {
+  constructor() {
     super();
   }
-  
-  private domElement = document.querySelector('body') || this._elementRef.nativeElement.querySelector('body');
 
   @Output() onFontSizeSelection = new EventEmitter<FontSize>();
   @Input() backgroundColor?: string;
