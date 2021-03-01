@@ -411,8 +411,64 @@
             "templateData": "<div\r\n  [ngClass]=\"classes\"\r\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n  ngDefaultControl [ngModel]=\"light\"\r\n>\r\n  <h1 style=\"text-align: center;\">h1 Header Example</h1>\r\n  <hr>\r\n  <h2>This is an example of an h2 header</h2>\r\n  <h3>This is an example of an h3 header</h3>\r\n  <h4>This is an example of an h4 header</h4>\r\n  <h5>This is an example of an h5 header</h5>\r\n  <hr>\r\n  <p>This is an example of a paragraph. This is an example of a paragraph.\r\n    This is an example of a paragraph. This is an example of a paragraph.\r\n    This is an example of a paragraph. This is an example of a paragraph.\r\n    This is an example of a paragraph. This is an example of a paragraph.\r\n    This is an example of a paragraph. This is an example of a paragraph.\r\n    This is an example of a paragraph. This is an example of a paragraph.\r\n    This is an example of a paragraph. This is an example of a paragraph.\r\n    This is an example of a paragraph. This is an example of a paragraph.\r\n    This is an example of a paragraph. This is an example of a paragraph.\r\n    This is an example of a paragraph. This is an example of a paragraph.\r\n    This is an example of a paragraph. This is an example of a paragraph.\r\n    This is an example of a paragraph. This is an example of a paragraph.<br>\r\n    <br>\r\n    This is an example of a paragraph. This is an example of a paragraph.\r\n    This is an example of a paragraph. This is an example of a paragraph.\r\n    This is an example of a paragraph. This is an example of a paragraph.\r\n    This is an example of a paragraph. This is an example of a paragraph.\r\n    This is an example of a paragraph. This is an example of a paragraph.\r\n    This is an example of a paragraph. This is an example of a paragraph.\r\n    This is an example of a paragraph. This is an example of a paragraph.\r\n    This is an example of a paragraph. This is an example of a paragraph.\r\n    This is an example of a paragraph. This is an example of a paragraph.\r\n    This is an example of a paragraph. This is an example of a paragraph.\r\n    This is an example of a paragraph. This is an example of a paragraph.\r\n    This is an example of a paragraph. This is an example of a paragraph.\r\n  </p>\r\n</div>"
         },
         {
+            "name": "DocumentComponent",
+            "id": "component-DocumentComponent-c1031b2cf60899d53e3541a27b7c0340",
+            "file": "src/app/page/document/document.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-document",
+            "styleUrls": [
+                "./document.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./document.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 12
+                }
+            ],
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-document',\n  templateUrl: './document.component.html',\n  styleUrls: ['./document.component.scss']\n})\nexport class DocumentComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./document.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "args": [],
+                "line": 8
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<p>document works!</p>\n"
+        },
+        {
             "name": "FontSizeComponent",
-            "id": "component-FontSizeComponent-3396cb40fda8323b6d5b384fb9916dfa",
+            "id": "component-FontSizeComponent-986d7990ec3ab5fc5bb969bfbff3f80d",
             "file": "src/app/px-footer/font-size/font-size.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -431,7 +487,7 @@
             "inputsClass": [
                 {
                     "name": "backgroundColor",
-                    "line": 18,
+                    "line": 16,
                     "type": "string"
                 },
                 {
@@ -465,22 +521,11 @@
                 {
                     "name": "onFontSizeSelection",
                     "defaultValue": "new EventEmitter<FontSize>()",
-                    "line": 17,
+                    "line": 15,
                     "type": "EventEmitter"
                 }
             ],
             "propertiesClass": [
-                {
-                    "name": "domElement",
-                    "defaultValue": "document.querySelector('body') || this._elementRef.nativeElement.querySelector('body')",
-                    "type": "",
-                    "optional": false,
-                    "description": "",
-                    "line": 15,
-                    "modifierKind": [
-                        112
-                    ]
-                },
                 {
                     "name": "show",
                     "type": "boolean",
@@ -504,7 +549,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 26,
+                    "line": 24,
                     "jsdoctags": [
                         {
                             "name": "s",
@@ -596,7 +641,7 @@
             "description": "",
             "rawdescription": "",
             "type": "component",
-            "sourceCode": "import { Component, ElementRef, EventEmitter, Input, Output } from '@angular/core';\r\nimport { ThemeChangeComponent } from 'src/app/theme-change/theme-change.component';\r\nimport { FontSize } from './font-size.enum';\r\n\r\n@Component({\r\n  selector: 'font-size',\r\n  templateUrl: './font-size.component.html',\r\n  styleUrls: ['./font-size.component.scss']\r\n})\r\nexport class FontSizeComponent extends ThemeChangeComponent {\r\n  constructor(private _elementRef : ElementRef) {\r\n    super();\r\n  }\r\n  \r\n  private domElement = document.querySelector('body') || this._elementRef.nativeElement.querySelector('body');\r\n\r\n  @Output() onFontSizeSelection = new EventEmitter<FontSize>();\r\n  @Input() backgroundColor?: string;\r\n\r\n  public get classes(): string[] {\r\n    const mode = this.light ? 'font-size--light' : 'font-size--dark';\r\n\r\n    return ['font-size', mode];\r\n  }\r\n\r\n  selectFontSize(s: FontSize) {\r\n    this.fontSize = s;\r\n    this.onFontSizeSelection.emit(this.fontSize);\r\n  }\r\n}\r\n",
+            "sourceCode": "import { Component, EventEmitter, Input, Output } from '@angular/core';\r\nimport { ThemeChangeComponent } from 'src/app/theme-change/theme-change.component';\r\nimport { FontSize } from './font-size.enum';\r\n\r\n@Component({\r\n  selector: 'font-size',\r\n  templateUrl: './font-size.component.html',\r\n  styleUrls: ['./font-size.component.scss']\r\n})\r\nexport class FontSizeComponent extends ThemeChangeComponent {\r\n  constructor() {\r\n    super();\r\n  }\r\n\r\n  @Output() onFontSizeSelection = new EventEmitter<FontSize>();\r\n  @Input() backgroundColor?: string;\r\n\r\n  public get classes(): string[] {\r\n    const mode = this.light ? 'font-size--light' : 'font-size--dark';\r\n\r\n    return ['font-size', mode];\r\n  }\r\n\r\n  selectFontSize(s: FontSize) {\r\n    this.fontSize = s;\r\n    this.onFontSizeSelection.emit(this.fontSize);\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -608,22 +653,8 @@
             "constructorObj": {
                 "name": "constructor",
                 "description": "",
-                "args": [
-                    {
-                        "name": "_elementRef",
-                        "type": "ElementRef"
-                    }
-                ],
-                "line": 10,
-                "jsdoctags": [
-                    {
-                        "name": "_elementRef",
-                        "type": "ElementRef",
-                        "tagName": {
-                            "text": "param"
-                        }
-                    }
-                ]
+                "args": [],
+                "line": 10
             },
             "extends": "ThemeChangeComponent",
             "accessors": {
@@ -633,7 +664,7 @@
                         "name": "classes",
                         "type": "[]",
                         "returnType": "string[]",
-                        "line": 20
+                        "line": 18
                     }
                 }
             },
@@ -992,8 +1023,8 @@
         },
         {
             "name": "PageComponent",
-            "id": "component-PageComponent-ea4e4f326477221a07100de7e8cd34b4",
-            "file": "src/stories/page.component.ts",
+            "id": "component-PageComponent-fe748ee0078b8240b50431b5ddbd884d",
+            "file": "src/app/page/page.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
@@ -1001,7 +1032,7 @@
             "providers": [],
             "selector": "a-degree-page",
             "styleUrls": [
-                "./page.css"
+                "./page.component.scss"
             ],
             "styles": [],
             "templateUrl": [
@@ -1153,12 +1184,12 @@
             "description": "",
             "rawdescription": "",
             "type": "component",
-            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\r\nimport { NavbarComponent } from 'src/app/navbar/navbar.component';\r\nimport { PxFooterComponent } from 'src/app/px-footer/px-footer.component';\r\nimport { BgImageComponent } from 'src/app/bg-image/bg-image.component';\r\nimport { FontSizeComponent } from '../app/px-footer/font-size/font-size.component';\r\nimport { QualityComponent } from '../app/px-footer/quality/quality.component';\r\nimport { ThemeButtonComponent } from '../app/px-footer/theme-button/theme-button.component';\r\nimport { DemoTextComponent } from '../app/demo-text/demo-text.component';\r\nimport { FontSize } from '../app/px-footer/font-size/font-size.enum';\r\nimport { Fidelity } from '../app/px-footer/quality/fidelity.enum';\r\nimport { ThemeChangeComponent } from 'src/app/theme-change/theme-change.component';\r\n\r\n@Component({\r\n  selector: 'a-degree-page',\r\n  templateUrl: './page.component.html',\r\n  styleUrls: ['./page.css'],\r\n})\r\nexport default class PageComponent extends ThemeChangeComponent {\r\n  @Input() brand = '';\r\n  @Input() fidelity: Fidelity = Fidelity.Normal;\r\n  @Input() backgroundColor?: string;\r\n  @Input() navItems: string[] = [];\r\n\r\n  public get classes(): string[] {\r\n    const mode = this.light ? 'page--light' : 'page--dark';\r\n\r\n    return ['page', mode];\r\n  }\r\n}\r\n\r\n// export const Page = ({ user, onLogin, onLogout, onCreateAccount }) => (\r\n//   <article>\r\n//     <Header user={user} onLogin={onLogin} onLogout={onLogout} onCreateAccount={onCreateAccount} />\r\n\r\n// );\r\n// Page.propTypes = {\r\n//   user: PropTypes.shape({}),\r\n//   onLogin: PropTypes.func.isRequired,\r\n//   onLogout: PropTypes.func.isRequired,\r\n//   onCreateAccount: PropTypes.func.isRequired,\r\n// };\r\n\r\n// Page.defaultProps = {\r\n//   user: null,\r\n// };\r\n",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\r\nimport { NavbarComponent } from 'src/app/navbar/navbar.component';\r\nimport { PxFooterComponent } from 'src/app/px-footer/px-footer.component';\r\nimport { BgImageComponent } from 'src/app/bg-image/bg-image.component';\r\nimport { FontSizeComponent } from 'src/app/px-footer/font-size/font-size.component';\r\nimport { QualityComponent } from 'src/app/px-footer/quality/quality.component';\r\nimport { ThemeButtonComponent } from 'src/app/px-footer/theme-button/theme-button.component';\r\nimport { DemoTextComponent } from 'src/app/demo-text/demo-text.component';\r\nimport { FontSize } from 'src/app/px-footer/font-size/font-size.enum';\r\nimport { Fidelity } from 'src/app/px-footer/quality/fidelity.enum';\r\nimport { ThemeChangeComponent } from 'src/app/theme-change/theme-change.component';\r\n\r\n@Component({\r\n  selector: 'a-degree-page',\r\n  templateUrl: './page.component.html',\r\n  styleUrls: ['./page.component.scss'],\r\n})\r\nexport default class PageComponent extends ThemeChangeComponent {\r\n  @Input() brand = '';\r\n  @Input() fidelity: Fidelity = Fidelity.Normal;\r\n  @Input() backgroundColor?: string;\r\n  @Input() navItems: string[] = [];\r\n\r\n  public get classes(): string[] {\r\n    const mode = this.light ? 'page--light' : 'page--dark';\r\n\r\n    return ['page', mode];\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
                     "data": "section {\r\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\r\n  font-size: 14px;\r\n  line-height: 24px;\r\n  padding: 48px 20px;\r\n  margin: 0 auto;\r\n  max-width: 600px;\r\n  color: #333;\r\n}\r\n\r\ndemo-text {\r\n  position: relative;\r\n  z-index: 9998;\r\n}\r\n\r\nh2 {\r\n  font-weight: 900;\r\n  font-size: 32px;\r\n  line-height: 1;\r\n  margin: 0 0 4px;\r\n  display: inline-block;\r\n  vertical-align: top;\r\n}\r\n\r\np {\r\n  margin: 1em 0;\r\n}\r\n\r\na {\r\n  text-decoration: none;\r\n  color: #1ea7fd;\r\n}\r\n\r\nul {\r\n  padding-left: 30px;\r\n  margin: 1em 0;\r\n}\r\n\r\nli {\r\n  margin-bottom: 8px;\r\n}\r\n\r\n.tip {\r\n  display: inline-block;\r\n  border-radius: 1em;\r\n  font-size: 11px;\r\n  line-height: 12px;\r\n  font-weight: 700;\r\n  background: #e7fdd8;\r\n  color: #66bf3c;\r\n  padding: 4px 12px;\r\n  margin-right: 10px;\r\n  vertical-align: top;\r\n}\r\n\r\n.tip-wrapper {\r\n  font-size: 13px;\r\n  line-height: 20px;\r\n  margin-top: 40px;\r\n  margin-bottom: 40px;\r\n}\r\n\r\n.tip-wrapper svg {\r\n  display: inline-block;\r\n  height: 12px;\r\n  width: 12px;\r\n  margin-right: 4px;\r\n  vertical-align: top;\r\n  margin-top: 3px;\r\n}\r\n\r\n.tip-wrapper svg path {\r\n  fill: #1ea7fd;\r\n}\r\n",
-                    "styleUrl": "./page.css"
+                    "styleUrl": "./page.component.scss"
                 }
             ],
             "stylesData": "",
@@ -1174,7 +1205,7 @@
                     }
                 }
             },
-            "templateData": "<div [ngClass]=\"{'small-size': fontSize === -1, 'normal-size': fontSize === 0, 'large-size': fontSize === 1}\">\r\n  <navbar \r\n    [brand]=\"brand\"\r\n    [light]=\"light\"\r\n    [navItems]=\"navItems\"\r\n    [ngClass]=\"classes\" \r\n    [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n  >\r\n  </navbar>\r\n  <div *ngIf=\"show; else elseBlock\">\r\n    <bg-image\r\n      [light]=\"light\"\r\n      [ngClass]=\"classes\" \r\n      [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n    >\r\n    </bg-image>\r\n    <br>\r\n    <br>\r\n    <br>\r\n    <demo-text [light]=\"light\"></demo-text>\r\n    <br>\r\n    <br>\r\n    <br>\r\n  </div>\r\n  <demo-text [light]=\"light\" #elseBlock></demo-text>\r\n  \r\n  <px-footer \r\n  (onThemeChange)=\"changeTheme($event)\"\r\n  (onFontSizeChange)=\"changeFontSize($event)\"\r\n  (onFidelityChange)=\"changeFidelity($event)\"\r\n  [light]=\"light\"\r\n  [fontSize]=\"fontSize\"\r\n  [fidelity]=\"fidelity\"\r\n  [ngClass]=\"classes\" \r\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n>\r\n</px-footer>\r\n</div>\r\n\r\n"
+            "templateData": "<div [ngClass]=\"{'small-size': fontSize === -1, 'normal-size': fontSize === 0, 'large-size': fontSize === 1}\">\r\n  <navbar \r\n    [brand]=\"brand\"\r\n    [light]=\"light\"\r\n    [navItems]=\"navItems\"\r\n    [ngClass]=\"classes\" \r\n    [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n  >\r\n  </navbar>\r\n  <div *ngIf=\"show; then thenBlock; else elseBlock\"></div>\r\n  <ng-template #thenBlock>\r\n    <bg-image\r\n      [light]=\"light\"\r\n      [ngClass]=\"classes\" \r\n      [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n      #thenBlock>\r\n    </bg-image>\r\n    <br>\r\n    <br>\r\n    <br>\r\n    <demo-text [light]=\"light\"></demo-text>\r\n    <br>\r\n    <br>\r\n    <br>\r\n  </ng-template>\r\n  <ng-template #elseBlock>\r\n    <br>\r\n    <br>\r\n    <br>\r\n    <demo-text [light]=\"true\"></demo-text>\r\n    <br>\r\n    <br>\r\n    <br>\r\n  </ng-template>\r\n  \r\n  <px-footer \r\n  (onThemeChange)=\"changeTheme($event)\"\r\n  (onFontSizeChange)=\"changeFontSize($event)\"\r\n  (onFidelityChange)=\"changeFidelity($event)\"\r\n  [light]=\"light\"\r\n  [fontSize]=\"fontSize\"\r\n  [fidelity]=\"fidelity\"\r\n  [ngClass]=\"classes\" \r\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n>\r\n</px-footer>\r\n</div>\r\n\r\n"
         },
         {
             "name": "PxFooterComponent",
@@ -1600,6 +1631,9 @@
                             "name": "DemoTextComponent"
                         },
                         {
+                            "name": "DocumentComponent"
+                        },
+                        {
                             "name": "FontSizeComponent"
                         },
                         {
@@ -1711,6 +1745,14 @@
                 "name": "Dark",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/Navbar.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Dark",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/NavBrand.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
@@ -1720,30 +1762,6 @@
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/stories/NavItem.stories.ts",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Dark",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Navbar.stories.ts",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Dark",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/PxFooter.stories.ts",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Dark",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Quality.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -1764,12 +1782,20 @@
                 "defaultValue": "Template.bind({})"
             },
             {
-                "name": "environment",
+                "name": "Dark",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/environments/environment.ts",
-                "type": "object",
-                "defaultValue": "{\r\n  production: false\r\n}"
+                "file": "src/stories/PxFooter.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Dark",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Quality.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
             },
             {
                 "name": "environment",
@@ -1778,6 +1804,14 @@
                 "file": "src/environments/environment.prod.ts",
                 "type": "object",
                 "defaultValue": "{\r\n  production: true\r\n}"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/environments/environment.ts",
+                "type": "object",
+                "defaultValue": "{\r\n  production: false\r\n}"
             },
             {
                 "name": "Large",
@@ -1807,6 +1841,14 @@
                 "name": "Light",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/Navbar.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Light",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/NavBrand.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
@@ -1823,7 +1865,15 @@
                 "name": "Light",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Navbar.stories.ts",
+                "file": "src/stories/Page.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Light",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/ThemeButton.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -1840,22 +1890,6 @@
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/stories/Quality.stories.ts",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Light",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Page.stories.ts",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Light",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/ThemeButton.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -1958,6 +1992,14 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/Navbar.stories.ts",
+                "type": "Story<NavbarComponent>",
+                "defaultValue": "(args: NavbarComponent) => ({\r\n  component: NavbarComponent,\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/NavBrand.stories.ts",
                 "type": "Story<NavBrandComponent>",
                 "defaultValue": "(args: NavBrandComponent) => ({\r\n  component: NavBrandComponent,\r\n  props: args,\r\n})"
@@ -1974,9 +2016,17 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Navbar.stories.ts",
-                "type": "Story<NavbarComponent>",
-                "defaultValue": "(args: NavbarComponent) => ({\r\n  component: NavbarComponent,\r\n  props: args,\r\n})"
+                "file": "src/stories/Page.stories.ts",
+                "type": "Story<Page>",
+                "defaultValue": "(args: Page) => ({\r\n  component: Page,\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/ThemeButton.stories.ts",
+                "type": "Story<ThemeButtonComponent>",
+                "defaultValue": "(args: ThemeButtonComponent) => ({\r\n  component: ThemeButtonComponent,\r\n  props: args,\r\n})"
             },
             {
                 "name": "Template",
@@ -1993,22 +2043,6 @@
                 "file": "src/stories/Quality.stories.ts",
                 "type": "Story<QualityComponent>",
                 "defaultValue": "(args: QualityComponent) => ({\r\n  component: QualityComponent,\r\n  props: args,\r\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Page.stories.ts",
-                "type": "Story<Page>",
-                "defaultValue": "(args: Page) => ({\r\n  component: Page,\r\n  props: args,\r\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/ThemeButton.stories.ts",
-                "type": "Story<ThemeButtonComponent>",
-                "defaultValue": "(args: ThemeButtonComponent) => ({\r\n  component: ThemeButtonComponent,\r\n  props: args,\r\n})"
             }
         ],
         "functions": [],
@@ -2125,6 +2159,40 @@
                     "defaultValue": "(args: FontSizeComponent) => ({\r\n  component: FontSizeComponent,\r\n  props: args,\r\n})"
                 }
             ],
+            "src/stories/Navbar.stories.ts": [
+                {
+                    "name": "Dark",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Navbar.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Light",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Navbar.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "navItemsData",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Navbar.stories.ts",
+                    "type": "[]",
+                    "defaultValue": "[ '❓ About', '📐 Angularization', '💪 Get Great' ]"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Navbar.stories.ts",
+                    "type": "Story<NavbarComponent>",
+                    "defaultValue": "(args: NavbarComponent) => ({\r\n  component: NavbarComponent,\r\n  props: args,\r\n})"
+                }
+            ],
             "src/stories/NavBrand.stories.ts": [
                 {
                     "name": "Dark",
@@ -2175,92 +2243,6 @@
                     "file": "src/stories/NavItem.stories.ts",
                     "type": "Story<NavItemComponent>",
                     "defaultValue": "(args: NavItemComponent) => ({\r\n  component: NavItemComponent,\r\n  props: args,\r\n})"
-                }
-            ],
-            "src/stories/Navbar.stories.ts": [
-                {
-                    "name": "Dark",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Navbar.stories.ts",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Light",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Navbar.stories.ts",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "navItemsData",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Navbar.stories.ts",
-                    "type": "[]",
-                    "defaultValue": "[ '❓ About', '📐 Angularization', '💪 Get Great' ]"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Navbar.stories.ts",
-                    "type": "Story<NavbarComponent>",
-                    "defaultValue": "(args: NavbarComponent) => ({\r\n  component: NavbarComponent,\r\n  props: args,\r\n})"
-                }
-            ],
-            "src/stories/PxFooter.stories.ts": [
-                {
-                    "name": "Dark",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/PxFooter.stories.ts",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Light",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/PxFooter.stories.ts",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/PxFooter.stories.ts",
-                    "type": "Story<PxFooterComponent>",
-                    "defaultValue": "(args: PxFooterComponent) => ({\r\n  component: PxFooterComponent,\r\n  props: args,\r\n})"
-                }
-            ],
-            "src/stories/Quality.stories.ts": [
-                {
-                    "name": "Dark",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Quality.stories.ts",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Light",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Quality.stories.ts",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Quality.stories.ts",
-                    "type": "Story<QualityComponent>",
-                    "defaultValue": "(args: QualityComponent) => ({\r\n  component: QualityComponent,\r\n  props: args,\r\n})"
                 }
             ],
             "src/stories/Page.stories.ts": [
@@ -2323,14 +2305,56 @@
                     "defaultValue": "(args: ThemeButtonComponent) => ({\r\n  component: ThemeButtonComponent,\r\n  props: args,\r\n})"
                 }
             ],
-            "src/environments/environment.ts": [
+            "src/stories/PxFooter.stories.ts": [
                 {
-                    "name": "environment",
+                    "name": "Dark",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/environments/environment.ts",
-                    "type": "object",
-                    "defaultValue": "{\r\n  production: false\r\n}"
+                    "file": "src/stories/PxFooter.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Light",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/PxFooter.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/PxFooter.stories.ts",
+                    "type": "Story<PxFooterComponent>",
+                    "defaultValue": "(args: PxFooterComponent) => ({\r\n  component: PxFooterComponent,\r\n  props: args,\r\n})"
+                }
+            ],
+            "src/stories/Quality.stories.ts": [
+                {
+                    "name": "Dark",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Quality.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Light",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Quality.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Quality.stories.ts",
+                    "type": "Story<QualityComponent>",
+                    "defaultValue": "(args: QualityComponent) => ({\r\n  component: QualityComponent,\r\n  props: args,\r\n})"
                 }
             ],
             "src/environments/environment.prod.ts": [
@@ -2341,6 +2365,16 @@
                     "file": "src/environments/environment.prod.ts",
                     "type": "object",
                     "defaultValue": "{\r\n  production: true\r\n}"
+                }
+            ],
+            "src/environments/environment.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.ts",
+                    "type": "object",
+                    "defaultValue": "{\r\n  production: false\r\n}"
                 }
             ],
             "src/stories/Button.stories.ts": [
@@ -2552,12 +2586,30 @@
                 "status": "low"
             },
             {
+                "filePath": "src/app/page/document/document.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "DocumentComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/page/page.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "PageComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/12",
+                "status": "low"
+            },
+            {
                 "filePath": "src/app/px-footer/font-size/font-size.component.ts",
                 "type": "component",
                 "linktype": "component",
                 "name": "FontSizeComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/13",
+                "coverageCount": "0/12",
                 "status": "low"
             },
             {
@@ -3002,15 +3054,6 @@
                 "name": "HeaderComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/5",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/page.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "PageComponent",
-                "coveragePercent": 0,
-                "coverageCount": "0/12",
                 "status": "low"
             },
             {

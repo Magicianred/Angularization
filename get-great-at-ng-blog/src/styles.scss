@@ -8,6 +8,7 @@
     Geneva, 
     Verdana, 
     sans-serif;
+  overflow-wrap: break-word;
 }
 
 @mixin change-font-size($font-size) {
@@ -22,4 +23,3 @@
 .small-size { @include change-font-size(3px); }
 .normal-size { @include change-font-size(9px); }
 .large-size { @include change-font-size(18px); }
-
