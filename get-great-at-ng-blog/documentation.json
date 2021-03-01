@@ -42,12 +42,70 @@
         },
         {
             "name": "ThemeChangeComponent",
-            "id": "class-ThemeChangeComponent-d8454ce1afe795418bc2136b11f855d9",
+            "id": "class-ThemeChangeComponent-da26b3830594994b9f5ebdf1242e231c",
             "file": "src/app/theme-change/theme-change.component.ts",
             "type": "class",
-            "sourceCode": "import { Input } from '@angular/core';\n\nexport class ThemeChangeComponent {\n  @Input() light = false;\n\n  changeTheme(light: boolean) {\n    this.light = !light;\n  }\n}\n",
-            "properties": [],
+            "sourceCode": "import { Input } from '@angular/core';\r\nimport { FontSize } from '../px-footer/font-size/font-size.enum';\r\nimport { Fidelity } from '../px-footer/quality/fidelity.enum';\r\n\r\nexport class ThemeChangeComponent {\r\n  constructor() { \r\n    this.show = this.fidelity === Fidelity.Normal || this.fidelity === Fidelity.High;\r\n  }\r\n\r\n  @Input() light = false;\r\n  @Input() fontSize: FontSize = FontSize.Normal;\r\n  @Input() fidelity: Fidelity = Fidelity.Normal;\r\n  show: boolean;\r\n\r\n  changeTheme(light: boolean) { this.light = light; }\r\n  changeFontSize(size: FontSize) { this.fontSize = size; }\r\n  changeFidelity(fi: Fidelity) { \r\n    this.fidelity = fi;\r\n    this.show = this.fidelity === Fidelity.Normal || this.fidelity === Fidelity.High; \r\n  }\r\n}\r\n",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "args": [],
+                "line": 5
+            },
+            "properties": [
+                {
+                    "name": "show",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "",
+                    "line": 13
+                }
+            ],
             "methods": [
+                {
+                    "name": "changeFidelity",
+                    "args": [
+                        {
+                            "name": "fi",
+                            "type": "Fidelity"
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 17,
+                    "jsdoctags": [
+                        {
+                            "name": "fi",
+                            "type": "Fidelity",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "changeFontSize",
+                    "args": [
+                        {
+                            "name": "size",
+                            "type": "FontSize"
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 16,
+                    "jsdoctags": [
+                        {
+                            "name": "size",
+                            "type": "FontSize",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
                 {
                     "name": "changeTheme",
                     "args": [
@@ -59,7 +117,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 6,
+                    "line": 15,
                     "jsdoctags": [
                         {
                             "name": "light",
@@ -74,9 +132,21 @@
             "indexSignatures": [],
             "inputsClass": [
                 {
+                    "name": "fidelity",
+                    "defaultValue": "Fidelity.Normal",
+                    "line": 12,
+                    "type": "Fidelity"
+                },
+                {
+                    "name": "fontSize",
+                    "defaultValue": "FontSize.Normal",
+                    "line": 11,
+                    "type": "FontSize"
+                },
+                {
                     "name": "light",
                     "defaultValue": "false",
-                    "line": 4
+                    "line": 10
                 }
             ],
             "outputsClass": [],
@@ -135,7 +205,7 @@
         },
         {
             "name": "BgImageComponent",
-            "id": "component-BgImageComponent-e7ee52c73243e3a54429e74e00c586c5",
+            "id": "component-BgImageComponent-191b621a97c820151fb5a99eed3cad9e",
             "file": "src/app/bg-image/bg-image.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -177,7 +247,7 @@
             "description": "",
             "rawdescription": "",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'bg-image',\n  templateUrl: './bg-image.component.html',\n  styleUrls: ['./bg-image.component.scss']\n})\nexport class BgImageComponent {\n  @Input() light = false;\n  @Input() backgroundColor?: string;\n  @Input() navItems: string[] = [];\n\n  public get classes(): string[] {\n    const mode = this.light ? 'bg-image--light' : 'bg-image--dark';\n\n    return [mode];\n  }\n}\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'bg-image',\r\n  templateUrl: './bg-image.component.html',\r\n  styleUrls: ['./bg-image.component.scss']\r\n})\r\nexport class BgImageComponent {\r\n  @Input() light = false;\r\n  @Input() backgroundColor?: string;\r\n  @Input() navItems: string[] = [];\r\n\r\n  public get classes(): string[] {\r\n    const mode = this.light ? 'bg-image--light' : 'bg-image--dark';\r\n\r\n    return [mode];\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -197,7 +267,7 @@
                     }
                 }
             },
-            "templateData": "<div \n  [ngClass]=\"classes\"\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\n  ngDefaultControl [ngModel]=\"light\"\n>\n  <div class=\"bg-image\"></div>\n</div>\n"
+            "templateData": "<div \r\n  [ngClass]=\"classes\"\r\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n  ngDefaultControl [ngModel]=\"light\"\r\n>\r\n  <div class=\"bg-image\"></div>\r\n</div>\r\n"
         },
         {
             "name": "ButtonComponent",
@@ -282,7 +352,7 @@
         },
         {
             "name": "DemoTextComponent",
-            "id": "component-DemoTextComponent-f2e8d8ab5ab42a741f2b126d140fb99d",
+            "id": "component-DemoTextComponent-ceef59f2623d91b65c2e6051a72897ba",
             "file": "src/app/demo-text/demo-text.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -318,7 +388,7 @@
             "description": "",
             "rawdescription": "",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'demo-text',\n  templateUrl: './demo-text.component.html',\n  styleUrls: ['./demo-text.component.scss']\n})\nexport class DemoTextComponent {\n  @Input() light = false;\n  @Input() backgroundColor?: string;\n\n  public get classes(): string[] {\n    const mode = this.light ? 'demo-text--light' : 'demo-text--dark';\n\n    return [mode];\n  }\n\n}\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'demo-text',\r\n  templateUrl: './demo-text.component.html',\r\n  styleUrls: ['./demo-text.component.scss']\r\n})\r\nexport class DemoTextComponent {\r\n  @Input() light = false;\r\n  @Input() backgroundColor?: string;\r\n\r\n  public get classes(): string[] {\r\n    const mode = this.light ? 'demo-text--light' : 'demo-text--dark';\r\n\r\n    return [mode];\r\n  }\r\n\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -338,11 +408,11 @@
                     }
                 }
             },
-            "templateData": "<div\n  [ngClass]=\"classes\"\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\n  ngDefaultControl [ngModel]=\"light\"\n>\n  <h1 style=\"text-align: center;\">h1 Header Example</h1>\n  <hr>\n  <h2>This is an example of an h2 header</h2>\n  <h3>This is an example of an h3 header</h3>\n  <h4>This is an example of an h4 header</h4>\n  <h5>This is an example of an h5 header</h5>\n  <hr>\n  <p>This is an example of a paragraph. This is an example of a paragraph.\n    This is an example of a paragraph. This is an example of a paragraph.\n    This is an example of a paragraph. This is an example of a paragraph.\n    This is an example of a paragraph. This is an example of a paragraph.\n    This is an example of a paragraph. This is an example of a paragraph.\n    This is an example of a paragraph. This is an example of a paragraph.\n    This is an example of a paragraph. This is an example of a paragraph.\n    This is an example of a paragraph. This is an example of a paragraph.\n    This is an example of a paragraph. This is an example of a paragraph.\n    This is an example of a paragraph. This is an example of a paragraph.\n    This is an example of a paragraph. This is an example of a paragraph.\n    This is an example of a paragraph. This is an example of a paragraph.<br>\n    <br>\n    This is an example of a paragraph. This is an example of a paragraph.\n    This is an example of a paragraph. This is an example of a paragraph.\n    This is an example of a paragraph. This is an example of a paragraph.\n    This is an example of a paragraph. This is an example of a paragraph.\n    This is an example of a paragraph. This is an example of a paragraph.\n    This is an example of a paragraph. This is an example of a paragraph.\n    This is an example of a paragraph. This is an example of a paragraph.\n    This is an example of a paragraph. This is an example of a paragraph.\n    This is an example of a paragraph. This is an example of a paragraph.\n    This is an example of a paragraph. This is an example of a paragraph.\n    This is an example of a paragraph. This is an example of a paragraph.\n    This is an example of a paragraph. This is an example of a paragraph.\n  </p>\n</div>"
+            "templateData": "<div\r\n  [ngClass]=\"classes\"\r\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n  ngDefaultControl [ngModel]=\"light\"\r\n>\r\n  <h1 style=\"text-align: center;\">h1 Header Example</h1>\r\n  <hr>\r\n  <h2>This is an example of an h2 header</h2>\r\n  <h3>This is an example of an h3 header</h3>\r\n  <h4>This is an example of an h4 header</h4>\r\n  <h5>This is an example of an h5 header</h5>\r\n  <hr>\r\n  <p>This is an example of a paragraph. This is an example of a paragraph.\r\n    This is an example of a paragraph. This is an example of a paragraph.\r\n    This is an example of a paragraph. This is an example of a paragraph.\r\n    This is an example of a paragraph. This is an example of a paragraph.\r\n    This is an example of a paragraph. This is an example of a paragraph.\r\n    This is an example of a paragraph. This is an example of a paragraph.\r\n    This is an example of a paragraph. This is an example of a paragraph.\r\n    This is an example of a paragraph. This is an example of a paragraph.\r\n    This is an example of a paragraph. This is an example of a paragraph.\r\n    This is an example of a paragraph. This is an example of a paragraph.\r\n    This is an example of a paragraph. This is an example of a paragraph.\r\n    This is an example of a paragraph. This is an example of a paragraph.<br>\r\n    <br>\r\n    This is an example of a paragraph. This is an example of a paragraph.\r\n    This is an example of a paragraph. This is an example of a paragraph.\r\n    This is an example of a paragraph. This is an example of a paragraph.\r\n    This is an example of a paragraph. This is an example of a paragraph.\r\n    This is an example of a paragraph. This is an example of a paragraph.\r\n    This is an example of a paragraph. This is an example of a paragraph.\r\n    This is an example of a paragraph. This is an example of a paragraph.\r\n    This is an example of a paragraph. This is an example of a paragraph.\r\n    This is an example of a paragraph. This is an example of a paragraph.\r\n    This is an example of a paragraph. This is an example of a paragraph.\r\n    This is an example of a paragraph. This is an example of a paragraph.\r\n    This is an example of a paragraph. This is an example of a paragraph.\r\n  </p>\r\n</div>"
         },
         {
             "name": "FontSizeComponent",
-            "id": "component-FontSizeComponent-c43d8681bbc046a9a978fd1bf79b33fe",
+            "id": "component-FontSizeComponent-3396cb40fda8323b6d5b384fb9916dfa",
             "file": "src/app/px-footer/font-size/font-size.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -361,26 +431,41 @@
             "inputsClass": [
                 {
                     "name": "backgroundColor",
-                    "line": 17,
+                    "line": 18,
                     "type": "string"
+                },
+                {
+                    "name": "fidelity",
+                    "defaultValue": "Fidelity.Normal",
+                    "line": 12,
+                    "type": "Fidelity",
+                    "inheritance": {
+                        "file": "ThemeChangeComponent"
+                    }
                 },
                 {
                     "name": "fontSize",
                     "defaultValue": "FontSize.Normal",
-                    "line": 16,
-                    "type": "FontSize"
+                    "line": 11,
+                    "type": "FontSize",
+                    "inheritance": {
+                        "file": "ThemeChangeComponent"
+                    }
                 },
                 {
                     "name": "light",
                     "defaultValue": "false",
-                    "line": 15
+                    "line": 10,
+                    "inheritance": {
+                        "file": "ThemeChangeComponent"
+                    }
                 }
             ],
             "outputsClass": [
                 {
-                    "name": "onClick",
-                    "defaultValue": "new EventEmitter<Event>()",
-                    "line": 19,
+                    "name": "onFontSizeSelection",
+                    "defaultValue": "new EventEmitter<FontSize>()",
+                    "line": 17,
                     "type": "EventEmitter"
                 }
             ],
@@ -391,42 +476,119 @@
                     "type": "",
                     "optional": false,
                     "description": "",
-                    "line": 13,
+                    "line": 15,
                     "modifierKind": [
                         112
                     ]
+                },
+                {
+                    "name": "show",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "",
+                    "line": 13,
+                    "inheritance": {
+                        "file": "ThemeChangeComponent"
+                    }
                 }
             ],
             "methodsClass": [
                 {
-                    "name": "ngOnInit",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 35
-                },
-                {
                     "name": "selectFontSize",
                     "args": [
                         {
-                            "name": "fs",
+                            "name": "s",
                             "type": "FontSize"
                         }
                     ],
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 27,
+                    "line": 26,
                     "jsdoctags": [
                         {
-                            "name": "fs",
+                            "name": "s",
                             "type": "FontSize",
                             "tagName": {
                                 "text": "param"
                             }
                         }
                     ]
+                },
+                {
+                    "name": "changeFidelity",
+                    "args": [
+                        {
+                            "name": "fi",
+                            "type": "Fidelity"
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 17,
+                    "jsdoctags": [
+                        {
+                            "name": "fi",
+                            "type": "Fidelity",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ],
+                    "inheritance": {
+                        "file": "ThemeChangeComponent"
+                    }
+                },
+                {
+                    "name": "changeFontSize",
+                    "args": [
+                        {
+                            "name": "size",
+                            "type": "FontSize"
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 16,
+                    "jsdoctags": [
+                        {
+                            "name": "size",
+                            "type": "FontSize",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ],
+                    "inheritance": {
+                        "file": "ThemeChangeComponent"
+                    }
+                },
+                {
+                    "name": "changeTheme",
+                    "args": [
+                        {
+                            "name": "light",
+                            "type": "boolean"
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 15,
+                    "jsdoctags": [
+                        {
+                            "name": "light",
+                            "type": "boolean",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ],
+                    "inheritance": {
+                        "file": "ThemeChangeComponent"
+                    }
                 }
             ],
             "hostBindings": [],
@@ -434,7 +596,7 @@
             "description": "",
             "rawdescription": "",
             "type": "component",
-            "sourceCode": "import { Component, ElementRef, EventEmitter, Input, OnInit, Output } from '@angular/core';\nimport { FontSize } from './font-size.enum';\n\n@Component({\n  selector: 'font-size',\n  templateUrl: './font-size.component.html',\n  styleUrls: ['./font-size.component.scss']\n})\nexport class FontSizeComponent implements OnInit {\n  constructor(private _elementRef : ElementRef) {\n  }\n  \n  private domElement = document.querySelector('body') || this._elementRef.nativeElement.querySelector('body');\n\n  @Input() light = false;\n  @Input() fontSize: FontSize = FontSize.Normal;\n  @Input() backgroundColor?: string;\n\n  @Output() onClick = new EventEmitter<Event>();\n\n  public get classes(): string[] {\n    const mode = this.light ? 'font-size--light' : 'font-size--dark';\n\n    return ['font-size', mode];\n  }\n\n  selectFontSize(fs: FontSize) { \n    /*if (this.fontSize == -1) this.domElement.classList = 'small-size';\n    else if (this.fontSize === 0) this.domElement.classList = 'normal-size';\n    else this.domElement.classList = 'large-size';*/\n    \n    this.fontSize = fs;\n  }\n\n  ngOnInit() { /*this.domElement.classList = 'normal-size';*/ }\n}\n",
+            "sourceCode": "import { Component, ElementRef, EventEmitter, Input, Output } from '@angular/core';\r\nimport { ThemeChangeComponent } from 'src/app/theme-change/theme-change.component';\r\nimport { FontSize } from './font-size.enum';\r\n\r\n@Component({\r\n  selector: 'font-size',\r\n  templateUrl: './font-size.component.html',\r\n  styleUrls: ['./font-size.component.scss']\r\n})\r\nexport class FontSizeComponent extends ThemeChangeComponent {\r\n  constructor(private _elementRef : ElementRef) {\r\n    super();\r\n  }\r\n  \r\n  private domElement = document.querySelector('body') || this._elementRef.nativeElement.querySelector('body');\r\n\r\n  @Output() onFontSizeSelection = new EventEmitter<FontSize>();\r\n  @Input() backgroundColor?: string;\r\n\r\n  public get classes(): string[] {\r\n    const mode = this.light ? 'font-size--light' : 'font-size--dark';\r\n\r\n    return ['font-size', mode];\r\n  }\r\n\r\n  selectFontSize(s: FontSize) {\r\n    this.fontSize = s;\r\n    this.onFontSizeSelection.emit(this.fontSize);\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -452,7 +614,7 @@
                         "type": "ElementRef"
                     }
                 ],
-                "line": 9,
+                "line": 10,
                 "jsdoctags": [
                     {
                         "name": "_elementRef",
@@ -463,9 +625,7 @@
                     }
                 ]
             },
-            "implements": [
-                "OnInit"
-            ],
+            "extends": "ThemeChangeComponent",
             "accessors": {
                 "classes": {
                     "name": "classes",
@@ -473,11 +633,11 @@
                         "name": "classes",
                         "type": "[]",
                         "returnType": "string[]",
-                        "line": 21
+                        "line": 20
                     }
                 }
             },
-            "templateData": "<p\n  [ngClass]=\"classes\"\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\n  ngDefaultControl [ngModel]=\"label\"\n  ngDefaultControl [ngModel]=\"light\"\n>\n  <span \n    [ngClass]=\"{ 'small-a': true, 'selected-a--light': fontSize === -1 && light, 'selected-a--dark': fontSize === -1 && !light }\"\n    (click)=\"selectFontSize(-1)\"\n  >A</span><span\n    [ngClass]=\"{ 'medium-a': true, 'selected-a--light': fontSize === 0 && light, 'selected-a--dark': fontSize === 0 && !light }\" \n    (click)=\"selectFontSize(0)\"\n  >A</span><span \n    [ngClass]=\"{ 'large-a': true, 'selected-a--light': fontSize === 1 && light, 'selected-a--dark': fontSize === 1 && !light }\"\n    (click)=\"selectFontSize(1)\"\n  >A</span>\n</p>\n"
+            "templateData": "<p\r\n  [ngClass]=\"classes\"\r\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n  ngDefaultControl [ngModel]=\"label\"\r\n  ngDefaultControl [ngModel]=\"light\"\r\n>\r\n  <span \r\n    [ngClass]=\"{ 'small-a': true, 'selected-a--light': fontSize === -1 && light, 'selected-a--dark': fontSize === -1 && !light }\"\r\n    (click)=\"selectFontSize(-1)\"\r\n  >A</span><span\r\n    [ngClass]=\"{ 'medium-a': true, 'selected-a--light': fontSize === 0 && light, 'selected-a--dark': fontSize === 0 && !light }\" \r\n    (click)=\"selectFontSize(0)\"\r\n  >A</span><span \r\n    [ngClass]=\"{ 'large-a': true, 'selected-a--light': fontSize === 1 && light, 'selected-a--dark': fontSize === 1 && !light }\"\r\n    (click)=\"selectFontSize(1)\"\r\n  >A</span>\r\n</p>\r\n"
         },
         {
             "name": "HeaderComponent",
@@ -540,6 +700,62 @@
                 }
             ],
             "stylesData": ""
+        },
+        {
+            "name": "LoFiComponent",
+            "id": "component-LoFiComponent-401a48f59a41b9e5670cc36b55cc7888",
+            "file": "src/app/lo-fi/lo-fi.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-lo-fi",
+            "styleUrls": [
+                "./lo-fi.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./lo-fi.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "backgroundColor",
+                    "line": 10,
+                    "type": "string",
+                    "inheritance": {
+                        "file": "DemoTextComponent"
+                    }
+                },
+                {
+                    "name": "light",
+                    "defaultValue": "false",
+                    "line": 9,
+                    "inheritance": {
+                        "file": "DemoTextComponent"
+                    }
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\nimport { DemoTextComponent } from '../demo-text/demo-text.component';\n\n@Component({\n  selector: 'app-lo-fi',\n  templateUrl: './lo-fi.component.html',\n  styleUrls: ['./lo-fi.component.scss']\n})\nexport class LoFiComponent extends DemoTextComponent { }\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./lo-fi.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "extends": "DemoTextComponent",
+            "templateData": "\n"
         },
         {
             "name": "NavbarComponent",
@@ -776,7 +992,7 @@
         },
         {
             "name": "PageComponent",
-            "id": "component-PageComponent-fccbcea165f46c5ccd0bd7ed6d3c9ac3",
+            "id": "component-PageComponent-ea4e4f326477221a07100de7e8cd34b4",
             "file": "src/stories/page.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -795,7 +1011,7 @@
             "inputsClass": [
                 {
                     "name": "backgroundColor",
-                    "line": 22,
+                    "line": 21,
                     "type": "string"
                 },
                 {
@@ -806,33 +1022,106 @@
                 {
                     "name": "fidelity",
                     "defaultValue": "Fidelity.Normal",
-                    "line": 21,
-                    "type": "Fidelity"
-                },
-                {
-                    "name": "fontSize",
-                    "defaultValue": "FontSize.Normal",
                     "line": 20,
-                    "type": "FontSize"
+                    "type": "Fidelity"
                 },
                 {
                     "name": "navItems",
                     "defaultValue": "[]",
-                    "line": 23,
+                    "line": 22,
                     "type": "string[]"
+                },
+                {
+                    "name": "fidelity",
+                    "defaultValue": "Fidelity.Normal",
+                    "line": 12,
+                    "type": "Fidelity",
+                    "inheritance": {
+                        "file": "ThemeChangeComponent"
+                    }
+                },
+                {
+                    "name": "fontSize",
+                    "defaultValue": "FontSize.Normal",
+                    "line": 11,
+                    "type": "FontSize",
+                    "inheritance": {
+                        "file": "ThemeChangeComponent"
+                    }
                 },
                 {
                     "name": "light",
                     "defaultValue": "false",
-                    "line": 4,
+                    "line": 10,
                     "inheritance": {
                         "file": "ThemeChangeComponent"
                     }
                 }
             ],
             "outputsClass": [],
-            "propertiesClass": [],
+            "propertiesClass": [
+                {
+                    "name": "show",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "",
+                    "line": 13,
+                    "inheritance": {
+                        "file": "ThemeChangeComponent"
+                    }
+                }
+            ],
             "methodsClass": [
+                {
+                    "name": "changeFidelity",
+                    "args": [
+                        {
+                            "name": "fi",
+                            "type": "Fidelity"
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 17,
+                    "jsdoctags": [
+                        {
+                            "name": "fi",
+                            "type": "Fidelity",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ],
+                    "inheritance": {
+                        "file": "ThemeChangeComponent"
+                    }
+                },
+                {
+                    "name": "changeFontSize",
+                    "args": [
+                        {
+                            "name": "size",
+                            "type": "FontSize"
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 16,
+                    "jsdoctags": [
+                        {
+                            "name": "size",
+                            "type": "FontSize",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ],
+                    "inheritance": {
+                        "file": "ThemeChangeComponent"
+                    }
+                },
                 {
                     "name": "changeTheme",
                     "args": [
@@ -844,7 +1133,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 6,
+                    "line": 15,
                     "jsdoctags": [
                         {
                             "name": "light",
@@ -864,7 +1153,7 @@
             "description": "",
             "rawdescription": "",
             "type": "component",
-            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\r\nimport { NavbarComponent } from 'src/app/navbar/navbar.component';\r\nimport { PxFooterComponent } from 'src/app/px-footer/px-footer.component';\r\nimport { BgImageComponent } from 'src/app/bg-image/bg-image.component';\r\nimport { FontSizeComponent } from '../app/px-footer/font-size/font-size.component';\r\nimport { QualityComponent } from '../app/px-footer/quality/quality.component';\r\nimport { ThemeButtonComponent } from '../app/px-footer/theme-button/theme-button.component';\r\nimport { DemoTextComponent } from '../app/demo-text/demo-text.component';\r\nimport { FontSize } from '../app/px-footer/font-size/font-size.enum';\r\nimport { Fidelity } from '../app/px-footer/quality/fidelity.enum';\r\nimport { ThemeChangeComponent } from 'src/app/theme-change/theme-change.component';\r\n\r\n@Component({\r\n  selector: 'a-degree-page',\r\n  templateUrl: './page.component.html',\r\n  styleUrls: ['./page.css'],\r\n})\r\nexport default class PageComponent extends ThemeChangeComponent {\r\n  @Input() brand = '';\r\n  @Input() fontSize: FontSize = FontSize.Normal;\r\n  @Input() fidelity: Fidelity = Fidelity.Normal;\r\n  @Input() backgroundColor?: string;\r\n  @Input() navItems: string[] = [];\r\n\r\n  public get classes(): string[] {\r\n    const mode = this.light ? 'page--light' : 'page--dark';\r\n\r\n    return ['page', mode];\r\n  }\r\n}\r\n\r\n// export const Page = ({ user, onLogin, onLogout, onCreateAccount }) => (\r\n//   <article>\r\n//     <Header user={user} onLogin={onLogin} onLogout={onLogout} onCreateAccount={onCreateAccount} />\r\n\r\n// );\r\n// Page.propTypes = {\r\n//   user: PropTypes.shape({}),\r\n//   onLogin: PropTypes.func.isRequired,\r\n//   onLogout: PropTypes.func.isRequired,\r\n//   onCreateAccount: PropTypes.func.isRequired,\r\n// };\r\n\r\n// Page.defaultProps = {\r\n//   user: null,\r\n// };\r\n",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\r\nimport { NavbarComponent } from 'src/app/navbar/navbar.component';\r\nimport { PxFooterComponent } from 'src/app/px-footer/px-footer.component';\r\nimport { BgImageComponent } from 'src/app/bg-image/bg-image.component';\r\nimport { FontSizeComponent } from '../app/px-footer/font-size/font-size.component';\r\nimport { QualityComponent } from '../app/px-footer/quality/quality.component';\r\nimport { ThemeButtonComponent } from '../app/px-footer/theme-button/theme-button.component';\r\nimport { DemoTextComponent } from '../app/demo-text/demo-text.component';\r\nimport { FontSize } from '../app/px-footer/font-size/font-size.enum';\r\nimport { Fidelity } from '../app/px-footer/quality/fidelity.enum';\r\nimport { ThemeChangeComponent } from 'src/app/theme-change/theme-change.component';\r\n\r\n@Component({\r\n  selector: 'a-degree-page',\r\n  templateUrl: './page.component.html',\r\n  styleUrls: ['./page.css'],\r\n})\r\nexport default class PageComponent extends ThemeChangeComponent {\r\n  @Input() brand = '';\r\n  @Input() fidelity: Fidelity = Fidelity.Normal;\r\n  @Input() backgroundColor?: string;\r\n  @Input() navItems: string[] = [];\r\n\r\n  public get classes(): string[] {\r\n    const mode = this.light ? 'page--light' : 'page--dark';\r\n\r\n    return ['page', mode];\r\n  }\r\n}\r\n\r\n// export const Page = ({ user, onLogin, onLogout, onCreateAccount }) => (\r\n//   <article>\r\n//     <Header user={user} onLogin={onLogin} onLogout={onLogout} onCreateAccount={onCreateAccount} />\r\n\r\n// );\r\n// Page.propTypes = {\r\n//   user: PropTypes.shape({}),\r\n//   onLogin: PropTypes.func.isRequired,\r\n//   onLogout: PropTypes.func.isRequired,\r\n//   onCreateAccount: PropTypes.func.isRequired,\r\n// };\r\n\r\n// Page.defaultProps = {\r\n//   user: null,\r\n// };\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -881,15 +1170,15 @@
                         "name": "classes",
                         "type": "[]",
                         "returnType": "string[]",
-                        "line": 25
+                        "line": 24
                     }
                 }
             },
-            "templateData": "<div [ngClass]=\"{'small-size': fidelity === -1, 'normal-size': fidelity === 0, 'large-size': fidelity === 1}\">\r\n    <navbar \r\n      [brand]=\"brand\"\r\n      [light]=\"light\"\r\n      [navItems]=\"navItems\"\r\n      [ngClass]=\"classes\" \r\n      [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n    >\r\n    </navbar>\r\n    <bg-image\r\n      [light]=\"light\"\r\n      [ngClass]=\"classes\" \r\n      [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n    >\r\n    </bg-image>\r\n    <br>\r\n    <br>\r\n    <br>\r\n    <demo-text [light]=\"light\"></demo-text>\r\n    <br>\r\n    <br>\r\n    <br>\r\n    <px-footer \r\n      (onThemeChange)=\"changeTheme(light)\"\r\n      [light]=\"light\"\r\n      [fontSize]=\"0\"\r\n      [fidelity]=\"0\"\r\n      [ngClass]=\"classes\" \r\n      [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n    >\r\n    </px-footer>\r\n  </div>"
+            "templateData": "<div [ngClass]=\"{'small-size': fontSize === -1, 'normal-size': fontSize === 0, 'large-size': fontSize === 1}\">\r\n  <navbar \r\n    [brand]=\"brand\"\r\n    [light]=\"light\"\r\n    [navItems]=\"navItems\"\r\n    [ngClass]=\"classes\" \r\n    [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n  >\r\n  </navbar>\r\n  <div *ngIf=\"show; else elseBlock\">\r\n    <bg-image\r\n      [light]=\"light\"\r\n      [ngClass]=\"classes\" \r\n      [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n    >\r\n    </bg-image>\r\n    <br>\r\n    <br>\r\n    <br>\r\n    <demo-text [light]=\"light\"></demo-text>\r\n    <br>\r\n    <br>\r\n    <br>\r\n  </div>\r\n  <demo-text [light]=\"light\" #elseBlock></demo-text>\r\n  \r\n  <px-footer \r\n  (onThemeChange)=\"changeTheme($event)\"\r\n  (onFontSizeChange)=\"changeFontSize($event)\"\r\n  (onFidelityChange)=\"changeFidelity($event)\"\r\n  [light]=\"light\"\r\n  [fontSize]=\"fontSize\"\r\n  [fidelity]=\"fidelity\"\r\n  [ngClass]=\"classes\" \r\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n>\r\n</px-footer>\r\n</div>\r\n\r\n"
         },
         {
             "name": "PxFooterComponent",
-            "id": "component-PxFooterComponent-8fec0f7c46fbc2606c8cde1ac02d0a91",
+            "id": "component-PxFooterComponent-dc941673bb2225e34dee543a06ce781c",
             "file": "src/app/px-footer/px-footer.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -931,6 +1220,18 @@
             ],
             "outputsClass": [
                 {
+                    "name": "onFidelityChange",
+                    "defaultValue": "new EventEmitter<Fidelity>()",
+                    "line": 21,
+                    "type": "EventEmitter"
+                },
+                {
+                    "name": "onFontSizeChange",
+                    "defaultValue": "new EventEmitter<FontSize>()",
+                    "line": 20,
+                    "type": "EventEmitter"
+                },
+                {
                     "name": "onThemeChange",
                     "defaultValue": "new EventEmitter<boolean>()",
                     "line": 19,
@@ -940,12 +1241,56 @@
             "propertiesClass": [],
             "methodsClass": [
                 {
+                    "name": "changeFidelity",
+                    "args": [
+                        {
+                            "name": "fi",
+                            "type": "Fidelity"
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 34,
+                    "jsdoctags": [
+                        {
+                            "name": "fi",
+                            "type": "Fidelity",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "changeFontSize",
+                    "args": [
+                        {
+                            "name": "s",
+                            "type": "FontSize"
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 29,
+                    "jsdoctags": [
+                        {
+                            "name": "s",
+                            "type": "FontSize",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
                     "name": "toggleTheme",
                     "args": [],
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 27
+                    "line": 39
                 }
             ],
             "hostBindings": [],
@@ -953,7 +1298,7 @@
             "description": "",
             "rawdescription": "",
             "type": "component",
-            "sourceCode": "import { Component, EventEmitter, Input, Output } from '@angular/core';\nimport { FontSizeComponent } from './font-size/font-size.component';\nimport { QualityComponent } from './quality/quality.component';\nimport { ThemeButtonComponent } from './theme-button/theme-button.component';\nimport { FontSize } from './font-size/font-size.enum';\nimport { Fidelity } from './quality/fidelity.enum';\n\n@Component({\n  selector: 'px-footer',\n  templateUrl: './px-footer.component.html',\n  styleUrls: ['./px-footer.component.scss']\n})\nexport class PxFooterComponent {\n  @Input() light = false;\n  @Input() fidelity: Fidelity = Fidelity.Normal;\n  @Input() fontSize: FontSize = FontSize.Normal;\n  @Input() backgroundColor?: string;\n\n  @Output() onThemeChange = new EventEmitter<boolean>();\n\n  public get classes(): string[] {\n    const mode = this.light ? 'footer--light' : 'footer--dark';\n\n    return ['footer', mode];\n  }\n\n  toggleTheme() { \n    this.light = !this.light;\n    this.onThemeChange.emit(this.light);\n  }\n}\n",
+            "sourceCode": "import { Component, EventEmitter, Input, Output, ViewChild } from '@angular/core';\r\nimport { FontSizeComponent } from './font-size/font-size.component';\r\nimport { QualityComponent } from './quality/quality.component';\r\nimport { ThemeButtonComponent } from './theme-button/theme-button.component';\r\nimport { FontSize } from './font-size/font-size.enum';\r\nimport { Fidelity } from './quality/fidelity.enum';\r\n\r\n@Component({\r\n  selector: 'px-footer',\r\n  templateUrl: './px-footer.component.html',\r\n  styleUrls: ['./px-footer.component.scss']\r\n})\r\nexport class PxFooterComponent {\r\n  @Input() light = false;\r\n  @Input() fidelity: Fidelity = Fidelity.Normal;\r\n  @Input() fontSize: FontSize = FontSize.Normal;\r\n  @Input() backgroundColor?: string;\r\n\r\n  @Output() onThemeChange = new EventEmitter<boolean>();\r\n  @Output() onFontSizeChange = new EventEmitter<FontSize>();\r\n  @Output() onFidelityChange = new EventEmitter<Fidelity>();\r\n\r\n  public get classes(): string[] {\r\n    const mode = this.light ? 'footer--light' : 'footer--dark';\r\n\r\n    return ['footer', mode];\r\n  }\r\n\r\n  changeFontSize(s: FontSize) { \r\n    this.fontSize = s;\r\n    this.onFontSizeChange.emit(this.fontSize);\r\n  }\r\n\r\n  changeFidelity(fi: Fidelity) {\r\n    this.fidelity = fi;\r\n    this.onFidelityChange.emit(this.fidelity);\r\n  }\r\n\r\n  toggleTheme() { \r\n    this.light = !this.light;\r\n    this.onThemeChange.emit(this.light);\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -969,15 +1314,15 @@
                         "name": "classes",
                         "type": "[]",
                         "returnType": "string[]",
-                        "line": 21
+                        "line": 23
                     }
                 }
             },
-            "templateData": "<div\n  class=\"footer-container\"\n  [ngClass]=\"classes\"\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\n  ngDefaultControl [ngModel]=\"light\"\n  ngDefaultControl [ngModel]=\"fontSize\"\n  ngDefaultControl [ngModel]=\"fidelity\"\n>\n  <div style=\"float: left; width: 33%;\">\n    <font-size \n      [fontSize]=\"fontSize\"\n      [light]=\"light\"\n      [ngClass]=\"classes\" \n      [ngStyle]=\"{ 'background-color': backgroundColor }\"\n      >\n    </font-size>\n  </div>\n  <div style=\"float: left; width: 33%; text-align: center;\">\n    <quality \n      [fidelity]=\"fidelity\"\n      [light]=\"light\"\n      [ngClass]=\"classes\" \n      [ngStyle]=\"{ 'background-color': backgroundColor }\"\n      >\n    </quality>\n  </div>\n  <div style=\"float: left; width: 33%; text-align: right;\">\n    <theme-button\n      (click)=\"toggleTheme()\"\n      [light]=\"light\" \n      [ngClass]=\"classes\" \n      [ngStyle]=\"{ 'background-color': backgroundColor }\">\n    </theme-button>\n  </div>\n</div>\n"
+            "templateData": "<div\r\n  class=\"footer-container\"\r\n  [ngClass]=\"classes\"\r\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n  ngDefaultControl [ngModel]=\"light\"\r\n  ngDefaultControl [ngModel]=\"fontSize\"\r\n  ngDefaultControl [ngModel]=\"fidelity\"\r\n>\r\n  <div style=\"float: left; width: 33%;\">\r\n    <font-size\r\n      (onFontSizeSelection)=\"changeFontSize($event)\"\r\n      [fontSize]=\"fontSize\"\r\n      [light]=\"light\"\r\n      [ngClass]=\"classes\" \r\n      [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n      >\r\n    </font-size>\r\n  </div>\r\n  <div style=\"float: left; width: 33%; text-align: center;\">\r\n    <quality\r\n      (onFidelitySelection)=\"changeFidelity($event)\" \r\n      [fidelity]=\"fidelity\"\r\n      [light]=\"light\"\r\n      [ngClass]=\"classes\" \r\n      [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n      >\r\n    </quality>\r\n  </div>\r\n  <div style=\"float: left; width: 33%; text-align: right;\">\r\n    <theme-button\r\n      (click)=\"toggleTheme()\"\r\n      [light]=\"light\" \r\n      [ngClass]=\"classes\" \r\n      [ngStyle]=\"{ 'background-color': backgroundColor }\">\r\n    </theme-button>\r\n  </div>\r\n</div>\r\n"
         },
         {
             "name": "QualityComponent",
-            "id": "component-QualityComponent-eb2fe33a76d52e3511cae271a5384eb1",
+            "id": "component-QualityComponent-b0af4d9bec562e364468ff128189e61e",
             "file": "src/app/px-footer/quality/quality.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -996,45 +1341,153 @@
             "inputsClass": [
                 {
                     "name": "backgroundColor",
-                    "line": 12,
+                    "line": 11,
                     "type": "string"
                 },
                 {
                     "name": "fidelity",
                     "defaultValue": "Fidelity.Normal",
+                    "line": 12,
+                    "type": "Fidelity",
+                    "inheritance": {
+                        "file": "ThemeChangeComponent"
+                    }
+                },
+                {
+                    "name": "fontSize",
+                    "defaultValue": "FontSize.Normal",
                     "line": 11,
-                    "type": "Fidelity"
+                    "type": "FontSize",
+                    "inheritance": {
+                        "file": "ThemeChangeComponent"
+                    }
                 },
                 {
                     "name": "light",
                     "defaultValue": "false",
-                    "line": 10
+                    "line": 10,
+                    "inheritance": {
+                        "file": "ThemeChangeComponent"
+                    }
                 }
             ],
-            "outputsClass": [],
-            "propertiesClass": [],
+            "outputsClass": [
+                {
+                    "name": "onFidelitySelection",
+                    "defaultValue": "new EventEmitter<Fidelity>()",
+                    "line": 13,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [
+                {
+                    "name": "show",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "",
+                    "line": 13,
+                    "inheritance": {
+                        "file": "ThemeChangeComponent"
+                    }
+                }
+            ],
             "methodsClass": [
                 {
-                    "name": "selectFontSize",
+                    "name": "selectFidelity",
                     "args": [
                         {
-                            "name": "f",
+                            "name": "fi",
                             "type": "Fidelity"
                         }
                     ],
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 20,
+                    "line": 21,
                     "jsdoctags": [
                         {
-                            "name": "f",
+                            "name": "fi",
                             "type": "Fidelity",
                             "tagName": {
                                 "text": "param"
                             }
                         }
                     ]
+                },
+                {
+                    "name": "changeFidelity",
+                    "args": [
+                        {
+                            "name": "fi",
+                            "type": "Fidelity"
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 17,
+                    "jsdoctags": [
+                        {
+                            "name": "fi",
+                            "type": "Fidelity",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ],
+                    "inheritance": {
+                        "file": "ThemeChangeComponent"
+                    }
+                },
+                {
+                    "name": "changeFontSize",
+                    "args": [
+                        {
+                            "name": "size",
+                            "type": "FontSize"
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 16,
+                    "jsdoctags": [
+                        {
+                            "name": "size",
+                            "type": "FontSize",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ],
+                    "inheritance": {
+                        "file": "ThemeChangeComponent"
+                    }
+                },
+                {
+                    "name": "changeTheme",
+                    "args": [
+                        {
+                            "name": "light",
+                            "type": "boolean"
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 15,
+                    "jsdoctags": [
+                        {
+                            "name": "light",
+                            "type": "boolean",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ],
+                    "inheritance": {
+                        "file": "ThemeChangeComponent"
+                    }
                 }
             ],
             "hostBindings": [],
@@ -1042,7 +1495,7 @@
             "description": "",
             "rawdescription": "",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\r\nimport { Fidelity } from './fidelity.enum';\r\n\r\n@Component({\r\n  selector: 'quality',\r\n  templateUrl: './quality.component.html',\r\n  styleUrls: ['./quality.component.scss']\r\n})\r\nexport class QualityComponent {\r\n  @Input() light = false;\r\n  @Input() fidelity: Fidelity = Fidelity.Normal;\r\n  @Input() backgroundColor?: string;\r\n\r\n  public get classes(): string[] {\r\n    const mode = this.light ? 'quality--light' : 'quality--dark';\r\n\r\n    return ['quality', mode];\r\n  }\r\n\r\n  selectFontSize(f: Fidelity) {\r\n    this.fidelity = f;\r\n  }\r\n}\r\n",
+            "sourceCode": "import { Component, Input, Output, EventEmitter  } from '@angular/core';\r\nimport { ThemeChangeComponent } from 'src/app/theme-change/theme-change.component';\r\nimport { Fidelity } from './fidelity.enum';\r\n\r\n@Component({\r\n  selector: 'quality',\r\n  templateUrl: './quality.component.html',\r\n  styleUrls: ['./quality.component.scss']\r\n})\r\nexport class QualityComponent extends ThemeChangeComponent {\r\n  @Input() backgroundColor?: string;\r\n\r\n  @Output() onFidelitySelection = new EventEmitter<Fidelity>();\r\n\r\n  public get classes(): string[] {\r\n    const mode = this.light ? 'quality--light' : 'quality--dark';\r\n\r\n    return ['quality', mode];\r\n  }\r\n\r\n  selectFidelity(fi: Fidelity) { \r\n    this.fidelity = fi \r\n    this.onFidelitySelection.emit(this.fidelity);\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -1051,6 +1504,7 @@
                 }
             ],
             "stylesData": "",
+            "extends": "ThemeChangeComponent",
             "accessors": {
                 "classes": {
                     "name": "classes",
@@ -1058,15 +1512,15 @@
                         "name": "classes",
                         "type": "[]",
                         "returnType": "string[]",
-                        "line": 14
+                        "line": 15
                     }
                 }
             },
-            "templateData": "<p\n  [ngClass]=\"classes\"\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\n  ngDefaultControl [ngModel]=\"label\"\n  ngDefaultControl [ngModel]=\"light\"\n>\n  <span \n    [ngClass]=\"{ 'selected-dash--light': fidelity === -1 && light, 'selected-dash--dark': fidelity === -1 && !light }\"\n    (click)=\"selectFontSize(-1)\"\n  >•</span><span\n    [ngClass]=\"{ 'normal-dash': true, 'selected-dash--light': fidelity === 0 && light, 'selected-dash--dark': fidelity === 0 && !light }\" \n    (click)=\"selectFontSize(0)\"\n  >•</span><span \n    [ngClass]=\"{ 'high-dash': true, 'selected-dash--light': fidelity === 1 && light, 'selected-dash--dark': fidelity === 1 && !light }\"\n    (click)=\"selectFontSize(1)\"\n  >•</span>\n</p>\n"
+            "templateData": "<p\r\n  [ngClass]=\"classes\"\r\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n  ngDefaultControl [ngModel]=\"label\"\r\n  ngDefaultControl [ngModel]=\"light\"\r\n>\r\n  <span \r\n    [ngClass]=\"{ 'selected-dash--light': fidelity === -1 && light, 'selected-dash--dark': fidelity === -1 && !light }\"\r\n    (click)=\"selectFidelity(-1)\"\r\n  >•</span><span\r\n    [ngClass]=\"{ 'normal-dash': true, 'selected-dash--light': fidelity === 0 && light, 'selected-dash--dark': fidelity === 0 && !light }\" \r\n    (click)=\"selectFidelity(0)\"\r\n  >•</span><span \r\n    [ngClass]=\"{ 'high-dash': true, 'selected-dash--light': fidelity === 1 && light, 'selected-dash--dark': fidelity === 1 && !light }\"\r\n    (click)=\"selectFidelity(1)\"\r\n  >•</span>\r\n</p>\r\n"
         },
         {
             "name": "ThemeButtonComponent",
-            "id": "component-ThemeButtonComponent-272fbbafccf0ea73524346dc496bc10f",
+            "id": "component-ThemeButtonComponent-574eebfb8a9f8180483c2ecdfbe2f696",
             "file": "src/app/px-footer/theme-button/theme-button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -1102,7 +1556,7 @@
             "description": "",
             "rawdescription": "",
             "type": "component",
-            "sourceCode": "import { Component, EventEmitter, Input, Output } from '@angular/core';\n\n@Component({\n  selector: 'theme-button',\n  templateUrl: './theme-button.component.html',\n  styleUrls: ['./theme-button.component.scss']\n})\nexport class ThemeButtonComponent {\n  @Input() light = false;\n  @Input() backgroundColor?: string;\n\n  public get classes(): string[] {\n    const mode = this.light ? 'theme-button--light' : 'theme-button--dark';\n\n    return ['theme-button', mode];\n  }\n}\n",
+            "sourceCode": "import { Component, EventEmitter, Input, Output } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'theme-button',\r\n  templateUrl: './theme-button.component.html',\r\n  styleUrls: ['./theme-button.component.scss']\r\n})\r\nexport class ThemeButtonComponent {\r\n  @Input() light = false;\r\n  @Input() backgroundColor?: string;\r\n\r\n  public get classes(): string[] {\r\n    const mode = this.light ? 'theme-button--light' : 'theme-button--dark';\r\n\r\n    return ['theme-button', mode];\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -1122,7 +1576,7 @@
                     }
                 }
             },
-            "templateData": "<button\n  [ngClass]=\"classes\"\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\n  ngDefaultControl [ngModel]=\"light\"\n>\n  {{ light ? '💡' : '🌙' }}\n</button>\n"
+            "templateData": "<button\r\n  [ngClass]=\"classes\"\r\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n  ngDefaultControl [ngModel]=\"light\"\r\n>\r\n  {{ light ? '💡' : '🌙' }}\r\n</button>\r\n"
         }
     ],
     "modules": [
@@ -1147,6 +1601,9 @@
                         },
                         {
                             "name": "FontSizeComponent"
+                        },
+                        {
+                            "name": "LoFiComponent"
                         },
                         {
                             "name": "NavBrandComponent"
@@ -1254,14 +1711,6 @@
                 "name": "Dark",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Navbar.stories.ts",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Dark",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/stories/NavBrand.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
@@ -1278,7 +1727,7 @@
                 "name": "Dark",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Page.stories.ts",
+                "file": "src/stories/Navbar.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -1302,6 +1751,14 @@
                 "name": "Dark",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/Page.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Dark",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/ThemeButton.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
@@ -1310,17 +1767,17 @@
                 "name": "environment",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/environments/environment.prod.ts",
+                "file": "src/environments/environment.ts",
                 "type": "object",
-                "defaultValue": "{\r\n  production: true\r\n}"
+                "defaultValue": "{\r\n  production: false\r\n}"
             },
             {
                 "name": "environment",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/environments/environment.ts",
+                "file": "src/environments/environment.prod.ts",
                 "type": "object",
-                "defaultValue": "{\r\n  production: false\r\n}"
+                "defaultValue": "{\r\n  production: true\r\n}"
             },
             {
                 "name": "Large",
@@ -1350,14 +1807,6 @@
                 "name": "Light",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Navbar.stories.ts",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Light",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/stories/NavBrand.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
@@ -1374,7 +1823,7 @@
                 "name": "Light",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Page.stories.ts",
+                "file": "src/stories/Navbar.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -1391,6 +1840,14 @@
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/stories/Quality.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Light",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Page.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -1501,14 +1958,6 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Navbar.stories.ts",
-                "type": "Story<NavbarComponent>",
-                "defaultValue": "(args: NavbarComponent) => ({\r\n  component: NavbarComponent,\r\n  props: args,\r\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/stories/NavBrand.stories.ts",
                 "type": "Story<NavBrandComponent>",
                 "defaultValue": "(args: NavBrandComponent) => ({\r\n  component: NavBrandComponent,\r\n  props: args,\r\n})"
@@ -1525,9 +1974,9 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Page.stories.ts",
-                "type": "Story<Page>",
-                "defaultValue": "(args: Page) => ({\r\n  component: Page,\r\n  props: args,\r\n})"
+                "file": "src/stories/Navbar.stories.ts",
+                "type": "Story<NavbarComponent>",
+                "defaultValue": "(args: NavbarComponent) => ({\r\n  component: NavbarComponent,\r\n  props: args,\r\n})"
             },
             {
                 "name": "Template",
@@ -1544,6 +1993,14 @@
                 "file": "src/stories/Quality.stories.ts",
                 "type": "Story<QualityComponent>",
                 "defaultValue": "(args: QualityComponent) => ({\r\n  component: QualityComponent,\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Page.stories.ts",
+                "type": "Story<Page>",
+                "defaultValue": "(args: Page) => ({\r\n  component: Page,\r\n  props: args,\r\n})"
             },
             {
                 "name": "Template",
@@ -1668,40 +2125,6 @@
                     "defaultValue": "(args: FontSizeComponent) => ({\r\n  component: FontSizeComponent,\r\n  props: args,\r\n})"
                 }
             ],
-            "src/stories/Navbar.stories.ts": [
-                {
-                    "name": "Dark",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Navbar.stories.ts",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Light",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Navbar.stories.ts",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "navItemsData",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Navbar.stories.ts",
-                    "type": "[]",
-                    "defaultValue": "[ '❓ About', '📐 Angularization', '💪 Get Great' ]"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Navbar.stories.ts",
-                    "type": "Story<NavbarComponent>",
-                    "defaultValue": "(args: NavbarComponent) => ({\r\n  component: NavbarComponent,\r\n  props: args,\r\n})"
-                }
-            ],
             "src/stories/NavBrand.stories.ts": [
                 {
                     "name": "Dark",
@@ -1754,12 +2177,12 @@
                     "defaultValue": "(args: NavItemComponent) => ({\r\n  component: NavItemComponent,\r\n  props: args,\r\n})"
                 }
             ],
-            "src/stories/Page.stories.ts": [
+            "src/stories/Navbar.stories.ts": [
                 {
                     "name": "Dark",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/Page.stories.ts",
+                    "file": "src/stories/Navbar.stories.ts",
                     "type": "",
                     "defaultValue": "Template.bind({})"
                 },
@@ -1767,7 +2190,7 @@
                     "name": "Light",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/Page.stories.ts",
+                    "file": "src/stories/Navbar.stories.ts",
                     "type": "",
                     "defaultValue": "Template.bind({})"
                 },
@@ -1775,7 +2198,7 @@
                     "name": "navItemsData",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/Page.stories.ts",
+                    "file": "src/stories/Navbar.stories.ts",
                     "type": "[]",
                     "defaultValue": "[ '❓ About', '📐 Angularization', '💪 Get Great' ]"
                 },
@@ -1783,9 +2206,9 @@
                     "name": "Template",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/Page.stories.ts",
-                    "type": "Story<Page>",
-                    "defaultValue": "(args: Page) => ({\r\n  component: Page,\r\n  props: args,\r\n})"
+                    "file": "src/stories/Navbar.stories.ts",
+                    "type": "Story<NavbarComponent>",
+                    "defaultValue": "(args: NavbarComponent) => ({\r\n  component: NavbarComponent,\r\n  props: args,\r\n})"
                 }
             ],
             "src/stories/PxFooter.stories.ts": [
@@ -1840,6 +2263,40 @@
                     "defaultValue": "(args: QualityComponent) => ({\r\n  component: QualityComponent,\r\n  props: args,\r\n})"
                 }
             ],
+            "src/stories/Page.stories.ts": [
+                {
+                    "name": "Dark",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Page.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Light",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Page.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "navItemsData",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Page.stories.ts",
+                    "type": "[]",
+                    "defaultValue": "[ '❓ About', '📐 Angularization', '💪 Get Great' ]"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Page.stories.ts",
+                    "type": "Story<Page>",
+                    "defaultValue": "(args: Page) => ({\r\n  component: Page,\r\n  props: args,\r\n})"
+                }
+            ],
             "src/stories/ThemeButton.stories.ts": [
                 {
                     "name": "Dark",
@@ -1866,16 +2323,6 @@
                     "defaultValue": "(args: ThemeButtonComponent) => ({\r\n  component: ThemeButtonComponent,\r\n  props: args,\r\n})"
                 }
             ],
-            "src/environments/environment.prod.ts": [
-                {
-                    "name": "environment",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/environments/environment.prod.ts",
-                    "type": "object",
-                    "defaultValue": "{\r\n  production: true\r\n}"
-                }
-            ],
             "src/environments/environment.ts": [
                 {
                     "name": "environment",
@@ -1884,6 +2331,16 @@
                     "file": "src/environments/environment.ts",
                     "type": "object",
                     "defaultValue": "{\r\n  production: false\r\n}"
+                }
+            ],
+            "src/environments/environment.prod.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.prod.ts",
+                    "type": "object",
+                    "defaultValue": "{\r\n  production: true\r\n}"
                 }
             ],
             "src/stories/Button.stories.ts": [
@@ -2059,6 +2516,15 @@
                 "status": "low"
             },
             {
+                "filePath": "src/app/lo-fi/lo-fi.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "LoFiComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
                 "filePath": "src/app/navbar/nav-brand/nav-brand.component.ts",
                 "type": "component",
                 "linktype": "component",
@@ -2091,7 +2557,7 @@
                 "linktype": "component",
                 "name": "FontSizeComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/9",
+                "coverageCount": "0/13",
                 "status": "low"
             },
             {
@@ -2100,7 +2566,7 @@
                 "linktype": "component",
                 "name": "PxFooterComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/7",
+                "coverageCount": "0/11",
                 "status": "low"
             },
             {
@@ -2109,7 +2575,7 @@
                 "linktype": "component",
                 "name": "QualityComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/5",
+                "coverageCount": "0/11",
                 "status": "low"
             },
             {
@@ -2127,7 +2593,7 @@
                 "linktype": "classe",
                 "name": "ThemeChangeComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/2",
+                "coverageCount": "0/6",
                 "status": "low"
             },
             {
@@ -2544,7 +3010,7 @@
                 "linktype": "component",
                 "name": "PageComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/8",
+                "coverageCount": "0/12",
                 "status": "low"
             },
             {

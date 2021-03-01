@@ -13,6 +13,7 @@ import { BgImageComponent } from './bg-image/bg-image.component';
 import { ThemeButtonComponent } from './px-footer/theme-button/theme-button.component';
 import { ThemeChangeComponent } from './theme-change/theme-change.component';
 import { DemoTextComponent } from './demo-text/demo-text.component';
+import { LoFiComponent } from './lo-fi/lo-fi.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { DemoTextComponent } from './demo-text/demo-text.component';
     BgImageComponent,
     ThemeButtonComponent,
     ThemeChangeComponent,
-    DemoTextComponent
+    DemoTextComponent,
+    LoFiComponent
   ],
   imports: [
     BrowserModule,

@@ -1,17 +1,19 @@
 <div [ngClass]="{'small-size': fontSize === -1, 'normal-size': fontSize === 0, 'large-size': fontSize === 1}">
-    <navbar 
-      [brand]="brand"
-      [light]="light"
-      [navItems]="navItems"
-      [ngClass]="classes" 
-      [ngStyle]="{ 'background-color': backgroundColor }"
-    >
-    </navbar>
+  <navbar 
+    [brand]="brand"
+    [light]="light"
+    [navItems]="navItems"
+    [ngClass]="classes" 
+    [ngStyle]="{ 'background-color': backgroundColor }"
+  >
+  </navbar>
+  <div *ngIf="show; then thenBlock; else elseBlock"></div>
+  <ng-template #thenBlock>
     <bg-image
       [light]="light"
       [ngClass]="classes" 
       [ngStyle]="{ 'background-color': backgroundColor }"
-    >
+      #thenBlock>
     </bg-image>
     <br>
     <br>
@@ -20,14 +22,27 @@
     <br>
     <br>
     <br>
-    <px-footer 
-      (onThemeChange)="changeTheme($event)"
-      (onFontSizeChange)="changeFontSize($event)"
-      [light]="light"
-      [fontSize]="fontSize"
-      [fidelity]="fidelity"
-      [ngClass]="classes" 
-      [ngStyle]="{ 'background-color': backgroundColor }"
-    >
-    </px-footer>
-  </div>
+  </ng-template>
+  <ng-template #elseBlock>
+    <br>
+    <br>
+    <br>
+    <demo-text [light]="true"></demo-text>
+    <br>
+    <br>
+    <br>
+  </ng-template>
+  
+  <px-footer 
+  (onThemeChange)="changeTheme($event)"
+  (onFontSizeChange)="changeFontSize($event)"
+  (onFidelityChange)="changeFidelity($event)"
+  [light]="light"
+  [fontSize]="fontSize"
+  [fidelity]="fidelity"
+  [ngClass]="classes" 
+  [ngStyle]="{ 'background-color': backgroundColor }"
+>
+</px-footer>
+</div>
+

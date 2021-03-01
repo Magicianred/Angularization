@@ -17,7 +17,8 @@
     </font-size>
   </div>
   <div style="float: left; width: 33%; text-align: center;">
-    <quality 
+    <quality
+      (onFidelitySelection)="changeFidelity($event)" 
       [fidelity]="fidelity"
       [light]="light"
       [ngClass]="classes" 

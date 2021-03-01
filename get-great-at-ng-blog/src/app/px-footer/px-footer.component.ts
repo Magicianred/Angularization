@@ -18,6 +18,7 @@ export class PxFooterComponent {
 
   @Output() onThemeChange = new EventEmitter<boolean>();
   @Output() onFontSizeChange = new EventEmitter<FontSize>();
+  @Output() onFidelityChange = new EventEmitter<Fidelity>();
 
   public get classes(): string[] {
     const mode = this.light ? 'footer--light' : 'footer--dark';
@@ -28,6 +29,11 @@ export class PxFooterComponent {
   changeFontSize(s: FontSize) { 
     this.fontSize = s;
     this.onFontSizeChange.emit(this.fontSize);
+  }
+
+  changeFidelity(fi: Fidelity) {
+    this.fidelity = fi;
+    this.onFidelityChange.emit(this.fidelity);
   }
 
   toggleTheme() { 

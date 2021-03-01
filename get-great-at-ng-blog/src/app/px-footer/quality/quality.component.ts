@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter  } from '@angular/core';
+import { ThemeChangeComponent } from 'src/app/theme-change/theme-change.component';
 import { Fidelity } from './fidelity.enum';
 
 @Component({
@@ -6,10 +7,10 @@ import { Fidelity } from './fidelity.enum';
   templateUrl: './quality.component.html',
   styleUrls: ['./quality.component.scss']
 })
-export class QualityComponent {
-  @Input() light = false;
-  @Input() fidelity: Fidelity = Fidelity.Normal;
+export class QualityComponent extends ThemeChangeComponent {
   @Input() backgroundColor?: string;
+
+  @Output() onFidelitySelection = new EventEmitter<Fidelity>();
 
   public get classes(): string[] {
     const mode = this.light ? 'quality--light' : 'quality--dark';
@@ -17,7 +18,8 @@ export class QualityComponent {
     return ['quality', mode];
   }
 
-  selectFontSize(f: Fidelity) {
-    this.fidelity = f;
+  selectFidelity(fi: Fidelity) { 
+    this.fidelity = fi 
+    this.onFidelitySelection.emit(this.fidelity);
   }
 }
