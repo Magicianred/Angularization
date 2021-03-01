@@ -14,6 +14,7 @@ import { ThemeButtonComponent } from '../app/px-footer/theme-button/theme-button
 import { FontSize } from '../app/px-footer/font-size/font-size.enum';
 import { Fidelity } from '../app/px-footer/quality/fidelity.enum';
 import { PxFooterComponent } from 'src/app/px-footer/px-footer.component';
+import { DemoTextComponent } from 'src/app/demo-text/demo-text.component';
 
 export default {
   title: 'Example/Page',
@@ -28,7 +29,8 @@ export default {
         BgImageComponent,
         FontSizeComponent,
         QualityComponent,
-        ThemeButtonComponent
+        ThemeButtonComponent,
+        DemoTextComponent
       ],
       imports: [CommonModule],
     }),

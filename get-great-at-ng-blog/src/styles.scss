@@ -9,3 +9,17 @@
     Verdana, 
     sans-serif;
 }
+
+@mixin change-font-size($font-size) {
+  h1 { font-size: 60px + $font-size; }
+  h2 { font-size: 48px + $font-size; }
+  h3 { font-size: 36px + $font-size; }
+  h4 { font-size: 24px + $font-size; }
+  h5 { font-size: 18px + $font-size; }
+  p { font-size: 15px + $font-size; }
+}
+
+.small-size { @include change-font-size(0); }
+.normal-size { @include change-font-size(6px); }
+.large-size { @include change-font-size(12px); }
+

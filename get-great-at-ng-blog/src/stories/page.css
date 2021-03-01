@@ -8,6 +8,11 @@ section {
   color: #333;
 }
 
+demo-text {
+  position: relative;
+  z-index: 9998;
+}
+
 h2 {
   font-weight: 900;
   font-size: 32px;
@@ -15,8 +20,6 @@ h2 {
   margin: 0 0 4px;
   display: inline-block;
   vertical-align: top;
-  position: relative;
-  z-index: 9998;
 }
 
 p {

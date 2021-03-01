@@ -1,4 +1,5 @@
 import { Component, ElementRef, EventEmitter, Input, Output } from '@angular/core';
+import { ThemeChangeComponent } from 'src/app/theme-change/theme-change.component';
 import { FontSize } from './font-size.enum';
 
 @Component({
@@ -6,13 +7,15 @@ import { FontSize } from './font-size.enum';
   templateUrl: './font-size.component.html',
   styleUrls: ['./font-size.component.scss']
 })
-export class FontSizeComponent {
-  constructor(private _elementRef : ElementRef) {}
-  @Input() light = false;
-  @Input() fontSize: FontSize = FontSize.Normal;
-  @Input() backgroundColor?: string;
+export class FontSizeComponent extends ThemeChangeComponent {
+  constructor(private _elementRef : ElementRef) {
+    super();
+  }
+  
+  private domElement = document.querySelector('body') || this._elementRef.nativeElement.querySelector('body');
 
-  @Output() onClick = new EventEmitter<Event>();
+  @Output() onFontSizeSelection = new EventEmitter<FontSize>();
+  @Input() backgroundColor?: string;
 
   public get classes(): string[] {
     const mode = this.light ? 'font-size--light' : 'font-size--dark';
@@ -20,14 +23,8 @@ export class FontSizeComponent {
     return ['font-size', mode];
   }
 
-  selectFontSize(fs: FontSize) { 
-    /* const domElement = this._elementRef.nativeElement.querySelector('body');
-
-    if (this.fontSize < fs && fs === 1) domElement.style.fontSize += 12;
-    else if (this.fontSize < fs && fs === 0) domElement.style.fontSize += 6;
-    else if (this.fontSize > fs && fs === -1) domElement.style.fontSize -= 12;
-    else if (this.fontSize > fs && fs === 0) domElement.style.fontSize -= 6; */
-    
-    this.fontSize = fs;
+  selectFontSize(s: FontSize) {
+    this.fontSize = s;
+    this.onFontSizeSelection.emit(this.fontSize);
   }
 }

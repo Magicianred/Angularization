@@ -5,45 +5,18 @@ import { BgImageComponent } from 'src/app/bg-image/bg-image.component';
 import { FontSizeComponent } from '../app/px-footer/font-size/font-size.component';
 import { QualityComponent } from '../app/px-footer/quality/quality.component';
 import { ThemeButtonComponent } from '../app/px-footer/theme-button/theme-button.component';
+import { DemoTextComponent } from '../app/demo-text/demo-text.component';
 import { FontSize } from '../app/px-footer/font-size/font-size.enum';
 import { Fidelity } from '../app/px-footer/quality/fidelity.enum';
 import { ThemeChangeComponent } from 'src/app/theme-change/theme-change.component';
 
 @Component({
   selector: 'a-degree-page',
-  template: `
-  <navbar 
-    [brand]="brand"
-    [light]="light"
-    [navItems]="navItems"
-    [ngClass]="classes" 
-    [ngStyle]="{ 'background-color': backgroundColor }"
-  >
-  </navbar>
-  <bg-image
-    [light]="light"
-    [ngClass]="classes" 
-    [ngStyle]="{ 'background-color': backgroundColor }"
-  >
-  </bg-image>
-  <br>
-  <br>
-  <br>
-  <px-footer 
-    (onThemeChange)="changeTheme(light)"
-    [light]="light"
-    [fontSize]="0"
-    [fidelity]="0"
-    [ngClass]="classes" 
-    [ngStyle]="{ 'background-color': backgroundColor }"
-  >
-  </px-footer>
-    `,
+  templateUrl: './page.component.html',
   styleUrls: ['./page.css'],
 })
 export default class PageComponent extends ThemeChangeComponent {
   @Input() brand = '';
-  @Input() fontSize: FontSize = FontSize.Normal;
   @Input() fidelity: Fidelity = Fidelity.Normal;
   @Input() backgroundColor?: string;
   @Input() navItems: string[] = [];
