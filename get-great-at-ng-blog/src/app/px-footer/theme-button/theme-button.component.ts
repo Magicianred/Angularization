@@ -9,15 +9,9 @@ export class ThemeButtonComponent {
   @Input() light = false;
   @Input() backgroundColor?: string;
 
-  @Output() onClick = new EventEmitter<Event>();
-
   public get classes(): string[] {
     const mode = this.light ? 'theme-button--light' : 'theme-button--dark';
 
     return ['theme-button', mode];
-  }
-
-  toggleTheme() { 
-    this.light = !this.light;
   }
 }
