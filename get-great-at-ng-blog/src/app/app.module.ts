@@ -12,6 +12,7 @@ import { QualityComponent } from './px-footer/quality/quality.component';
 import { BgImageComponent } from './bg-image/bg-image.component';
 import { ThemeButtonComponent } from './px-footer/theme-button/theme-button.component';
 import { ThemeChangeComponent } from './theme-change/theme-change.component';
+import { DemoTextComponent } from './demo-text/demo-text.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ThemeChangeComponent } from './theme-change/theme-change.component';
     QualityComponent,
     BgImageComponent,
     ThemeButtonComponent,
-    ThemeChangeComponent
+    ThemeChangeComponent,
+    DemoTextComponent
   ],
   imports: [
     BrowserModule,

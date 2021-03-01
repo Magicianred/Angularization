@@ -1,0 +1,33 @@
+<div [ngClass]="{'small-size': fontSize === -1, 'normal-size': fontSize === 0, 'large-size': fontSize === 1}">
+    <navbar 
+      [brand]="brand"
+      [light]="light"
+      [navItems]="navItems"
+      [ngClass]="classes" 
+      [ngStyle]="{ 'background-color': backgroundColor }"
+    >
+    </navbar>
+    <bg-image
+      [light]="light"
+      [ngClass]="classes" 
+      [ngStyle]="{ 'background-color': backgroundColor }"
+    >
+    </bg-image>
+    <br>
+    <br>
+    <br>
+    <demo-text [light]="light"></demo-text>
+    <br>
+    <br>
+    <br>
+    <px-footer 
+      (onThemeChange)="changeTheme($event)"
+      (onFontSizeChange)="changeFontSize($event)"
+      [light]="light"
+      [fontSize]="fontSize"
+      [fidelity]="fidelity"
+      [ngClass]="classes" 
+      [ngStyle]="{ 'background-color': backgroundColor }"
+    >
+    </px-footer>
+  </div>
