@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FontSize } from './px-footer/font-size/font-size.enum';
 import { Fidelity } from './px-footer/quality/fidelity.enum';
 import PageComponent from './page/page.component';
@@ -8,7 +8,7 @@ import PageComponent from './page/page.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'get-great-at-ng-blog';
   light = true; 
   brand = 'O';
@@ -19,4 +19,9 @@ export class AppComponent {
     { name: '📐 Angularization', route: '\/angularization'}, 
     { name: '💪 Get Great', route: '\/get-great'} 
   ]; 
+
+  ngOnInit() {  
+    history.pushState({light: true }, '', ''); 
+  }
 }
+

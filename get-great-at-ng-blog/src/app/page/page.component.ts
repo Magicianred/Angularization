@@ -10,10 +10,13 @@ import { FontSize } from 'src/app/px-footer/font-size/font-size.enum';
 import { Fidelity } from 'src/app/px-footer/quality/fidelity.enum';
 import { ThemeChangeComponent } from 'src/app/theme-change/theme-change.component';
 import { DocumentComponent } from 'src/app/page/document/document.component';
+import { LightService } from '../articles/light.service';
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'page',
   templateUrl: './page.component.html',
+  providers: [LightService],
   styleUrls: ['./page.component.scss'],
 })
 export default class PageComponent extends ThemeChangeComponent {
@@ -26,5 +29,11 @@ export default class PageComponent extends ThemeChangeComponent {
     const mode = this.light ? 'page--light' : 'page--dark';
 
     return ['page', mode];
+  }
+
+  constructor(public router: Router) { super() }
+
+  changeTheme(light: boolean) { 
+    this.light = light;
   }
 }

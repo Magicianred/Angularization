@@ -1,1 +1,20 @@
-<p>home works!</p>
+<div 
+  [ngClass]="classes"
+  [ngStyle]="{ 'background-color': backgroundColor }"
+  ngDefaultControl [ngModel]="light"
+>
+  <br>
+  <h1 
+    [ngClass]="classes"
+    [ngStyle]="{ 'background-color': backgroundColor }"
+  >Get Angularized;<br><br>
+    Don't try to do everything;<br><br>
+    Write <em>haiku</em>-like code.<br>
+  </h1>
+  <br>
+  <button
+    [ngClass]="{'get-started-button': true, 'get-started-button--light': !light, 'get-started-button--dark': light}"
+  >
+    Get Started
+  </button>
+</div>

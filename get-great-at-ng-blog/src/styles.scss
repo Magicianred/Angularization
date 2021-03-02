@@ -26,3 +26,28 @@
 
 .active-route { color: crimson; }
 a { text-decoration: none; }
+
+@mixin change-theme($light) {
+
+  @if($light) {
+    h1, h2, h3, h4, h5, p { 
+      color: #000;
+    }
+    button {
+      color: #fff !important;
+      background-color: #000 !important;
+    }
+  }
+  @else {
+    h1, h2, h3, h4, h5, p { 
+      color: #fff;
+    }
+    button {
+      color: #000 !important;
+      background-color: #fff !important;
+    }
+  }
+}
+
+.light { @include change-theme(true); }
+.dark { @include change-theme(false); }
