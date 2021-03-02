@@ -12,7 +12,7 @@ import { ThemeChangeComponent } from 'src/app/theme-change/theme-change.componen
 import { DocumentComponent } from 'src/app/page/document/document.component';
 
 @Component({
-  selector: 'a-degree-page',
+  selector: 'page',
   templateUrl: './page.component.html',
   styleUrls: ['./page.component.scss'],
 })
@@ -20,7 +20,7 @@ export default class PageComponent extends ThemeChangeComponent {
   @Input() brand = '';
   @Input() fidelity: Fidelity = Fidelity.Normal;
   @Input() backgroundColor?: string;
-  @Input() navItems: string[] = [];
+  @Input() navItems = [{name: '', route: ''}];;
 
   public get classes(): string[] {
     const mode = this.light ? 'page--light' : 'page--dark';

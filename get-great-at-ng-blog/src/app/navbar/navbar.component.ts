@@ -11,15 +11,13 @@ export class NavbarComponent implements OnInit {
   @Input() light = false;
   @Input() brand = '';
   @Input() backgroundColor?: string;
-  @Input() navItems: string[] = [];
+  @Input() navItems = [{name: '', route: ''}];;
 
   public get classes(): string[] {
     const mode = this.light ? 'navbar--light' : 'navbar--dark';
 
     return ['navbar', mode];
   }
-
-  constructor() { }
 
   ngOnInit(): void {
   }

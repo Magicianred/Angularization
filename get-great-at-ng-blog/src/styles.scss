@@ -23,3 +23,6 @@
 .small-size { @include change-font-size(3px); }
 .normal-size { @include change-font-size(9px); }
 .large-size { @include change-font-size(18px); }
+
+.active-route { color: crimson; }
+a { text-decoration: none; }

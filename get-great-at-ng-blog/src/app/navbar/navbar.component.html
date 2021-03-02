@@ -16,19 +16,14 @@
     </nav-brand>
   </div>
   <div>
-    <ul 
+    <nav-item 
       *ngFor="let item of navItems"
       [ngClass]="classes"
-      [ngStyle]="{ 'background-color': backgroundColor }"
-    >
-      <li>
-        <nav-item 
-          [label]="item"
-          [light]="light" 
-          [ngClass]="classes" 
-          [ngStyle]="{ 'background-color': backgroundColor }">
-        </nav-item>
-      </li>
-    </ul>
+      [ngStyle]="{ 'background-color': backgroundColor }" 
+      [label]="item.name"
+      [route]="item.route"
+      [light]="light" 
+      [ngClass]="classes">
+    </nav-item>
   </div>
 </div>

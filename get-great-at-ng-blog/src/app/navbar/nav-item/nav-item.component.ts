@@ -9,8 +9,7 @@ export class NavItemComponent {
   @Input() light = false;
   @Input() backgroundColor?: string;
   @Input() label = '';
-
-  @Output() onClick = new EventEmitter<Event>();
+  @Input() route = '';
 
   public get classes(): string[] {
     const mode = this.light ? 'nav-item--light' : 'nav-item--dark';
