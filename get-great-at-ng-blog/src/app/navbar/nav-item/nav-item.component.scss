@@ -5,8 +5,8 @@
   line-height: 45px;
   padding-left: 0;
   padding-right: 0;
-  margin-left: 10px;
-  font-size: 10px;
+  margin-left: 7.5px;
+  font-size: 12px;
   opacity: 1;
 }
 
@@ -24,11 +24,22 @@
   opacity: 0.667;
 }
 
+/* Large-Size */
+@media (min-width: 414px) { 
+  .nav-item {
+    margin-left: 20px;
+    font-size: 15px;
+    padding-left: 5px;
+    padding-right: 5px; 
+    line-height: 45px;
+  }
+}
+
 /* Tablet */
 @media (min-width: 834px) { 
   .nav-item {
     margin-left: 90px;
-    font-size: 12px;
+    font-size: 18px;
     padding-left: 5px;
     padding-right: 5px; 
     line-height: 50px;
@@ -39,7 +50,7 @@
 @media (min-width: 1112px) {
   .nav-item {
     margin-left: 120px;
-    font-size: 15px;
+    font-size: 24px;
     padding-left: 10px;
     padding-right: 10px;  
     line-height: 60px;

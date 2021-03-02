@@ -3,7 +3,6 @@
   [ngStyle]="{ 'background-color': backgroundColor }"
   ngDefaultControl [ngModel]="light"
 >
-  <span style="font-size: 20px;">Quality</span><br>
   <span 
     [ngClass]="{ 'selected-dash--light': fidelity === -1 && light, 'selected-dash--dark': fidelity === -1 && !light }"
     (click)="selectFidelity(-1)"
