@@ -11,7 +11,7 @@
 
   <br>
   <br>
-  A complete guide to visually test-driven, component-driven <b>Angular</b> development with Storybook.
+  A complete guide for getting started with visually test-driven, component-driven <b>Angular</b> development with Storybook.
   <br>
   <br>
 
