@@ -44,11 +44,5 @@ export class PxFooterComponent {
   toggleTheme() { 
     this.light = !this.light;
     this.onThemeChange.emit(this.light);
-
-    history.pushState({light: this.light }, '', ''); 
-
-    history.state.light = this.light;
-    
-    this.router.navigate(['/'], {state: {data: { light: this.light}} });
   }
 }

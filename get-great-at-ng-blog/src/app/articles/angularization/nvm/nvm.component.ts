@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ThemeChangeComponent } from 'src/app/theme-change/theme-change.component';
 
 @Component({
   selector: 'app-nvm',
   templateUrl: './nvm.component.html',
-  styleUrls: ['./nvm.component.scss']
+  styleUrls: ['../../../page/document/document.component.scss', './nvm.component.scss']
 })
-export class NvmComponent implements OnInit {
+export class NvmComponent extends ThemeChangeComponent { 
+  @Input() backgroundColor?: string;
 
-  constructor() { }
+  public get classes(): string[] {
+    const mode = this.light ? 'document--light' : 'document--dark';
 
-  ngOnInit(): void {
+    return ['document', mode];
   }
-
 }
+

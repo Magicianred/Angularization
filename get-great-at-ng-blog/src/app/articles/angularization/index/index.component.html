@@ -1,1 +1,25 @@
-<p>index works!</p>
+<div
+  [ngClass]="classes"
+  [ngStyle]="{ 'background-color': backgroundColor }"
+  ngDefaultControl [ngModel]="light"
+>
+<h2 style="text-align: center;">Angularization</h2>
+<hr>
+<p>
+  Are you ready to get Angularized 📐?<br>
+  <br> 
+  Angularization is a thoroughly-documented guide for visual test-driven, component-driven Angular and Storybook development-process maintained on <a href="https://github.com/pjnalls/Angularization">GitHub</a>.<br>
+  <br>
+  Below are some articles to help you get started:
+
+</p>
+
+<ul>
+  <li><a routerLink="/angularization/nvm">"NVM not NPM"</a></li>
+  <li><a routerLink="/angularization/vscode">Visual Studio Code</a></li>
+  <li><a routerLink="/angularization/vtdd">Visual TDD with Angular and Storybook</a></li>
+</ul>
+  <br>
+  <br>
+<p style="text-align: right"> — <a href="https://pjnalls.com">@pjnalls</a></p>
+</div>

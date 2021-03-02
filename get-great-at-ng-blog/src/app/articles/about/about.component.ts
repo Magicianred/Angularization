@@ -4,14 +4,14 @@ import { ThemeChangeComponent } from 'src/app/theme-change/theme-change.componen
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
-  styleUrls: ['./about.component.scss']
+  styleUrls: ['../../page/document/document.component.scss', './about.component.scss']
 })
 export class AboutComponent extends ThemeChangeComponent { 
   @Input() backgroundColor?: string;
 
   public get classes(): string[] {
-    const mode = this.light ? 'nav-item--light' : 'nav-item--dark';
+    const mode = this.light ? 'document--light' : 'document--dark';
 
-    return ['nav-item', mode];
+    return ['document', mode];
   }
 }

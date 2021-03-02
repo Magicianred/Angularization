@@ -9,7 +9,7 @@ import { GetGreatComponent } from './articles/get-great/get-great.component';
 import { HomeComponent } from './articles/home/home.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent, data: { light: true }},
+  { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'angularization', component: IndexComponent },
   { path: 'angularization/nvm', component: NvmComponent },
