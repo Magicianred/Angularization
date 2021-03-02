@@ -11,7 +11,7 @@
 
   <br>
   <br>
-  <b>Angular 11+</b> development tutorials for intermediate developers who need to start from 0.
+  A complete guide to visually test-driven, component-driven <b>Angular</b> development with Storybook.
   <br>
   <br>
 
