@@ -1,9 +1,10 @@
 <a
-  (click)="onClick.emit($event)"
+  routerLink="{{ route }}" routerLinkActive="active-route"
   [ngClass]="classes"
   [ngStyle]="{ 'background-color': backgroundColor }"
   ngDefaultControl [ngModel]="label"
   ngDefaultControl [ngModel]="light"
+  ngDefaultControl [ngModel]="route"
 >
   {{ label }}
 </a>

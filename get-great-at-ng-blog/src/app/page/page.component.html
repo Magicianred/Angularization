@@ -1,4 +1,10 @@
-<div [ngClass]="{'small-size': fontSize === -1, 'normal-size': fontSize === 0, 'large-size': fontSize === 1}">
+<div 
+  [ngClass]="{'small-size': fontSize === -1, 'normal-size': fontSize === 0, 'large-size': fontSize === 1}"
+  ngDefaultControl [ngModel]="light" 
+  ngDefaultControl [ngModel]="brand"
+  ngDefaultControl [ngModel]="fontSize"
+  ngDefaultControl [ngModel]="fidelity" 
+  ngDefaultControl [ngModel]="navItems">
   <navbar 
     [brand]="brand"
     [light]="light"

@@ -1,6 +1,10 @@
-import { Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FontSize } from '../px-footer/font-size/font-size.enum';
 import { Fidelity } from '../px-footer/quality/fidelity.enum';
+
+@Component({
+  template: ''
+})
 
 export class ThemeChangeComponent {
   constructor() { 
