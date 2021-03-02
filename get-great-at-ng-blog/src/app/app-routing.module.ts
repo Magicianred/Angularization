@@ -5,6 +5,7 @@ import { IndexComponent } from './articles/angularization/index/index.component'
 import { NvmComponent } from './articles/angularization/nvm/nvm.component';
 import { VsCodeComponent } from './articles/angularization/vs-code/vs-code.component';
 import { VtddAngularComponent } from './articles/angularization/vtdd-angular/vtdd-angular.component';
+import { ContactComponent } from './articles/contact/contact.component';
 import { GetGreatComponent } from './articles/get-great/get-great.component';
 import { HomeComponent } from './articles/home/home.component';
 
@@ -15,7 +16,8 @@ const routes: Routes = [
   { path: 'angularization/nvm', component: NvmComponent },
   { path: 'angularization/vscode', component: VsCodeComponent },
   { path: 'angularization/vtdd', component: VtddAngularComponent },
-  { path: 'get-great', component: GetGreatComponent }
+  { path: 'contact', component: ContactComponent },
+  { path: '**', component: HomeComponent },
 ];
 
 @NgModule({

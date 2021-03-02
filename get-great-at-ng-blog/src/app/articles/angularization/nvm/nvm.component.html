@@ -1,18 +1,95 @@
+
+
 <div
   [ngClass]="classes"
   [ngStyle]="{ 'background-color': backgroundColor }"
   ngDefaultControl [ngModel]="light"
 >
-<h2 style="text-align: center;">About</h2>
+<h2>"NVM not NPM" ❓</h2>
 <hr>
+<h3>What is an "NVM"?</h3>
 <p>
-  <b>Forzen<span>.</span>io</b> provides <em>Zenful</em> visual test-driven, component-driven design systems, development processes, and web applications using Angular (TBD React and Vue) and <a href="https://storybook.js.org/"></a>Storybook.js.
-  <br>
-  <br>
-   We do our best to alleviate the ever prevalent angst of front-end engineering and at <em>least</em> mitigated it with insightful research and full guides to <a routerLink="/angularization">Angularization</a> processes.
+NVM stands for Node Version Manager. Essentially, it is a system utility for installing, using, and managing multiple versions of Node.js.
 </p>
-  <br>
-  <br>
+<p>
+Below is a NVM-Windows example when using a Bash (Git Bash, more specifically) shell:
+</p>
+
+<p>
+$ nvm list<br><br>
+  
+    15.8.0<br>
+  * 14.15.5 (Currently using 64-bit executable)<br><br>
+
+$ node -v<br>
+v14.15.5<br><br>
+
+$ nvm use 15.8.0<br>
+Now using node v15.8.0 (64-bit)<br><br>
+
+$ node -v<br>
+v15.8.0<br><br>
+
+$
+
+</p>
+
+<p>
+As you can see above, we're able to switch versions of node with a simple nvm use command.
+</p>
+
+
+<h3>Why an NVM?</h3>
+<p> you work on multiple Node.js projects at any point, simultaneously or sequentially, it would behoove you not to have more than one version of Node.js on your machine — especially if you maintain any number of legacy and modern applications at an enterprise.</p>
+
+<p>
+Let's put this in perspective: at the time of writing this sub-section of Angularization (February 15, 2021), Node.js was initially released 11+ years ago (May 27, 2009) — soon to be 12 years ago. Since that time, there's been 500+ versions released for Node.js.</p>
+
+<p>
+Therefore, invest some time into researching and using a reliable type of NVM, since at some point — if not now or in the past — you'll most likely need it as Node.js development progresses.
+</p>
+
+<p>
+I'll be using NVM-Windows, but you can check the "NVM Alternatives" sub-section for other popular NVM projects.
+</p>
+
+<h3>How to Install NVM</h3>
+<p>
+As mentioned in the previous sub-section, I and another developer used NVM-Windows for our Node version manager during our initial Angular 11+ session, and I have been using it since Summer 2016 (if I remember correctly).</p>
+
+<p>
+Needless to say, I haven't had any troubles with it on a Windows machine.
+</p>
+
+<p>
+
+Follow the set of instructions in the "Installation & Upgrades" sections in the README found here on GitHub.
+</p>
+<p>
+
+WARNING: Make sure you read the PREREQUISITE part for uninstalling existing Node.js & NPM installations.
+</p>
+<p>
+
+Also be sure to read the second paragraph about global module conflicts and backing up any global npmrc configurations.
+</p>
+<p>
+...
+</p>
+<p>
+Done? Okay... now — time to put nvm to use.
+</p>
+
+<h3>How to Use NVM</h3>
+<p>
+NVMs' commands vary due to different implementations so check your preferred NVM's documentation for details.
+</p>
+<p>
+
+
+For NVM-Windows, refer to the https://github.com/coreybutler/nvm-windows#usage page and section full description of all the commands.
+</p>
+
 <p style="text-align: right"> — <a href="https://pjnalls.com">@pjnalls</a></p>
 </div>
 

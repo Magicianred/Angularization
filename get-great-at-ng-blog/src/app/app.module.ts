@@ -23,6 +23,7 @@ import { VtddAngularComponent } from './articles/angularization/vtdd-angular/vtd
 import { GetGreatComponent } from './articles/get-great/get-great.component';
 import PageComponent from './page/page.component';
 import { CommonModule } from '@angular/common';
+import { ContactComponent } from './articles/contact/contact.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +45,8 @@ import { CommonModule } from '@angular/common';
     VsCodeComponent,
     VtddAngularComponent,
     GetGreatComponent,
-    PageComponent
+    PageComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
