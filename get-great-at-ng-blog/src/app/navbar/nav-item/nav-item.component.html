@@ -1,5 +1,5 @@
 <a
-  routerLink="{{ route }}" routerLinkActive="active-route"
+  routerLink="{{ route }}" [state]="{ data: { light: light } }" routerLinkActive="active-route"
   [ngClass]="classes"
   [ngStyle]="{ 'background-color': backgroundColor }"
   ngDefaultControl [ngModel]="label"

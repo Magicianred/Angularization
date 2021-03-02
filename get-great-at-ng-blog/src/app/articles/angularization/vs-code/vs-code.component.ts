@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { ThemeChangeComponent } from 'src/app/theme-change/theme-change.component';
 
 @Component({
   selector: 'app-vs-code',
   templateUrl: './vs-code.component.html',
-  styleUrls: ['./vs-code.component.scss']
+  styleUrls: ['../../../page/document/document.component.scss', './vs-code.component.scss']
 })
-export class VsCodeComponent implements OnInit {
+export class VsCodeComponent extends ThemeChangeComponent { 
+  @Input() backgroundColor?: string;
 
-  constructor() { }
+  public get classes(): string[] {
+    const mode = this.light ? 'document--light' : 'document--dark';
 
-  ngOnInit(): void {
+    return ['document', mode];
   }
 
 }

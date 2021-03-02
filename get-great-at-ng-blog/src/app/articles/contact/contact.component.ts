@@ -2,11 +2,11 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ThemeChangeComponent } from 'src/app/theme-change/theme-change.component';
 
 @Component({
-  selector: 'app-nvm',
-  templateUrl: './nvm.component.html',
-  styleUrls: ['../../../page/document/document.component.scss', './nvm.component.scss']
+  selector: 'app-contact',
+  templateUrl: './contact.component.html',
+  styleUrls: ['../../page/document/document.component.scss', './contact.component.scss']
 })
-export class NvmComponent extends ThemeChangeComponent { 
+export class ContactComponent extends ThemeChangeComponent { 
   @Input() backgroundColor?: string;
 
   public get classes(): string[] {
@@ -15,4 +15,3 @@ export class NvmComponent extends ThemeChangeComponent {
     return ['document', mode];
   }
 }
-

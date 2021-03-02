@@ -1,15 +1,21 @@
+import { Input } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
+import { ThemeChangeComponent } from 'src/app/theme-change/theme-change.component';
 
 @Component({
   selector: 'app-index',
   templateUrl: './index.component.html',
-  styleUrls: ['./index.component.scss']
+  styleUrls: ['../../../page/document/document.component.scss', './index.component.scss']
 })
-export class IndexComponent implements OnInit {
+export class IndexComponent extends ThemeChangeComponent implements OnInit  {
+  @Input() backgroundColor?: string;
 
-  constructor() { }
+  public get classes(): string[] {
+    const mode = this.light ? 'document--light' : 'document--dark';
 
-  ngOnInit(): void {
+    return ['document', mode];
   }
+
+  ngOnInit() {}
 
 }

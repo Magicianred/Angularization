@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, Output, ViewChild } from '@angular/core
 import { FontSizeComponent } from './font-size/font-size.component';
 import { QualityComponent } from './quality/quality.component';
 import { ThemeButtonComponent } from './theme-button/theme-button.component';
+import { Router } from '@angular/router';
 import { FontSize } from './font-size/font-size.enum';
 import { Fidelity } from './quality/fidelity.enum';
 
@@ -11,6 +12,9 @@ import { Fidelity } from './quality/fidelity.enum';
   styleUrls: ['./px-footer.component.scss']
 })
 export class PxFooterComponent {
+  
+  constructor(private router: Router) { }
+
   @Input() light = false;
   @Input() fidelity: Fidelity = Fidelity.Normal;
   @Input() fontSize: FontSize = FontSize.Normal;
@@ -19,6 +23,7 @@ export class PxFooterComponent {
   @Output() onThemeChange = new EventEmitter<boolean>();
   @Output() onFontSizeChange = new EventEmitter<FontSize>();
   @Output() onFidelityChange = new EventEmitter<Fidelity>();
+
 
   public get classes(): string[] {
     const mode = this.light ? 'footer--light' : 'footer--dark';

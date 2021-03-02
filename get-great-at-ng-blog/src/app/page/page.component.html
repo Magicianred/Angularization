@@ -1,5 +1,5 @@
 <div 
-  [ngClass]="{'small-size': fontSize === -1, 'normal-size': fontSize === 0, 'large-size': fontSize === 1}"
+  [ngClass]="{'small-size': fontSize === -1, 'normal-size': fontSize === 0, 'large-size': fontSize === 1, 'light': light, 'dark': !light}"
   ngDefaultControl [ngModel]="light" 
   ngDefaultControl [ngModel]="brand"
   ngDefaultControl [ngModel]="fontSize"
@@ -14,7 +14,8 @@
   >
   </navbar>
   <div *ngIf="show; then thenBlock; else elseBlock"></div>
-  <ng-template #thenBlock>
+  <ng-template 
+    #thenBlock>
     <bg-image
       [light]="light"
       [ngClass]="classes" 
@@ -24,12 +25,9 @@
     <br>
     <br>
     <br>
-    <document
-      [light]="light"
-      [ngClass]="classes" 
-      [ngStyle]="{ 'background-color': backgroundColor }"
+    <router-outlet
     >
-    </document>
+    </router-outlet>
     <br>
     <br>
     <br>
