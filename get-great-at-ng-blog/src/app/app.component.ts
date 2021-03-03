@@ -17,7 +17,7 @@ export class AppComponent implements OnInit {
   navItems = [ 
     { name: '❓ About', route: '\/about'},  
     { name: '📐 Angularization', route: '\/angularization'}, 
-    { name: '💪 Contact', route: '\/contact'} 
+    { name: '✉ Contact', route: '\/contact'} 
   ]; 
 
   ngOnInit() {  
