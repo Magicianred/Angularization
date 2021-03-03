@@ -616,7 +616,13 @@ https://github.com/angular-eslint/angular-eslint#migrating-an-angular-cli-projec
 
 https://sass-lang.com/documentation/at-rules/control/if
 
+### 6. Can storybook display the sample code for the component?
 
+https://github.com/storybookjs/storybook/issues/1843
+
+### 7. 
+
+https://stackoverflow.com/questions/53954558/how-to-turn-a-file-into-a-string-in-nodejs
 <br>
 <br>
 <br>

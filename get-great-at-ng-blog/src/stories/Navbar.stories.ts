@@ -23,8 +23,11 @@ const Template: Story<NavbarComponent> = (args: NavbarComponent) => ({
   props: args,
 });
 
-export const navItemsData =  
-  [ '❓ About', '📐 Angularization', '💪 Get Great' ];
+const navItemsData = [ 
+  { name: '❓ About', route: '\/about'},  
+  { name: '📐 Angularization', route: '\/angularization'}, 
+  { name: '✉ Contact', route: '\/contact'} 
+];
 
 export const Light = Template.bind({});
 Light.args = { light: true, brand: 'A°', navItems: navItemsData };

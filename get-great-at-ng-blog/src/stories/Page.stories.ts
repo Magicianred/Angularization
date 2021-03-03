@@ -44,8 +44,11 @@ const Template: Story<Page> = (args: Page) => ({
   props: args,
 });
 
-const navItemsData =  
-  [ '❓ About', '📐 Angularization', '💪 Get Great' ];
+const navItemsData = [ 
+  { name: '❓ About', route: '\/about'},  
+  { name: '📐 Angularization', route: '\/angularization'}, 
+  { name: '✉ Contact', route: '\/contact'} 
+];
 
 export const Light = Template.bind({});
 Light.args = { 

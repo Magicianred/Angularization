@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve -o",
     "build": "ng build",
+    "build:prod": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
@@ -24,6 +25,7 @@
     "@angular/router": "~11.2.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
+    "yarn": "^1.22.10",
     "zone.js": "~0.11.3"
   },
   "devDependencies": {
@@ -40,6 +42,7 @@
     "@storybook/addon-actions": "^6.1.18",
     "@storybook/addon-essentials": "^6.1.18",
     "@storybook/addon-links": "^6.1.18",
+    "@storybook/addon-storysource": "^6.1.21",
     "@storybook/angular": "^6.1.18",
     "@types/jasmine": "~3.6.0",
     "@types/node": "^12.11.1",

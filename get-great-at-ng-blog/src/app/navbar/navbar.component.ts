@@ -11,7 +11,7 @@ export class NavbarComponent implements OnInit {
   @Input() light = false;
   @Input() brand = '';
   @Input() backgroundColor?: string;
-  @Input() navItems = [{name: '', route: ''}];;
+  @Input() navItems = [{name: '', route: ''}];
 
   public get classes(): string[] {
     const mode = this.light ? 'navbar--light' : 'navbar--dark';
