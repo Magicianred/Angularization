@@ -24,6 +24,7 @@ import { GetGreatComponent } from './articles/get-great/get-great.component';
 import PageComponent from './page/page.component';
 import { CommonModule } from '@angular/common';
 import { ContactComponent } from './articles/contact/contact.component';
+import { RouterModule } from '@angular/router';
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,6 +53,7 @@ import { ContactComponent } from './articles/contact/contact.component';
     BrowserModule,
     CommonModule,
     AppRoutingModule,
+    RouterModule,
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
   providers: [],

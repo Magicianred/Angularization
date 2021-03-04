@@ -3335,7 +3335,7 @@
                 "name": "Dark",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/NavItem.stories.ts",
+                "file": "src/stories/Navbar.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -3343,7 +3343,15 @@
                 "name": "Dark",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Navbar.stories.ts",
+                "file": "src/stories/NavBrand.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Dark",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/NavItem.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -3376,14 +3384,6 @@
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/stories/ThemeButton.stories.ts",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Dark",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/NavBrand.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -3431,7 +3431,7 @@
                 "name": "Light",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/NavItem.stories.ts",
+                "file": "src/stories/Navbar.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -3439,7 +3439,15 @@
                 "name": "Light",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Navbar.stories.ts",
+                "file": "src/stories/NavBrand.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Light",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/NavItem.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -3472,14 +3480,6 @@
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/stories/ThemeButton.stories.ts",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Light",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/NavBrand.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -3574,9 +3574,9 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/NavItem.stories.ts",
-                "type": "Story<NavItemComponent>",
-                "defaultValue": "(args: NavItemComponent) => ({\r\n  component: NavItemComponent,\r\n  props: args,\r\n})"
+                "file": "src/stories/Header.stories.ts",
+                "type": "Story<Header>",
+                "defaultValue": "(args: Header) => ({\r\n  component: Header,\r\n  props: args,\r\n})"
             },
             {
                 "name": "Template",
@@ -3590,9 +3590,25 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/NavBrand.stories.ts",
+                "type": "Story<NavBrandComponent>",
+                "defaultValue": "(args: NavBrandComponent) => ({\r\n  component: NavBrandComponent,\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/NavItem.stories.ts",
+                "type": "Story<NavItemComponent>",
+                "defaultValue": "(args: NavItemComponent) => ({\r\n  component: NavItemComponent,\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/Page.stories.ts",
-                "type": "Story<Page>",
-                "defaultValue": "(args: Page) => ({\r\n  component: Page,\r\n  props: args,\r\n})"
+                "type": "Story<AppModule>",
+                "defaultValue": "(args: AppModule) => ({\r\n  module: AppModule,\r\n  props: args,\r\n})"
             },
             {
                 "name": "Template",
@@ -3601,14 +3617,6 @@
                 "file": "src/stories/PxFooter.stories.ts",
                 "type": "Story<PxFooterComponent>",
                 "defaultValue": "(args: PxFooterComponent) => ({\r\n  component: PxFooterComponent,\r\n  props: args,\r\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Header.stories.ts",
-                "type": "Story<Header>",
-                "defaultValue": "(args: Header) => ({\r\n  component: Header,\r\n  props: args,\r\n})"
             },
             {
                 "name": "Template",
@@ -3625,14 +3633,6 @@
                 "file": "src/stories/ThemeButton.stories.ts",
                 "type": "Story<ThemeButtonComponent>",
                 "defaultValue": "(args: ThemeButtonComponent) => ({\r\n  component: ThemeButtonComponent,\r\n  props: args,\r\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/NavBrand.stories.ts",
-                "type": "Story<NavBrandComponent>",
-                "defaultValue": "(args: NavBrandComponent) => ({\r\n  component: NavBrandComponent,\r\n  props: args,\r\n})"
             }
         ],
         "functions": [],
@@ -3749,32 +3749,6 @@
                     "defaultValue": "(args: FontSizeComponent) => ({\r\n  component: FontSizeComponent,\r\n  props: args,\r\n})"
                 }
             ],
-            "src/stories/NavItem.stories.ts": [
-                {
-                    "name": "Dark",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/NavItem.stories.ts",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Light",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/NavItem.stories.ts",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/NavItem.stories.ts",
-                    "type": "Story<NavItemComponent>",
-                    "defaultValue": "(args: NavItemComponent) => ({\r\n  component: NavItemComponent,\r\n  props: args,\r\n})"
-                }
-            ],
             "src/stories/Navbar.stories.ts": [
                 {
                     "name": "Dark",
@@ -3809,6 +3783,58 @@
                     "defaultValue": "(args: NavbarComponent) => ({\r\n  component: NavbarComponent,\r\n  props: args,\r\n})"
                 }
             ],
+            "src/stories/NavBrand.stories.ts": [
+                {
+                    "name": "Dark",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/NavBrand.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Light",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/NavBrand.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/NavBrand.stories.ts",
+                    "type": "Story<NavBrandComponent>",
+                    "defaultValue": "(args: NavBrandComponent) => ({\r\n  component: NavBrandComponent,\r\n  props: args,\r\n})"
+                }
+            ],
+            "src/stories/NavItem.stories.ts": [
+                {
+                    "name": "Dark",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/NavItem.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Light",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/NavItem.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/NavItem.stories.ts",
+                    "type": "Story<NavItemComponent>",
+                    "defaultValue": "(args: NavItemComponent) => ({\r\n  component: NavItemComponent,\r\n  props: args,\r\n})"
+                }
+            ],
             "src/stories/Page.stories.ts": [
                 {
                     "name": "Dark",
@@ -3839,8 +3865,8 @@
                     "ctype": "miscellaneous",
                     "subtype": "variable",
                     "file": "src/stories/Page.stories.ts",
-                    "type": "Story<Page>",
-                    "defaultValue": "(args: Page) => ({\r\n  component: Page,\r\n  props: args,\r\n})"
+                    "type": "Story<AppModule>",
+                    "defaultValue": "(args: AppModule) => ({\r\n  module: AppModule,\r\n  props: args,\r\n})"
                 }
             ],
             "src/stories/PxFooter.stories.ts": [
@@ -3919,32 +3945,6 @@
                     "file": "src/stories/ThemeButton.stories.ts",
                     "type": "Story<ThemeButtonComponent>",
                     "defaultValue": "(args: ThemeButtonComponent) => ({\r\n  component: ThemeButtonComponent,\r\n  props: args,\r\n})"
-                }
-            ],
-            "src/stories/NavBrand.stories.ts": [
-                {
-                    "name": "Dark",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/NavBrand.stories.ts",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Light",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/NavBrand.stories.ts",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/NavBrand.stories.ts",
-                    "type": "Story<NavBrandComponent>",
-                    "defaultValue": "(args: NavBrandComponent) => ({\r\n  component: NavBrandComponent,\r\n  props: args,\r\n})"
                 }
             ],
             "src/environments/environment.prod.ts": [
@@ -4095,6 +4095,11 @@
                 "filename": "src/app/app-routing.module.ts",
                 "module": "AppRoutingModule",
                 "children": [
+                    {
+                        "path": "",
+                        "redirectTo": "/",
+                        "pathMatch": "full"
+                    },
                     {
                         "path": "",
                         "component": "HomeComponent"
