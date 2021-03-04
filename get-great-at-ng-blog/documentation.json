@@ -1439,14 +1439,14 @@
         },
         {
             "name": "LoFiComponent",
-            "id": "component-LoFiComponent-2e721d4a2170925f975cbe4317ed699e",
+            "id": "component-LoFiComponent-3ad5413719dc4a2ebfcfbc6900172c1f",
             "file": "src/app/lo-fi/lo-fi.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
             "providers": [],
-            "selector": "app-lo-fi",
+            "selector": "lo-fi",
             "styleUrls": [
                 "./lo-fi.component.scss"
             ],
@@ -1456,6 +1456,11 @@
             ],
             "viewProviders": [],
             "inputsClass": [
+                {
+                    "name": "light",
+                    "defaultValue": "true",
+                    "line": 11
+                },
                 {
                     "name": "backgroundColor",
                     "line": 10,
@@ -1481,7 +1486,7 @@
             "description": "",
             "rawdescription": "",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\r\nimport { DemoTextComponent } from '../demo-text/demo-text.component';\r\n\r\n@Component({\r\n  selector: 'app-lo-fi',\r\n  templateUrl: './lo-fi.component.html',\r\n  styleUrls: ['./lo-fi.component.scss']\r\n})\r\nexport class LoFiComponent extends DemoTextComponent { }\r\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\nimport { DemoTextComponent } from '../demo-text/demo-text.component';\r\nimport {  AboutComponent  } from '../articles/about/about.component';\r\n\r\n@Component({\r\n  selector: 'lo-fi',\r\n  templateUrl: './lo-fi.component.html',\r\n  styleUrls: ['./lo-fi.component.scss']\r\n})\r\nexport class LoFiComponent extends DemoTextComponent { \r\n  @Input() light = true;\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -1491,7 +1496,7 @@
             ],
             "stylesData": "",
             "extends": "DemoTextComponent",
-            "templateData": "\r\n"
+            "templateData": "<div\r\n  ngDefaultControl [ngModel]=\"light\"\r\n>\r\n<app-about [light]=\"light\"></app-about>\r\n\r\n</div>"
         },
         {
             "name": "NavbarComponent",
@@ -1893,7 +1898,7 @@
         },
         {
             "name": "PageComponent",
-            "id": "component-PageComponent-8ca181c99fb3538a50d67104f9563c39",
+            "id": "component-PageComponent-075318236390cc35b047238dd4a70ac2",
             "file": "src/app/page/page.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -1916,24 +1921,24 @@
             "inputsClass": [
                 {
                     "name": "backgroundColor",
-                    "line": 25,
+                    "line": 26,
                     "type": "string"
                 },
                 {
                     "name": "brand",
                     "defaultValue": "''",
-                    "line": 23
+                    "line": 24
                 },
                 {
                     "name": "fidelity",
                     "defaultValue": "Fidelity.Normal",
-                    "line": 24,
+                    "line": 25,
                     "type": "Fidelity"
                 },
                 {
                     "name": "navItems",
                     "defaultValue": "[{name: '', route: ''}]",
-                    "line": 26
+                    "line": 27
                 },
                 {
                     "name": "fidelity",
@@ -1969,7 +1974,7 @@
                     "type": "Router",
                     "optional": false,
                     "description": "",
-                    "line": 34,
+                    "line": 35,
                     "modifierKind": [
                         114
                     ]
@@ -1997,7 +2002,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 36,
+                    "line": 37,
                     "jsdoctags": [
                         {
                             "name": "light",
@@ -2089,7 +2094,7 @@
             "description": "",
             "rawdescription": "",
             "type": "component",
-            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\r\nimport { NavbarComponent } from 'src/app/navbar/navbar.component';\r\nimport { PxFooterComponent } from 'src/app/px-footer/px-footer.component';\r\nimport { BgImageComponent } from 'src/app/bg-image/bg-image.component';\r\nimport { FontSizeComponent } from 'src/app/px-footer/font-size/font-size.component';\r\nimport { QualityComponent } from 'src/app/px-footer/quality/quality.component';\r\nimport { ThemeButtonComponent } from 'src/app/px-footer/theme-button/theme-button.component';\r\nimport { DemoTextComponent } from 'src/app/demo-text/demo-text.component';\r\nimport { FontSize } from 'src/app/px-footer/font-size/font-size.enum';\r\nimport { Fidelity } from 'src/app/px-footer/quality/fidelity.enum';\r\nimport { ThemeChangeComponent } from 'src/app/theme-change/theme-change.component';\r\nimport { DocumentComponent } from 'src/app/page/document/document.component';\r\nimport { LightService } from '../articles/light.service';\r\nimport { Router } from '@angular/router'\r\n\r\n@Component({\r\n  selector: 'page',\r\n  templateUrl: './page.component.html',\r\n  providers: [LightService],\r\n  styleUrls: ['./page.component.scss'],\r\n})\r\nexport default class PageComponent extends ThemeChangeComponent {\r\n  @Input() brand = '';\r\n  @Input() fidelity: Fidelity = Fidelity.Normal;\r\n  @Input() backgroundColor?: string;\r\n  @Input() navItems = [{name: '', route: ''}];;\r\n\r\n  public get classes(): string[] {\r\n    const mode = this.light ? 'page--light' : 'page--dark';\r\n\r\n    return ['page', mode];\r\n  }\r\n\r\n  constructor(public router: Router) { super() }\r\n\r\n  changeTheme(light: boolean) { \r\n    this.light = light;\r\n  }\r\n}\r\n",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\r\nimport { NavbarComponent } from 'src/app/navbar/navbar.component';\r\nimport { PxFooterComponent } from 'src/app/px-footer/px-footer.component';\r\nimport { BgImageComponent } from 'src/app/bg-image/bg-image.component';\r\nimport { FontSizeComponent } from 'src/app/px-footer/font-size/font-size.component';\r\nimport { QualityComponent } from 'src/app/px-footer/quality/quality.component';\r\nimport { ThemeButtonComponent } from 'src/app/px-footer/theme-button/theme-button.component';\r\nimport { DemoTextComponent } from 'src/app/demo-text/demo-text.component';\r\nimport { FontSize } from 'src/app/px-footer/font-size/font-size.enum';\r\nimport { Fidelity } from 'src/app/px-footer/quality/fidelity.enum';\r\nimport { ThemeChangeComponent } from 'src/app/theme-change/theme-change.component';\r\nimport { LoFiComponent } from 'src/app/lo-fi/lo-fi.component';\r\nimport { DocumentComponent } from 'src/app/page/document/document.component';\r\nimport { LightService } from '../articles/light.service';\r\nimport { Router } from '@angular/router'\r\n\r\n@Component({\r\n  selector: 'page',\r\n  templateUrl: './page.component.html',\r\n  providers: [LightService],\r\n  styleUrls: ['./page.component.scss'],\r\n})\r\nexport default class PageComponent extends ThemeChangeComponent {\r\n  @Input() brand = '';\r\n  @Input() fidelity: Fidelity = Fidelity.Normal;\r\n  @Input() backgroundColor?: string;\r\n  @Input() navItems = [{name: '', route: ''}];;\r\n\r\n  public get classes(): string[] {\r\n    const mode = this.light ? 'page--light' : 'page--dark';\r\n\r\n    return ['page', mode];\r\n  }\r\n\r\n  constructor(public router: Router) { super() }\r\n\r\n  changeTheme(light: boolean) { \r\n    this.light = light;\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -2107,7 +2112,7 @@
                         "type": "Router"
                     }
                 ],
-                "line": 32,
+                "line": 33,
                 "jsdoctags": [
                     {
                         "name": "router",
@@ -2126,11 +2131,11 @@
                         "name": "classes",
                         "type": "[]",
                         "returnType": "string[]",
-                        "line": 28
+                        "line": 29
                     }
                 }
             },
-            "templateData": "<div \r\n  [ngClass]=\"{'small-size': fontSize === -1, 'normal-size': fontSize === 0, 'large-size': fontSize === 1, 'light': light, 'dark': !light}\"\r\n  ngDefaultControl [ngModel]=\"light\" \r\n  ngDefaultControl [ngModel]=\"brand\"\r\n  ngDefaultControl [ngModel]=\"fontSize\"\r\n  ngDefaultControl [ngModel]=\"fidelity\" \r\n  ngDefaultControl [ngModel]=\"navItems\">\r\n  <navbar \r\n    [brand]=\"brand\"\r\n    [light]=\"light\"\r\n    [navItems]=\"navItems\"\r\n    [ngClass]=\"classes\" \r\n    [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n  >\r\n  </navbar>\r\n  <div *ngIf=\"show; then thenBlock; else elseBlock\"></div>\r\n  <ng-template \r\n    #thenBlock>\r\n    <bg-image\r\n      [light]=\"light\"\r\n      [ngClass]=\"classes\" \r\n      [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n      #thenBlock>\r\n    </bg-image>\r\n    <br>\r\n    <br>\r\n    <br>\r\n    <router-outlet\r\n    >\r\n    </router-outlet>\r\n    <br>\r\n    <br>\r\n    <br>\r\n  </ng-template>\r\n  <ng-template #elseBlock>\r\n    <br>\r\n    <br>\r\n    <br>\r\n    <demo-text [light]=\"true\"></demo-text>\r\n    <br>\r\n    <br>\r\n    <br>\r\n  </ng-template>\r\n  \r\n  <px-footer \r\n  (onThemeChange)=\"changeTheme($event)\"\r\n  (onFontSizeChange)=\"changeFontSize($event)\"\r\n  (onFidelityChange)=\"changeFidelity($event)\"\r\n  [light]=\"light\"\r\n  [fontSize]=\"fontSize\"\r\n  [fidelity]=\"fidelity\"\r\n  [ngClass]=\"classes\" \r\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n>\r\n</px-footer>\r\n</div>\r\n\r\n"
+            "templateData": "<div \r\n  [ngClass]=\"{'small-size': fontSize === -1, 'normal-size': fontSize === 0, 'large-size': fontSize === 1, 'light': light, 'dark': !light}\"\r\n  ngDefaultControl [ngModel]=\"light\" \r\n  ngDefaultControl [ngModel]=\"brand\"\r\n  ngDefaultControl [ngModel]=\"fontSize\"\r\n  ngDefaultControl [ngModel]=\"fidelity\" \r\n  ngDefaultControl [ngModel]=\"navItems\">\r\n  <navbar \r\n    [brand]=\"brand\"\r\n    [light]=\"light\"\r\n    [navItems]=\"navItems\"\r\n    [ngClass]=\"classes\" \r\n    [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n  >\r\n  </navbar>\r\n  <div *ngIf=\"show; then thenBlock; else elseBlock\"></div>\r\n  <ng-template \r\n    #thenBlock>\r\n    <bg-image\r\n      [light]=\"light\"\r\n      [ngClass]=\"classes\" \r\n      [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n      #thenBlock>\r\n    </bg-image>\r\n    <br>\r\n    <br>\r\n    <br>\r\n    <router-outlet\r\n    >\r\n    </router-outlet>\r\n    <br>\r\n    <br>\r\n    <br>\r\n  </ng-template>\r\n  <ng-template #elseBlock>\r\n    <br>\r\n    <br>\r\n    <br>\r\n    <lofi [light]=\"light\"></lofi>\r\n    <br>\r\n    <br>\r\n    <br>\r\n  </ng-template>\r\n  \r\n  <px-footer \r\n  (onThemeChange)=\"changeTheme($event)\"\r\n  (onFontSizeChange)=\"changeFontSize($event)\"\r\n  (onFidelityChange)=\"changeFidelity($event)\"\r\n  [light]=\"light\"\r\n  [fontSize]=\"fontSize\"\r\n  [fidelity]=\"fidelity\"\r\n  [ngClass]=\"classes\" \r\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n>\r\n</px-footer>\r\n</div>\r\n\r\n"
         },
         {
             "name": "PxFooterComponent",
@@ -3248,17 +3253,17 @@
                 "name": "environment",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/environments/environment.prod.ts",
+                "file": "src/environments/environment.ts",
                 "type": "object",
-                "defaultValue": "{\r\n  production: true\r\n}"
+                "defaultValue": "{\r\n  production: false\r\n}"
             },
             {
                 "name": "environment",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/environments/environment.ts",
+                "file": "src/environments/environment.prod.ts",
                 "type": "object",
-                "defaultValue": "{\r\n  production: false\r\n}"
+                "defaultValue": "{\r\n  production: true\r\n}"
             },
             {
                 "name": "Light",
@@ -3740,16 +3745,6 @@
                     "defaultValue": "(args: ThemeButtonComponent) => ({\r\n  component: ThemeButtonComponent,\r\n  props: args,\r\n})"
                 }
             ],
-            "src/environments/environment.prod.ts": [
-                {
-                    "name": "environment",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/environments/environment.prod.ts",
-                    "type": "object",
-                    "defaultValue": "{\r\n  production: true\r\n}"
-                }
-            ],
             "src/environments/environment.ts": [
                 {
                     "name": "environment",
@@ -3758,6 +3753,16 @@
                     "file": "src/environments/environment.ts",
                     "type": "object",
                     "defaultValue": "{\r\n  production: false\r\n}"
+                }
+            ],
+            "src/environments/environment.prod.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.prod.ts",
+                    "type": "object",
+                    "defaultValue": "{\r\n  production: true\r\n}"
                 }
             ]
         },
@@ -3990,7 +3995,7 @@
                 "linktype": "component",
                 "name": "LoFiComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/3",
+                "coverageCount": "0/4",
                 "status": "low"
             },
             {

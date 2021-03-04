@@ -71,6 +71,13 @@ export default {
   argTypes: {
     backgroundColor: { control: 'color' },
   },
+  parameters: {
+    docs: {
+      source: {
+        type: 'code'
+      }
+    }
+  }
 } as Meta;
 
 const Template: Story<PxFooterComponent> = (args: PxFooterComponent) => ({
@@ -80,6 +87,7 @@ const Template: Story<PxFooterComponent> = (args: PxFooterComponent) => ({
 
 export const Light = Template.bind({});
 Light.args = { light: true, fidelity: Fidelity.Normal, fontSize: FontSize.Normal };
+
 
 export const Dark = Template.bind({})
 Dark.args = { light: false, fidelity: Fidelity.Normal, fontSize: FontSize.Normal };

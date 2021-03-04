@@ -623,6 +623,11 @@ https://github.com/storybookjs/storybook/issues/1843
 ### 7. 
 
 https://stackoverflow.com/questions/53954558/how-to-turn-a-file-into-a-string-in-nodejs
+
+### 8.
+
+https://stackoverflow.com/questions/57161839/module-not-found-error-cant-resolve-fs-in
+
 <br>
 <br>
 <br>
