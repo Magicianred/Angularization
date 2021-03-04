@@ -10,6 +10,7 @@ import { GetGreatComponent } from './articles/get-great/get-great.component';
 import { HomeComponent } from './articles/home/home.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/', pathMatch: 'full' },
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'angularization', component: IndexComponent },
@@ -17,7 +18,7 @@ const routes: Routes = [
   { path: 'angularization/vscode', component: VsCodeComponent },
   { path: 'angularization/vtdd', component: VtddAngularComponent },
   { path: 'contact', component: ContactComponent },
-  { path: '**', component: HomeComponent },
+  { path: '**', redirectTo: '/', pathMatch: 'full' },
 ];
 
 @NgModule({

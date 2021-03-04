@@ -1,5 +1,5 @@
 import { moduleMetadata } from '@storybook/angular';
-import { CommonModule } from '@angular/common';
+import { APP_BASE_HREF, CommonModule } from '@angular/common';
 // also exported from '@storybook/react' if you can deal with breaking changes in 6.1
 import { Story, Meta } from '@storybook/angular/types-6-0';
 import Page from 'src/app/page/page.component';
@@ -16,31 +16,67 @@ import { Fidelity } from '../app/px-footer/quality/fidelity.enum';
 import { PxFooterComponent } from 'src/app/px-footer/px-footer.component';
 import { DemoTextComponent } from 'src/app/demo-text/demo-text.component';
 import { DocumentComponent } from 'src/app/page/document/document.component';
+import { AppModule } from 'src/app/app.module';
+import { AppRoutingModule } from 'src/app/app-routing.module';
+import { RouterModule } from '@angular/router';
+import PageComponent from 'src/app/page/page.component';
+import { HomeComponent } from 'src/app/articles/home/home.component';
+import { AboutComponent } from 'src/app/articles/about/about.component';
+import { AppComponent } from 'src/app/app.component';
+import { LoFiComponent } from 'src/app/lo-fi/lo-fi.component';
+import { IndexComponent } from 'src/app/articles/angularization/index/index.component';
+import { NvmComponent } from 'src/app/articles/angularization/nvm/nvm.component';
+import { VtddAngularComponent } from 'src/app/articles/angularization/vtdd-angular/vtdd-angular.component';
+import { GetGreatComponent } from 'src/app/articles/get-great/get-great.component';
+import { VsCodeComponent } from 'src/app/articles/angularization/vs-code/vs-code.component';
+import { ContactComponent } from 'src/app/articles/contact/contact.component';
 
 export default {
-  title: 'Example/Page',
-  component: Page,
+  title: 'Page/App',
+  component: AppComponent,
   decorators: [
     moduleMetadata({
       declarations: [
-        NavbarComponent, 
-        NavBrandComponent, 
+        AppComponent,
+        NavbarComponent,
         NavItemComponent,
+        NavBrandComponent,
         PxFooterComponent,
-        BgImageComponent,
         FontSizeComponent,
         QualityComponent,
+        BgImageComponent,
         ThemeButtonComponent,
         DemoTextComponent,
-        DocumentComponent
+        LoFiComponent,
+        DocumentComponent,
+        HomeComponent,
+        AboutComponent,
+        IndexComponent,
+        NvmComponent,
+        VsCodeComponent,
+        VtddAngularComponent,
+        GetGreatComponent,
+        PageComponent,
+        ContactComponent
       ],
-      imports: [CommonModule],
+      imports: [
+        CommonModule,
+        AppRoutingModule,
+        RouterModule.forRoot([
+          { path: '', loadChildren: () => import('../app/app.module').then(m => m.AppModule) }
+        ], {
+          useHash: true
+        })
+      ],
+      providers: [
+        { provide: APP_BASE_HREF, useValue: '/'}
+      ]
     }),
   ],
 } as Meta;
 
-const Template: Story<Page> = (args: Page) => ({
-  component: Page,
+const Template: Story<AppComponent> = (args: AppComponent) => ({
+  component: AppComponent,
   props: args,
 });
 

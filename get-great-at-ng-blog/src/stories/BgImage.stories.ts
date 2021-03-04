@@ -2,7 +2,7 @@ import { Meta, Story } from '@storybook/angular/types-6-0';
 import { BgImageComponent } from '../app/bg-image/bg-image.component';
 
 export default {
-  title: 'Example/BgImage',
+  title: 'Page/BgImage',
   component: BgImageComponent,
   argTypes: {
     backgroundColor: { control: 'color' },
