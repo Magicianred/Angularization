@@ -18,7 +18,7 @@ const routes: Routes = [
   { path: 'angularization/vscode', component: VsCodeComponent },
   { path: 'angularization/vtdd', component: VtddAngularComponent },
   { path: 'contact', component: ContactComponent },
-  { path: '**', component: HomeComponent },
+  { path: '**', redirectTo: '/', pathMatch: 'full' },
 ];
 
 @NgModule({

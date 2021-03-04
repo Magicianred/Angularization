@@ -32,7 +32,7 @@ import { VsCodeComponent } from 'src/app/articles/angularization/vs-code/vs-code
 import { ContactComponent } from 'src/app/articles/contact/contact.component';
 
 export default {
-  title: 'Example/App',
+  title: 'Page/App',
   component: AppComponent,
   decorators: [
     moduleMetadata({
