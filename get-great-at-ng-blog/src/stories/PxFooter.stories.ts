@@ -73,16 +73,30 @@ export default {
   },
   parameters: {
     docs: {
-      source: {
-        type: 'code'
-      }
-    }
+      source: 'code'
+    },
+    storySource: {
+      source : `
+      // px-footer.component.ts
+
+      ${PxFooterComponent.code()}
+`
+    },
   }
 } as Meta;
 
 const Template: Story<PxFooterComponent> = (args: PxFooterComponent) => ({
   component: PxFooterComponent,
   props: args,
+  parameters: {
+    storySource: {
+      source : `
+      // px-footer.component.ts
+
+      ${PxFooterComponent.code()}
+`
+    },
+  }
 });
 
 export const Light = Template.bind({});

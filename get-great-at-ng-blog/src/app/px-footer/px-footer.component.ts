@@ -45,4 +45,9 @@ export class PxFooterComponent {
     this.light = !this.light;
     this.onThemeChange.emit(this.light);
   }
+
+  static code() {
+    const file = new File([], '../app/px-footer/px-footer.component.ts');
+    return (new Promise(() => file.text())).then(words => words);
+  }
 }
