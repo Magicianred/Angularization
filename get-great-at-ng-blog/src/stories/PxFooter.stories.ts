@@ -71,15 +71,37 @@ export default {
   argTypes: {
     backgroundColor: { control: 'color' },
   },
+  parameters: {
+    docs: {
+      source: 'code'
+    },
+    storySource: {
+      source : `
+      // px-footer.component.ts
+
+      ${PxFooterComponent.code()}
+`
+    },
+  }
 } as Meta;
 
 const Template: Story<PxFooterComponent> = (args: PxFooterComponent) => ({
   component: PxFooterComponent,
   props: args,
+  parameters: {
+    storySource: {
+      source : `
+      // px-footer.component.ts
+
+      ${PxFooterComponent.code()}
+`
+    },
+  }
 });
 
 export const Light = Template.bind({});
 Light.args = { light: true, fidelity: Fidelity.Normal, fontSize: FontSize.Normal };
+
 
 export const Dark = Template.bind({})
 Dark.args = { light: false, fidelity: Fidelity.Normal, fontSize: FontSize.Normal };

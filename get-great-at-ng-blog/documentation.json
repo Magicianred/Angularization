@@ -578,7 +578,7 @@
         },
         {
             "name": "DemoTextComponent",
-            "id": "component-DemoTextComponent-ceef59f2623d91b65c2e6051a72897ba",
+            "id": "component-DemoTextComponent-58ab4e1cb2a22025f5341699b253f1b1",
             "file": "src/app/demo-text/demo-text.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -597,13 +597,13 @@
             "inputsClass": [
                 {
                     "name": "backgroundColor",
-                    "line": 10,
+                    "line": 16,
                     "type": "string"
                 },
                 {
                     "name": "light",
                     "defaultValue": "false",
-                    "line": 9
+                    "line": 15
                 }
             ],
             "outputsClass": [],
@@ -614,11 +614,11 @@
             "description": "",
             "rawdescription": "",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'demo-text',\r\n  templateUrl: './demo-text.component.html',\r\n  styleUrls: ['./demo-text.component.scss']\r\n})\r\nexport class DemoTextComponent {\r\n  @Input() light = false;\r\n  @Input() backgroundColor?: string;\r\n\r\n  public get classes(): string[] {\r\n    const mode = this.light ? 'demo-text--light' : 'demo-text--dark';\r\n\r\n    return [mode];\r\n  }\r\n\r\n}\r\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\nimport { AboutComponent } from '../articles/about/about.component';\r\nimport { IndexComponent } from '../articles/angularization/index/index.component';\r\nimport { NvmComponent } from '../articles/angularization/nvm/nvm.component';\r\nimport { VsCodeComponent } from '../articles/angularization/vs-code/vs-code.component';\r\nimport { VtddAngularComponent } from '../articles/angularization/vtdd-angular/vtdd-angular.component';\r\nimport { ContactComponent } from '../articles/contact/contact.component';\r\n\r\n@Component({\r\n  selector: 'demo-text',\r\n  templateUrl: './demo-text.component.html',\r\n  styleUrls: ['./demo-text.component.scss']\r\n})\r\nexport class DemoTextComponent {\r\n  @Input() light = false;\r\n  @Input() backgroundColor?: string;\r\n\r\n  public get classes(): string[] {\r\n    const mode = this.light ? 'demo-text--light' : 'demo-text--dark';\r\n\r\n    return [mode];\r\n  }\r\n\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "h1, h2, h3, h4, p { color: #000 !important; }\r\n\r\n* { width: 100%;}\r\n",
+                    "data": "h1, h2, h3, h4, p { color: #000 !important; }\r\n\r\n* { width: 99%; margin: 0;}\r\n",
                     "styleUrl": "./demo-text.component.scss"
                 }
             ],
@@ -630,11 +630,11 @@
                         "name": "classes",
                         "type": "[]",
                         "returnType": "string[]",
-                        "line": 12
+                        "line": 18
                     }
                 }
             },
-            "templateData": "<div\r\n  [ngClass]=\"classes\"\r\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n  ngDefaultControl [ngModel]=\"light\"\r\n>\r\n<br>\r\n<br>\r\n<h1 style=\"text-align: center;\">Lo-Fi Mode</h1>\r\n<br>\r\n<br>\r\n<hr>\r\n<br>\r\n<h2 >About</h2>\r\n<br>\r\n<hr>\r\n<p>\r\n  <b>Forzen<span>.</span>io</b> provides <em>Zenful</em> visual test-driven, component-driven design systems, development processes, and web applications using Angular (TBD React and Vue) and <a href=\"https://storybook.js.org/\"></a>Storybook.js.\r\n  <br>\r\n  <br>\r\n   We strive to alleviate the ever prevalent angst of front-end engineering and mitigated it through throrough research and full guides to <a routerLink=\"/angularization\">Angularization</a> processes.\r\n</p>\r\n  <br>\r\n  <br>\r\n\r\n<div\r\n[ngClass]=\"classes\"\r\n[ngStyle]=\"{ 'background-color': backgroundColor }\"\r\nngDefaultControl [ngModel]=\"light\"\r\n>\r\n<h2>Angularization</h2>\r\n<hr>\r\n<p>\r\nAre you ready to get Angularized 📐?<br>\r\n<br> \r\nAngularization is a thoroughly-documented guide for visual test-driven, component-driven Angular and Storybook development-process maintained on <a href=\"https://github.com/pjnalls/Angularization\">GitHub</a>.<br>\r\n<br>\r\nBelow are some articles to help you get started:\r\n\r\n</p>\r\n\r\n<ul>\r\n<li><a routerLink=\"/angularization/nvm\">\"<em>NVM</em> not NPM\"</a></li>\r\n<li><a routerLink=\"/angularization/vscode\" aria-disabled=\"true\">Visual Studio Code (Writing-in-Progress)</a></li>\r\n<li><a routerLink=\"/angularization/vtdd\" aria-disabled=\"true\">Visual TDD with Angular and Storybook (Writing-in-Progress) </a></li>\r\n</ul>\r\n\r\n<p>\r\nPlease note that the documenation is currently still being written but you can check the living guide on <a href=\"https://github.com/pjnalls/Angularization\">the Angularization GitHub repository</a>\r\n</p>\r\n<br>\r\n<br>\r\n</div>\r\n<br>\r\n<br>\r\n<h2>\"NVM not NPM\" ❓</h2>\r\n<br>\r\n<hr>\r\n<h3>What is an \"NVM\"?</h3>\r\n<p>\r\nNVM stands for Node Version Manager. Essentially, it is a system utility for installing, using, and managing multiple versions of Node.js.\r\n</p>\r\n<p>\r\nBelow is a NVM-Windows example when using a Bash (Git Bash, more specifically) shell:\r\n</p>\r\n\r\n<p>\r\n$ nvm list<br><br>\r\n  \r\n    15.8.0<br>\r\n  * 14.15.5 (Currently using 64-bit executable)<br><br>\r\n\r\n$ node -v<br>\r\nv14.15.5<br><br>\r\n\r\n$ nvm use 15.8.0<br>\r\nNow using node v15.8.0 (64-bit)<br><br>\r\n\r\n$ node -v<br>\r\nv15.8.0<br><br>\r\n\r\n$\r\n\r\n</p>\r\n\r\n<p>\r\nAs you can see above, we're able to switch versions of node with a simple nvm use command.\r\n</p>\r\n\r\n\r\n<h3>Why an NVM?</h3>\r\n<p> you work on multiple Node.js projects at any point, simultaneously or sequentially, it would behoove you not to have more than one version of Node.js on your machine — especially if you maintain any number of legacy and modern applications at an enterprise.</p>\r\n\r\n<p>\r\nLet's put this in perspective: at the time of writing this sub-section of Angularization (February 15, 2021), Node.js was initially released 11+ years ago (May 27, 2009) — soon to be 12 years ago. Since that time, there's been 500+ versions released for Node.js.</p>\r\n\r\n<p>\r\nTherefore, invest some time into researching and using a reliable type of NVM, since at some point — if not now or in the past — you'll most likely need it as Node.js development progresses.\r\n</p>\r\n\r\n<p>\r\nI'll be using NVM-Windows, but you can check the \"NVM Alternatives\" sub-section for other popular NVM projects.\r\n</p>\r\n\r\n<h3>How to Install NVM</h3>\r\n<p>\r\nAs mentioned in the previous sub-section, I and another developer used NVM-Windows for our Node version manager during our initial Angular 11+ session, and I have been using it since Summer 2016 (if I remember correctly).</p>\r\n\r\n<p>\r\nNeedless to say, I haven't had any troubles with it on a Windows machine.\r\n</p>\r\n\r\n<p>\r\n\r\nFollow the set of instructions in the \"Installation & Upgrades\" sections in the README found here on GitHub.\r\n</p>\r\n<p>\r\n\r\nWARNING: Make sure you read the PREREQUISITE part for uninstalling existing Node.js & NPM installations.\r\n</p>\r\n<p>\r\n\r\nAlso be sure to read the second paragraph about global module conflicts and backing up any global npmrc configurations.\r\n</p>\r\n<p>\r\n...\r\n</p>\r\n<p>\r\nDone? Okay... now — time to put nvm to use.\r\n</p>\r\n\r\n<h3>How to Use NVM</h3>\r\n<p>\r\nNVMs' commands vary due to different implementations so check your preferred NVM's documentation for details.\r\n</p>\r\n<p>\r\n\r\n\r\nFor NVM-Windows, refer to the https://github.com/coreybutler/nvm-windows#usage page and section full description of all the commands.\r\n</p>\r\n\r\n<br>\r\n<br>\r\n<h2 style=\"text-align: center;\">Visual Studio Code <br> (Writing-in-Progress)</h2>\r\n<br>\r\n<hr>\r\n<br>\r\n\r\n<br>\r\n<br>\r\n<h2 style=\"text-align: center;\">Visual TDD with Angular and Storybook <br>(Writing-in-Progress)</h2>\r\n<br>\r\n<hr>\r\n<br>\r\n\r\n<p style=\"text-align: right\"> — <a href=\"https://pjnalls.com\">@pjnalls</a></p>\r\n</div>\r\n\r\n\r\n\r\n"
+            "templateData": "<div\r\n  [ngClass]=\"classes\"\r\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n  ngDefaultControl [ngModel]=\"light\"\r\n>\r\n<br>\r\n<br>\r\n<h1 style=\"text-align: center;\">Lo-Fi Mode</h1>\r\n<br>\r\n<br>\r\n<hr>\r\n<br>\r\n<app-about></app-about>\r\n<br>\r\n<br>\r\n<app-index></app-index>\r\n<br>\r\n<br>\r\n<app-nvm></app-nvm>\r\n<br>\r\n<br>\r\n<app-vs-code></app-vs-code>\r\n<br>\r\n<br>\r\n<app-vtdd-angular></app-vtdd-angular>\r\n<br>\r\n<br>\r\n<app-contact></app-contact>\r\n<br>\r\n<br>\r\n<p style=\"text-align: right\"> — <a href=\"https://pjnalls.com\">@pjnalls</a></p>\r\n</div>\r\n"
         },
         {
             "name": "DocumentComponent",
@@ -1439,14 +1439,14 @@
         },
         {
             "name": "LoFiComponent",
-            "id": "component-LoFiComponent-2e721d4a2170925f975cbe4317ed699e",
+            "id": "component-LoFiComponent-53b4a7e5de4b8e99647409286ab8298b",
             "file": "src/app/lo-fi/lo-fi.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
             "providers": [],
-            "selector": "app-lo-fi",
+            "selector": "lo-fi",
             "styleUrls": [
                 "./lo-fi.component.scss"
             ],
@@ -1457,20 +1457,9 @@
             "viewProviders": [],
             "inputsClass": [
                 {
-                    "name": "backgroundColor",
-                    "line": 10,
-                    "type": "string",
-                    "inheritance": {
-                        "file": "DemoTextComponent"
-                    }
-                },
-                {
                     "name": "light",
                     "defaultValue": "false",
-                    "line": 9,
-                    "inheritance": {
-                        "file": "DemoTextComponent"
-                    }
+                    "line": 11
                 }
             ],
             "outputsClass": [],
@@ -1481,7 +1470,7 @@
             "description": "",
             "rawdescription": "",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\r\nimport { DemoTextComponent } from '../demo-text/demo-text.component';\r\n\r\n@Component({\r\n  selector: 'app-lo-fi',\r\n  templateUrl: './lo-fi.component.html',\r\n  styleUrls: ['./lo-fi.component.scss']\r\n})\r\nexport class LoFiComponent extends DemoTextComponent { }\r\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\nimport { DemoTextComponent } from '../demo-text/demo-text.component';\r\nimport {  AboutComponent  } from '../articles/about/about.component';\r\n\r\n@Component({\r\n  selector: 'lo-fi',\r\n  templateUrl: './lo-fi.component.html',\r\n  styleUrls: ['./lo-fi.component.scss']\r\n})\r\nexport class LoFiComponent { \r\n  @Input() light = false;\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -1490,8 +1479,7 @@
                 }
             ],
             "stylesData": "",
-            "extends": "DemoTextComponent",
-            "templateData": "\r\n"
+            "templateData": "<div\r\n  ngDefaultControl [ngModel]=\"light\"\r\n>\r\n<app-about [light]=\"light\"></app-about>\r\n\r\n</div>"
         },
         {
             "name": "NavbarComponent",
@@ -1893,7 +1881,7 @@
         },
         {
             "name": "PageComponent",
-            "id": "component-PageComponent-8ca181c99fb3538a50d67104f9563c39",
+            "id": "component-PageComponent-075318236390cc35b047238dd4a70ac2",
             "file": "src/app/page/page.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -1916,24 +1904,24 @@
             "inputsClass": [
                 {
                     "name": "backgroundColor",
-                    "line": 25,
+                    "line": 26,
                     "type": "string"
                 },
                 {
                     "name": "brand",
                     "defaultValue": "''",
-                    "line": 23
+                    "line": 24
                 },
                 {
                     "name": "fidelity",
                     "defaultValue": "Fidelity.Normal",
-                    "line": 24,
+                    "line": 25,
                     "type": "Fidelity"
                 },
                 {
                     "name": "navItems",
                     "defaultValue": "[{name: '', route: ''}]",
-                    "line": 26
+                    "line": 27
                 },
                 {
                     "name": "fidelity",
@@ -1969,7 +1957,7 @@
                     "type": "Router",
                     "optional": false,
                     "description": "",
-                    "line": 34,
+                    "line": 35,
                     "modifierKind": [
                         114
                     ]
@@ -1997,7 +1985,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 36,
+                    "line": 37,
                     "jsdoctags": [
                         {
                             "name": "light",
@@ -2089,7 +2077,7 @@
             "description": "",
             "rawdescription": "",
             "type": "component",
-            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\r\nimport { NavbarComponent } from 'src/app/navbar/navbar.component';\r\nimport { PxFooterComponent } from 'src/app/px-footer/px-footer.component';\r\nimport { BgImageComponent } from 'src/app/bg-image/bg-image.component';\r\nimport { FontSizeComponent } from 'src/app/px-footer/font-size/font-size.component';\r\nimport { QualityComponent } from 'src/app/px-footer/quality/quality.component';\r\nimport { ThemeButtonComponent } from 'src/app/px-footer/theme-button/theme-button.component';\r\nimport { DemoTextComponent } from 'src/app/demo-text/demo-text.component';\r\nimport { FontSize } from 'src/app/px-footer/font-size/font-size.enum';\r\nimport { Fidelity } from 'src/app/px-footer/quality/fidelity.enum';\r\nimport { ThemeChangeComponent } from 'src/app/theme-change/theme-change.component';\r\nimport { DocumentComponent } from 'src/app/page/document/document.component';\r\nimport { LightService } from '../articles/light.service';\r\nimport { Router } from '@angular/router'\r\n\r\n@Component({\r\n  selector: 'page',\r\n  templateUrl: './page.component.html',\r\n  providers: [LightService],\r\n  styleUrls: ['./page.component.scss'],\r\n})\r\nexport default class PageComponent extends ThemeChangeComponent {\r\n  @Input() brand = '';\r\n  @Input() fidelity: Fidelity = Fidelity.Normal;\r\n  @Input() backgroundColor?: string;\r\n  @Input() navItems = [{name: '', route: ''}];;\r\n\r\n  public get classes(): string[] {\r\n    const mode = this.light ? 'page--light' : 'page--dark';\r\n\r\n    return ['page', mode];\r\n  }\r\n\r\n  constructor(public router: Router) { super() }\r\n\r\n  changeTheme(light: boolean) { \r\n    this.light = light;\r\n  }\r\n}\r\n",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\r\nimport { NavbarComponent } from 'src/app/navbar/navbar.component';\r\nimport { PxFooterComponent } from 'src/app/px-footer/px-footer.component';\r\nimport { BgImageComponent } from 'src/app/bg-image/bg-image.component';\r\nimport { FontSizeComponent } from 'src/app/px-footer/font-size/font-size.component';\r\nimport { QualityComponent } from 'src/app/px-footer/quality/quality.component';\r\nimport { ThemeButtonComponent } from 'src/app/px-footer/theme-button/theme-button.component';\r\nimport { DemoTextComponent } from 'src/app/demo-text/demo-text.component';\r\nimport { FontSize } from 'src/app/px-footer/font-size/font-size.enum';\r\nimport { Fidelity } from 'src/app/px-footer/quality/fidelity.enum';\r\nimport { ThemeChangeComponent } from 'src/app/theme-change/theme-change.component';\r\nimport { LoFiComponent } from 'src/app/lo-fi/lo-fi.component';\r\nimport { DocumentComponent } from 'src/app/page/document/document.component';\r\nimport { LightService } from '../articles/light.service';\r\nimport { Router } from '@angular/router'\r\n\r\n@Component({\r\n  selector: 'page',\r\n  templateUrl: './page.component.html',\r\n  providers: [LightService],\r\n  styleUrls: ['./page.component.scss'],\r\n})\r\nexport default class PageComponent extends ThemeChangeComponent {\r\n  @Input() brand = '';\r\n  @Input() fidelity: Fidelity = Fidelity.Normal;\r\n  @Input() backgroundColor?: string;\r\n  @Input() navItems = [{name: '', route: ''}];;\r\n\r\n  public get classes(): string[] {\r\n    const mode = this.light ? 'page--light' : 'page--dark';\r\n\r\n    return ['page', mode];\r\n  }\r\n\r\n  constructor(public router: Router) { super() }\r\n\r\n  changeTheme(light: boolean) { \r\n    this.light = light;\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -2107,7 +2095,7 @@
                         "type": "Router"
                     }
                 ],
-                "line": 32,
+                "line": 33,
                 "jsdoctags": [
                     {
                         "name": "router",
@@ -2126,15 +2114,15 @@
                         "name": "classes",
                         "type": "[]",
                         "returnType": "string[]",
-                        "line": 28
+                        "line": 29
                     }
                 }
             },
-            "templateData": "<div \r\n  [ngClass]=\"{'small-size': fontSize === -1, 'normal-size': fontSize === 0, 'large-size': fontSize === 1, 'light': light, 'dark': !light}\"\r\n  ngDefaultControl [ngModel]=\"light\" \r\n  ngDefaultControl [ngModel]=\"brand\"\r\n  ngDefaultControl [ngModel]=\"fontSize\"\r\n  ngDefaultControl [ngModel]=\"fidelity\" \r\n  ngDefaultControl [ngModel]=\"navItems\">\r\n  <navbar \r\n    [brand]=\"brand\"\r\n    [light]=\"light\"\r\n    [navItems]=\"navItems\"\r\n    [ngClass]=\"classes\" \r\n    [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n  >\r\n  </navbar>\r\n  <div *ngIf=\"show; then thenBlock; else elseBlock\"></div>\r\n  <ng-template \r\n    #thenBlock>\r\n    <bg-image\r\n      [light]=\"light\"\r\n      [ngClass]=\"classes\" \r\n      [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n      #thenBlock>\r\n    </bg-image>\r\n    <br>\r\n    <br>\r\n    <br>\r\n    <router-outlet\r\n    >\r\n    </router-outlet>\r\n    <br>\r\n    <br>\r\n    <br>\r\n  </ng-template>\r\n  <ng-template #elseBlock>\r\n    <br>\r\n    <br>\r\n    <br>\r\n    <demo-text [light]=\"true\"></demo-text>\r\n    <br>\r\n    <br>\r\n    <br>\r\n  </ng-template>\r\n  \r\n  <px-footer \r\n  (onThemeChange)=\"changeTheme($event)\"\r\n  (onFontSizeChange)=\"changeFontSize($event)\"\r\n  (onFidelityChange)=\"changeFidelity($event)\"\r\n  [light]=\"light\"\r\n  [fontSize]=\"fontSize\"\r\n  [fidelity]=\"fidelity\"\r\n  [ngClass]=\"classes\" \r\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n>\r\n</px-footer>\r\n</div>\r\n\r\n"
+            "templateData": "<div \r\n  [ngClass]=\"{'small-size': fontSize === -1, 'normal-size': fontSize === 0, 'large-size': fontSize === 1, 'light': light, 'dark': !light}\"\r\n  ngDefaultControl [ngModel]=\"light\" \r\n  ngDefaultControl [ngModel]=\"brand\"\r\n  ngDefaultControl [ngModel]=\"fontSize\"\r\n  ngDefaultControl [ngModel]=\"fidelity\" \r\n  ngDefaultControl [ngModel]=\"navItems\">\r\n  <navbar \r\n    [brand]=\"brand\"\r\n    [light]=\"light\"\r\n    [navItems]=\"navItems\"\r\n    [ngClass]=\"classes\" \r\n    [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n  >\r\n  </navbar>\r\n  <div *ngIf=\"show; then thenBlock; else elseBlock\"></div>\r\n  <ng-template \r\n    #thenBlock>\r\n    <bg-image\r\n      [light]=\"light\"\r\n      [ngClass]=\"classes\" \r\n      [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n      #thenBlock>\r\n    </bg-image>\r\n    <br>\r\n    <br>\r\n    <br>\r\n    <router-outlet\r\n    >\r\n    </router-outlet>\r\n    <br>\r\n    <br>\r\n    <br>\r\n  </ng-template>\r\n  <ng-template #elseBlock>\r\n    <br>\r\n    <br>\r\n    <br>\r\n    <demo-text [light]=\"light\"></demo-text>\r\n    <!-- TODO: seperate compsite component from article content \r\n      <lo-fi [light]=\"light\"></lo-fi>\r\n    -->\r\n    <br>\r\n    <br>\r\n    <br>\r\n  </ng-template>\r\n  \r\n  <px-footer \r\n  (onThemeChange)=\"changeTheme($event)\"\r\n  (onFontSizeChange)=\"changeFontSize($event)\"\r\n  (onFidelityChange)=\"changeFidelity($event)\"\r\n  [light]=\"light\"\r\n  [fontSize]=\"fontSize\"\r\n  [fidelity]=\"fidelity\"\r\n  [ngClass]=\"classes\" \r\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n>\r\n</px-footer>\r\n</div>\r\n\r\n"
         },
         {
             "name": "PxFooterComponent",
-            "id": "component-PxFooterComponent-4ede756796d3168113930860ee64b53f",
+            "id": "component-PxFooterComponent-9272b3c02a3bd17703103578721cb4d9",
             "file": "src/app/px-footer/px-footer.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -2241,6 +2229,17 @@
                     ]
                 },
                 {
+                    "name": "code",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "any",
+                    "typeParameters": [],
+                    "line": 49,
+                    "modifierKind": [
+                        115
+                    ]
+                },
+                {
                     "name": "toggleTheme",
                     "args": [],
                     "optional": false,
@@ -2254,7 +2253,7 @@
             "description": "",
             "rawdescription": "",
             "type": "component",
-            "sourceCode": "import { Component, EventEmitter, Input, Output, ViewChild } from '@angular/core';\r\nimport { FontSizeComponent } from './font-size/font-size.component';\r\nimport { QualityComponent } from './quality/quality.component';\r\nimport { ThemeButtonComponent } from './theme-button/theme-button.component';\r\nimport { Router } from '@angular/router';\r\nimport { FontSize } from './font-size/font-size.enum';\r\nimport { Fidelity } from './quality/fidelity.enum';\r\n\r\n@Component({\r\n  selector: 'px-footer',\r\n  templateUrl: './px-footer.component.html',\r\n  styleUrls: ['./px-footer.component.scss']\r\n})\r\nexport class PxFooterComponent {\r\n  \r\n  constructor(private router: Router) { }\r\n\r\n  @Input() light = false;\r\n  @Input() fidelity: Fidelity = Fidelity.Normal;\r\n  @Input() fontSize: FontSize = FontSize.Normal;\r\n  @Input() backgroundColor?: string;\r\n\r\n  @Output() onThemeChange = new EventEmitter<boolean>();\r\n  @Output() onFontSizeChange = new EventEmitter<FontSize>();\r\n  @Output() onFidelityChange = new EventEmitter<Fidelity>();\r\n\r\n\r\n  public get classes(): string[] {\r\n    const mode = this.light ? 'footer--light' : 'footer--dark';\r\n\r\n    return ['footer', mode];\r\n  }\r\n\r\n  changeFontSize(s: FontSize) { \r\n    this.fontSize = s;\r\n    this.onFontSizeChange.emit(this.fontSize);\r\n  }\r\n\r\n  changeFidelity(fi: Fidelity) {\r\n    this.fidelity = fi;\r\n    this.onFidelityChange.emit(this.fidelity);\r\n  }\r\n\r\n  toggleTheme() { \r\n    this.light = !this.light;\r\n    this.onThemeChange.emit(this.light);\r\n  }\r\n}\r\n",
+            "sourceCode": "import { Component, EventEmitter, Input, Output, ViewChild } from '@angular/core';\r\nimport { FontSizeComponent } from './font-size/font-size.component';\r\nimport { QualityComponent } from './quality/quality.component';\r\nimport { ThemeButtonComponent } from './theme-button/theme-button.component';\r\nimport { Router } from '@angular/router';\r\nimport { FontSize } from './font-size/font-size.enum';\r\nimport { Fidelity } from './quality/fidelity.enum';\r\n\r\n@Component({\r\n  selector: 'px-footer',\r\n  templateUrl: './px-footer.component.html',\r\n  styleUrls: ['./px-footer.component.scss']\r\n})\r\nexport class PxFooterComponent {\r\n  \r\n  constructor(private router: Router) { }\r\n\r\n  @Input() light = false;\r\n  @Input() fidelity: Fidelity = Fidelity.Normal;\r\n  @Input() fontSize: FontSize = FontSize.Normal;\r\n  @Input() backgroundColor?: string;\r\n\r\n  @Output() onThemeChange = new EventEmitter<boolean>();\r\n  @Output() onFontSizeChange = new EventEmitter<FontSize>();\r\n  @Output() onFidelityChange = new EventEmitter<Fidelity>();\r\n\r\n\r\n  public get classes(): string[] {\r\n    const mode = this.light ? 'footer--light' : 'footer--dark';\r\n\r\n    return ['footer', mode];\r\n  }\r\n\r\n  changeFontSize(s: FontSize) { \r\n    this.fontSize = s;\r\n    this.onFontSizeChange.emit(this.fontSize);\r\n  }\r\n\r\n  changeFidelity(fi: Fidelity) {\r\n    this.fidelity = fi;\r\n    this.onFidelityChange.emit(this.fidelity);\r\n  }\r\n\r\n  toggleTheme() { \r\n    this.light = !this.light;\r\n    this.onThemeChange.emit(this.light);\r\n  }\r\n\r\n  static code() {\r\n    const file = new File([], '../app/px-footer/px-footer.component.ts');\r\n    return (new Promise(() => file.text())).then(words => words);\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -3232,7 +3231,7 @@
                 "name": "Dark",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Quality.stories.ts",
+                "file": "src/stories/ThemeButton.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -3240,7 +3239,7 @@
                 "name": "Dark",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/ThemeButton.stories.ts",
+                "file": "src/stories/Quality.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -3320,7 +3319,7 @@
                 "name": "Light",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Quality.stories.ts",
+                "file": "src/stories/ThemeButton.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -3328,7 +3327,7 @@
                 "name": "Light",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/ThemeButton.stories.ts",
+                "file": "src/stories/Quality.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -3409,15 +3408,7 @@
                 "subtype": "variable",
                 "file": "src/stories/PxFooter.stories.ts",
                 "type": "Story<PxFooterComponent>",
-                "defaultValue": "(args: PxFooterComponent) => ({\r\n  component: PxFooterComponent,\r\n  props: args,\r\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Quality.stories.ts",
-                "type": "Story<QualityComponent>",
-                "defaultValue": "(args: QualityComponent) => ({\r\n  component: QualityComponent,\r\n  props: args,\r\n})"
+                "defaultValue": "(args: PxFooterComponent) => ({\r\n  component: PxFooterComponent,\r\n  props: args,\r\n  parameters: {\r\n    storySource: {\r\n      source : `\r\n      // px-footer.component.ts\r\n\r\n      ${PxFooterComponent.code()}\r\n`\r\n    },\r\n  }\r\n})"
             },
             {
                 "name": "Template",
@@ -3426,6 +3417,14 @@
                 "file": "src/stories/ThemeButton.stories.ts",
                 "type": "Story<ThemeButtonComponent>",
                 "defaultValue": "(args: ThemeButtonComponent) => ({\r\n  component: ThemeButtonComponent,\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Quality.stories.ts",
+                "type": "Story<QualityComponent>",
+                "defaultValue": "(args: QualityComponent) => ({\r\n  component: QualityComponent,\r\n  props: args,\r\n})"
             }
         ],
         "functions": [],
@@ -3685,33 +3684,7 @@
                     "subtype": "variable",
                     "file": "src/stories/PxFooter.stories.ts",
                     "type": "Story<PxFooterComponent>",
-                    "defaultValue": "(args: PxFooterComponent) => ({\r\n  component: PxFooterComponent,\r\n  props: args,\r\n})"
-                }
-            ],
-            "src/stories/Quality.stories.ts": [
-                {
-                    "name": "Dark",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Quality.stories.ts",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Light",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Quality.stories.ts",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Quality.stories.ts",
-                    "type": "Story<QualityComponent>",
-                    "defaultValue": "(args: QualityComponent) => ({\r\n  component: QualityComponent,\r\n  props: args,\r\n})"
+                    "defaultValue": "(args: PxFooterComponent) => ({\r\n  component: PxFooterComponent,\r\n  props: args,\r\n  parameters: {\r\n    storySource: {\r\n      source : `\r\n      // px-footer.component.ts\r\n\r\n      ${PxFooterComponent.code()}\r\n`\r\n    },\r\n  }\r\n})"
                 }
             ],
             "src/stories/ThemeButton.stories.ts": [
@@ -3738,6 +3711,32 @@
                     "file": "src/stories/ThemeButton.stories.ts",
                     "type": "Story<ThemeButtonComponent>",
                     "defaultValue": "(args: ThemeButtonComponent) => ({\r\n  component: ThemeButtonComponent,\r\n  props: args,\r\n})"
+                }
+            ],
+            "src/stories/Quality.stories.ts": [
+                {
+                    "name": "Dark",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Quality.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Light",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Quality.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Quality.stories.ts",
+                    "type": "Story<QualityComponent>",
+                    "defaultValue": "(args: QualityComponent) => ({\r\n  component: QualityComponent,\r\n  props: args,\r\n})"
                 }
             ],
             "src/environments/environment.prod.ts": [
@@ -3990,7 +3989,7 @@
                 "linktype": "component",
                 "name": "LoFiComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/3",
+                "coverageCount": "0/2",
                 "status": "low"
             },
             {
@@ -4053,7 +4052,7 @@
                 "linktype": "component",
                 "name": "PxFooterComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/12",
+                "coverageCount": "0/13",
                 "status": "low"
             },
             {

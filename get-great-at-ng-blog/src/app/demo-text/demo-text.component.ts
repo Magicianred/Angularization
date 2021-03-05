@@ -1,4 +1,10 @@
 import { Component, Input } from '@angular/core';
+import { AboutComponent } from '../articles/about/about.component';
+import { IndexComponent } from '../articles/angularization/index/index.component';
+import { NvmComponent } from '../articles/angularization/nvm/nvm.component';
+import { VsCodeComponent } from '../articles/angularization/vs-code/vs-code.component';
+import { VtddAngularComponent } from '../articles/angularization/vtdd-angular/vtdd-angular.component';
+import { ContactComponent } from '../articles/contact/contact.component';
 
 @Component({
   selector: 'demo-text',

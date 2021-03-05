@@ -9,6 +9,7 @@ import { DemoTextComponent } from 'src/app/demo-text/demo-text.component';
 import { FontSize } from 'src/app/px-footer/font-size/font-size.enum';
 import { Fidelity } from 'src/app/px-footer/quality/fidelity.enum';
 import { ThemeChangeComponent } from 'src/app/theme-change/theme-change.component';
+import { LoFiComponent } from 'src/app/lo-fi/lo-fi.component';
 import { DocumentComponent } from 'src/app/page/document/document.component';
 import { LightService } from '../articles/light.service';
 import { Router } from '@angular/router'
