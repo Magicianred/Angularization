@@ -65,7 +65,14 @@ $ cd ../path/to/example/app/location/get-great-at-ng-blog
 If you don't have `yarn` installed, simply run the following `npm` command:
 
 ```
+$ yarn -v
+bash: yarn: command not found
+
 $ npm --global install yarn
+
+...
+
+$
 ```
 <br>
 
