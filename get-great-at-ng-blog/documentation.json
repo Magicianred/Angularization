@@ -634,7 +634,7 @@
                     }
                 }
             },
-            "templateData": "<div\r\n  [ngClass]=\"classes\"\r\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n  ngDefaultControl [ngModel]=\"light\"\r\n>\r\n<br>\r\n<br>\r\n<h1 style=\"text-align: center;\">Lo-Fi Mode</h1>\r\n<br>\r\n<br>\r\n<hr>\r\n<br>\r\n<app-about></app-about>\r\n<br>\r\n<br>\r\n<app-index></app-index>\r\n<br>\r\n<br>\r\n<app-nvm></app-nvm>\r\n<br>\r\n<br>\r\n<app-vs-code></app-vs-code>\r\n<br>\r\n<br>\r\n<app-vtdd-angular></app-vtdd-angular>\r\n<br>\r\n<br>\r\n<app-contact></app-contact>\r\n<br>\r\n<br>\r\n<p style=\"text-align: right\"> — <a href=\"https://pjnalls.com\">@pjnalls</a></p>\r\n</div>\r\n"
+            "templateData": "<div\r\n  [ngClass]=\"classes\"\r\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n  ngDefaultControl [ngModel]=\"light\"\r\n>\r\n  <br>\r\n  <br>\r\n  <h1 style=\"text-align: center;\">Lo-Fi Mode</h1>\r\n  <br>\r\n  <br>\r\n  <hr>\r\n  <app-about></app-about>\r\n  <app-index></app-index>\r\n  <app-nvm></app-nvm>\r\n  <app-vs-code></app-vs-code>\r\n  <app-vtdd-angular></app-vtdd-angular>\r\n  <app-contact></app-contact>\r\n</div>\r\n"
         },
         {
             "name": "DocumentComponent",
@@ -1877,7 +1877,7 @@
                     }
                 }
             },
-            "templateData": "\r\n\r\n<div\r\n  [ngClass]=\"classes\"\r\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n  ngDefaultControl [ngModel]=\"light\"\r\n>\r\n<h2>\"NVM not NPM\" ❓</h2>\r\n<hr>\r\n<h3>What is an \"NVM\"?</h3>\r\n<p>\r\nNVM stands for Node Version Manager. Essentially, it is a system utility for installing, using, and managing multiple versions of Node.js.\r\n</p>\r\n<p>\r\nBelow is a NVM-Windows example when using a Bash (Git Bash, more specifically) shell:\r\n</p>\r\n\r\n<p>\r\n$ nvm list<br><br>\r\n  \r\n    15.8.0<br>\r\n  * 14.15.5 (Currently using 64-bit executable)<br><br>\r\n\r\n$ node -v<br>\r\nv14.15.5<br><br>\r\n\r\n$ nvm use 15.8.0<br>\r\nNow using node v15.8.0 (64-bit)<br><br>\r\n\r\n$ node -v<br>\r\nv15.8.0<br><br>\r\n\r\n$\r\n\r\n</p>\r\n\r\n<p>\r\nAs you can see above, we're able to switch versions of node with a simple nvm use command.\r\n</p>\r\n\r\n\r\n<h3>Why an NVM?</h3>\r\n<p> you work on multiple Node.js projects at any point, simultaneously or sequentially, it would behoove you not to have more than one version of Node.js on your machine — especially if you maintain any number of legacy and modern applications at an enterprise.</p>\r\n\r\n<p>\r\nLet's put this in perspective: at the time of writing this sub-section of Angularization (February 15, 2021), Node.js was initially released 11+ years ago (May 27, 2009) — soon to be 12 years ago. Since that time, there's been 500+ versions released for Node.js.</p>\r\n\r\n<p>\r\nTherefore, invest some time into researching and using a reliable type of NVM, since at some point — if not now or in the past — you'll most likely need it as Node.js development progresses.\r\n</p>\r\n\r\n<p>\r\nI'll be using NVM-Windows, but you can check the \"NVM Alternatives\" sub-section for other popular NVM projects.\r\n</p>\r\n\r\n<h3>How to Install NVM</h3>\r\n<p>\r\nAs mentioned in the previous sub-section, I and another developer used NVM-Windows for our Node version manager during our initial Angular 11+ session, and I have been using it since Summer 2016 (if I remember correctly).</p>\r\n\r\n<p>\r\nNeedless to say, I haven't had any troubles with it on a Windows machine.\r\n</p>\r\n\r\n<p>\r\n\r\nFollow the set of instructions in the \"Installation & Upgrades\" sections in the README found here on GitHub.\r\n</p>\r\n<p>\r\n\r\nWARNING: Make sure you read the PREREQUISITE part for uninstalling existing Node.js & NPM installations.\r\n</p>\r\n<p>\r\n\r\nAlso be sure to read the second paragraph about global module conflicts and backing up any global npmrc configurations.\r\n</p>\r\n<p>\r\n...\r\n</p>\r\n<p>\r\nDone? Okay... now — time to put nvm to use.\r\n</p>\r\n\r\n<h3>How to Use NVM</h3>\r\n<p>\r\nNVMs' commands vary due to different implementations so check your preferred NVM's documentation for details.\r\n</p>\r\n<p>\r\n\r\n\r\nFor NVM-Windows, refer to the https://github.com/coreybutler/nvm-windows#usage page and section full description of all the commands.\r\n</p>\r\n\r\n<p style=\"text-align: right\"> — <a href=\"https://pjnalls.com\">@pjnalls</a></p>\r\n</div>\r\n\r\n"
+            "templateData": "\r\n\r\n<div\r\n  [ngClass]=\"classes\"\r\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n  ngDefaultControl [ngModel]=\"light\"\r\n>\r\n<h2>\"<em>NVM</em> not NPM\" ❓</h2>\r\n<hr>\r\n<h3>What is an \"NVM\"?</h3>\r\n<p>\r\nNVM stands for <strong><em>N</em>ode <em>V</em>ersion <em>M</em>anager</strong>. Essentially, it is a system utility for installing, using, and managing multiple versions of Node.js.\r\n</p>\r\n<p>\r\nBelow is a NVM-Windows example when using a Bash (Git Bash, more specifically) shell:\r\n</p>\r\n\r\n<div class=\"samp\">\r\n<samp>\r\n  <br>  \r\n  $ nvm list<br>\r\n  <br>\r\n  &nbsp;&nbsp;&nbsp;&nbsp;15.8.0<br>\r\n  &nbsp;&nbsp;* 14.15.5 (Currently using 64-bit executable)<br>\r\n  <br>\r\n  $ node -v<br>\r\n  v14.15.5<br>\r\n  <br>\r\n  $ nvm use 15.8.0<br>\r\n  Now using node v15.8.0 (64-bit)<br>\r\n  <br>\r\n  $ node -v<br>\r\n  v15.8.0<br>\r\n  <br>\r\n  $<br>\r\n  <br>\r\n</samp>\r\n</div>\r\n\r\n<p>\r\nAs you can see above, we're able to switch versions of <code>node</code> with a simple <code>nvm use</code> command.\r\n</p>\r\n\r\n\r\n<h3>Why an NVM?</h3>\r\n<p> you work on multiple Node.js projects at any point, simultaneously or sequentially, it would behoove you not to have more than one version of Node.js on your machine — especially if you maintain any number of legacy and modern applications at an enterprise.</p>\r\n\r\n<p>\r\nLet's put this in perspective: at the time of writing this sub-section of Angularization (February 15, 2021), Node.js was initially released 11+ years ago (May 27, 2009) — soon to be 12 years ago. Since that time, there's been 500+ versions released for Node.js.</p>\r\n\r\n<p>\r\nTherefore, invest some time into researching and using a reliable type of NVM, since at some point — if not now or in the past — you'll most likely need it as Node.js development progresses.\r\n</p>\r\n\r\n<p>\r\nI'll be using NVM-Windows, but you can check the \"NVM Alternatives\" sub-section for other popular NVM projects.\r\n</p>\r\n\r\n<h3>How to Install NVM</h3>\r\n<p>\r\nAs mentioned in the previous sub-section, I and another developer used NVM-Windows for our Node version manager during our initial Angular 11+ session, and I have been using it since Summer 2016 (if I remember correctly).</p>\r\n\r\n<p>\r\nNeedless to say, I haven't had any troubles with it on a Windows machine.\r\n</p>\r\n\r\n<p>\r\n\r\nFollow the set of instructions in the \"Installation & Upgrades\" sections in the README found here on GitHub.\r\n</p>\r\n<p>\r\n\r\nWARNING: Make sure you read the PREREQUISITE part for uninstalling existing Node.js & NPM installations.\r\n</p>\r\n<p>\r\n\r\nAlso be sure to read the second paragraph about global module conflicts and backing up any global npmrc configurations.\r\n</p>\r\n<p>\r\n...\r\n</p>\r\n<p>\r\nDone? Okay... now — time to put nvm to use.\r\n</p>\r\n\r\n<h3>How to Use NVM</h3>\r\n<p>\r\nNVMs' commands vary due to different implementations so check your preferred NVM's documentation for details.\r\n</p>\r\n<p>\r\n\r\n\r\nFor NVM-Windows, refer to the https://github.com/coreybutler/nvm-windows#usage page and section full description of all the commands.\r\n</p>\r\n\r\n<p style=\"text-align: right\"> — <a href=\"https://pjnalls.com\">@pjnalls</a></p>\r\n</div>\r\n\r\n"
         },
         {
             "name": "PageComponent",
@@ -3183,14 +3183,6 @@
                 "name": "Dark",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/BgImage.stories.ts",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Dark",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/stories/FontSize.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
@@ -3199,7 +3191,7 @@
                 "name": "Dark",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Navbar.stories.ts",
+                "file": "src/stories/BgImage.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -3215,7 +3207,23 @@
                 "name": "Dark",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/Navbar.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Dark",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/NavItem.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Dark",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Quality.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -3232,14 +3240,6 @@
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/stories/ThemeButton.stories.ts",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Dark",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Quality.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -3271,14 +3271,6 @@
                 "name": "Light",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/BgImage.stories.ts",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Light",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/stories/FontSize.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
@@ -3287,7 +3279,7 @@
                 "name": "Light",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Navbar.stories.ts",
+                "file": "src/stories/BgImage.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -3303,7 +3295,23 @@
                 "name": "Light",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/Navbar.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Light",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/NavItem.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Light",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Quality.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -3320,14 +3328,6 @@
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/stories/ThemeButton.stories.ts",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Light",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Quality.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -3366,14 +3366,6 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/BgImage.stories.ts",
-                "type": "Story<BgImageComponent>",
-                "defaultValue": "(args: BgImageComponent) => ({\r\n  component: BgImageComponent,\r\n  props: args,\r\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/stories/FontSize.stories.ts",
                 "type": "Story<FontSizeComponent>",
                 "defaultValue": "(args: FontSizeComponent) => ({\r\n  component: FontSizeComponent,\r\n  props: args,\r\n})"
@@ -3382,9 +3374,9 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Navbar.stories.ts",
-                "type": "Story<NavbarComponent>",
-                "defaultValue": "(args: NavbarComponent) => ({\r\n  component: NavbarComponent,\r\n  props: args,\r\n})"
+                "file": "src/stories/BgImage.stories.ts",
+                "type": "Story<BgImageComponent>",
+                "defaultValue": "(args: BgImageComponent) => ({\r\n  component: BgImageComponent,\r\n  props: args,\r\n})"
             },
             {
                 "name": "Template",
@@ -3398,9 +3390,25 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/Navbar.stories.ts",
+                "type": "Story<NavbarComponent>",
+                "defaultValue": "(args: NavbarComponent) => ({\r\n  component: NavbarComponent,\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/NavItem.stories.ts",
                 "type": "Story<NavItemComponent>",
                 "defaultValue": "(args: NavItemComponent) => ({\r\n  component: NavItemComponent,\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Quality.stories.ts",
+                "type": "Story<QualityComponent>",
+                "defaultValue": "(args: QualityComponent) => ({\r\n  component: QualityComponent,\r\n  props: args,\r\n})"
             },
             {
                 "name": "Template",
@@ -3417,14 +3425,6 @@
                 "file": "src/stories/ThemeButton.stories.ts",
                 "type": "Story<ThemeButtonComponent>",
                 "defaultValue": "(args: ThemeButtonComponent) => ({\r\n  component: ThemeButtonComponent,\r\n  props: args,\r\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Quality.stories.ts",
-                "type": "Story<QualityComponent>",
-                "defaultValue": "(args: QualityComponent) => ({\r\n  component: QualityComponent,\r\n  props: args,\r\n})"
             }
         ],
         "functions": [],
@@ -3523,6 +3523,32 @@
                     "defaultValue": "(args: AppComponent) => ({\r\n  component: AppComponent,\r\n  props: args,\r\n})"
                 }
             ],
+            "src/stories/FontSize.stories.ts": [
+                {
+                    "name": "Dark",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/FontSize.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Light",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/FontSize.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/FontSize.stories.ts",
+                    "type": "Story<FontSizeComponent>",
+                    "defaultValue": "(args: FontSizeComponent) => ({\r\n  component: FontSizeComponent,\r\n  props: args,\r\n})"
+                }
+            ],
             "src/stories/BgImage.stories.ts": [
                 {
                     "name": "Dark",
@@ -3549,12 +3575,12 @@
                     "defaultValue": "(args: BgImageComponent) => ({\r\n  component: BgImageComponent,\r\n  props: args,\r\n})"
                 }
             ],
-            "src/stories/FontSize.stories.ts": [
+            "src/stories/NavBrand.stories.ts": [
                 {
                     "name": "Dark",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/FontSize.stories.ts",
+                    "file": "src/stories/NavBrand.stories.ts",
                     "type": "",
                     "defaultValue": "Template.bind({})"
                 },
@@ -3562,7 +3588,7 @@
                     "name": "Light",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/FontSize.stories.ts",
+                    "file": "src/stories/NavBrand.stories.ts",
                     "type": "",
                     "defaultValue": "Template.bind({})"
                 },
@@ -3570,9 +3596,9 @@
                     "name": "Template",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/FontSize.stories.ts",
-                    "type": "Story<FontSizeComponent>",
-                    "defaultValue": "(args: FontSizeComponent) => ({\r\n  component: FontSizeComponent,\r\n  props: args,\r\n})"
+                    "file": "src/stories/NavBrand.stories.ts",
+                    "type": "Story<NavBrandComponent>",
+                    "defaultValue": "(args: NavBrandComponent) => ({\r\n  component: NavBrandComponent,\r\n  props: args,\r\n})"
                 }
             ],
             "src/stories/Navbar.stories.ts": [
@@ -3609,32 +3635,6 @@
                     "defaultValue": "(args: NavbarComponent) => ({\r\n  component: NavbarComponent,\r\n  props: args,\r\n})"
                 }
             ],
-            "src/stories/NavBrand.stories.ts": [
-                {
-                    "name": "Dark",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/NavBrand.stories.ts",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Light",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/NavBrand.stories.ts",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/NavBrand.stories.ts",
-                    "type": "Story<NavBrandComponent>",
-                    "defaultValue": "(args: NavBrandComponent) => ({\r\n  component: NavBrandComponent,\r\n  props: args,\r\n})"
-                }
-            ],
             "src/stories/NavItem.stories.ts": [
                 {
                     "name": "Dark",
@@ -3659,6 +3659,32 @@
                     "file": "src/stories/NavItem.stories.ts",
                     "type": "Story<NavItemComponent>",
                     "defaultValue": "(args: NavItemComponent) => ({\r\n  component: NavItemComponent,\r\n  props: args,\r\n})"
+                }
+            ],
+            "src/stories/Quality.stories.ts": [
+                {
+                    "name": "Dark",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Quality.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Light",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Quality.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Quality.stories.ts",
+                    "type": "Story<QualityComponent>",
+                    "defaultValue": "(args: QualityComponent) => ({\r\n  component: QualityComponent,\r\n  props: args,\r\n})"
                 }
             ],
             "src/stories/PxFooter.stories.ts": [
@@ -3711,32 +3737,6 @@
                     "file": "src/stories/ThemeButton.stories.ts",
                     "type": "Story<ThemeButtonComponent>",
                     "defaultValue": "(args: ThemeButtonComponent) => ({\r\n  component: ThemeButtonComponent,\r\n  props: args,\r\n})"
-                }
-            ],
-            "src/stories/Quality.stories.ts": [
-                {
-                    "name": "Dark",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Quality.stories.ts",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Light",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Quality.stories.ts",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Quality.stories.ts",
-                    "type": "Story<QualityComponent>",
-                    "defaultValue": "(args: QualityComponent) => ({\r\n  component: QualityComponent,\r\n  props: args,\r\n})"
                 }
             ],
             "src/environments/environment.prod.ts": [

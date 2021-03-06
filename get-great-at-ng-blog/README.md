@@ -1,4 +1,78 @@
-# GetGreatAtNgBlog
+<br>
+<h1 align="center">
+  <br>
+  Get Great at <strong>A°</strong>ngularization
+  <br>
+  <br>  
+</h1>
+<br>
+<br>
+<h3 align="center">Example Web Application of Visual Test-Driven, <br>Component-Driven Angular 11+ Development with Storybook 6+</h3>
+<br>
+<br>
+<hr>
+<!-- --- -->
+
+<br>
+
+The following are instructions for how to use this example Angularization app.
+<br>
+<br>
+
+## Getting Started
+<br>
+
+`git clone` this Angularization repository `cd` into the downloaded folder.
+
+```bash
+# This is a Git Bash example.
+
+$ git clone https://github.com/pjnalls/Angularization.git
+
+$ cd Angularization
+
+~/Angularization (main) $
+```
+<br>
+
+Then move the folder to your desired location and `cd` into that project in that location.
+
+```bash
+$ mv ./get-great-at-ng-blog ../path/to/example/app/location
+
+$ cd ../path/to/example/app/location/get-great-at-ng-blog
+```
+<br>
+
+Now install `npm` and `yarn` dependencies.
+
+```bash
+$ npm install
+
+...
+
+$ yarn install
+
+...
+```
+<br>
+
+Lastly, run the Storybook server locally with the `storybook` script:
+
+```bash
+$ npm run storybook
+
+...
+```
+...
+
+<br>
+And... enjoy 😀!
+
+<br>
+<br>
+
+# Angular CLI 11.2.1 Generated README Details:
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.1.
 

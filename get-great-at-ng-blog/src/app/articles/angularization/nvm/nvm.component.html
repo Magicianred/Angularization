@@ -5,37 +5,40 @@
   [ngStyle]="{ 'background-color': backgroundColor }"
   ngDefaultControl [ngModel]="light"
 >
-<h2>"NVM not NPM" ❓</h2>
+<h2>"<em>NVM</em> not NPM" ❓</h2>
 <hr>
 <h3>What is an "NVM"?</h3>
 <p>
-NVM stands for Node Version Manager. Essentially, it is a system utility for installing, using, and managing multiple versions of Node.js.
+NVM stands for <strong><em>N</em>ode <em>V</em>ersion <em>M</em>anager</strong>. Essentially, it is a system utility for installing, using, and managing multiple versions of Node.js.
 </p>
 <p>
 Below is a NVM-Windows example when using a Bash (Git Bash, more specifically) shell:
 </p>
 
+<div class="samp">
+<samp>
+  <br>  
+  $ nvm list<br>
+  <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;15.8.0<br>
+  &nbsp;&nbsp;* 14.15.5 (Currently using 64-bit executable)<br>
+  <br>
+  $ node -v<br>
+  v14.15.5<br>
+  <br>
+  $ nvm use 15.8.0<br>
+  Now using node v15.8.0 (64-bit)<br>
+  <br>
+  $ node -v<br>
+  v15.8.0<br>
+  <br>
+  $<br>
+  <br>
+</samp>
+</div>
+
 <p>
-$ nvm list<br><br>
-  
-    15.8.0<br>
-  * 14.15.5 (Currently using 64-bit executable)<br><br>
-
-$ node -v<br>
-v14.15.5<br><br>
-
-$ nvm use 15.8.0<br>
-Now using node v15.8.0 (64-bit)<br><br>
-
-$ node -v<br>
-v15.8.0<br><br>
-
-$
-
-</p>
-
-<p>
-As you can see above, we're able to switch versions of node with a simple nvm use command.
+As you can see above, we're able to switch versions of <code>node</code> with a simple <code>nvm use</code> command.
 </p>
 
 
