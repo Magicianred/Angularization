@@ -19,7 +19,25 @@ The following are instructions for how to use this example Angularization app.
 <br>
 <br>
 
+## System Requirements
+<br>
+
+Before you clone this repository, I recommend that you have the [latest LTS (Long-Term Support) version of Node.js](https://nodejs.org/en/) installed (`14.16.0` for me at the time of writing this) since that is the version I used to create this Angular application.
+
+
+```bash
+$ node -v
+v14.16.0
+```
+
+<br>
+
+If you're completely new to Node.js you can look into my ["<em>NVM</em> not NPM" article here](https://github.com/pjnalls/Angularization#nvm-not-npm--1) and return back to this guide.
+
+<br>
+
 ## Getting Started
+
 <br>
 
 `git clone` this Angularization repository `cd` into the downloaded folder.
@@ -41,6 +59,13 @@ Then move the folder to your desired location and `cd` into that project in that
 $ mv ./get-great-at-ng-blog ../path/to/example/app/location
 
 $ cd ../path/to/example/app/location/get-great-at-ng-blog
+```
+<br>
+
+If you don't have `yarn` installed, simply run the following `npm` command:
+
+```
+$ npm --global install yarn
 ```
 <br>
 
@@ -72,7 +97,7 @@ And... enjoy 😀!
 <br>
 <br>
 
-# Angular CLI 11.2.1 Generated README Details:
+# Angular CLI 11.2.1 Generated `README.md` Details:
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.1.
 
