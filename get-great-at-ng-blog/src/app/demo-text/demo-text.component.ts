@@ -9,7 +9,7 @@ import { ContactComponent } from '../articles/contact/contact.component';
 @Component({
   selector: 'demo-text',
   templateUrl: './demo-text.component.html',
-  styleUrls: ['./demo-text.component.scss']
+  styleUrls: ['./demo-text.component.scss'],
 })
 export class DemoTextComponent {
   @Input() light = false;
@@ -20,5 +20,4 @@ export class DemoTextComponent {
 
     return [mode];
   }
-
 }

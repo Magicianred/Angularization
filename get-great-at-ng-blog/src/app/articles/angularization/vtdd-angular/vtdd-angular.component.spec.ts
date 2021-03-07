@@ -8,9 +8,8 @@ describe('VtddAngularComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ VtddAngularComponent ]
-    })
-    .compileComponents();
+      declarations: [VtddAngularComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

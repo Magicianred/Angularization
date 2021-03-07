@@ -1,71 +1,147 @@
 * {
-  font-family: 
-    'Segoe UI', 
-    'Nunito Sans', 
-    'Helvetica Neue', 
-    Helvetica, Arial, 
-    Tahoma, 
-    Geneva, 
-    Verdana, 
-    sans-serif;
+  font-family: "Segoe UI", "Nunito Sans", "Helvetica Neue", Helvetica, Arial,
+    Tahoma, Geneva, Verdana, sans-serif;
 }
 
-samp, code { font-family: 'Courier New', Courier, monospace; font-weight: 600; }
-.samp { padding: 2.5%; }
+samp,
+code {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
+}
+.samp {
+  padding: 2.5%;
+}
 
 @mixin change-font-size($font-size) {
-  
-  h1 { font-size: 60px + $font-size - 30; }
-  h2 { font-size: 48px + $font-size - 20; }
-  h3 { font-size: 36px + $font-size - 14; }
-  h4 { font-size: 24px + $font-size - 8; }
-  h5 { font-size: 18px + $font-size - 4; }
-  p, a, samp, code { font-size: 15px + $font-size; }
+  h1 {
+    font-size: 60px + $font-size - 30;
+  }
+  h2 {
+    font-size: 48px + $font-size - 20;
+  }
+  h3 {
+    font-size: 36px + $font-size - 14;
+  }
+  h4 {
+    font-size: 24px + $font-size - 8;
+  }
+  h5 {
+    font-size: 18px + $font-size - 4;
+  }
+  p,
+  a,
+  samp,
+  code {
+    font-size: 15px + $font-size;
+  }
 
   @media (min-width: 414px) {
-    h1 { font-size: 60px + $font-size - 10; }
-    h2 { font-size: 48px + $font-size - 7; }
-    h3 { font-size: 36px + $font-size - 5; }
-    h4 { font-size: 24px + $font-size - 4; }
-    h5 { font-size: 18px + $font-size - 2; }
-    p, a, samp, code { font-size: 15px + $font-size }
+    h1 {
+      font-size: 60px + $font-size - 10;
+    }
+    h2 {
+      font-size: 48px + $font-size - 7;
+    }
+    h3 {
+      font-size: 36px + $font-size - 5;
+    }
+    h4 {
+      font-size: 24px + $font-size - 4;
+    }
+    h5 {
+      font-size: 18px + $font-size - 2;
+    }
+    p,
+    a,
+    samp,
+    code {
+      font-size: 15px + $font-size;
+    }
   }
 
   @media (min-width: 834px) {
-      
-    h1 { font-size: 60px + $font-size - 8; }
-    h2 { font-size: 48px + $font-size - 6; }
-    h3 { font-size: 36px + $font-size - 5; }
-    h4 { font-size: 24px + $font-size - 4; }
-    h5 { font-size: 18px + $font-size - 2; }
-    p, a, samp, code { font-size: 15px + $font-size - (($font-size / 2) * 1); }
-
+    h1 {
+      font-size: 60px + $font-size - 8;
+    }
+    h2 {
+      font-size: 48px + $font-size - 6;
+    }
+    h3 {
+      font-size: 36px + $font-size - 5;
+    }
+    h4 {
+      font-size: 24px + $font-size - 4;
+    }
+    h5 {
+      font-size: 18px + $font-size - 2;
+    }
+    p,
+    a,
+    samp,
+    code {
+      font-size: 15px + $font-size - (($font-size / 2) * 1);
+    }
   }
 
   @media (min-width: 1112px) {
-    h1 { font-size: 60px + $font-size; }
-    h2 { font-size: 48px + $font-size; }
-    h3 { font-size: 36px + $font-size; }
-    h4 { font-size: 24px + $font-size; }
-    h5 { font-size: 18px + $font-size; }
-    p, a, samp, code { font-size: 15px + $font-size; }
+    h1 {
+      font-size: 60px + $font-size;
+    }
+    h2 {
+      font-size: 48px + $font-size;
+    }
+    h3 {
+      font-size: 36px + $font-size;
+    }
+    h4 {
+      font-size: 24px + $font-size;
+    }
+    h5 {
+      font-size: 18px + $font-size;
+    }
+    p,
+    a,
+    samp,
+    code {
+      font-size: 15px + $font-size;
+    }
   }
-
 }
 
-.small-size { @include change-font-size(3px); }
-.normal-size { @include change-font-size(9px); }
-.large-size { @include change-font-size(18px); }
+.small-size {
+  @include change-font-size(3px);
+}
+.normal-size {
+  @include change-font-size(9px);
+}
+.large-size {
+  @include change-font-size(18px);
+}
 
-.active-route { color: crimson; }
-a { text-decoration: none; }
+.active-route {
+  color: crimson;
+}
+a {
+  text-decoration: none;
+}
 
 @mixin change-theme($light) {
+  @if ($light) {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    p,
+    samp,
+    code {
+      color: #000;
+    }
 
-  @if($light) {
-    h1, h2, h3, h4, h5, p, samp, code { color: #000; }
-
-    .samp, code { background-color: #eee; }
+    .samp,
+    code {
+      background-color: #eee;
+    }
 
     button {
       color: #fff !important;
@@ -75,35 +151,78 @@ a { text-decoration: none; }
       background-color: #fff !important;
     }
 
-    p a:link, p a:active, li a:link, li a:active { color: #05a; }
-    p a:visited, li a:visited { color: #307; }
-    p a:hover, li a:hover{ color: #a0a; cursor: pointer; }
-    p a { text-decoration: none; }
-  }
-  @else {
-    h1, h2, h3, h4, h5, p, samp, code { 
+    p a:link,
+    p a:active,
+    li a:link,
+    li a:active {
+      color: #05a;
+    }
+    p a:visited,
+    li a:visited {
+      color: #307;
+    }
+    p a:hover,
+    li a:hover {
+      color: #a0a;
+      cursor: pointer;
+    }
+    p a {
+      text-decoration: none;
+    }
+  } @else {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    p,
+    samp,
+    code {
       color: #fff;
     }
 
-    .samp, code { background-color: #222; }
+    .samp,
+    code {
+      background-color: #222;
+    }
 
     button {
       color: #000 !important;
       background-color: #fff !important;
     }
-    
+
     .document {
       background-color: #000 !important;
     }
 
-    p a:link, p a:active, li a:link, li a:active { color: #59f; }
-    p a:visited, li a:visited { color: #a7f; }
-    p a:hover, li a:hover { color: #f5f; cursor: pointer; }
-    p a { text-decoration: none; }
+    p a:link,
+    p a:active,
+    li a:link,
+    li a:active {
+      color: #59f;
+    }
+    p a:visited,
+    li a:visited {
+      color: #a7f;
+    }
+    p a:hover,
+    li a:hover {
+      color: #f5f;
+      cursor: pointer;
+    }
+    p a {
+      text-decoration: none;
+    }
   }
 }
 
-.light { @include change-theme(true); }
-.dark { @include change-theme(false); }
+.light {
+  @include change-theme(true);
+}
+.dark {
+  @include change-theme(false);
+}
 
-ul {list-style-type: circle !important; }
+ul {
+  list-style-type: circle !important;
+}

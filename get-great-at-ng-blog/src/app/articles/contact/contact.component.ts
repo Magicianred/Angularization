@@ -4,9 +4,12 @@ import { ThemeChangeComponent } from 'src/app/theme-change/theme-change.componen
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['../../page/document/document.component.scss', './contact.component.scss']
+  styleUrls: [
+    '../../page/document/document.component.scss',
+    './contact.component.scss',
+  ],
 })
-export class ContactComponent extends ThemeChangeComponent { 
+export class ContactComponent extends ThemeChangeComponent {
   @Input() backgroundColor?: string;
 
   public get classes(): string[] {

@@ -8,9 +8,8 @@ describe('BgImageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BgImageComponent ]
-    })
-    .compileComponents();
+      declarations: [BgImageComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

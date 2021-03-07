@@ -2,36 +2,40 @@
   class="footer-container"
   [ngClass]="classes"
   [ngStyle]="{ 'background-color': backgroundColor }"
-  ngDefaultControl [ngModel]="light"
-  ngDefaultControl [ngModel]="fontSize"
-  ngDefaultControl [ngModel]="fidelity"
+  ngDefaultControl
+  [ngModel]="light"
+  ngDefaultControl
+  [ngModel]="fontSize"
+  ngDefaultControl
+  [ngModel]="fidelity"
 >
-  <div style="float: left; width: 33%;">
+  <div style="float: left; width: 33%">
     <font-size
       (onFontSizeSelection)="changeFontSize($event)"
       [fontSize]="fontSize"
       [light]="light"
-      [ngClass]="classes" 
+      [ngClass]="classes"
       [ngStyle]="{ 'background-color': backgroundColor }"
-      >
+    >
     </font-size>
   </div>
-  <div style="float: left; width: 33%; text-align: center;">
+  <div style="float: left; width: 33%; text-align: center">
     <quality
-      (onFidelitySelection)="changeFidelity($event)" 
+      (onFidelitySelection)="changeFidelity($event)"
       [fidelity]="fidelity"
       [light]="light"
-      [ngClass]="classes" 
+      [ngClass]="classes"
       [ngStyle]="{ 'background-color': backgroundColor }"
-      >
+    >
     </quality>
   </div>
-  <div style="float: left; width: 33%; text-align: right;">
+  <div style="float: left; width: 33%; text-align: right">
     <theme-button
       (click)="toggleTheme()"
-      [light]="light" 
-      [ngClass]="classes" 
-      [ngStyle]="{ 'background-color': backgroundColor }">
+      [light]="light"
+      [ngClass]="classes"
+      [ngStyle]="{ 'background-color': backgroundColor }"
+    >
     </theme-button>
   </div>
 </div>

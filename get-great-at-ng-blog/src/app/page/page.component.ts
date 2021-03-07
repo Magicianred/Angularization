@@ -12,7 +12,7 @@ import { ThemeChangeComponent } from 'src/app/theme-change/theme-change.componen
 import { LoFiComponent } from 'src/app/lo-fi/lo-fi.component';
 import { DocumentComponent } from 'src/app/page/document/document.component';
 import { LightService } from '../articles/light.service';
-import { Router } from '@angular/router'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'page',
@@ -24,7 +24,7 @@ export default class PageComponent extends ThemeChangeComponent {
   @Input() brand = '';
   @Input() fidelity: Fidelity = Fidelity.Normal;
   @Input() backgroundColor?: string;
-  @Input() navItems = [{name: '', route: ''}];;
+  @Input() navItems = [{ name: '', route: '' }];
 
   public get classes(): string[] {
     const mode = this.light ? 'page--light' : 'page--dark';
@@ -32,9 +32,11 @@ export default class PageComponent extends ThemeChangeComponent {
     return ['page', mode];
   }
 
-  constructor(public router: Router) { super() }
+  constructor(public router: Router) {
+    super();
+  }
 
-  changeTheme(light: boolean) { 
+  changeTheme(light: boolean) {
     this.light = light;
   }
 }

@@ -4,9 +4,12 @@ import { ThemeChangeComponent } from 'src/app/theme-change/theme-change.componen
 @Component({
   selector: 'app-vs-code',
   templateUrl: './vs-code.component.html',
-  styleUrls: ['../../../page/document/document.component.scss', './vs-code.component.scss']
+  styleUrls: [
+    '../../../page/document/document.component.scss',
+    './vs-code.component.scss',
+  ],
 })
-export class VsCodeComponent extends ThemeChangeComponent { 
+export class VsCodeComponent extends ThemeChangeComponent {
   @Input() backgroundColor?: string;
 
   public get classes(): string[] {
@@ -14,5 +17,4 @@ export class VsCodeComponent extends ThemeChangeComponent {
 
     return ['document', mode];
   }
-
 }

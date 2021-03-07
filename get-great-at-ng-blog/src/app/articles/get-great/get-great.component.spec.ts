@@ -8,9 +8,8 @@ describe('GetGreatComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GetGreatComponent ]
-    })
-    .compileComponents();
+      declarations: [GetGreatComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

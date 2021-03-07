@@ -5,7 +5,7 @@ import { FontSize } from './font-size.enum';
 @Component({
   selector: 'font-size',
   templateUrl: './font-size.component.html',
-  styleUrls: ['./font-size.component.scss']
+  styleUrls: ['./font-size.component.scss'],
 })
 export class FontSizeComponent extends ThemeChangeComponent {
   constructor() {

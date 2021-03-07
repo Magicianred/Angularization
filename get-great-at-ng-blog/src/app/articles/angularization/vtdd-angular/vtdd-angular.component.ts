@@ -4,9 +4,12 @@ import { ThemeChangeComponent } from 'src/app/theme-change/theme-change.componen
 @Component({
   selector: 'app-vtdd-angular',
   templateUrl: './vtdd-angular.component.html',
-  styleUrls: ['../../../page/document/document.component.scss', './vtdd-angular.component.scss']
+  styleUrls: [
+    '../../../page/document/document.component.scss',
+    './vtdd-angular.component.scss',
+  ],
 })
-export class VtddAngularComponent extends ThemeChangeComponent { 
+export class VtddAngularComponent extends ThemeChangeComponent {
   @Input() backgroundColor?: string;
 
   public get classes(): string[] {

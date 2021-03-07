@@ -1,45 +1,68 @@
-.font-size { 
-  font-weight: 700; 
+.font-size {
+  font-weight: 700;
   width: 90px;
   margin: 0;
   margin-top: 0;
   text-align: center;
-  cursor: pointer; 
+  cursor: pointer;
 }
 
-span:hover { opacity: 0.667; }
+span:hover {
+  opacity: 0.667;
+}
 
-.medium-a, .large-a { padding-left: 7.5px; }
+.medium-a,
+.large-a {
+  padding-left: 7.5px;
+}
 
-.small-a { font-size: medium; }
-.medium-a { font-size: x-large; }
-.large-a { font-size: xx-large; }
+.small-a {
+  font-size: medium;
+}
+.medium-a {
+  font-size: x-large;
+}
+.large-a {
+  font-size: xx-large;
+}
 
-.font-size--light { color: #000; background-color: #fff;}
-.font-size--dark { color: #fff; background-color: #000;}
+.font-size--light {
+  color: #000;
+  background-color: #fff;
+}
+.font-size--dark {
+  color: #fff;
+  background-color: #000;
+}
 
-.selected-a--light { color: #fff !important; -webkit-text-stroke: 1.5px #000; }
-.selected-a--dark { color: #000 !important; -webkit-text-stroke: 1.5px #fff; }
+.selected-a--light {
+  color: #fff !important;
+  -webkit-text-stroke: 1.5px #000;
+}
+.selected-a--dark {
+  color: #000 !important;
+  -webkit-text-stroke: 1.5px #fff;
+}
 
 /* Large Mobile */
-@media (min-width: 414px) { 
-  .font-size { 
+@media (min-width: 414px) {
+  .font-size {
     margin-top: 0;
-  } 
+  }
 }
 
 /* Tablet */
-@media (min-width: 834px) { 
-  .font-size { 
+@media (min-width: 834px) {
+  .font-size {
     margin-top: 2px;
     margin-right: 0;
-  } 
+  }
 }
 
 /* Full */
-@media (min-width: 1112px) { 
-  .font-size { 
+@media (min-width: 1112px) {
+  .font-size {
     margin-top: 5px;
     margin-right: -10px;
-  } 
+  }
 }

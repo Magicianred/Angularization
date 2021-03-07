@@ -3,12 +3,12 @@ import { FontSize } from '../px-footer/font-size/font-size.enum';
 import { Fidelity } from '../px-footer/quality/fidelity.enum';
 
 @Component({
-  template: ''
+  template: '',
 })
-
 export class ThemeChangeComponent {
-  constructor() { 
-    this.show = this.fidelity === Fidelity.Normal || this.fidelity === Fidelity.High;
+  constructor() {
+    this.show =
+      this.fidelity === Fidelity.Normal || this.fidelity === Fidelity.High;
   }
 
   @Input() light = false;
@@ -16,10 +16,15 @@ export class ThemeChangeComponent {
   @Input() fidelity: Fidelity = Fidelity.Normal;
   show: boolean;
 
-  changeTheme(light: boolean) { this.light = light;}
-  changeFontSize(size: FontSize) { this.fontSize = size; }
-  changeFidelity(fi: Fidelity) { 
+  changeTheme(light: boolean) {
+    this.light = light;
+  }
+  changeFontSize(size: FontSize) {
+    this.fontSize = size;
+  }
+  changeFidelity(fi: Fidelity) {
     this.fidelity = fi;
-    this.show = this.fidelity === Fidelity.Normal || this.fidelity === Fidelity.High; 
+    this.show =
+      this.fidelity === Fidelity.Normal || this.fidelity === Fidelity.High;
   }
 }

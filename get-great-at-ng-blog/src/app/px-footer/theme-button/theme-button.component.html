@@ -1,7 +1,8 @@
 <button
   [ngClass]="classes"
   [ngStyle]="{ 'background-color': backgroundColor }"
-  ngDefaultControl [ngModel]="light"
+  ngDefaultControl
+  [ngModel]="light"
 >
-  {{ light ? '🔆' : '🌙' }}
+  {{ light ? "🔆" : "🌙" }}
 </button>

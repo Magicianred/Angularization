@@ -2,28 +2,32 @@
   class="navbar-container"
   [ngClass]="classes"
   [ngStyle]="{ 'background-color': backgroundColor }"
-  ngDefaultControl [ngModel]="brand"
-  ngDefaultControl [ngModel]="light"
-  ngDefaultControl [ngModel]="navItems"
+  ngDefaultControl
+  [ngModel]="brand"
+  ngDefaultControl
+  [ngModel]="light"
+  ngDefaultControl
+  [ngModel]="navItems"
 >
-  <div style="float: left;">
-    <nav-brand 
+  <div style="float: left">
+    <nav-brand
       [label]="brand"
       [light]="light"
-      [ngClass]="classes" 
+      [ngClass]="classes"
       [ngStyle]="{ 'background-color': backgroundColor }"
-      >
+    >
     </nav-brand>
   </div>
   <div>
-    <nav-item 
+    <nav-item
       *ngFor="let item of navItems"
       [ngClass]="classes"
-      [ngStyle]="{ 'background-color': backgroundColor }" 
+      [ngStyle]="{ 'background-color': backgroundColor }"
       [label]="item.name"
       [route]="item.route"
-      [light]="light" 
-      [ngClass]="classes">
+      [light]="light"
+      [ngClass]="classes"
+    >
     </nav-item>
   </div>
 </div>

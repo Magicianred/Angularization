@@ -1,5 +1,5 @@
-.quality { 
-  font-weight: 700; 
+.quality {
+  font-weight: 700;
   width: 90px;
   height: 45px;
   line-height: 45px;
@@ -10,15 +10,32 @@
   padding-left: 10%;
   text-align: center;
   cursor: pointer;
-  font-size: 45px; 
+  font-size: 45px;
 }
 
-span:hover { opacity: 0.667; }
+span:hover {
+  opacity: 0.667;
+}
 
-.normal-dash, .high-dash { padding-left: 10px; }
+.normal-dash,
+.high-dash {
+  padding-left: 10px;
+}
 
-.quality--light { color: #000; background-color: #fff;}
-.quality--dark { color: #fff; background-color: #000;}
+.quality--light {
+  color: #000;
+  background-color: #fff;
+}
+.quality--dark {
+  color: #fff;
+  background-color: #000;
+}
 
-.selected-dash--light { color: #fff !important; -webkit-text-stroke: 1.5px #000; }
-.selected-dash--dark { color: #000 !important; -webkit-text-stroke: 1.5px #fff; }
+.selected-dash--light {
+  color: #fff !important;
+  -webkit-text-stroke: 1.5px #000;
+}
+.selected-dash--dark {
+  color: #000 !important;
+  -webkit-text-stroke: 1.5px #fff;
+}

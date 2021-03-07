@@ -1,11 +1,11 @@
-import { Component, Input, Output, EventEmitter  } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { ThemeChangeComponent } from 'src/app/theme-change/theme-change.component';
 import { Fidelity } from './fidelity.enum';
 
 @Component({
   selector: 'quality',
   templateUrl: './quality.component.html',
-  styleUrls: ['./quality.component.scss']
+  styleUrls: ['./quality.component.scss'],
 })
 export class QualityComponent extends ThemeChangeComponent {
   @Input() backgroundColor?: string;
@@ -18,8 +18,8 @@ export class QualityComponent extends ThemeChangeComponent {
     return ['quality', mode];
   }
 
-  selectFidelity(fi: Fidelity) { 
-    this.fidelity = fi 
+  selectFidelity(fi: Fidelity) {
+    this.fidelity = fi;
     this.onFidelitySelection.emit(this.fidelity);
   }
 }

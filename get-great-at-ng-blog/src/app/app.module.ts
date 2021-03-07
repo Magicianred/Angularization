@@ -47,18 +47,11 @@ import { RouterModule } from '@angular/router';
     VtddAngularComponent,
     GetGreatComponent,
     PageComponent,
-    ContactComponent
+    ContactComponent,
   ],
-  imports: [
-    BrowserModule,
-    CommonModule,
-    AppRoutingModule,
-    RouterModule,
-  ],
-  schemas: [ NO_ERRORS_SCHEMA ],
+  imports: [BrowserModule, CommonModule, AppRoutingModule, RouterModule],
+  schemas: [NO_ERRORS_SCHEMA],
   providers: [],
-  bootstrap: [
-    AppComponent
-  ]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

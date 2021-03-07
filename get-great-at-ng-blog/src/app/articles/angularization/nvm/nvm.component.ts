@@ -4,9 +4,12 @@ import { ThemeChangeComponent } from 'src/app/theme-change/theme-change.componen
 @Component({
   selector: 'app-nvm',
   templateUrl: './nvm.component.html',
-  styleUrls: ['../../../page/document/document.component.scss', './nvm.component.scss']
+  styleUrls: [
+    '../../../page/document/document.component.scss',
+    './nvm.component.scss',
+  ],
 })
-export class NvmComponent extends ThemeChangeComponent { 
+export class NvmComponent extends ThemeChangeComponent {
   @Input() backgroundColor?: string;
 
   public get classes(): string[] {
@@ -15,4 +18,3 @@ export class NvmComponent extends ThemeChangeComponent {
     return ['document', mode];
   }
 }
-

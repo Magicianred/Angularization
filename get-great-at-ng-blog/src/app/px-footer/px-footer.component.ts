@@ -1,4 +1,10 @@
-import { Component, EventEmitter, Input, Output, ViewChild } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Input,
+  Output,
+  ViewChild,
+} from '@angular/core';
 import { FontSizeComponent } from './font-size/font-size.component';
 import { QualityComponent } from './quality/quality.component';
 import { ThemeButtonComponent } from './theme-button/theme-button.component';
@@ -9,11 +15,10 @@ import { Fidelity } from './quality/fidelity.enum';
 @Component({
   selector: 'px-footer',
   templateUrl: './px-footer.component.html',
-  styleUrls: ['./px-footer.component.scss']
+  styleUrls: ['./px-footer.component.scss'],
 })
 export class PxFooterComponent {
-  
-  constructor(private router: Router) { }
+  constructor(private router: Router) {}
 
   @Input() light = false;
   @Input() fidelity: Fidelity = Fidelity.Normal;
@@ -24,14 +29,13 @@ export class PxFooterComponent {
   @Output() onFontSizeChange = new EventEmitter<FontSize>();
   @Output() onFidelityChange = new EventEmitter<Fidelity>();
 
-
   public get classes(): string[] {
     const mode = this.light ? 'footer--light' : 'footer--dark';
 
     return ['footer', mode];
   }
 
-  changeFontSize(s: FontSize) { 
+  changeFontSize(s: FontSize) {
     this.fontSize = s;
     this.onFontSizeChange.emit(this.fontSize);
   }
@@ -41,13 +45,13 @@ export class PxFooterComponent {
     this.onFidelityChange.emit(this.fidelity);
   }
 
-  toggleTheme() { 
+  toggleTheme() {
     this.light = !this.light;
     this.onThemeChange.emit(this.light);
   }
 
   static code() {
     const file = new File([], '../app/px-footer/px-footer.component.ts');
-    return (new Promise(() => file.text())).then(words => words);
+    return new Promise(() => file.text()).then((words) => words);
   }
 }
