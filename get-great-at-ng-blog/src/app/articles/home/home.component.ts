@@ -23,8 +23,5 @@ export class HomeComponent extends ThemeChangeComponent implements OnInit {
     return ['home'];
   }
 
-  ngOnInit() {
-    this.light = history.state.data ? history.state.data.light : true;
-    console.log(history.state.data);
-  }
+  ngOnInit() { }
 }

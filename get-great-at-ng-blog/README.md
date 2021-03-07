@@ -7,7 +7,7 @@
 </h1>
 <br>
 <br>
-<h3 align="center">Example Web Application of Visual Test-Driven, <br>Component-Driven Angular 11+ Development with Storybook 6+</h3>
+<h3 align="center">Example Web Application for Visual Test-Driven, <br>Component-Driven Angular 11+ Development with Storybook 6+</h3>
 <br>
 <br>
 <hr>
@@ -22,10 +22,13 @@ The following are instructions for how to use this example Angularization app.
 ## System Requirements
 <br>
 
-Before you clone this repository, I recommend that you have the [latest LTS (Long-Term Support) version of Node.js](https://nodejs.org/en/) installed (`14.16.0` for me at the time of writing this) since that is the version I used to create this Angular application.
+Before you clone this repository, ensure you have [Git](https://git-scm.com/) and I recommend that you have the [latest LTS (Long-Term Support) version of Node.js](https://nodejs.org/en/) installed (`14.16.0` for me at the time of writing this) since that is the version I used to create this Angular application.
 
 
 ```bash
+$ git --version
+git version ...
+
 $ node -v
 v14.16.0
 ```
@@ -43,42 +46,31 @@ If you're completely new to Node.js you can look into my ["<em>NVM</em> not NPM"
 `git clone` this Angularization repository `cd` into the downloaded folder.
 
 ```bash
-# This is a Git Bash example.
-
 $ git clone https://github.com/pjnalls/Angularization.git
 
-$ cd Angularization
-
-~/Angularization (main) $
+$ cd Angularization/get-great-at-ng-blog/
 ```
-<br>
 
-Then move the folder to your desired location and `cd` into that project in that location.
-
-```bash
-$ mv ./get-great-at-ng-blog ../path/to/example/app/location
-
-$ cd ../path/to/example/app/location/get-great-at-ng-blog
-```
 <br>
 
 If you don't have `yarn` installed, simply run the following `npm` command:
 
 ```
+$ yarn -v
+bash: yarn: command not found
+
 $ npm --global install yarn
+
+...
+
+$
 ```
 <br>
 
-Now install `npm` and `yarn` dependencies.
+Install your dependencies with `yarn`.
 
 ```bash
-$ npm install
-
-...
-
 $ yarn install
-
-...
 ```
 <br>
 
@@ -86,13 +78,9 @@ Lastly, run the Storybook server locally with the `storybook` script:
 
 ```bash
 $ npm run storybook
-
-...
 ```
-...
 
-<br>
-And... enjoy 😀!
+A new page be served for Storybook.
 
 <br>
 <br>

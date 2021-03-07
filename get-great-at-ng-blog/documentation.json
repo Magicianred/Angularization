@@ -3422,6 +3422,14 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/Quality.stories.ts",
+                "type": "Story<QualityComponent>",
+                "defaultValue": "(args: QualityComponent) => ({\r\n  component: QualityComponent,\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/ThemeButton.stories.ts",
                 "type": "Story<ThemeButtonComponent>",
                 "defaultValue": "(args: ThemeButtonComponent) => ({\n  component: ThemeButtonComponent,\n  props: args,\n})"
@@ -3635,12 +3643,12 @@
                     "defaultValue": "(args: NavBrandComponent) => ({\n  component: NavBrandComponent,\n  props: args,\n})"
                 }
             ],
-            "src/stories/NavItem.stories.ts": [
+            "src/stories/NavBrand.stories.ts": [
                 {
                     "name": "Dark",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/NavItem.stories.ts",
+                    "file": "src/stories/NavBrand.stories.ts",
                     "type": "",
                     "defaultValue": "Template.bind({})"
                 },
@@ -3648,7 +3656,7 @@
                     "name": "Light",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/NavItem.stories.ts",
+                    "file": "src/stories/NavBrand.stories.ts",
                     "type": "",
                     "defaultValue": "Template.bind({})"
                 },
@@ -3711,6 +3719,32 @@
                     "file": "src/stories/Quality.stories.ts",
                     "type": "Story<QualityComponent>",
                     "defaultValue": "(args: QualityComponent) => ({\n  component: QualityComponent,\n  props: args,\n})"
+                }
+            ],
+            "src/stories/Quality.stories.ts": [
+                {
+                    "name": "Dark",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Quality.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Light",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Quality.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Quality.stories.ts",
+                    "type": "Story<QualityComponent>",
+                    "defaultValue": "(args: QualityComponent) => ({\r\n  component: QualityComponent,\r\n  props: args,\r\n})"
                 }
             ],
             "src/stories/ThemeButton.stories.ts": [
