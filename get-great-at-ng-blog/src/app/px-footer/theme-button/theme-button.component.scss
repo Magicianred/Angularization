@@ -10,37 +10,43 @@
   cursor: pointer;
 }
 
-button:hover { opacity: 0.667; }
+button:hover {
+  opacity: 0.667;
+}
 
-.theme-button--light { background-color: #000; }
-.theme-button--dark { background-color: #fff; }
+.theme-button--light {
+  background-color: #000;
+}
+.theme-button--dark {
+  background-color: #fff;
+}
 
 /* Large Mobile */
-@media (min-width: 414px) { 
-  .theme-button { 
-    font-size: 12px; 
+@media (min-width: 414px) {
+  .theme-button {
+    font-size: 12px;
     width: 49px;
     margin-top: 10px;
     margin-right: 0;
-  } 
+  }
 }
 
 /* Tablet */
-@media (min-width: 834px) { 
-  .theme-button { 
-    font-size: 15px; 
+@media (min-width: 834px) {
+  .theme-button {
+    font-size: 15px;
     width: 54px;
     margin-top: 11px;
     margin-right: 0;
-  } 
+  }
 }
 
 /* Full */
-@media (min-width: 1112px) { 
-  .theme-button { 
-    font-size: 18px; 
+@media (min-width: 1112px) {
+  .theme-button {
+    font-size: 18px;
     width: 60px;
     margin-top: 14px;
     margin-right: -10px;
-  } 
+  }
 }

@@ -8,9 +8,8 @@ describe('NvmComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NvmComponent ]
-    })
-    .compileComponents();
+      declarations: [NvmComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

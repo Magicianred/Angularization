@@ -5,7 +5,7 @@ import { ThemeChangeComponent } from 'src/app/theme-change/theme-change.componen
 @Component({
   selector: 'document',
   templateUrl: './document.component.html',
-  styleUrls: ['./document.component.scss']
+  styleUrls: ['./document.component.scss'],
 })
 export class DocumentComponent extends ThemeChangeComponent {
   constructor() {

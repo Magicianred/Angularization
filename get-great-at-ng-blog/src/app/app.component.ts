@@ -6,22 +6,21 @@ import PageComponent from './page/page.component';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
   title = 'get-great-at-ng-blog';
-  light = true; 
+  light = true;
   brand = 'O';
   fontSize = FontSize.Normal;
-  fidelity = Fidelity.Normal; 
-  navItems = [ 
-    { name: '❓ About', route: '\/about'},  
-    { name: '📐 Angularization', route: '\/angularization'}, 
-    { name: '✉ Contact', route: '\/contact'} 
-  ]; 
+  fidelity = Fidelity.Normal;
+  navItems = [
+    { name: '❓ About', route: '/about' },
+    { name: '📐 Angularization', route: '/angularization' },
+    { name: '✉ Contact', route: '/contact' },
+  ];
 
-  ngOnInit() {  
-    history.pushState({light: true }, '', ''); 
+  ngOnInit() {
+    history.pushState({ light: true }, '', '');
   }
 }
-

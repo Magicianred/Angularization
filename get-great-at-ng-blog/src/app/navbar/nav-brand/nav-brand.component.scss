@@ -11,13 +11,19 @@
   font-weight: 900;
   text-decoration: underline;
 }
-.nav-brand--light { color: crimson; background-color: #fff; }
-.nav-brand--dark { color: #fff; background-color: #000; }
+.nav-brand--light {
+  color: crimson;
+  background-color: #fff;
+}
+.nav-brand--dark {
+  color: #fff;
+  background-color: #000;
+}
 
 /* Tablet */
 @media (min-width: 834px) {
-  .nav-brand { 
-    font-size: 30px;  
+  .nav-brand {
+    font-size: 30px;
     padding-top: 2px;
     padding-left: 15px;
     padding-right: 5px;
@@ -26,7 +32,7 @@
 
 /* Full */
 @media (min-width: 1112px) {
-  .nav-brand { 
+  .nav-brand {
     font-size: 40px;
     padding-top: 0;
     padding-left: 20px;

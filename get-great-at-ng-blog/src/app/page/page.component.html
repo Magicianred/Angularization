@@ -1,60 +1,69 @@
-<div 
-  [ngClass]="{'small-size': fontSize === -1, 'normal-size': fontSize === 0, 'large-size': fontSize === 1, 'light': light, 'dark': !light}"
-  ngDefaultControl [ngModel]="light" 
-  ngDefaultControl [ngModel]="brand"
-  ngDefaultControl [ngModel]="fontSize"
-  ngDefaultControl [ngModel]="fidelity" 
-  ngDefaultControl [ngModel]="navItems">
-  <navbar 
+<div
+  [ngClass]="{
+    'small-size': fontSize === -1,
+    'normal-size': fontSize === 0,
+    'large-size': fontSize === 1,
+    light: light,
+    dark: !light
+  }"
+  ngDefaultControl
+  [ngModel]="light"
+  ngDefaultControl
+  [ngModel]="brand"
+  ngDefaultControl
+  [ngModel]="fontSize"
+  ngDefaultControl
+  [ngModel]="fidelity"
+  ngDefaultControl
+  [ngModel]="navItems"
+>
+  <navbar
     [brand]="brand"
     [light]="light"
     [navItems]="navItems"
-    [ngClass]="classes" 
+    [ngClass]="classes"
     [ngStyle]="{ 'background-color': backgroundColor }"
   >
   </navbar>
   <div *ngIf="show; then thenBlock; else elseBlock"></div>
-  <ng-template 
-    #thenBlock>
+  <ng-template #thenBlock>
     <bg-image
       [light]="light"
-      [ngClass]="classes" 
+      [ngClass]="classes"
       [ngStyle]="{ 'background-color': backgroundColor }"
-      #thenBlock>
-    </bg-image>
-    <br>
-    <br>
-    <br>
-    <router-outlet
+      #thenBlock
     >
-    </router-outlet>
-    <br>
-    <br>
-    <br>
+    </bg-image>
+    <br />
+    <br />
+    <br />
+    <router-outlet> </router-outlet>
+    <br />
+    <br />
+    <br />
   </ng-template>
   <ng-template #elseBlock>
-    <br>
-    <br>
-    <br>
+    <br />
+    <br />
+    <br />
     <demo-text [light]="light"></demo-text>
     <!-- TODO: seperate compsite component from article content 
       <lo-fi [light]="light"></lo-fi>
     -->
-    <br>
-    <br>
-    <br>
+    <br />
+    <br />
+    <br />
   </ng-template>
-  
-  <px-footer 
-  (onThemeChange)="changeTheme($event)"
-  (onFontSizeChange)="changeFontSize($event)"
-  (onFidelityChange)="changeFidelity($event)"
-  [light]="light"
-  [fontSize]="fontSize"
-  [fidelity]="fidelity"
-  [ngClass]="classes" 
-  [ngStyle]="{ 'background-color': backgroundColor }"
->
-</px-footer>
-</div>
 
+  <px-footer
+    (onThemeChange)="changeTheme($event)"
+    (onFontSizeChange)="changeFontSize($event)"
+    (onFidelityChange)="changeFidelity($event)"
+    [light]="light"
+    [fontSize]="fontSize"
+    [fidelity]="fidelity"
+    [ngClass]="classes"
+    [ngStyle]="{ 'background-color': backgroundColor }"
+  >
+  </px-footer>
+</div>

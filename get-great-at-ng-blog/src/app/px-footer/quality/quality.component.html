@@ -1,16 +1,31 @@
 <p
   [ngClass]="classes"
   [ngStyle]="{ 'background-color': backgroundColor }"
-  ngDefaultControl [ngModel]="light"
+  ngDefaultControl
+  [ngModel]="light"
 >
-  <span 
-    [ngClass]="{ 'selected-dash--light': fidelity === -1 && light, 'selected-dash--dark': fidelity === -1 && !light }"
+  <span
+    [ngClass]="{
+      'selected-dash--light': fidelity === -1 && light,
+      'selected-dash--dark': fidelity === -1 && !light
+    }"
     (click)="selectFidelity(-1)"
-  >•</span><span
-    [ngClass]="{ 'normal-dash': true, 'selected-dash--light': fidelity === 0 && light, 'selected-dash--dark': fidelity === 0 && !light }" 
+    >•</span
+  ><span
+    [ngClass]="{
+      'normal-dash': true,
+      'selected-dash--light': fidelity === 0 && light,
+      'selected-dash--dark': fidelity === 0 && !light
+    }"
     (click)="selectFidelity(0)"
-  >•</span><span 
-    [ngClass]="{ 'high-dash': true, 'selected-dash--light': fidelity === 1 && light, 'selected-dash--dark': fidelity === 1 && !light }"
+    >•</span
+  ><span
+    [ngClass]="{
+      'high-dash': true,
+      'selected-dash--light': fidelity === 1 && light,
+      'selected-dash--dark': fidelity === 1 && !light
+    }"
     (click)="selectFidelity(1)"
-  >•</span>
+    >•</span
+  >
 </p>

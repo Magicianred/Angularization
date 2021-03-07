@@ -1,10 +1,13 @@
 <a
   (click)="onClick.emit($event)"
-  routerLink="/" [state]="{ data: { light: light } }" 
+  routerLink="/"
+  [state]="{ data: { light: light } }"
   [ngClass]="classes"
   [ngStyle]="{ 'background-color': backgroundColor }"
-  ngDefaultControl [ngModel]="label"
-  ngDefaultControl [ngModel]="light"
+  ngDefaultControl
+  [ngModel]="label"
+  ngDefaultControl
+  [ngModel]="light"
 >
   {{ label }}
 </a>

@@ -8,9 +8,8 @@ describe('FontSizeComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FontSizeComponent ]
-    })
-    .compileComponents();
+      declarations: [FontSizeComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

@@ -50,20 +50,25 @@ export default {
         VtddAngularComponent,
         GetGreatComponent,
         PageComponent,
-        ContactComponent
+        ContactComponent,
       ],
       imports: [
         CommonModule,
         AppRoutingModule,
-        RouterModule.forRoot([
-          { path: '', loadChildren: () => import('../app/app.module').then(m => m.AppModule) }
-        ], {
-          useHash: true
-        })
+        RouterModule.forRoot(
+          [
+            {
+              path: '',
+              loadChildren: () =>
+                import('../app/app.module').then((m) => m.AppModule),
+            },
+          ],
+          {
+            useHash: true,
+          }
+        ),
       ],
-      providers: [
-        { provide: APP_BASE_HREF, useValue: '/'}
-      ]
+      providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
     }),
   ],
   argTypes: {
@@ -76,14 +81,14 @@ const Template: Story<NavbarComponent> = (args: NavbarComponent) => ({
   props: args,
 });
 
-const navItemsData = [ 
-  { name: '❓ About', route: '\/about'},  
-  { name: '📐 Angularization', route: '\/angularization'}, 
-  { name: '✉ Contact', route: '\/contact'} 
+const navItemsData = [
+  { name: '❓ About', route: '/about' },
+  { name: '📐 Angularization', route: '/angularization' },
+  { name: '✉ Contact', route: '/contact' },
 ];
 
 export const Light = Template.bind({});
 Light.args = { light: true, brand: 'A°', navItems: navItemsData };
 
-export const Dark = Template.bind({})
+export const Dark = Template.bind({});
 Dark.args = { light: false, brand: 'A°', navItems: navItemsData };

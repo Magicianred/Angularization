@@ -5,13 +5,13 @@ import { NavBrandComponent } from './nav-brand/nav-brand.component';
 @Component({
   selector: 'navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
+  styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent implements OnInit {
   @Input() light = false;
   @Input() brand = '';
   @Input() backgroundColor?: string;
-  @Input() navItems = [{name: '', route: ''}];
+  @Input() navItems = [{ name: '', route: '' }];
 
   public get classes(): string[] {
     const mode = this.light ? 'navbar--light' : 'navbar--dark';
@@ -19,7 +19,5 @@ export class NavbarComponent implements OnInit {
     return ['navbar', mode];
   }
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

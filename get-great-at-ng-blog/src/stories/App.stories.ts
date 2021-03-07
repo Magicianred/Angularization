@@ -57,20 +57,25 @@ export default {
         VtddAngularComponent,
         GetGreatComponent,
         PageComponent,
-        ContactComponent
+        ContactComponent,
       ],
       imports: [
         CommonModule,
         AppRoutingModule,
-        RouterModule.forRoot([
-          { path: '', loadChildren: () => import('../app/app.module').then(m => m.AppModule) }
-        ], {
-          useHash: true
-        })
+        RouterModule.forRoot(
+          [
+            {
+              path: '',
+              loadChildren: () =>
+                import('../app/app.module').then((m) => m.AppModule),
+            },
+          ],
+          {
+            useHash: true,
+          }
+        ),
       ],
-      providers: [
-        { provide: APP_BASE_HREF, useValue: '/'}
-      ]
+      providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
     }),
   ],
 } as Meta;
@@ -80,26 +85,26 @@ const Template: Story<AppComponent> = (args: AppComponent) => ({
   props: args,
 });
 
-const navItemsData = [ 
-  { name: '❓ About', route: '\/about'},  
-  { name: '📐 Angularization', route: '\/angularization'}, 
-  { name: '✉ Contact', route: '\/contact'} 
+const navItemsData = [
+  { name: '❓ About', route: '/about' },
+  { name: '📐 Angularization', route: '/angularization' },
+  { name: '✉ Contact', route: '/contact' },
 ];
 
 export const Light = Template.bind({});
-Light.args = { 
-  light: true, 
+Light.args = {
+  light: true,
   brand: 'A°',
   fontSize: FontSize.Normal,
-  fidelity: Fidelity.Normal, 
-  navItems: navItemsData 
+  fidelity: Fidelity.Normal,
+  navItems: navItemsData,
 };
 
-export const Dark = Template.bind({})
-Dark.args = { 
-  light: false, 
+export const Dark = Template.bind({});
+Dark.args = {
+  light: false,
   brand: 'A°',
   fontSize: FontSize.Normal,
-  fidelity: Fidelity.Normal, 
-  navItems: navItemsData
+  fidelity: Fidelity.Normal,
+  navItems: navItemsData,
 };

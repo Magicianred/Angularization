@@ -3,7 +3,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'bg-image',
   templateUrl: './bg-image.component.html',
-  styleUrls: ['./bg-image.component.scss']
+  styleUrls: ['./bg-image.component.scss'],
 })
 export class BgImageComponent {
   @Input() light = false;

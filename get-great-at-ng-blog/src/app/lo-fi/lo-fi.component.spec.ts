@@ -8,9 +8,8 @@ describe('LoFiComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LoFiComponent ]
-    })
-    .compileComponents();
+      declarations: [LoFiComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

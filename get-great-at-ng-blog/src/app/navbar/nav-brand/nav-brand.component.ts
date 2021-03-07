@@ -3,7 +3,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'nav-brand',
   templateUrl: './nav-brand.component.html',
-  styleUrls: ['./nav-brand.component.scss']
+  styleUrls: ['./nav-brand.component.scss'],
 })
 export class NavBrandComponent {
   @Input() light = false;
@@ -17,5 +17,4 @@ export class NavBrandComponent {
 
     return ['nav-brand', mode];
   }
-
 }

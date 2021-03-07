@@ -18,4 +18,4 @@ export const Light = Template.bind({});
 Light.args = { light: true };
 
 export const Dark = Template.bind({});
-Dark.args = { };
+Dark.args = {};

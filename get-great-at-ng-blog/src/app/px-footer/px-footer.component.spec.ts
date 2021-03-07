@@ -8,9 +8,8 @@ describe('PxFooterComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PxFooterComponent ]
-    })
-    .compileComponents();
+      declarations: [PxFooterComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

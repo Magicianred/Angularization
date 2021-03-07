@@ -8,9 +8,8 @@ describe('VsCodeComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ VsCodeComponent ]
-    })
-    .compileComponents();
+      declarations: [VsCodeComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

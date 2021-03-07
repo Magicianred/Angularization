@@ -1,16 +1,32 @@
 <p
   [ngClass]="classes"
   [ngStyle]="{ 'background-color': backgroundColor }"
-  ngDefaultControl [ngModel]="light"
+  ngDefaultControl
+  [ngModel]="light"
 >
-  <span 
-    [ngClass]="{ 'small-a': true, 'selected-a--light': fontSize === -1 && light, 'selected-a--dark': fontSize === -1 && !light }"
+  <span
+    [ngClass]="{
+      'small-a': true,
+      'selected-a--light': fontSize === -1 && light,
+      'selected-a--dark': fontSize === -1 && !light
+    }"
     (click)="selectFontSize(-1)"
-  >A</span><span
-    [ngClass]="{ 'medium-a': true, 'selected-a--light': fontSize === 0 && light, 'selected-a--dark': fontSize === 0 && !light }" 
+    >A</span
+  ><span
+    [ngClass]="{
+      'medium-a': true,
+      'selected-a--light': fontSize === 0 && light,
+      'selected-a--dark': fontSize === 0 && !light
+    }"
     (click)="selectFontSize(0)"
-  >A</span><span 
-    [ngClass]="{ 'large-a': true, 'selected-a--light': fontSize === 1 && light, 'selected-a--dark': fontSize === 1 && !light }"
+    >A</span
+  ><span
+    [ngClass]="{
+      'large-a': true,
+      'selected-a--light': fontSize === 1 && light,
+      'selected-a--dark': fontSize === 1 && !light
+    }"
     (click)="selectFontSize(1)"
-  >A</span>
+    >A</span
+  >
 </p>
