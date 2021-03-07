@@ -1073,7 +1073,7 @@
         },
         {
             "name": "HomeComponent",
-            "id": "component-HomeComponent-939ad1310608bbb84ce35c9d6426cbd7",
+            "id": "component-HomeComponent-4735d06214588eccb2af57a1b6b3e29c",
             "file": "src/app/articles/home/home.component.ts",
             "changeDetection": "ChangeDetectionStrategy.Default",
             "encapsulation": [],
@@ -1226,7 +1226,7 @@
             "description": "",
             "rawdescription": "",
             "type": "component",
-            "sourceCode": "import { Component, Input, OnChanges, OnInit, ChangeDetectorRef, ChangeDetectionStrategy } from '@angular/core';\r\nimport { ThemeChangeComponent } from 'src/app/theme-change/theme-change.component';\r\n\r\n@Component({\r\n  selector: 'app-home',\r\n  templateUrl: './home.component.html',\r\n  styleUrls: ['./home.component.scss'],\r\n  changeDetection: ChangeDetectionStrategy.Default\r\n})\r\nexport class HomeComponent extends ThemeChangeComponent implements OnInit {\r\n  @Input() backgroundColor?: string;\r\n\r\n  public get classes(): string[] {\r\n    const mode = this.light ? 'home--light' : 'home--dark';\r\n\r\n    return ['home'];\r\n  }\r\n\r\n  ngOnInit() {\r\n    this.light = history.state.data ? history.state.data.light : true;\r\n    console.log(history.state.data);\r\n  }\r\n}\r\n",
+            "sourceCode": "import { Component, Input, OnChanges, OnInit, ChangeDetectorRef, ChangeDetectionStrategy } from '@angular/core';\r\nimport { ThemeChangeComponent } from 'src/app/theme-change/theme-change.component';\r\n\r\n@Component({\r\n  selector: 'app-home',\r\n  templateUrl: './home.component.html',\r\n  styleUrls: ['./home.component.scss'],\r\n  changeDetection: ChangeDetectionStrategy.Default\r\n})\r\nexport class HomeComponent extends ThemeChangeComponent implements OnInit {\r\n  @Input() backgroundColor?: string;\r\n\r\n  public get classes(): string[] {\r\n    const mode = this.light ? 'home--light' : 'home--dark';\r\n\r\n    return ['home'];\r\n  }\r\n\r\n  ngOnInit() { }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -3183,14 +3183,6 @@
                 "name": "Dark",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/FontSize.stories.ts",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Dark",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/stories/BgImage.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
@@ -3199,7 +3191,7 @@
                 "name": "Dark",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/NavBrand.stories.ts",
+                "file": "src/stories/FontSize.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -3215,6 +3207,14 @@
                 "name": "Dark",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/NavBrand.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Dark",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/NavItem.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
@@ -3223,7 +3223,7 @@
                 "name": "Dark",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Quality.stories.ts",
+                "file": "src/stories/PxFooter.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -3231,7 +3231,7 @@
                 "name": "Dark",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/PxFooter.stories.ts",
+                "file": "src/stories/Quality.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -3271,14 +3271,6 @@
                 "name": "Light",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/FontSize.stories.ts",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Light",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/stories/BgImage.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
@@ -3287,7 +3279,7 @@
                 "name": "Light",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/NavBrand.stories.ts",
+                "file": "src/stories/FontSize.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -3303,6 +3295,14 @@
                 "name": "Light",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/NavBrand.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Light",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/NavItem.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
@@ -3311,7 +3311,7 @@
                 "name": "Light",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Quality.stories.ts",
+                "file": "src/stories/PxFooter.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -3319,7 +3319,7 @@
                 "name": "Light",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/PxFooter.stories.ts",
+                "file": "src/stories/Quality.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -3366,14 +3366,6 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/FontSize.stories.ts",
-                "type": "Story<FontSizeComponent>",
-                "defaultValue": "(args: FontSizeComponent) => ({\r\n  component: FontSizeComponent,\r\n  props: args,\r\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/stories/BgImage.stories.ts",
                 "type": "Story<BgImageComponent>",
                 "defaultValue": "(args: BgImageComponent) => ({\r\n  component: BgImageComponent,\r\n  props: args,\r\n})"
@@ -3382,9 +3374,9 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/NavBrand.stories.ts",
-                "type": "Story<NavBrandComponent>",
-                "defaultValue": "(args: NavBrandComponent) => ({\r\n  component: NavBrandComponent,\r\n  props: args,\r\n})"
+                "file": "src/stories/FontSize.stories.ts",
+                "type": "Story<FontSizeComponent>",
+                "defaultValue": "(args: FontSizeComponent) => ({\r\n  component: FontSizeComponent,\r\n  props: args,\r\n})"
             },
             {
                 "name": "Template",
@@ -3398,6 +3390,14 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/NavBrand.stories.ts",
+                "type": "Story<NavBrandComponent>",
+                "defaultValue": "(args: NavBrandComponent) => ({\r\n  component: NavBrandComponent,\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/NavItem.stories.ts",
                 "type": "Story<NavItemComponent>",
                 "defaultValue": "(args: NavItemComponent) => ({\r\n  component: NavItemComponent,\r\n  props: args,\r\n})"
@@ -3406,17 +3406,17 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Quality.stories.ts",
-                "type": "Story<QualityComponent>",
-                "defaultValue": "(args: QualityComponent) => ({\r\n  component: QualityComponent,\r\n  props: args,\r\n})"
+                "file": "src/stories/PxFooter.stories.ts",
+                "type": "Story<PxFooterComponent>",
+                "defaultValue": "(args: PxFooterComponent) => ({\r\n  component: PxFooterComponent,\r\n  props: args,\r\n  parameters: {\r\n    storySource: {\r\n      source : `\r\n      // px-footer.component.ts\r\n\r\n      ${PxFooterComponent.code()}\r\n`\r\n    },\r\n  }\r\n})"
             },
             {
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/PxFooter.stories.ts",
-                "type": "Story<PxFooterComponent>",
-                "defaultValue": "(args: PxFooterComponent) => ({\r\n  component: PxFooterComponent,\r\n  props: args,\r\n  parameters: {\r\n    storySource: {\r\n      source : `\r\n      // px-footer.component.ts\r\n\r\n      ${PxFooterComponent.code()}\r\n`\r\n    },\r\n  }\r\n})"
+                "file": "src/stories/Quality.stories.ts",
+                "type": "Story<QualityComponent>",
+                "defaultValue": "(args: QualityComponent) => ({\r\n  component: QualityComponent,\r\n  props: args,\r\n})"
             },
             {
                 "name": "Template",
@@ -3523,32 +3523,6 @@
                     "defaultValue": "(args: AppComponent) => ({\r\n  component: AppComponent,\r\n  props: args,\r\n})"
                 }
             ],
-            "src/stories/FontSize.stories.ts": [
-                {
-                    "name": "Dark",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/FontSize.stories.ts",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Light",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/FontSize.stories.ts",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/FontSize.stories.ts",
-                    "type": "Story<FontSizeComponent>",
-                    "defaultValue": "(args: FontSizeComponent) => ({\r\n  component: FontSizeComponent,\r\n  props: args,\r\n})"
-                }
-            ],
             "src/stories/BgImage.stories.ts": [
                 {
                     "name": "Dark",
@@ -3575,12 +3549,12 @@
                     "defaultValue": "(args: BgImageComponent) => ({\r\n  component: BgImageComponent,\r\n  props: args,\r\n})"
                 }
             ],
-            "src/stories/NavBrand.stories.ts": [
+            "src/stories/FontSize.stories.ts": [
                 {
                     "name": "Dark",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/NavBrand.stories.ts",
+                    "file": "src/stories/FontSize.stories.ts",
                     "type": "",
                     "defaultValue": "Template.bind({})"
                 },
@@ -3588,7 +3562,7 @@
                     "name": "Light",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/NavBrand.stories.ts",
+                    "file": "src/stories/FontSize.stories.ts",
                     "type": "",
                     "defaultValue": "Template.bind({})"
                 },
@@ -3596,9 +3570,9 @@
                     "name": "Template",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/NavBrand.stories.ts",
-                    "type": "Story<NavBrandComponent>",
-                    "defaultValue": "(args: NavBrandComponent) => ({\r\n  component: NavBrandComponent,\r\n  props: args,\r\n})"
+                    "file": "src/stories/FontSize.stories.ts",
+                    "type": "Story<FontSizeComponent>",
+                    "defaultValue": "(args: FontSizeComponent) => ({\r\n  component: FontSizeComponent,\r\n  props: args,\r\n})"
                 }
             ],
             "src/stories/Navbar.stories.ts": [
@@ -3635,6 +3609,32 @@
                     "defaultValue": "(args: NavbarComponent) => ({\r\n  component: NavbarComponent,\r\n  props: args,\r\n})"
                 }
             ],
+            "src/stories/NavBrand.stories.ts": [
+                {
+                    "name": "Dark",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/NavBrand.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Light",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/NavBrand.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/NavBrand.stories.ts",
+                    "type": "Story<NavBrandComponent>",
+                    "defaultValue": "(args: NavBrandComponent) => ({\r\n  component: NavBrandComponent,\r\n  props: args,\r\n})"
+                }
+            ],
             "src/stories/NavItem.stories.ts": [
                 {
                     "name": "Dark",
@@ -3661,32 +3661,6 @@
                     "defaultValue": "(args: NavItemComponent) => ({\r\n  component: NavItemComponent,\r\n  props: args,\r\n})"
                 }
             ],
-            "src/stories/Quality.stories.ts": [
-                {
-                    "name": "Dark",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Quality.stories.ts",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Light",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Quality.stories.ts",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Quality.stories.ts",
-                    "type": "Story<QualityComponent>",
-                    "defaultValue": "(args: QualityComponent) => ({\r\n  component: QualityComponent,\r\n  props: args,\r\n})"
-                }
-            ],
             "src/stories/PxFooter.stories.ts": [
                 {
                     "name": "Dark",
@@ -3711,6 +3685,32 @@
                     "file": "src/stories/PxFooter.stories.ts",
                     "type": "Story<PxFooterComponent>",
                     "defaultValue": "(args: PxFooterComponent) => ({\r\n  component: PxFooterComponent,\r\n  props: args,\r\n  parameters: {\r\n    storySource: {\r\n      source : `\r\n      // px-footer.component.ts\r\n\r\n      ${PxFooterComponent.code()}\r\n`\r\n    },\r\n  }\r\n})"
+                }
+            ],
+            "src/stories/Quality.stories.ts": [
+                {
+                    "name": "Dark",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Quality.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Light",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Quality.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Quality.stories.ts",
+                    "type": "Story<QualityComponent>",
+                    "defaultValue": "(args: QualityComponent) => ({\r\n  component: QualityComponent,\r\n  props: args,\r\n})"
                 }
             ],
             "src/stories/ThemeButton.stories.ts": [
